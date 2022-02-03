@@ -41,3 +41,12 @@ public class two_sum {
         assertArrayEquals(expectedOutput, twoSum(exampleThree, exampleTarget));
     }
 }
+
+/*
+Explantion:
+We want to make a HashMap to keep trace of the difference of the element. First, we have an if-statement asking is the HashMap contains this element
+If yes, we return the value of the key-value pair, along with the current index
+Else, we put the key as the difference (target-nums[i]), and the value is the current index
+
+Line 18 and 19 can be replace by return new int[] {map.get(nums[i]), i};
+*/

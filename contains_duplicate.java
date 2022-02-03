@@ -30,3 +30,9 @@ public class contains_duplicate {
         assertEquals(true, containsDuplicate(exampleThree));
     }
 }
+
+/*
+Explanation
+Create a HashSet and add the element to it. As it implements the Set Interface, duplicate values are now allowed.
+If an element is a duplicate, it will return true.
+*/
