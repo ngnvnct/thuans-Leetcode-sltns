@@ -49,4 +49,7 @@ If yes, we return the value of the key-value pair, along with the current index
 Else, we put the key as the difference (target-nums[i]), and the value is the current index
 
 Line 18 and 19 can be replace by return new int[] {map.get(nums[i]), i};
+
+Time: O(n), looping through n elements of Array
+Space: O(n), storing the Array in HashMap
 */

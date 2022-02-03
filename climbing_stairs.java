@@ -25,3 +25,11 @@ public class climbing_stairs {
         assertEquals(1836311903, climbStairs(45));
     }
 }
+
+/*
+Explantion:
+Use Dynamic Programming to store expensive calculation (memoization). Have a base case, then start with smaller values, and build a larger value using them.
+
+Time: O(n), n is input
+Space: O(1)
+*/

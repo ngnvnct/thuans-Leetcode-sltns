@@ -35,4 +35,7 @@ public class contains_duplicate {
 Explanation
 Create a HashSet and add the element to it. As it implements the Set Interface, duplicate values are now allowed.
 If an element is a duplicate, it will return true.
+
+Time: O(n), lopping through the Array
+Space: O(n), storing the Array in a Set
 */

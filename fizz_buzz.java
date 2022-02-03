@@ -32,3 +32,11 @@ public class fizz_buzz {
         assertEquals(expectedOutput, fizzBuzz(n));
     }
 }
+
+/*
+Explantion:
+Use modulus % to return the remainder of two number after division
+
+Time: O(n), n is input
+Space: O(n), storing the result
+*/
