@@ -1,4 +1,8 @@
+import static org.junit.Assert.assertEquals;
+
 import java.util.Stack;
+
+import org.junit.Test;
 
 public class valid_parentheses {
     public boolean isValid(String s) {
@@ -20,4 +24,21 @@ public class valid_parentheses {
         }
         return stack.isEmpty();
     }
+
+    @Test
+    public void testParentheses() {
+        assertEquals(true, isValid("(){}[]"));
+        assertEquals(true, isValid("()"));
+        assertEquals(false, isValid("(]"));
+    }
 }
+
+/*
+Explanation
+
+A simple stack problem, if it is (,[ or { then push it onto the stack. Then if it is ), ], } peek the stack and if they match then pop it out. Finally, see if the stack is empty
+
+Time: O(n) 
+Space: O(n)
+
+*/
