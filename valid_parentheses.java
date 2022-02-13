@@ -17,7 +17,7 @@ public class valid_parentheses {
         Stack<Character> stack = new Stack<>();
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
-            
+
             if (c == '(' || c == '[' || c == '{') {
                 stack.push(c);
             } else if (c == ')' && !stack.isEmpty() && stack.peek() == '(') {
@@ -37,9 +37,9 @@ public class valid_parentheses {
         if (s.length() % 2 == 1) {
             return false;
         }
-        
+
         Deque<Character> stack = new ArrayDeque<>();
-        
+
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
             if (c == '(') {
@@ -55,48 +55,19 @@ public class valid_parentheses {
         return stack.isEmpty();
     }
 
-    public boolean isValidOptimal(String s) {
-        if (s.length() % 2 == 1) {
-            return false;
-        }
-
+    public boolean isValidIllegalChar(String s) {
         Deque<Character> stack = new ArrayDeque<>();
         Map<Character, Character> map = new HashMap<>();
         map.put('(', ')');
         map.put('[', ']');
         map.put('{', '}');
-        
+
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
-			if (map.containsKey(c)) {
-				stack.addFirst(map.get(c));
-			} else if (map.containsValue(c)) {
-				if (stack.isEmpty() || stack.removeFirst() != c) {
-					return false;
-				}
-			}
-        }
-        return stack.isEmpty();
-    }
-
-    public boolean isValidOptimal2(String s) {
-        if (s.length() % 2 == 1) {
-            return false;
-        }
-
-        Map<Character, Character> map = new HashMap<>();
-        map.put('(', ')');
-        map.put('[', ']');
-        map.put('{', '}');
-        Deque<Character> stack = new ArrayDeque<>();
-        
-        for (int i = 0 ; i < s.length(); i++) {
-            char c = s.charAt(i);
-            
             if (map.containsKey(c)) {
-                stack.addLast(map.get(c));
+                stack.addFirst(map.get(c));
             } else if (map.containsValue(c)) {
-                if (stack.isEmpty() || stack.removeLast() != c) {
+                if (stack.isEmpty() || stack.removeFirst() != c) {
                     return false;
                 }
             }
@@ -112,39 +83,44 @@ public class valid_parentheses {
         assertEquals(true, isValidDeque("(){}[]"));
         assertEquals(true, isValidDeque("()"));
         assertEquals(false, isValidDeque("(]"));
-        assertEquals(true, isValidOptimal("(){}[]"));
-        assertEquals(true, isValidOptimal("()"));
-        assertEquals(false, isValidOptimal("(]"));
-        assertEquals(true, isValidOptimal("(a)"));
-        assertEquals(true, isValidOptimal("(141[])(){waga}((51afaw))()hh()"));
-        assertEquals(true, isValidOptimal("(()agwg())((()agwga()())gawgwgag)"));
-        assertEquals(true, isValidOptimal("(agwgg)([ghhheah%&@Q])"));
-        assertEquals(true, isValidOptimal2("(a)"));
-        assertEquals(true, isValidOptimal2("(141[])(){waga}((51afaw))()hh()"));
-        assertEquals(true, isValidOptimal2("(()agwg())((()agwga()())gawgwgag)"));
-        assertEquals(true, isValidOptimal2("(agwgg)([ghhheah%&@Q])"));
+        assertEquals(true, isValidIllegalChar("(){}[]"));
+        assertEquals(true, isValidIllegalChar("()"));
+        assertEquals(false, isValidIllegalChar("(]"));
+        assertEquals(true, isValidIllegalChar("(a)"));
+        assertEquals(true, isValidIllegalChar("(141[])(){waga}((51afaw))()hh()"));
+        assertEquals(true, isValidIllegalChar("(()agwg())((()agwga()())gawgwgag)"));
+        assertEquals(true, isValidIllegalChar("(agwgg)([ghhheah%&@Q])"));
     }
 }
 
 /*
-https://leetcode.com/problems/valid-parentheses/
-Explanation
-
-A simple stack problem, if it is (,[ or { then push it onto the stack. Then if it is ), ], } peek the stack and if they match then pop it out. Finally, see if the stack is empty
-
-Method 2: if you see (, [, { push these onto the stack },],) then pop them and check it with the current to see if it matches
-
-You can just exist early if the length of the string is odd
-
-Time: O(n) 
-Space: O(n)
-
-For Java: Using Stack shows that you're not as familiar with language as the interviewer probably wants you to be.
-Stack is a rather old collection that extends Vector, has performance issues due to each method in it being synchronized, 
-and violates some best practices around interfaces, so it is considered legacy nowadays.
-
-The most optimal way is using a hashmap, because the other two does not account for each that contains Characters, Numbers or Special Symbols
-
-https://docs.oracle.com/javase/7/docs/api/java/util/Deque.html
-Use Deque instead https://docs.oracle.com/javase/7/docs/api/java/util/Deque.html
-*/
+ * https://leetcode.com/problems/valid-parentheses/
+ * Explanation
+ * 
+ * A simple stack problem, if it is (,[ or { then push it onto the stack. Then
+ * if it is ), ], } peek the stack and if they match then pop it out. Finally,
+ * see if the stack is empty
+ * 
+ * Method 2: if you see (, [, { push these onto the stack },],) then pop them
+ * and check it with the current to see if it matches
+ * 
+ * You can just exist early if the length of the string is odd
+ * 
+ * Time: O(n), optimal is not optimal since containsValue() is an O(n)
+ * operation, but in this case it is constant so it is okay
+ * Space: O(n)
+ * 
+ * For Java: Using Stack shows that you're not as familiar with language as the
+ * interviewer probably wants you to be.
+ * Stack is a rather old collection that extends Vector, has performance issues
+ * due to each method in it being synchronized,
+ * and violates some best practices around interfaces, so it is considered
+ * legacy nowadays.
+ * 
+ * The most optimal way is using a hashmap, because the other two does not
+ * account for each that contains Characters, Numbers or Special Symbols
+ * 
+ * https://docs.oracle.com/javase/7/docs/api/java/util/Deque.html
+ * Use Deque instead
+ * https://docs.oracle.com/javase/7/docs/api/java/util/Deque.html
+ */
