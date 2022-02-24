@@ -1,3 +1,5 @@
+import static org.junit.Assert.assertEquals;
+
 import java.util.Arrays;
 
 import org.junit.Test;
@@ -30,6 +32,10 @@ public class destroying_asteroids {
 
     @Test
     public void testDestroyed() {
+        int[] exampleOne = {3,9,19,5,21};
+        assertEquals(true, asteroidsDestroyed(10, exampleOne));
+        int[] exampleTwo = {4,9,23,4};
+        assertEquals(false, asteroidsDestroyed(5, exampleTwo));
 
     }
 }
