@@ -5,7 +5,7 @@ import org.junit.Test;
 public class number_of_steps_reduce_zero {
     public int numberOfSteps(int num) {
         int count = 0;
-        System.out.println(Integer.toBinaryString(num));
+        //System.out.println(Integer.toBinaryString(num));
         while (num != 0) {
             if (num % 2 == 0) {
                 num /= 2;
