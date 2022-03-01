@@ -29,7 +29,7 @@ public class decode_strings {
 
     public String decodeStringStack(String s) {
         Stack<Integer> numCount = new Stack<>();
-        Stack<String> result = new Stack<>();
+        Stack<String> stack = new Stack<>();
         String res = "";
         int index = 0;
         while (index < s.length()) {
@@ -39,13 +39,18 @@ public class decode_strings {
                     count = 10 * count + (s.charAt(index) - '0');
                     index += 1;
                 }
+                // This is here just in case I forget about Character.isDigit() 
+                /*while (s.charAt(index) >= '0' && s.charAt(index) <= '9') {
+                    count = 10 * count + (s.charAt(index) - '0');
+                    index += 1;
+                }*/
                 numCount.push(count);
             } else if (s.charAt(index) == '[') {
-                result.push(res);
+                stack.push(res);
                 res = "";
                 index += 1;
             } else if (s.charAt(index) == ']') {
-                StringBuilder temp = new StringBuilder(result.pop());
+                StringBuilder temp = new StringBuilder(stack.pop());
                 int count = numCount.pop();
                 for (int i =0; i < count; i++) {
                     temp.append(res);
@@ -66,7 +71,7 @@ public class decode_strings {
 Explanation
 
 54[ab6[cd]]
-Stakc 5-4-[-a-b-6-[-c-d. Once we see a ], we pop everything include the [ bracket
+Stack 5-4-[-a-b-6-[-c-d. Once we see a ], we pop everything include the [ bracket
 In this case we pop cd, and we take the integer right after [, as long as it is 0 to 9 (digits)
 
 Then we push 6[cd] into the stack
