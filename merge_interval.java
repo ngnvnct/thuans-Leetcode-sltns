@@ -17,7 +17,7 @@ public class merge_interval {
 
 		Arrays.sort(intervals, (a, b) -> a[0] - b[0]);
 		//Arrays.sort(intervals, (i1, i2) -> Integer.compare(i1[0], i2[0]));
-		List<int[]> res = new ArrayList<>();
+		List<int[]> res = new ArrayList<int[]>();
 		int[] current = intervals[0];
 		res.add(current);
 		for (int i = 1; i < intervals.length; i++) {

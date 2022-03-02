@@ -1,6 +1,10 @@
+import static org.junit.Assert.assertEquals;
+
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+
+import org.junit.Test;
 
 public class longest_string_chain {
     public int longestStrChain(String[] words) {
@@ -37,6 +41,20 @@ public class longest_string_chain {
             sequenceLength = Math.max(sequenceLength, presentLength);
         }
         return sequenceLength;
+    }
+
+    @Test
+    public void testLongestStrChain() {
+        String[] exampleOne = {"a","b","ba","bca","bda","bdca"};
+        String[] exampleTwo = {"xbc","pcxbcf","xb","cxbc","pcxbc"};
+        String[] exampleThree = {"abcd","dbqca"};
+
+        assertEquals(4, longestStrChain(exampleOne));
+        assertEquals(4, longestStrChain(exampleOne));
+        assertEquals(5, longestStrChainMethod2(exampleTwo));
+        assertEquals(5, longestStrChainMethod2(exampleTwo));
+        assertEquals(1, longestStrChain(exampleThree));
+        assertEquals(1, longestStrChain(exampleThree));
     }
 }
 
@@ -77,6 +95,17 @@ word is ba, prev is a, remove b; prev is b, remove a, Best length is 2, because 
 word is bca, prev is ca, ba, or bc, best length is 3, because ba = 2, dp has {a : 1, b : 1, ba : 2, bca: 3}
 word is bda, prev is da, ba, or bd, best length is 3, because ba = 2, dp has {a : 1, b : 1, ba : 2, bca : 3, bda : 3}
 word is bdca, prev is dca,bca,bda, bda, best length is 4, because bda = 3, dp has {a : 1, b : 1, ba : 2, bca : 3, bda : 3, bdca : 4}
+Return 4
+
+Run Down
+["xbc","pcxbcf","xb","cxbc","pcxbc"]
+["xb","xbc","cxbx","pcxbc","pcxbcf"]
+word is xb, we have x, b. Best length is 1, dp has {xb: 1}
+word is xbc, we have xb, xc, bc. Best length is 2, dp has {xbc: 2, xb: 1}
+word is cxbc, we don't have anything. Length is 3, dp has {xbc: 2, xb: 1, cxbc: 3}
+word is pcxbc, we have cxbc. Length is 4, dp has {xbc: 2, xb: 1, cxbc: 3, pcxbc: 4}
+word is pcxbcf, we have pcxbc. Length is 5, dp has {xbc : 2, xb: 1, cxbc: 3, pcxbc: 4, pcxbcf:5}
+Return 5
 
 Let n be the number of words in the list, and L be the maximum possible length of a word
 Time: Sorting take O(n log n), two for loops the outer loop runs for O(n) time, inner loop run O(L^2) worse case. First L for inner loop, second L for creating each substring
