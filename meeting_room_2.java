@@ -68,8 +68,8 @@ public class meeting_room_2 {
         int[][] exampleTwo = {{7,10}, {2,4}};
         assertEquals(2, minMeetingRooms(exampleOne));
         assertEquals(2, minMeetingRooms2(exampleOne));
-        assertEquals(1, minMeetingRooms(exampleOne));
         assertEquals(1, minMeetingRooms(exampleTwo));
+        assertEquals(1, minMeetingRooms2(exampleTwo));
     }
 }
 
