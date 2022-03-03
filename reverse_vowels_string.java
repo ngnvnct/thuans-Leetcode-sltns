@@ -65,8 +65,11 @@ public class reverse_vowels_string {
 }
 
 
-/*abstract
+/*
 Explanation
 
+Make a set, or a string of vowels, then check at each index. Use two pointers approarch to swap, only swap if both char at left and right are vowels, else move left or right
 
+Time: O(n)
+Space: O(10)
 */
