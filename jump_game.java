@@ -5,7 +5,7 @@ import org.junit.Test;
 public class jump_game {
     public boolean canJump(int[] nums) {
         int goal = nums.length-1;
-        for (int i = nums.length-1; i >= 0; i--) {
+        for (int i = nums.length-2; i >= 0; i--) {
             if (nums[i] + i >= goal) {
                 goal = i;
             }
@@ -32,6 +32,10 @@ public class jump_game {
         int[] exampleTwo = {3,2,1,0,4};
         assertEquals(false, canJump(exampleTwo));
         assertEquals(false,canJumpTwo(exampleTwo));
+
+        int[] exampleThree = {2,0,0};
+        assertEquals(true, canJump(exampleThree));
+        assertEquals(true,canJumpTwo(exampleThree));
     }
 }
 
