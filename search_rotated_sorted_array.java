@@ -103,6 +103,17 @@ Explanation
 In this example, nums[mid] = 7, then we check if nums[left] <= nums[mid], if it is then we are searching the left portion
 if target is bigger than or equal to nums[left], and smaller than mid, meaning we don't care about the right portion, we shrink the window
 
+Search 2, If nums[mid] == target, the job is done, return mid
+Pivot element is larger than the first element in the array, i.e. the subarray from the first element to the pivot is non-rotated, as shown in the following graph.
+If the target is located in the non-rotated subarray:
+  go left: `right = mid - 1`.
+  else go right left = mid + 1
+Pivot element is smaller than the first element of the array, i.e. the rotation index is somewhere between 0 and mid. 
+It implies that the sub-array from the pivot element to the last one is non-rotated, as shown in the following graph.
+  - If the target is located in the non-rotated subarray:
+  go right: `start = mid + 1`.
+
+  - Otherwise: go left: `end = mid - 1`.
 Time: O(log n)
 Space: O(1)
 */
