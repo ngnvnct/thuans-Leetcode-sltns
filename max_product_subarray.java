@@ -82,7 +82,7 @@ Case1 :- All the elements are positive : Then your answer will be product of all
 Case2 :- Array have positive and negative elements both :
 If the number of negative elements is even then again your answer will be complete array because on multiplying all the negative numbers it will become positive.
 If the number of negative elements is odd then you have to remove just one negative element and for that u need to check your subarrays to get the max product.
-Case3 :- Array also contains 0. We just make the currMin and currMax equals 0
+Case3 :- Array also contains 0. We just make the currMin and currMax equals 1, because we might have to make a new subarray after 0 
 
 Use temp to re-use the old currMax value
 
