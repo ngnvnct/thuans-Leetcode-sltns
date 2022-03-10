@@ -37,4 +37,6 @@ Explanation
 Anagram = two words that can be rearrange and be the same. We can sort all the words and group them together. We have a map that contains the sorted word (key).
 After we sort it, we need to pass it back as a string. If nothing is being map yet, we need to add a new array list. 
 
+Time: O(nlogn)
+Space: O(n)
 */

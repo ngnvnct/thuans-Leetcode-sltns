@@ -58,5 +58,4 @@ Bottom up DP Problem. It is just House Robber 1 and we call it twice, 1 going fr
 
 Time: O(n)
 Space: O(n) or O(1)
-
 */

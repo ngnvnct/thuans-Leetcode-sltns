@@ -55,6 +55,6 @@ then we want to loop through the grid row and columns, and if we encounter a 1, 
 In our DFS call, we want to have a constraint check, if it is out of bound or we encounter a 0, we want to return 1
 else, we mark each visited 0 with a -1 so we don't revisit it again, then we call the dfs stack going down, up, to the left and to the right, trying to get to the base case, and add it to our perimeter
 
-Time: O(n)
-Space: O(mn)
+Time: O(MN)
+Space: O(1)
 */

@@ -34,5 +34,8 @@ public class buy_sell_stock_i {
 
 /*
 Explanation:
-Using Kadane's Algorithm to keep track of the largest sum array to get the most profit. 
+Using Kadane's Algorithm to keep track of the largest sum array to get the most profit.
+
+Time: O(n)
+Space: O(1)
 */

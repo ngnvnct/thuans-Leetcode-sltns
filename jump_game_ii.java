@@ -48,5 +48,6 @@ Jump1 is also a greedy BFS solution, the level tells how many step you need to r
 Jump2 is a bfs solution, i == curEnd means I visited all the items on the current level, increment res++ is like incrementing the level you are on. currEnd = currFarthest is getting queue size
 for the next level I am traversing
 
-
+Time: O(n)
+Space: O(1)
 */

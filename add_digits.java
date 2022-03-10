@@ -38,5 +38,4 @@ Digit Root Math way, use a formula
 
 Time: O(n) or O(1)
 Space: O(1)
-
 */

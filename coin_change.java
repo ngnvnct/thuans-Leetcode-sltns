@@ -39,5 +39,4 @@ Bottom-Up Dynamic Programming apporach. Build up an array of DP and solve the su
 
 Time: O(n * m) where n is the amount and m is the array of coins
 Space: O(n) where n is the amount;
-
 */
