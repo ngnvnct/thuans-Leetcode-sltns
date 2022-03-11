@@ -1,7 +1,3 @@
-import static org.junit.Assert.assertEquals;
-
-import org.junit.Test;
-
 public class angle_between_hands_clock {
     public static void main(String[] args) {
         angle_between_hands_clock Solution = new angle_between_hands_clock();
