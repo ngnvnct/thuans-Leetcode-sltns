@@ -84,8 +84,8 @@ public class reformat_date {
         StringBuilder sb = new StringBuilder();
         String[] months = new String[]{"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
         Map<String, String> map = new HashMap<>();
-        for (int i = 0; i < months.length; ++i) {
-            map.put(months[i], (i + 1 < 10 ? "0" : "") + (i+1));    
+        for (int i = 1; i <= 12; ++i) {
+            map.put(months[i-1], (i < 10 ? "0" : "") + (i));    
         }
                 
         sb.append(split[2]);
