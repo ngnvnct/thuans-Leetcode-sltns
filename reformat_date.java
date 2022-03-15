@@ -100,8 +100,8 @@ public class reformat_date {
         return sb.toString();
     }
 
-    private String getMonth(String s) {
-        switch(s) {
+    private String getMonth(String month) {
+        switch(month) {
             case "Jan": return "01";
             case "Feb": return "02";
             case "Mar": return "03";
