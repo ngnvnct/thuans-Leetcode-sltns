@@ -6,6 +6,10 @@ import org.junit.Test;
 
 public class valid_parentheses {
     public boolean isValid(String s) {
+        if (s.length() % 2 == 1) {
+            return false;
+        }
+
         Stack<Character> stack = new Stack<>();
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
@@ -59,6 +63,8 @@ Explanation
 A simple stack problem, if it is (,[ or { then push it onto the stack. Then if it is ), ], } peek the stack and if they match then pop it out. Finally, see if the stack is empty
 
 Method 2: if you see (, [, { push these onto the stack },],) then pop them and check it with the current to see if it matches
+
+You can just exist early if the length of the string is odd
 
 Time: O(n) 
 Space: O(n)

@@ -20,12 +20,33 @@ public class container_with_most_water {
         return res;
     }
 
+    public int maxArea2(int[] height) {
+        int left = 0;
+        int right = height.length-1;
+        int area = 0;
+        while (left < right) {
+            int containerWidth = right-left;
+            if (height[left] < height[right]) {
+                area = Math.max(area, height[left] * containerWidth);
+                left++;
+            } else {
+                area = Math.max(area, height[right] * containerWidth);
+                right--;
+            }
+        }
+        return area;
+    }
+
+    
+
     @Test
     public void testMaxArea() {
         int[] exampleOne = {1,8,6,2,5,4,8,3,7};
         int[] exampleTwo = {1,1};
         assertEquals(49, maxArea(exampleOne));
         assertEquals(1, maxArea(exampleTwo));
+        assertEquals(49, maxArea2(exampleOne));
+        assertEquals(1, maxArea2(exampleTwo));
     }
 }
 

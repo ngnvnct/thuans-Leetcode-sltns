@@ -80,8 +80,6 @@ Second loop, going right, fill cell with 1
 dp[i-1][j] cell above
 dp[i][j-1] cell to the left
 
-
-In this problem, we don't really need to compute the factorials separately for both numerator and denominator, 
-we can simplify the binomial coefficients to [(m+n-2)(m+n-3)...n]/(m-1)!, 
-where there are both m-1 multipliers in numerator and denominator, or just use the recurrence relation C(n,k)=C(n,k-1)*(n-k+1)/k
+Time: O(m * n)
+Space: O(m * n)
 */
