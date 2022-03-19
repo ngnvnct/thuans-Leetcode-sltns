@@ -47,7 +47,9 @@ public class extract_string_to_integer {
 
 /*abstract
 Explanation
-Edge case is when there is multiple numbers that appear in a string "67FE2", 
+Edge case is when there is multiple numbers that appear in a string "67FE2" or when the last one is a number
+keep a count variable to continously getting the number, and when it is not a number, you want to add it to the result (using count != 0)
+if the last character is a number, have to do one last check outside to see if it is a number, then add it to the result
 
 Time: O(nm)
 Space: O(1)
