@@ -39,5 +39,4 @@ Using Kadane's Algorithm, we loop through the array once and see if we should ma
 
 Time: O(n)
 Space: O(1)
-
 */

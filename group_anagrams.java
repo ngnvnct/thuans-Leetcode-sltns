@@ -21,6 +21,7 @@ public class group_anagrams {
             char[] c = current.toCharArray();
             Arrays.sort(c);
             String sorted = new String(c);
+            //String sorted = String.valueOf(c);
 
             if (!map.containsKey(sorted)) {
                 map.put(sorted, new ArrayList<>());
@@ -37,6 +38,6 @@ Explanation
 Anagram = two words that can be rearrange and be the same. We can sort all the words and group them together. We have a map that contains the sorted word (key).
 After we sort it, we need to pass it back as a string. If nothing is being map yet, we need to add a new array list. 
 
-Time: O(nlogn)
-Space: O(n)
+Time: O(n klogk) where n is the length of strs, and k is the maximum leng of a string in strs, sorting is k log k
+Space: O(nk), total information content stored in res
 */

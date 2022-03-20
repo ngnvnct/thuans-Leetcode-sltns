@@ -75,6 +75,14 @@ Method 1, replace everything to lowercase and remove space, we only need to chec
 Method 2, using Character.isLetterOrDigit to skip the " " space character
 Method 3, don't have to use char array
 
+A man, a plan, a canal: Panama turn into
+a man, a plan, a canal: Panama
+compare a and a, okay
+space on left, increment, compare m and m
+compare a and a
+.....
+return true
+
 Time: O(n)
 Space: O(1)
 */

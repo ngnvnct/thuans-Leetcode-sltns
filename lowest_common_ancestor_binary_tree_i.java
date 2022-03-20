@@ -73,5 +73,6 @@ From the root's left & right we found both p and q, so the root is the LCA
 Left is not null means from the left's left and right we found both p and q
 so the left is the lca, otherwise it is the right
 
-
+Time: O(n)
+Space: O(n)
 */
