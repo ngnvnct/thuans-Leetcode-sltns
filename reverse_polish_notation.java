@@ -84,6 +84,8 @@ Stack [3, 3]
 We see a "*", we pop 2 numbers out and get the result and push it back onto the stack
 
 Since after the loop our stack will only have 1 variable, we can return stack.peek()
+If you're using Java, note that the input type is an array of strings, not an array of chars. This means that you should be comparing them with .equals(...), not ==.
+
 
 Time: O(n)
 Space: O(n)
