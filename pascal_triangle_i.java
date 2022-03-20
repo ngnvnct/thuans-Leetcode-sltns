@@ -39,6 +39,6 @@ row 3, we add 1 into index 0, row now has [1,1,2,1]. J Loop starts, row.set to r
 row 4, we add 1 into index 0, row now has [1,1,3,3,1]. J Loops start.....
 row 5, we add 1 into index 0, row now has [1,1,4,6,4,1]. J loops start....
 
-Time: O(n)
-Space: O(n)
+Time: O(n ^ 2), outter loops runs numRows times, but for each iteration of the outer loop, the inner loop run rowNum times, Gauss's formula
+Space: O(n ^ 2), we need to store each number that we update in triangle.
 */

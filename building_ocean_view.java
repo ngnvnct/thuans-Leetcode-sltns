@@ -3,8 +3,6 @@ import static org.junit.Assert.assertArrayEquals;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Stack;
-
 import org.junit.Test;
 
 public class building_ocean_view {
