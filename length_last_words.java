@@ -29,6 +29,20 @@ public class length_last_words {
         return count;
     }
 
+    public int lengthOfLastWord3(String s) {
+        int p = s.length();
+        int length = 0;
+        while (p > 0) {
+            p--;
+            if (s.charAt(p) != ' ') {
+                length++;
+            } else if (length > 0) {
+                return length;
+            }
+        }
+        return length;
+    }
+
     @Test
     public void testLength() {
         String one = "Hello World";
@@ -40,6 +54,9 @@ public class length_last_words {
         assertEquals(4,lengthOfLastWord2(two));
         assertEquals(6,lengthOfLastWord(three));
         assertEquals(6,lengthOfLastWord2(three));
+        assertEquals(5,lengthOfLastWord3(one));
+        assertEquals(4,lengthOfLastWord3(two));
+        assertEquals(6,lengthOfLastWord3(three));
     }
 }
 
@@ -47,6 +64,11 @@ public class length_last_words {
 Explanation
 
 Trim trailing white spaces with the first loop (if trim() is not allowed), then just loop until you find the next whitespace
+
+One loop
+"   fly me   to   the moon  "
+we set p equals to the length of the string, and we decrement every time, we have and if and an else if
+if it is not a white space, that means we are in the present of the last word, increment count, if we see a white space and length > 0, we are done, return it
 
 Time: O(n)
 Space: O(1)

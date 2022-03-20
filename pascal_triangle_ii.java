@@ -41,6 +41,6 @@ row 5, we add 1 into index 0, row now has [1,1,4,6,4,1]. J loops start....
 
 at the end we just return res.get(rowIndex) and we get our result
 
-Time: O(n)
-Space: O(n)
+Time: O(n^2)
+Space: O(n^2)
 */
