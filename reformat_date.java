@@ -1,5 +1,9 @@
+import static org.junit.Assert.assertEquals;
+
 import java.util.HashMap;
 import java.util.Map;
+
+import org.junit.Test;
 
 public class reformat_date {
     public String reformatDateBruteForce(String date) {
@@ -11,7 +15,7 @@ public class reformat_date {
         String zero = "0";
         for (int i = index; i < date.length(); i++) {
             if (date.charAt(i) == ' ') {
-                index = i;
+                index = i+1;
                 break;
             } else {
                 if (Character.isDigit(date.charAt(i))) {
@@ -24,58 +28,18 @@ public class reformat_date {
             day = zero;
         }
         
-        for (int i = index+1; i < date.length(); i++) {
+        for (int i = index; i < date.length(); i++) {
             if (date.charAt(i) == ' ') {
-                index = i;
+                index = i+1;
                 break;
             } else {
                 month += date.charAt(i);
             }
         }
-        switch(month) {
-            case "Jan":
-                month = "01";
-                break;
-            case "Feb":
-                month = "02";
-                break;
-            case "Mar":
-                month = "03";
-                break;
-            case "Apr":
-                month = "04";
-                break;
-            case "May":
-                month = "05";
-                break;
-            case "Jun":
-                month = "06";
-                break;
-            case "Jul":
-                month = "07";
-                break;
-            case "Aug":
-                month = "08";
-                break;
-            case "Sep":
-                month = "09";
-                break;
-            case "Oct":
-                month = "10";
-                break;
-            case "Nov":
-                month = "11";
-                break;
-            case "Dec":
-                month = "12";
-                break;
-            default:
-                break;
-        }
-        for (int i = index+1; i < date.length(); i++) {
+        for (int i = index; i < date.length(); i++) {
             year += date.charAt(i);
         }
-        res += year + "-" + month + "-" + day;
+        res += year + "-" + getMonth(month) + "-" + day;
         return res;
     }
 
@@ -98,6 +62,16 @@ public class reformat_date {
             sb.append(date.substring(0,2));
         }
         return sb.toString();
+    }
+
+    public String reformateDateSubstring(String date) {
+        String res = "";
+        if (date.length() == 13) {
+            res = date.substring(9,13) + '-' + getMonth(date.substring(5, 8)) + '-' + date.substring(0,2);
+        } else {
+            res = date.substring(8,12) + '-' + getMonth(date.substring(4, 7)) + '-' + '0' + date.substring(0,1);
+        }
+        return res;
     }
 
     private String getMonth(String month) {
@@ -125,6 +99,29 @@ public class reformat_date {
         String day = reformat[0];
         return year + "-" + getMonth(month) + "-" + (day.length() == 3 ? "0" + day.substring(0,1) : day.substring(0,2));
     }
+
+    @Test
+    public void testDate() {
+        String one = "20th Oct 2052";
+        String two = "6th Jun 1933";
+        String three = "26th May 1960";
+        String expectedOne = "2052-10-20";
+        String expectedTwo = "1933-06-06";
+        String expectedThree = "1960-05-26";
+
+        assertEquals(expectedOne, reformatDate(one));
+        assertEquals(expectedTwo, reformatDate(two));
+        assertEquals(expectedThree,reformatDate(three));
+        assertEquals(expectedOne, reformatDateBruteForce(one));
+        assertEquals(expectedTwo, reformatDateBruteForce(two));
+        assertEquals(expectedThree,reformatDateBruteForce(three));
+        assertEquals(expectedOne, reformatDateMap(one));
+        assertEquals(expectedTwo, reformatDateMap(two));
+        assertEquals(expectedThree,reformatDateMap(three));
+        assertEquals(expectedOne, reformateDateSubstring(one));
+        assertEquals(expectedTwo, reformateDateSubstring(two));
+        assertEquals(expectedThree,reformateDateSubstring(three));
+    }
 }
 
 /*
@@ -132,7 +129,8 @@ Explanation
 
 Classic Dirty Brute Force Way, do 3 loops, and break when you see the first space, then start the next loop at spaceIndex + 1;
 Second one is simlar to the last one, except you use a hash map to store the month
-Last one is the cleanest and easy to read
+Third one is the cleanest and easy to read, and you don't need a hash map
+Fourth one is you only use substring
 
 Since the input is valid, if the day length is 3, that means we need to add a trailing 0 at the beginning, else we can just get the 0 and 1 substring index
 

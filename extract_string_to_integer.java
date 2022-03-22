@@ -15,19 +15,23 @@ public class extract_string_to_integer {
 
     public List<Integer> extract(String[] words) {
         List<Integer> res = new ArrayList<>();
-        int count = 0;
+        int count;
 
         for (String word : words) {
             count = 0;
             for (int i = 0; i < word.length(); i++) {
                 char c = word.charAt(i);
+                
                 if (Character.isDigit(c)) {
                     count = 10 * count + (c - '0');
+                    if (count == 0) {
+                        res.add(count);
+                    }
                 } else {
                     if (count != 0) {
                         res.add(count);
-                        count = 0;
                     }
+                    count = 0;
                 }
             }
             if (count != 0) {
@@ -42,6 +46,10 @@ public class extract_string_to_integer {
         String[] one = {"A2D", "1B", "3F5", "67FE2", "AA"};
         List<Integer> expected = new ArrayList<>(Arrays.asList(2,1,3,5,67,2));
         assertEquals(expected, extract(one));
+
+        String[] two = {"A2D", "1B", "3F5", "60FE2", "A0A"};
+        List<Integer> expectedTwo = new ArrayList<>(Arrays.asList(2,1,3,5,60,2, 0));
+        assertEquals(expectedTwo, extract(two));
     }
 }
 
@@ -50,6 +58,11 @@ Explanation
 Edge case is when there is multiple numbers that appear in a string "67FE2" or when the last one is a number
 keep a count variable to continously getting the number, and when it is not a number, you want to add it to the result (using count != 0)
 if the last character is a number, have to do one last check outside to see if it is a number, then add it to the result
+
+One Edge case that i didn't catch, what if there is only 0 in the string, need the is count equals 0 after the calculation, if it is
+it only contains 0, so add it in the result
+
+One potential follow up is, what if i don't want to contain duplicate, use a set.
 
 Time: O(nm)
 Space: O(1)
