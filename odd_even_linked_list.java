@@ -1,27 +1,5 @@
 public class odd_even_linked_list {
-
-    public static void main(String[] args) {
-        ListNode newList = new ListNode(1);
-        ListNode second = new ListNode(2);
-        ListNode third = new ListNode(3);
-        ListNode four = new ListNode(4);
-        ListNode five = new ListNode(5);
-        newList.next = second;
-        second.next= third;
-        third.next = four;
-        four.next = five;
-
-        odd_even_linked_list sol = new odd_even_linked_list();
-        sol.oddEvenList(newList);
-
-        while (newList != null) {
-            System.out.print(newList.val + " ");
-            newList = newList.next;
-        }
-    }
-
-
-    public ListNode oddEvenList(ListNode head) {
+    public static ListNode oddEvenList(ListNode head) {
         if (head == null) {
             return null;
         }
@@ -42,6 +20,7 @@ public class odd_even_linked_list {
 }
 
 /*
+https://leetcode.com/problems/odd-even-linked-list/
 Explanation
 
 A well-formed LinkedList need two pointers head and tail to support operations at both ends. 
@@ -87,4 +66,6 @@ head = 1 -> 3 -> 5 -> 2 -> 4
 
 Time: O(n)
 Space: O(1)
+
+Write the test case in LinkedListTests.java
 */
