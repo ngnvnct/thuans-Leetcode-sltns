@@ -30,6 +30,7 @@ public class smallest_index_equal_value {
 Explanation
 
 It is as simple as it gets. the first index % 10 == nums[i] is the smallest index
+One thing to is optimize is if the number is greater than 9, we can just skip it
 
 Time: O(n)
 Space: O(1)

@@ -58,7 +58,8 @@ Explanation
 Simulation and Recursive are simple enough.
 
 Counting Bits
-At each step, we either subtract 1 from num, or divide num by 2. Odd number in binary always have a last bit of 1. Subtracting 1 from an odd number changes the last bit from 1 to 0.
+At each step, we either subtract 1 from num, or divide num by 2. Odd number in binary always have a last bit of 1. 
+Subtracting 1 from an odd number changes the last bit from 1 to 0.
 Dividing by 2 removes the last bit from the number.
 The 0's took one step to remove, and the 1's took two steps to remove
 To get our answer, we can add two steps for every 1, and add one step for every 0 for each bit in the binary representation

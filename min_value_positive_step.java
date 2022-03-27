@@ -15,6 +15,16 @@ public class min_value_positive_step {
         return x;
     }
 
+    public int minStartValuePrefix(int[] nums) {
+        int x = 0;
+        int total = 0;
+        for (int num : nums) {
+            total += num;
+            x = Math.min(x, total);
+        }
+        return -x+1;
+    }
+
     @Test
     public void testMinStartValue() {
         int[] exampleOne = {-3,2,-3,4,2};
