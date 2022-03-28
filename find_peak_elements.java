@@ -52,7 +52,7 @@ public class find_peak_elements {
         assertEquals(2, findPeakElementsRecursive(new int[] {1,2,3,1}));
         assertEquals(5, findPeakElementsBinary(new int[] {1,2,1,3,5,6,4}));
         //Your function can return either index number 1 where the peak element is 2, or index number 5 where the peak element is 6.
-        assertEquals(2, findPeakElementsLinear(new int[] {1,2,1,3,5,6,4})); 
+        assertEquals(1, findPeakElementsLinear(new int[] {1,2,1,3,5,6,4})); 
 
         assertEquals(5, findPeakElementsRecursive(new int[] {1,2,1,3,5,6,4}));
         assertEquals(3, findPeakElementsBinary(new int[] {2,3,4,5,1}));

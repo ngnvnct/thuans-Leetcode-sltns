@@ -9,7 +9,7 @@ public class building_ocean_view {
     public static void main(String[] args) {
         int[] one = {4,2,3,1,1};
         building_ocean_view solution = new building_ocean_view();
-        System.out.println(Arrays.toString(solution.findBuildings(one)));
+        //System.out.println(Arrays.toString(solution.findBuildings(one)));
     }
     public int[] findBuildings(int[] heights) {
         List<Integer> temp = new ArrayList<>();
@@ -36,7 +36,7 @@ public class building_ocean_view {
     public void testOcean() {
         assertArrayEquals(new int[] {0,2,3}, findBuildings(new int[] {4,2,3,1}));
         assertArrayEquals(new int[] {0,1,2,3}, findBuildings(new int[] {4,3,2,1}));
-        assertArrayEquals(new int[] {3}, findBuildings(new int[] {1,3,2,1}));
+        assertArrayEquals(new int[] {1,2,3}, findBuildings(new int[] {1,3,2,1}));
     }
 }
 
