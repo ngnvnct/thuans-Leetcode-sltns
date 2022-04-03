@@ -59,3 +59,18 @@ public class two_sum_closest_to_zero {
         assertEquals(-14, twoSumClosestSort(three));
     }
 }
+
+/*abstract
+Explanation
+
+Brute Force: two for loops and check for every two sum target, if the absolute value of minSum is less than currentSum, replace it
+the result array is just if the question is about getting the two target index that has their sum closest to 0
+
+Time: O(n ^2)
+Space: O(1)
+
+Optimmal Way: Sort the array and use two pointers technique, use the same absolute value technique, if sum is negative, move the left pointer, else move the right pointer
+
+Time: O(n log n)
+Space: O(n), some sorting has aux space, else O(1)
+*/
