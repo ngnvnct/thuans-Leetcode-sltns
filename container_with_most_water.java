@@ -3,15 +3,15 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 public class container_with_most_water {
-    public int maxArea(int[] heights) {
+    public int maxArea(int[] height) {
         int left = 0;
-        int right = heights.length-1;
+        int right = height.length-1;
         int res = 0;
         while (left < right) {
             int containerLength = right-left;
-            int area = containerLength * Math.min(heights[left], heights[right]);
+            int area = containerLength * Math.min(height[left], height[right]);
             res = Math.max(res,area);
-            if (heights[left] < heights[right]) {
+            if (height[left] < height[right]) {
                 left++;
             } else {
                 right--;

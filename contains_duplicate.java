@@ -33,7 +33,7 @@ public class contains_duplicate {
 
 /*
 Explanation
-Create a HashSet and add the element to it. As it implements the Set Interface, duplicate values are now allowed.
+Create a HashSet and add the element to it. As it implements the Set Interface, duplicate values are not allowed.
 If an element is a duplicate, it will return true.
 
 Time: O(n), lopping through the Array
