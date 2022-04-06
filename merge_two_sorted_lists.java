@@ -1,10 +1,10 @@
-public class merge_two_sorted_lists {
-    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+public class merge_two_sorted_lists {    
+    public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         ListNode dummy = new ListNode(-1);
         ListNode head = dummy;
 
-        while( l1 != null && l2 != null) {
-            if (l1.val < l2.val) {
+        while (l1 != null && l2 != null) {
+            if (l1.value < l2.value) {
                 dummy.next = l1;
                 l1 = l1.next;
             } else {
@@ -22,7 +22,6 @@ public class merge_two_sorted_lists {
     }
 }
 
-
 /*
 https://leetcode.com/problems/merge-two-sorted-lists/
 Explanation
@@ -34,4 +33,6 @@ if we exhaust a list, another list can have still have some values after it, in 
 
 Time: O(n + m)
 Space: O(1)
+
+Write the test case in LinkedListTests.java
 */
