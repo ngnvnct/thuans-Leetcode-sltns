@@ -30,7 +30,7 @@ public class three_sum_closest {
 
     @Test
     public void testThreeSumClosest() {
-        assertEquals(2, threeSumClosest(new int[] {-1,2,1-4}, 1));
+        assertEquals(-2, threeSumClosest(new int[] {-1,2,1-4}, 1));
     }
 }
 
