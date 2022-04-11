@@ -8,7 +8,7 @@ public class remove_duplicate_sorted {
         }
 
         int insertPos = 0;
-        for (int i = 0; i < nums.length; i++) {
+        for (int i = 1; i < nums.length; i++) {
             if (nums[i] != nums[insertPos]) {
                 nums[++insertPos] = nums[i];
             }
