@@ -13,4 +13,8 @@ public class ListNode {
         this.value = value;
         this.next = null;
     }
+
+    public int getValue() {
+        return this.value;
+    }
 }

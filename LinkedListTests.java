@@ -108,6 +108,12 @@ public class LinkedListTests {
         // 2nd way to test
         ListNode expectedNodes2 = addMany(new ListNode(7), new ArrayList<>(Arrays.asList(0, 8)));
         assertTrue(getNodesInArray(expectedNodes2).equals(getNodesInArray(output)));
+
+        ListNode exampleThree = addMany(new ListNode(9), new ArrayList<>(Arrays.asList(9)));
+        ListNode exampleFour = new ListNode(1);
+        output = add_two_numbers_ll.addTwoNumbers(exampleThree, exampleFour);
+        expectedNodes = new ArrayList<>(Arrays.asList(0, 0, 1));
+        assertTrue(getNodesInArray(output).equals(expectedNodes));
     }
 
     @Test
