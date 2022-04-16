@@ -5,11 +5,12 @@ import java.util.List;
 public class anagram_from_string {
 
     public static void main(String[] args) {
-        String[] word = {"ACT", "TAC", "DOGG", "TCA", "BOB", "JUM"};
+        String[] word = { "ACT", "TAC", "DOGG", "TCA", "BOB", "JUM" };
         anagram_from_string sol = new anagram_from_string();
         System.out.println(sol.findAnagram("CAT", word).toString());
         System.out.println(sol.findAnagramSort("CAT", word).toString());
     }
+
     public List<String> findAnagram(String anagram, String[] words) {
         List<String> res = new ArrayList<>();
         boolean notAnagram = false;
@@ -61,24 +62,29 @@ public class anagram_from_string {
 }
 
 /*
-Explanation
-Keep a boolean flag and use a bucket to keep track of frequency, then loop through the string of array
-clone the bucket at each element, and then compare the word with the number of character in the bucket
-if it is not an anagram, set the flag to be false, and adds it to our result if it is a anagram
-
-clone(), it justs simple allocates new memory space and assigns the objects to it.
-
-If the constraint is both Upper Case and Lower Case
-0-25 is A-Z (65-90)
-
-([,\,],^,-,`)
-(26,27,28,29,30,31)
-91,92,93,94,95,96
-
-32-57 is a-z
-
-if the interview ask for lowercase, then it would be an array of 57
-
-Time: O(nm) where n is length of the array, and m is the maximum length of the string
-Space: O(1)
-*/
+ * Explanation
+ * Keep a boolean flag and use a bucket to keep track of frequency, then loop
+ * through the string of array
+ * clone the bucket at each element, and then compare the word with the number
+ * of character in the bucket
+ * if it is not an anagram, set the flag to be false, and adds it to our result
+ * if it is a anagram
+ * 
+ * clone(), it justs simple allocates new memory space and assigns the objects
+ * to it.
+ * 
+ * If the constraint is both Upper Case and Lower Case
+ * 0-25 is A-Z (65-90)
+ * 
+ * ([,\,],^,-,`)
+ * (26,27,28,29,30,31)
+ * 91,92,93,94,95,96
+ * 
+ * 32-57 is a-z
+ * 
+ * if the interview ask for lowercase, then it would be an array of 57
+ * 
+ * Time: O(nm) where n is length of the array, and m is the maximum length of
+ * the string
+ * Space: O(1)
+ */
