@@ -1,4 +1,5 @@
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
@@ -64,23 +65,27 @@ public class ascending_numbers_in_sentence {
         String example1 = "1 box has 3 blue 4 red 6 green and 12 yellow marbles";
         String example2 = "hello world 5 x 5";
         String example3 = "sunset is at 7 51 pm overnight lows will be in the low 50 and 60 s";
-        assertEquals(true, areNumbersAscending(example1));
-        assertEquals(false, areNumbersAscending(example2));
-        assertEquals(false, areNumbersAscending(example3));
-        assertEquals(true, areNumbersAscending2(example1));
-        assertEquals(false, areNumbersAscending2(example2));
-        assertEquals(false, areNumbersAscending2(example3));
+
+        assertTrue(areNumbersAscending(example1));
+        assertFalse(areNumbersAscending(example2));
+        assertFalse(areNumbersAscending(example3));
+        assertTrue(areNumbersAscending2(example1));
+        assertFalse(areNumbersAscending2(example2));
+        assertFalse(areNumbersAscending2(example3));
     }
 }
 
 /*
-Explanation
-Multiple ways to do it, tokenization or just loop through the string normally, and get the num using our favorite formular
-num = num * 10 + (currentChar - '0');
-
-then check with the previous, if it is smaller or equal to previousNum, return false, else make previousNum becomes currentNum
-return true when the loop terminate
-
-Time: O(n)
-Space: O(1) not counting input string
-*/
+ * https://leetcode.com/problems/check-if-numbers-are-ascending-in-a-sentence/
+ * Explanation
+ * Multiple ways to do it, tokenization or just loop through the string
+ * normally, and get the num using our favorite formular
+ * num = num * 10 + (currentChar - '0');
+ * 
+ * then check with the previous, if it is smaller or equal to previousNum,
+ * return false, else make previousNum becomes currentNum
+ * return true when the loop terminate
+ * 
+ * Time: O(n)
+ * Space: O(1) not counting input string
+ */
