@@ -1,8 +1,30 @@
 import static org.junit.Assert.assertEquals;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
+
 import org.junit.Test;
 
 public class min_add_to_make_parenthesis_valid {
+
+    public int minAddToMakeValidStack(String s) {
+        Deque<Character> stack = new ArrayDeque<>();
+        int count = 0;
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+
+            if (c == '(') {
+                stack.addFirst(c);
+            } else if (c == ')' && stack.isEmpty()) {
+                ++count;
+            } else {
+                stack.pop();
+            }
+        }
+        return count + stack.size();
+    }
+
+
     public int minAddToMakeValid(String s) {
         int needLeft = 0;
         int needRight = 0;

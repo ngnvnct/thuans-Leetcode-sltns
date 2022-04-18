@@ -1,7 +1,9 @@
 import static org.junit.Assert.assertArrayEquals;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Deque;
 import java.util.List;
 import org.junit.Test;
 
@@ -9,34 +11,52 @@ public class building_ocean_view {
     public static void main(String[] args) {
         int[] one = {4,2,3,1,1};
         building_ocean_view solution = new building_ocean_view();
-        //System.out.println(Arrays.toString(solution.findBuildings(one)));
+        System.out.println(Arrays.toString(solution.findBuildings(one)));
     }
     public int[] findBuildings(int[] heights) {
         List<Integer> temp = new ArrayList<>();
-        //Stack<Integer> stack = new Stack<>();
         int maxHeight = -1;
         for (int i = heights.length - 1; i >= 0; i--) {
             if (maxHeight < heights[i]) {
                 temp.add(i);
-                //stack.add(i);
                 maxHeight = heights[i];
             }
         }
-        System.out.println("Number of buildings that have an ocean view " + temp.size());
 
         int[] res = new int[temp.size()];
         for (int i = 0; i < temp.size(); i++) {
             res[i] = temp.get(temp.size()-1-i);
-            //res[i] = stack.pop();
         }
         return res;
     }
+
+    public int[] findBuildingsStack(int[] heights) {
+        Deque<Integer> stack = new ArrayDeque<>();
+        int maxHeight = -1;
+        for (int i = heights.length-1; i >= 0; i--) {
+            if (heights[i] > maxHeight) {
+                stack.addFirst(i);
+                maxHeight = heights[i];
+            }
+        }
+
+        int[] res = new int[stack.size()];
+        for (int i = 0; i < res.length; i++) {
+            res[i] = stack.removeFirst();
+        }
+        return res;
+    }
+
+
 
     @Test
     public void testOcean() {
         assertArrayEquals(new int[] {0,2,3}, findBuildings(new int[] {4,2,3,1}));
         assertArrayEquals(new int[] {0,1,2,3}, findBuildings(new int[] {4,3,2,1}));
         assertArrayEquals(new int[] {1,2,3}, findBuildings(new int[] {1,3,2,1}));
+        assertArrayEquals(new int[] {0,2,3}, findBuildingsStack(new int[] {4,2,3,1}));
+        assertArrayEquals(new int[] {0,1,2,3}, findBuildingsStack(new int[] {4,3,2,1}));
+        assertArrayEquals(new int[] {1,2,3}, findBuildingsStack(new int[] {1,3,2,1}));
     }
 }
 
