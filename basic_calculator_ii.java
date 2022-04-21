@@ -1,42 +1,47 @@
 import static org.junit.Assert.assertEquals;
 
-import java.util.Stack;
-
+import java.util.ArrayDeque;
+import java.util.Deque;
 import org.junit.Test;
 
 public class basic_calculator_ii {
     public int calculate(String s) {
-        if (s == null || s.length() == 0) {
+        if (s== null || s.length() == 0) {
             return 0;
         }
-        Stack<Integer> stack = new Stack<>();
+        Deque<Integer> stack = new ArrayDeque<>();
         char operation = '+';
         int currentNum = 0;
         int len = s.length();
-        for (int i = 0; i < len; i++) {
+        
+        for (int i = 0; i < s.length(); i++) {
             char currentChar = s.charAt(i);
             if (Character.isDigit(currentChar)) {
-                currentNum = (currentNum * 10) + (currentChar - '0');
+                currentNum = 10 * currentNum + (currentChar -'0');
             }
-            if (!Character.isDigit(currentChar) && currentChar != ' ' || i == len - 1) {
-                if (operation == '+') {
-                    stack.push(currentNum);
-                } else if (operation == '-') {
-                    stack.push(-currentNum);
-                } else if (operation == '*') {
-                    stack.push(stack.pop() * currentNum);
-                } else if (operation == '/') {
-                    stack.push(stack.pop() / currentNum);
+            if (!Character.isDigit(currentChar) && currentChar != ' ' || i == len-1) {
+                switch (operation) {
+                    case '+':
+                        stack.addFirst(currentNum);
+                        break;
+                    case '-':
+                        stack.addFirst(-currentNum);
+                        break;
+                    case '*':
+                        stack.addFirst(stack.removeFirst() * currentNum);
+                        break;
+                    case '/':
+                        stack.addFirst(stack.removeFirst() / currentNum);
+                        break;
                 }
                 operation = currentChar;
                 currentNum = 0;
             }
         }
-        int res = 0;
         while (!stack.isEmpty()) {
-            res += stack.pop();
+            currentNum += stack.removeFirst();
         }
-        return res;
+        return currentNum;
     }
 
     public int calculateOptimal(String s) {
