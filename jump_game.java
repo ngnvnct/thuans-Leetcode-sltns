@@ -1,11 +1,12 @@
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
 public class jump_game {
     public boolean canJump(int[] nums) {
-        int goal = nums.length-1;
-        for (int i = nums.length-2; i >= 0; i--) {
+        int goal = nums.length - 1;
+        for (int i = nums.length - 2; i >= 0; i--) {
             if (nums[i] + i >= goal) {
                 goal = i;
             }
@@ -15,7 +16,7 @@ public class jump_game {
 
     public boolean canJumpTwo(int[] nums) {
         int reachable = 0;
-        for (int i =0; i < nums.length; i++) {
+        for (int i = 0; i < nums.length; i++) {
             if (i > reachable) {
                 return false;
             }
@@ -26,24 +27,27 @@ public class jump_game {
 
     @Test
     public void testJumpGame() {
-        int[] exampleOne = {2,3,1,1,4};
-        assertEquals(true, canJump(exampleOne));
-        assertEquals(true, canJumpTwo(exampleOne));
-        int[] exampleTwo = {3,2,1,0,4};
-        assertEquals(false, canJump(exampleTwo));
-        assertEquals(false,canJumpTwo(exampleTwo));
+        int[] exampleOne = { 2, 3, 1, 1, 4 };
+        assertTrue(canJump(exampleOne));
+        assertTrue(canJumpTwo(exampleOne));
+        int[] exampleTwo = { 3, 2, 1, 0, 4 };
+        assertFalse(canJump(exampleTwo));
+        assertFalse(canJumpTwo(exampleTwo));
 
-        int[] exampleThree = {2,0,0};
-        assertEquals(true, canJump(exampleThree));
-        assertEquals(true,canJumpTwo(exampleThree));
+        int[] exampleThree = { 2, 0, 0 };
+        assertTrue(canJump(exampleThree));
+        assertTrue(canJumpTwo(exampleThree));
     }
 }
 
 /*
-Explanation
-Greedy solution, we have a goal post, and we start at the end. We check and see if from the previous position, can we go to the goal post
-Then we move the goalpost to the previous position, and eventually goal will become 0
-
-Time: O(n)
-Space: O(1)
-*/
+ * https://leetcode.com/problems/jump-game/
+ * Explanation
+ * Greedy solution, we have a goal post, and we start at the end. We check and
+ * see if from the previous position, can we go to the goal post
+ * Then we move the goalpost to the previous position, and eventually goal will
+ * become 0
+ * 
+ * Time: O(n)
+ * Space: O(1)
+ */
