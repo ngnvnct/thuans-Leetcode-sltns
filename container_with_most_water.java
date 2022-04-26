@@ -37,7 +37,15 @@ public class container_with_most_water {
         return area;
     }
 
-    
+    public int maxAreaBF(int[] height) {
+        int maxArea = 0;
+        for (int left = 0; left < height.length; left++) {
+            for (int right = left+1; right < height.length; right++) {
+                maxArea = Math.max(maxArea, Math.min(height[left], height[right]) * (right-left));
+            }
+        }
+        return maxArea;
+    }
 
     @Test
     public void testMaxArea() {
@@ -47,6 +55,8 @@ public class container_with_most_water {
         assertEquals(1, maxArea(exampleTwo));
         assertEquals(49, maxArea2(exampleOne));
         assertEquals(1, maxArea2(exampleTwo));
+        assertEquals(49, maxAreaBF(exampleOne));
+        assertEquals(1, maxAreaBF(exampleTwo));
     }
 }
 
@@ -55,6 +65,9 @@ Explanation
 Using two pointers approach. We take the length of the right and left pointer, and multiply it by the minimum value of the height at left and the height at right, since the minimum value
 determines how much water we can hold. If the height at left is smaller than right, we move the left for a potential bigger height. If the left point and the right pointer have equal value,
 we can move either of them, it doesn't matter.
+
+Brute Force : Consider every single case of area
+Time: O(n^2), Space: O(1)
 
 Time: O(n)
 Space: O(1)
