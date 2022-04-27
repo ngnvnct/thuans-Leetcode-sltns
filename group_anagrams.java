@@ -95,6 +95,8 @@ Optimal
 Two strings are anagram if they have the same character counts. So we can transform the string into a hash of 26 non-negative integers counts, represent the number of a,b,c
 similar to valid anagram, you can use arrays as a key, or turn it into a String hash ("#2#1#0....#0"), 2 a, 1 b, 0 c ....
 
+Do not use array as a key because HashMap uses equals to compare, and it will compare array if they have the same object
+
 Time: O(nk) where n is the length of the strs, and k is the maximum length of a string in strs
 Space: O(nk)
 */

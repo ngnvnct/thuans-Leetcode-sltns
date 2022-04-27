@@ -87,10 +87,9 @@ public class three_sum {
         }
         return res;
     }
-
 }
 
-/*abstract
+/*
 Explanation
 Sort the array, iterate through the list and use another two pointers (two sum) to apporach the target
 
@@ -101,4 +100,6 @@ We only have to update one pointer, and the conditions above will update the oth
 
 Time: O(n^2)
 Space: O(1) or O(n) depend on sort library
+
+Follow Up: No Sort, very annoying, do later
 */
