@@ -9,7 +9,7 @@ import java.util.Stack;
 import org.junit.Test;
 
 public class valid_parentheses {
-    public boolean isValid(String s) {
+    public boolean isValidStack(String s) {
         if (s.length() % 2 == 1) {
             return false;
         }
@@ -33,24 +33,7 @@ public class valid_parentheses {
         return stack.isEmpty();
     }
 
-    public boolean isValid2(String s) {
-        Stack<Character> stack = new Stack<>();
-        for (int i = 0; i < s.length(); i++) {
-            char c = s.charAt(i);
-            if (c == '(') {
-                stack.push(')');
-            } else if (c == '{') {
-                stack.push('}');
-            } else if (c == '[') {
-                stack.push(']');
-            } else if (stack.isEmpty() || stack.pop() != c) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    public boolean isValid3(String s) {
+    public boolean isValidDeque(String s) {
         Deque<Character> stack = new ArrayDeque<>();
         
         for (int i = 0; i < s.length(); i++) {
@@ -68,7 +51,7 @@ public class valid_parentheses {
         return stack.isEmpty();
     }
 
-    public boolean isValid4(String s) {
+    public boolean isValidOptimal(String s) {
         Deque<Character> stack = new ArrayDeque<>();
         Map<Character, Character> map = new HashMap<>();
         map.put('(', ')');
@@ -77,32 +60,33 @@ public class valid_parentheses {
         
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
-            if (map.containsKey(c)) {
-                stack.addFirst(map.get(c));
-            } else {
-                if (stack.isEmpty() || stack.removeFirst() != c) {
-                    return false;
-                }
-                
-            }
+			if (map.containsKey(c)) {
+				stack.addFirst(map.get(c));
+			} else if (map.containsValue(c)) {
+				if (stack.isEmpty() || stack.removeFirst() != c) {
+					return false;
+				}
+			}
         }
         return stack.isEmpty();
     }
 
     @Test
     public void testParentheses() {
-        assertEquals(true, isValid("(){}[]"));
-        assertEquals(true, isValid("()"));
-        assertEquals(false, isValid("(]"));
-        assertEquals(true, isValid2("(){}[]"));
-        assertEquals(true, isValid2("()"));
-        assertEquals(false, isValid2("(]"));
-        assertEquals(true, isValid3("(){}[]"));
-        assertEquals(true, isValid3("()"));
-        assertEquals(false, isValid3("(]"));
-        assertEquals(true, isValid4("(){}[]"));
-        assertEquals(true, isValid4("()"));
-        assertEquals(false, isValid4("(]"));
+        assertEquals(true, isValidStack("(){}[]"));
+        assertEquals(true, isValidStack("()"));
+        assertEquals(false, isValidStack("(]"));
+        assertEquals(true, isValidDeque("(){}[]"));
+        assertEquals(true, isValidDeque("()"));
+        assertEquals(false, isValidDeque("(]"));
+        assertEquals(true, isValidOptimal("(){}[]"));
+        assertEquals(true, isValidOptimal("()"));
+        assertEquals(false, isValidOptimal("(]"));
+        assertEquals(true, isValidOptimal("(a)"));
+        assertEquals(true, isValidOptimal("(141[])(){waga}((51afaw))()hh()"));
+        assertEquals(true, isValidOptimal("(()agwg())((()agwga()())gawgwgag)"));
+        assertEquals(true, isValidOptimal("(agwgg)([ghhheah%&@Q])"));
+
     }
 }
 
@@ -121,6 +105,9 @@ Space: O(n)
 For Java: Using Stack shows that you're not as familiar with language as the interviewer probably wants you to be.
 Stack is a rather old collection that extends Vector, has performance issues due to each method in it being synchronized, 
 and violates some best practices around interfaces, so it is considered legacy nowadays.
+
+
+The most optimal way is using a hashmap, because the other two does not account for each that contains Characters, Numbers or Special Symbols
 
 https://docs.oracle.com/javase/7/docs/api/java/util/Deque.html
 Use Deque instead https://docs.oracle.com/javase/7/docs/api/java/util/Deque.html
