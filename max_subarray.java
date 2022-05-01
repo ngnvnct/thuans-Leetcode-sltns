@@ -20,15 +20,12 @@ public class max_subarray {
     @Test
     public void testMaxSubarray() {
         int[] exampleOne = new int[] {-2,2,5,-11,6};
-        assertEquals(7, maxSubArray(exampleOne));
-
         int[] exampleTwo = new int[] {-2,1,-3,4,-1,2,1,-5,4};
-        assertEquals(6, maxSubArray(exampleTwo));
-
         int[] exampleThree = new int[] {1};
-        assertEquals(1, maxSubArray(exampleThree));
-
         int[] exampleFour = new int[] {5,4,-1,7,8};
+        assertEquals(7, maxSubArray(exampleOne));
+        assertEquals(6, maxSubArray(exampleTwo));
+        assertEquals(1, maxSubArray(exampleThree));
         assertEquals(23, maxSubArray(exampleFour));
     }
 }

@@ -86,7 +86,6 @@ public class valid_parentheses {
         assertEquals(true, isValidOptimal("(141[])(){waga}((51afaw))()hh()"));
         assertEquals(true, isValidOptimal("(()agwg())((()agwga()())gawgwgag)"));
         assertEquals(true, isValidOptimal("(agwgg)([ghhheah%&@Q])"));
-
     }
 }
 
@@ -105,7 +104,6 @@ Space: O(n)
 For Java: Using Stack shows that you're not as familiar with language as the interviewer probably wants you to be.
 Stack is a rather old collection that extends Vector, has performance issues due to each method in it being synchronized, 
 and violates some best practices around interfaces, so it is considered legacy nowadays.
-
 
 The most optimal way is using a hashmap, because the other two does not account for each that contains Characters, Numbers or Special Symbols
 
