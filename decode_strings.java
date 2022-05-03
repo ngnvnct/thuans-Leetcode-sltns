@@ -1,4 +1,10 @@
+import static org.junit.Assert.assertEquals;
+
+import java.util.ArrayDeque;
+import java.util.Deque;
 import java.util.Stack;
+
+import org.junit.Test;
 
 public class decode_strings {
     private int position = 0;
@@ -64,10 +70,55 @@ public class decode_strings {
         }
         return res;
     }
+
+    public String decodeStringDeque(String s) {
+        Deque<Integer> countStack = new ArrayDeque<>();
+        Deque<StringBuilder> stringStack = new ArrayDeque<>();
+        int index = 0;
+        StringBuilder currString = new StringBuilder();
+        int count = 0;
+        while (index < s.length()) {
+            if (Character.isDigit(s.charAt(index))) {
+                count = 10 * count + (s.charAt(index) - '0');
+            } else if (s.charAt(index) == '[') {
+                countStack.addFirst(count);
+                stringStack.addFirst(currString);
+                currString = new StringBuilder();
+                count = 0;
+            } else if (s.charAt(index) == ']') {
+                StringBuilder decodedString = stringStack.removeFirst();
+                int k = countStack.removeFirst();
+                for (int i = 0; i < k; i++) {
+                    decodedString.append(currString);
+                }
+                currString = decodedString;
+            } else {
+                currString.append(s.charAt(index));
+            }
+            index++;
+        }
+        return currString.toString();
+    }
+
+    @Test
+    public void testDecodeString() {
+        String one = "3[a]2[bc]";
+        String expectedOne = "aaabcbc";
+        String two = "3[a2[c]]";
+        String expectedTwo = "accaccacc";
+        String three = "2[abc]3[cd]ef";
+        String expectedThree = "abcabccdcdcdef";
+
+        assertEquals(expectedOne, decodeStringDeque(one));
+        assertEquals(expectedOne, decodeStringStack(one));
+        assertEquals(expectedTwo, decodeStringDeque(two));
+        assertEquals(expectedTwo, decodeStringStack(two));
+        assertEquals(expectedThree, decodeStringDeque(three));
+        assertEquals(expectedThree, decodeStringStack(three));
+    }
 }
 
-
-/*abstract
+/*
 Explanation
 
 54[ab6[cd]]
@@ -79,11 +130,9 @@ Then we get to the 2nd ], we pop everything until we get to [, then we get to th
 54[a, b,cdcdcdcdcdced]
 now multiple 54 by the string inside
 
-
 Stack Solution
 We see 4 cases
 a number, a letter or the two brackets. We have two stacks, one to keep track of the number (count), and the other keep track of the string
-
 
 Recursive DFS Solution
 For the string in [] pair, we can recursively as the source string, the codes go into lower level at '[', and back to parent at ']'
