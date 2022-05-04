@@ -2,6 +2,7 @@ import static org.junit.Assert.assertArrayEquals;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
 import org.junit.Test;
@@ -34,6 +35,22 @@ public class merge_interval {
 		return res.toArray(new int[res.size()][2]);
     }
 
+	public int[][] merge2(int[][] intervals) {
+		if (intervals == null || intervals.length == 0) {
+			return new int[][] {};
+		}
+		Arrays.sort(intervals, (a, b) -> Integer.compare(a[0], b[0]));
+		LinkedList<int[]> merged = new LinkedList<>();
+		for (int[] interval : intervals) {
+			if (merged.isEmpty() || merged.getLast()[1] < interval[0]) {
+				merged.add(interval);
+			} else {
+				merged.getLast()[1] = Math.max(merged.getLast()[1], interval[1]);
+			}
+		}
+		return merged.toArray((new int[merged.size()][]));
+	}
+
 	@Test
 	public void testMergeInterval() {
 		int[][] exampleOne = new int[][]{{1,3}, {2,6}, {8,10}, {15,18}};
@@ -42,6 +59,8 @@ public class merge_interval {
 		int[][] expectedTwo = new int[][]{{1,5}};
 		assertArrayEquals(expectedOne, merge(exampleOne));
 		assertArrayEquals(expectedTwo, merge(exampleTwo));
+		assertArrayEquals(expectedOne, merge2(exampleOne));
+		assertArrayEquals(expectedTwo, merge2(exampleTwo));
 	}
 }
 
@@ -58,6 +77,10 @@ Compare currEnd and nextStart
 Merge [1,6],  [8,10], [15,18]
 
 current[1] = Math.max(currEnd, nextEnd); Any instance of the class ArrayList is mutable. Its elements can be modified
+
+Linked List is a part of the Collection framework present in java.util package. 
+This class is an implementation of the LinkedList data structure which is a linear data structure where the elements are not stored in contiguous locations and every element is a separate object with a data part and. 
+The Java.util.LinkedList.getLast() method is used to fetch or retrieve the last element from a LinkedList or the element present at the tail of the list.
 
 Time: O(nlogn)
 Space: O(n)

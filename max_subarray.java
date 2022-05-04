@@ -30,7 +30,6 @@ public class max_subarray {
     }
 }
 
-
 /*
 Using Kadane's Algorithm, we loop through the array once and see if we should make a newSum or adding it to our currentSum
 
