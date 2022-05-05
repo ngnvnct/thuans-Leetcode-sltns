@@ -1,3 +1,7 @@
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
+
 public class consecutive_characters {
     public int maxPower(String s) {
         int maxLength = 1;
@@ -12,4 +16,19 @@ public class consecutive_characters {
         }
         return Math.max(maxLength, count);
     }
+
+    @Test
+    public void testConsecutive() {
+        assertEquals(2, maxPower("leetcode"));
+        assertEquals(5, maxPower("abbcccddddeeeeedcba"));
+    }
 }
+
+/*
+Explanation
+If they are consecutive, count the character
+When they are not consecutive, get the max and reset the count to 1 (not 0!!)
+
+Time: O(n)
+Space: O(1) if not counting Input string O(n)
+*/
