@@ -5,7 +5,7 @@ public class min_stack {
     private Deque<Integer> stack = new ArrayDeque<>();
     private Deque<Integer> minStack = new ArrayDeque<>();
     
-    public min_stack() { }
+    public min_stack() {}
     
     public void push(int x) {
         stack.addFirst(x);
