@@ -9,35 +9,35 @@ public class to_lower_case {
         for (int i = 0; i < upper.length(); i++) {
             map.put(upper.charAt(i), lower.charAt(i));
         }
-        String res = "";
+        //String res = "";
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < s.length(); i++) {
             if (map.containsKey(s.charAt(i))) {
-                res += map.get(s.charAt(i));
+                //res += map.get(s.charAt(i));
                 sb.append(map.get(s.charAt(i)));
             } else {
-                res += s.charAt(i);
+                //res += s.charAt(i);
                 sb.append(s.charAt(i));
             }
         }
-        return res;
-        //return sb.toString();
+        //return res;
+        return sb.toString();
     }
 
     public String toLowerCase2(String s) {
-        String res = "";
+        //String res = "";
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < s.length(); i++) {
             if ('A' <= s.charAt(i) && s.charAt(i) <= 'Z') {
-                res += (char) (s.charAt(i) - 'A' + 'a');
+                //res += (char) (s.charAt(i) - 'A' + 'a');
                 sb.append((char) (s.charAt(i) - 'A' + 'a'));
             } else {
-                res += s.charAt(i);
+                //res += s.charAt(i);
                 sb.append(s.charAt(i));
             }
         }
-        return res;
-        //return sb.toString();
+        //return res;
+        return sb.toString();
     }
 }
 
@@ -49,6 +49,9 @@ Method 2, using ASCII code method, A to Z is 65 to 90, a to z is 97 to 122. Betw
 if we take a upper case ('H' - 'A' + 'a'), you will get the lower case of h, 72-65 = 7 + 97 = 104 = 'h'
 
 Using sb and res to show it doesn't matter which
+
+Update, StringBuilder is better than concatenation
+In a loop, res will re-create the String object over and over, while StringBuilder will only do it once
 
 Time: O(n)
 Space: O(n) to keep the output string
