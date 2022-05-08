@@ -23,8 +23,6 @@ public class sign_product_array {
                 return 0;
             } else if (num < 0) {
                 product *= -1;
-            } else {
-                product *= 1;
             }
         }
         return product;
@@ -52,3 +50,17 @@ public class sign_product_array {
         assertEquals(-1, arraySignMethod2(new int[] {-1,1,-1,1,-1}));
     }
 }
+
+/*
+Explanation
+
+This question is really easy, but the edge case will kick your ass. Reading the problem, the naive method is calculate the product, and return the correct sign
+The problem with this appoarch is integer overflow
+
+The better approarch is if we encounter a negative, we multiply it by -1, if there is an odd number of negative number, then we get negative, else positive
+
+Another approach is we don't really have to multiply anything, we can just have a variable called sign and set it equal to 1, if we encounter a negative we swap the sign
+
+Time: O(n)
+Space: O(1)
+*/
