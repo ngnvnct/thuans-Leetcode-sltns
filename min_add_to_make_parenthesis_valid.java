@@ -24,7 +24,6 @@ public class min_add_to_make_parenthesis_valid {
         return count + stack.size();
     }
 
-
     public int minAddToMakeValid(String s) {
         int needLeft = 0;
         int needRight = 0;
@@ -53,7 +52,7 @@ public class min_add_to_make_parenthesis_valid {
 /*abstract
 Explanation
 Keep 2 counts variable, if we encounter a "(", we increment needRight
-else if we encoutner a ")", we check if a "(" count is already present, we decrement needRight
+else if we encounter a ")", we check if a "(" count is already present, we decrement needRight
 else we only encounter ")" so far, we have to increment needLeft to match it
 return needLeft + needRight
 
