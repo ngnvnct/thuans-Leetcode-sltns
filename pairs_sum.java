@@ -45,7 +45,7 @@ public class pairs_sum {
     }
 }
 
-/*abstract
+/*
 Explanation
 The brute force way would be storing the sum and then do another pass to check if that pairs of sum add up to 10
 
