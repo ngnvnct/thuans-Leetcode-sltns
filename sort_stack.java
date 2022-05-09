@@ -1,3 +1,5 @@
+import java.util.ArrayDeque;
+import java.util.Deque;
 import java.util.Random;
 import java.util.Stack;
 
@@ -13,31 +15,45 @@ public class sort_stack {
         sort_stack sort = new sort_stack();
         System.out.println("Input stack  " + input);
         System.out.println("Sorted stack " + sort.sortStack(input));
+        //System.out.println("Reverse stack " + sort.sortStackReverse(input));
     }
-    public Stack<Integer> sortStack(Stack<Integer> input) {
-        Stack<Integer> res = new Stack<>();
+    public Deque<Integer> sortStack(Stack<Integer> input) {
+        Deque<Integer> stack = new ArrayDeque<>();
 
         while(!input.isEmpty()) {
             int currElement = input.pop();
 
-            while (!res.isEmpty() && res.peek() > currElement) {
-                input.push(res.pop());
+            while (!stack.isEmpty() && stack.peekLast() > currElement) {
+                input.push(stack.removeLast());
             }
-            res.push(currElement);
+            stack.addLast(currElement);
         }
-        return res;
+        return stack;
+    }
+    public Deque<Integer> sortStackReverse(Stack<Integer> input) {
+        Deque<Integer> stack = new ArrayDeque<>();
+
+        while(!input.isEmpty()) {
+            int currElement = input.pop();
+
+            while (!stack.isEmpty() && stack.peekFirst() > currElement) {
+                input.push(stack.removeFirst());
+            }
+            stack.addFirst(currElement);
+        }
+        return stack;
     }
 }
 
-/*abstract
+/*
 Explanation
 Input stack  [34, 3, 31, 98, 92, 23]
 Output [23, 92, 98]
 
 is 98 > 31, yes
-[34,3,31,98]
+Input [34,3,31,98]
 is 92 > 31, yes
-input [34,3,98,92]
+Input [34,3,98,92]
 Output [23,31]
 
 Next iteration or something
