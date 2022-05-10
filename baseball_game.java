@@ -2,38 +2,10 @@ import static org.junit.Assert.assertEquals;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
-import java.util.Stack;
-
 import org.junit.Test;
 
 public class baseball_game {
-    public int calPoint(String[] ops) {
-        Stack<Integer> stack = new Stack<>();
-
-        for (int i = 0; i < ops.length; i++) {
-            String s = ops[i];
-
-            if (s.equals("C") && !stack.isEmpty()) {
-                stack.pop();
-            } else if (s.equals("D") && !stack.isEmpty()) {
-                stack.push(2*stack.peek());
-            } else if (s.equals("+") && stack.size() >= 2) {
-                int num1 = stack.pop();
-                int sum = stack.peek() + num1;
-                stack.push(num1);
-                stack.push(sum);
-            } else {
-                stack.push(Integer.parseInt(s));
-            }
-        }
-        int total = 0;
-        for (int num : stack) {
-            total += num;
-        }
-        return total;
-    }
-
-    public int calPointsDeque(String[] ops) {
+    public int calPoints(String[] ops) {
         Deque<Integer> stack = new ArrayDeque<>();
         
         for (int i = 0; i < ops.length; i++) {
@@ -91,11 +63,9 @@ public class baseball_game {
         String[] one = {"5","2","C","D","+"};
         String[] two = {"5","-2","4","C","D","9","+","+"};
 
-        assertEquals(30, calPoint(one));
-        assertEquals(30, calPointsDeque(one));
+        assertEquals(30, calPoints(one));
         assertEquals(30, calPointOnePass(one));
-        assertEquals(27, calPoint(two));
-        assertEquals(27, calPointsDeque(two));
+        assertEquals(27, calPoints(two));
         assertEquals(27, calPointOnePass(two));
     }
 }
