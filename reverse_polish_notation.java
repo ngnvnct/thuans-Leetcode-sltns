@@ -1,57 +1,60 @@
 import static org.junit.Assert.assertEquals;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
 import java.util.Stack;
 
 import org.junit.Test;
 
 public class reverse_polish_notation {
     public int evalRPN(String[] tokens) {
-        Stack<Integer> stack = new Stack<>();
-        int num1,num2;
+        Deque<Integer> stack = new ArrayDeque<>();
+        int num1, num2;
+        
         for (String token : tokens) {
             switch(token) {
                 case "+":
-                    stack.push(stack.pop() + stack.pop());
+                    stack.addLast(stack.removeLast() + stack.removeLast());
                     break;
                 case "-":
-                    num1 = stack.pop();
-                    num2 = stack.pop();
-                    stack.push(num2-num1);
+                    num1 = stack.removeLast();
+                    num2 = stack.removeLast();
+                    stack.addLast(num2 - num1);
                     break;
                 case "*":
-                    stack.push(stack.pop() * stack.pop());
+                    stack.addLast(stack.removeLast() * stack.removeLast());
                     break;
                 case "/":
-                    num1 = stack.pop();
-                    num2 = stack.pop();
-                    stack.push(num2 / num1);
+                    num1 = stack.removeLast();
+                    num2 = stack.removeLast();
+                    stack.addLast(num2 / num1);
                     break;
                 default:
-                    stack.push(Integer.parseInt(token));
+                    stack.addLast(Integer.parseInt(token));
                     break;
             }
         }
-        return stack.peek();
+        return stack.peekLast();
     }
 
     public int evalRPN2(String[] tokens) {
-        Stack<Integer> stack = new Stack<>();
+        Deque<Integer> stack = new ArrayDeque<>();
         int num1,num2;
         for (String token : tokens) {
             if (token.equals("+")) {
-                stack.push(stack.pop() + stack.pop());
+                stack.addLast(stack.removeLast() + stack.removeLast());
             } else if (token.equals("-")) {
-                num1 = stack.pop();
-                num2 = stack.pop();
-                stack.push(num2-num1);
+                num1 = stack.removeLast();
+                num2 = stack.removeLast();
+                stack.addLast(num2 - num1);
             } else if (token.equals("*")) {
-                stack.push(stack.pop() * stack.pop());
+                stack.addLast(stack.removeLast() * stack.removeLast());
             } else if (token.equals("/")) {
-                num1 = stack.pop();
-                num2 = stack.pop();
-                stack.push(num2 / num1);
+                num1 = stack.removeLast();
+                num2 = stack.removeLast();
+                stack.addLast(num2 / num1);
             } else {
-                stack.push(Integer.parseInt(token));
+                stack.addLast(Integer.parseInt(token));
             }
         }
         return stack.peek();
@@ -85,7 +88,6 @@ We see a "*", we pop 2 numbers out and get the result and push it back onto the 
 
 Since after the loop our stack will only have 1 variable, we can return stack.peek()
 If you're using Java, note that the input type is an array of strings, not an array of chars. This means that you should be comparing them with .equals(...), not ==.
-
 
 Time: O(n)
 Space: O(n)
