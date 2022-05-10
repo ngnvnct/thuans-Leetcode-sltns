@@ -1,23 +1,24 @@
 import static org.junit.Assert.assertEquals;
 
-import java.util.Stack;
-
+import java.util.ArrayDeque;
+import java.util.Deque;
 import org.junit.Test;
 
 public class reverse_words_in_string {
     public String reverseWords(String s) {
-        Stack<String> stack = new Stack<>();
+        Deque<String> stack = new ArrayDeque<>();
         for (String a : s.trim().split(" ")) {
+            // This is here to learn about JUnit timeout
             //while(!a.isEmpty()) {
             //    stack.push(a);
             //}
             if (!a.isEmpty()) {
-                stack.push(a);
+                stack.addLast(a);
             }
         }
         StringBuilder sb = new StringBuilder();
         while (!stack.isEmpty()) {
-            sb.append(stack.pop());
+            sb.append(stack.removeLast());
             sb.append(" ");
         }
         return sb.toString().trim();
