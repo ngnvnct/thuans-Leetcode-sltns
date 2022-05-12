@@ -1,31 +1,32 @@
-import java.util.Stack;
+import java.util.ArrayDeque;
+import java.util.Deque;
 
 public class implement_queue_using_stacks {
-    Stack<Integer> stack1;
-    Stack<Integer> stack2;
+    Deque<Integer> stack1;
+    Deque<Integer> stack2;
 
     public implement_queue_using_stacks() {
-        this.stack1 = new Stack<>();
-        this.stack2 = new Stack<>();
+        this.stack1 = new ArrayDeque<>();
+        this.stack2 = new ArrayDeque<>();
     }
 
     public void push(int x) {
         while (!stack1.isEmpty()) {
-            stack2.push(stack1.pop());
+            stack2.addFirst(stack1.removeFirst());
         }
-        stack1.push(x);
+        stack1.addFirst(x);
 
         while (!stack2.isEmpty()) {
-            stack1.push(stack2.pop());
+            stack1.addFirst(stack2.removeFirst());
         }
     }
 
     public int pop() {
-        return stack1.pop();
+        return stack1.removeFirst();
     }
 
     public int peek() {
-        return stack1.peek();
+        return stack1.peekFirst();
     }
 
     public boolean empty() {
