@@ -1,19 +1,20 @@
-import java.util.Stack;
+import java.util.Deque;
+import java.util.LinkedList;
 
 public class palindrome_linked_list {
     public boolean isPalindrome(ListNode head) {
-        Stack<Integer> stack = new Stack<>();
+        Deque<Integer> stack = new LinkedList<>();
         ListNode temp = head;
         while (temp != null) {
-            stack.push(temp.val);
+            stack.addFirst(temp.val);
             temp = temp.next;
         }
         while (head != null) {
-            if (stack.pop() != head.val) {
+            if (stack.removeFirst() != head.val) {
                 return false;
             }
             head = head.next;
-        }   
+        }
         return true;
     }
 }

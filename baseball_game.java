@@ -89,4 +89,6 @@ and violates some best practices around interfaces, so it is considered legacy n
 https://docs.oracle.com/javase/7/docs/api/java/util/Deque.html
 Use Deque instead https://docs.oracle.com/javase/7/docs/api/java/util/Deque.html
 
+Time: O(n)
+Space: O(n)
 */
