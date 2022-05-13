@@ -1,7 +1,8 @@
 import static org.junit.Assert.assertArrayEquals;
-import java.util.Arrays;
-import java.util.Stack;
 
+import java.util.ArrayDeque;
+import java.util.Arrays;
+import java.util.Deque;
 import org.junit.Test;
 
 public class final_prices_discount {
@@ -18,12 +19,12 @@ public class final_prices_discount {
     }
 
     public int[] finalPricesStack(int[] prices) {
-        Stack<Integer> stack = new Stack<>();
-        for (int i =0; i< prices.length; i++) {
-            while (!stack.isEmpty() && prices[stack.peek()] >= prices[i]) {
-                prices[stack.pop()] -= prices[i];
+        Deque<Integer> stack = new ArrayDeque<>();
+        for (int i = 0; i < prices.length; i++) {
+            while (!stack.isEmpty() && prices[stack.peekFirst()] >= prices[i]) {
+                prices[stack.removeFirst()] -= prices[i];
             }
-            stack.push(i);
+            stack.addFirst(i);
         }
         System.out.println(Arrays.toString(prices));
         return prices;
@@ -41,8 +42,7 @@ public class final_prices_discount {
     }
 }
 
-
-/*abstract
+/*
 Explanation
 
 Brute Force, simple 2 loops and update this discount price as needed
