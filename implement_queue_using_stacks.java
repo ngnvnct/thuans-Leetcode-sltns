@@ -42,3 +42,14 @@ public class implement_queue_using_stacks {
         System.out.println("Queue is not empty, return false: " + myQueue.empty()); // return false
     }
 }
+
+/*
+Explanation
+Using Deque but only using Stack property otherwise it would be cheating. 
+Stack is First Un Last Out (FILO), and a Queue is First In First Out (FIFO)
+
+Queue is First In First Out, stack is Last In First Out. This means the newest element must be pushed to the bottom of the stack So if a Queue has [1,2] element, and we want to push 3 onto it.
+First we have to tranfser 1 and 2 to an auxilaray stack2.  Then the the element at s2 is pop back and push to stack1.
+
+Push: O(n), Pop O(1)
+*/
