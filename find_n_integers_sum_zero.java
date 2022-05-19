@@ -1,3 +1,7 @@
+import static org.junit.Assert.assertArrayEquals;
+
+import org.junit.Test;
+
 public class find_n_integers_sum_zero {
     public int[] sumZero(int n) {
         int[] res = new int[n];
@@ -23,5 +27,13 @@ public class find_n_integers_sum_zero {
             }
         }
         return res;
+    }
+
+    @Test
+    public void testSum() {
+        assertArrayEquals(new int[] {0,1,-1,2,-2}, sumZero(5));
+        assertArrayEquals(new int[] {0,1,-1}, sumZero(3));
+        assertArrayEquals(new int[] {0}, sumZero(1));
+        assertArrayEquals(new int[] {}, sumZero(0));
     }
 }
