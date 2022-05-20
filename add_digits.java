@@ -31,6 +31,9 @@ public class add_digits {
 }
 
 /*
+https://leetcode.com/problems/add-digits/
+
+Explanation
 Iteration way while n is greater than 9, meaning there are more than one digit, just add them until it becomes 1 digit
 38 mod 10 = 8, 38/10 + 8 = 11
 11 mod 10 = 1, 11/10 + 1 = 2, return 2
