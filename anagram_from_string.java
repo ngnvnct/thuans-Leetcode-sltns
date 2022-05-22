@@ -60,7 +60,7 @@ public class anagram_from_string {
     }
 }
 
-/*abstract
+/*
 Explanation
 Keep a boolean flag and use a bucket to keep track of frequency, then loop through the string of array
 clone the bucket at each element, and then compare the word with the number of character in the bucket
