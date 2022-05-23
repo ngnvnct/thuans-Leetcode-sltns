@@ -1,5 +1,9 @@
+import static org.junit.Assert.assertEquals;
+
 import java.util.Arrays;
 import java.util.PriorityQueue;
+
+import org.junit.Test;
 
 public class apples_basket {
     public int maxNumberOfApples(int[] weight) {
@@ -29,9 +33,18 @@ public class apples_basket {
         }
         return apples;
     }
+
+    @Test
+    public void testApple() {
+        assertEquals(4, maxNumberOfApples(new int[] {100,200,150,1000}));
+        assertEquals(5, maxNumberOfApples(new int[] {900,950,800,1000,700,800}));
+        assertEquals(4, maxNumberOfApplesHeap(new int[] {100,200,150,1000}));
+        assertEquals(5, maxNumberOfApplesHeap(new int[] {900,950,800,1000,700,800}));
+    }
 }
 
-/*abstract
+/*
+https://leetcode.com/problems/how-many-apples-can-you-put-into-the-basket/
 Explanation
 
 Greedy approach, sort the array and take the smallest weight until you reach the max
