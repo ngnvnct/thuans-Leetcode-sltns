@@ -19,6 +19,7 @@ public class longest_palindromic_substring {
         }
         return s.substring(start, end + 1);
     }
+
     private int expandAroundCenter(String s, int left, int right) {
         int L = left, R = right;
         while (L >= 0 && R < s.length() && s.charAt(L) == s.charAt(R)) {
@@ -36,26 +37,30 @@ public class longest_palindromic_substring {
 }
 
 /*
-https://leetcode.com/problems/longest-palindromic-substring/
-Explanation
-
-Brute Force
-babad
-Scan through the entire array
-n to scan through the array, and n^2 for all the substring
-Brute Force Time: O(n^3)
-
-We can start from the middle, and expand outward
-n to scan through the array, and n to expand outward
-O(n^2)
-
-Edge Case, "cbbd", even palindrome
-
-"racecar"
-i = 3 (at "e"), we found our biggest palindrome, how do we get the start window and end window for our substring?
-start = i - (length of the max palindrome -i) / 2, because i is at the middle, current index - max length - 1 (out of bound) divide by 2 to get the first half
-end = i + (length of the max palindrome) / 2, i is at the middle, current index + reslen / 2 to get the second half
-
-Time: O(n^2)
-Space: O(1)
-*/
+ * https://leetcode.com/problems/longest-palindromic-substring/
+ * Explanation
+ * 
+ * Brute Force
+ * babad
+ * Scan through the entire array
+ * n to scan through the array, and n^2 for all the substring
+ * Brute Force Time: O(n^3)
+ * 
+ * We can start from the middle, and expand outward
+ * n to scan through the array, and n to expand outward
+ * O(n^2)
+ * 
+ * Edge Case, "cbbd", even palindrome
+ * 
+ * "racecar"
+ * i = 3 (at "e"), we found our biggest palindrome, how do we get the start
+ * window and end window for our substring?
+ * start = i - (length of the max palindrome -i) / 2, because i is at the
+ * middle, current index - max length - 1 (out of bound) divide by 2 to get the
+ * first half
+ * end = i + (length of the max palindrome) / 2, i is at the middle, current
+ * index + reslen / 2 to get the second half
+ * 
+ * Time: O(n^2)
+ * Space: O(1)
+ */
