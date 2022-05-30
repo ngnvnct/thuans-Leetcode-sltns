@@ -2,10 +2,9 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-public class can_place_flower {
-
+public class Can_Place_Flowers_605 {
     public static void main (String[] args) {
-        can_place_flower Solution = new can_place_flower();
+        Can_Place_Flowers_605 Solution = new Can_Place_Flowers_605();
         int[] exampleOne = {1,0,0,0,1};
         System.out.println(Solution.canPlaceFlowersMethodTwo(exampleOne, 1));
     }
@@ -73,15 +72,13 @@ public class can_place_flower {
         assertEquals(true, canPlaceFlowersMethodTwo(exampleThree, 1));
         assertEquals(true, canPlaceFlowersMethodTwo(exampleFour, 1));
         assertEquals(true, canPlaceFlowersMethodTwo(exampleFive, 1));
-
-
     }
 }
 
 /*
+ * https://leetcode.com/problems/can-place-flowers/
  * Explanation
- * Greedy algorithm. If you can place a flower there, do so, and check for edge
- * case
+ * Greedy algorithm. If you can place a flower there, do so, and check for edge case
  * Edge Case
  * [1,0,1] no
  * [1,0,0,1] no
