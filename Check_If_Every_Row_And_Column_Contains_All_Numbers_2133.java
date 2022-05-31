@@ -6,7 +6,7 @@ import java.util.Set;
 
 import org.junit.Test;
 
-public class check_if_every_row_and_col_contain_all_number {
+public class Check_If_Every_Row_And_Column_Contains_All_Numbers_2133 {
     public boolean checkValid(int[][] matrix) {
         int row = matrix.length;
         int col = matrix[0].length; // it doesn't matter since it is n x 2
