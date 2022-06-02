@@ -29,3 +29,14 @@ public class running_sum {
         assertArrayEquals(new int[] {3,4,6,16,17}, runningSum2(new int[] {3,1,2,10,1}));
     }
 }
+
+/*
+Explanation
+https://leetcode.com/problems/running-sum-of-1d-array/
+
+There is a solution which use the input array and modify it, not ideal. Can start the loop at 0 or 1 it doesn't matter
+For solution 1 there is one extra calculation, other than that pretty obvious.
+
+Time: O(n)
+Space: O(1) if we don't care about output array, O(n) otherwise
+*/
