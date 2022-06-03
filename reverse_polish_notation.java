@@ -2,8 +2,6 @@ import static org.junit.Assert.assertEquals;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
-import java.util.Stack;
-
 import org.junit.Test;
 
 public class reverse_polish_notation {
@@ -75,8 +73,8 @@ public class reverse_polish_notation {
     }
 }
 
-
 /*
+https://leetcode.com/problems/evaluate-reverse-polish-notation/
 Explanation
 
 Since the RPN is valid, we keep a stack and our loop will have 5 cases. 4 operators, and the last case we push our number into the stack

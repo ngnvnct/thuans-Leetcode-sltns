@@ -47,7 +47,8 @@ public class word_search {
     }
 }
 
-/*abstract
+/*
+https://leetcode.com/problems/word-search/
 Explanation
 
 This is a famous backtracking problem. If we see the first word in the word bank, we recursively call dfs on it.
