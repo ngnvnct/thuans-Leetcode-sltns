@@ -5,7 +5,7 @@ public class pascal_triangle_i {
 
     public static void main (String[] args) {
         pascal_triangle_i Solution = new pascal_triangle_i();
-        Solution.generate(6);
+        System.out.println(Solution.generate(6));
     }
     public List<List<Integer>> generate(int numRows) {
         List<List<Integer>> res = new ArrayList<>();
@@ -17,7 +17,7 @@ public class pascal_triangle_i {
                 row.set(j, row.get(j) + row.get(j+1));
             }
             res.add(new ArrayList<>(row));
-            System.out.println("row " + i + " value " + res.get(i)); // keep this line
+            //System.out.println("row " + i + " value " + res.get(i)); // keep this line
         }
         return res;
     }
