@@ -34,7 +34,8 @@ public class valid_palindrome_ii {
     }
 }
 
-/*abstract
+/*
+https://leetcode.com/problems/valid-palindrome-ii/
 Explanation
 
 We want to have a helper function that can perform a palindrome check on our sub string

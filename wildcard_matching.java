@@ -87,8 +87,8 @@ public class wildcard_matching {
     }
 }
 
-
-/*abstract
+/*
+https://leetcode.com/problems/wildcard-matching/
 template: b*b*b*b*a
 query: bbbbbbbbbbbbbbbbba (essentially the idea here is that it has to at least be 'bbbba' but any number of b's will also be valid
 template: b*b*b*b*a
