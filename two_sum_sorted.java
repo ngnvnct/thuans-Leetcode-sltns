@@ -44,6 +44,7 @@ public class two_sum_sorted {
 }
 
 /*
+https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
 Explantion:
 Since the Array is sorted, we can just have a two pointers one at the front and one at the end and shrink the window
 

@@ -27,10 +27,10 @@ public class remove_element {
 }
 
 /*
+https://leetcode.com/problems/remove-element/
 Explanation
 Two Pointers approach, have a pointer starting at index 0, if the current element is not the same as the val, swap the element and increment the pointer
 
 Time: O(n)
 Space: O(1), modifying the input array in-place
-
 */
