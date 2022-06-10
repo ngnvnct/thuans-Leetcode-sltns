@@ -69,7 +69,8 @@ public class unique_paths {
     }
 }
 
-/*abstract
+/*
+https://leetcode.com/problems/unique-paths/
 Explanation
 Using DP bottom up, sub-problem, how many way way starting [0][0] you can move right, and move down. 
 {1,1,1,1,1}
@@ -77,6 +78,7 @@ Using DP bottom up, sub-problem, how many way way starting [0][0] you can move r
 {1,0,0,0,0}
 First loop, going down, fill cell with 1
 Second loop, going right, fill cell with 1
+Third loop, do the calculation
 dp[i-1][j] cell above
 dp[i][j-1] cell to the left
 
