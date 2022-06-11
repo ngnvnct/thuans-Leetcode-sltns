@@ -31,6 +31,7 @@ public class max_subarray {
 }
 
 /*
+https://leetcode.com/problems/maximum-subarray/
 Using Kadane's Algorithm, we loop through the array once and see if we should make a newSum or adding it to our currentSum
 
 Time: O(n)
