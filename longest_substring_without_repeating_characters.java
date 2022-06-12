@@ -39,6 +39,22 @@ public class longest_substring_without_repeating_characters {
         return longestSubstring;
     }
 
+    public int lengthOfLongestSubstring3(String s) {
+        Set<Character> window = new HashSet<>();
+        int start = 0;
+        int end = 0;
+        int max = 0;
+        while (end < s.length()) {
+            if (!window.contains(s.charAt(end))) {
+                window.add(s.charAt(end++));
+                max = Math.max(max, window.size());
+            } else {
+                window.remove(s.charAt(start++));
+            }
+        }
+        return max;
+    }
+
     @Test
     public void testLongestSubstring() {
         String exampleOne = "abcabcbb";
@@ -53,10 +69,15 @@ public class longest_substring_without_repeating_characters {
         assertEquals(1, lengthOfLongestSubstring2(exampleTwo));
         assertEquals(3, lengthOfLongestSubstring2(exampleThree));
         assertEquals(4, lengthOfLongestSubstring2(exampleFour));
+        assertEquals(3, lengthOfLongestSubstring3(exampleOne));
+        assertEquals(1, lengthOfLongestSubstring3(exampleTwo));
+        assertEquals(3, lengthOfLongestSubstring3(exampleThree));
+        assertEquals(4, lengthOfLongestSubstring3(exampleFour));
     }
 }
 
-/*abstract
+/*
+https://leetcode.com/problems/longest-substring-without-repeating-characters/
 Explanation
 Sliding Window technique. "abcabcbb", we start at "a", then go to b and c, on the next a we know that it is in the set, we remove the left most character then move the window to the right, then add a new "a" in
 Then we update the max result
