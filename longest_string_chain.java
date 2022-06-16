@@ -59,7 +59,8 @@ public class longest_string_chain {
 }
 
 
-/*abstract
+/*
+https://leetcode.com/problems/longest-string-chain/
 Explanation
 
 substring syntax: string.substring(int startIndex, int endIndex). startIndex is inclusive and endIndex is exclusive

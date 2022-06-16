@@ -1,3 +1,7 @@
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
+
 public class longest_palindromic_substring {
     public String longestPalindrome(String s) {
         if (s == null || s.length() < 1) {
@@ -23,9 +27,16 @@ public class longest_palindromic_substring {
         }
         return R - L - 1;
     }
+
+    @Test
+    public void testPalindrome() {
+        assertEquals("aba", longestPalindrome("babad"));
+        assertEquals("bb", longestPalindrome("cbbd"));
+    }
 }
 
-/*abstract
+/*
+https://leetcode.com/problems/longest-palindromic-substring/
 Explanation
 
 Brute Force
@@ -39,6 +50,11 @@ n to scan through the array, and n to expand outward
 O(n^2)
 
 Edge Case, "cbbd", even palindrome
+
+"racecar"
+i = 3 (at "e"), we found our biggest palindrome, how do we get the start window and end window for our substring?
+start = i - (length of the max palindrome -i) / 2, because i is at the middle, current index - max length - 1 (out of bound) divide by 2 to get the first half
+end = i + (length of the max palindrome) / 2, i is at the middle, current index + reslen / 2 to get the second half
 
 Time: O(n^2)
 Space: O(1)
