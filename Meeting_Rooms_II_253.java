@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 import org.junit.Test;
 
-public class meeting_room_2 {
+public class Meeting_Rooms_II_253 {
     public int minMeetingRooms(int[][] intervals) {
         if (intervals.length == 0) {
             return 0;
@@ -52,7 +52,7 @@ public class meeting_room_2 {
                 end += 1;
                 count -= 1;
             }
-            requireRoom = Math.max(requireRoom,count);
+            requireRoom = Math.max(requireRoom, count);
         }
         return requireRoom;
     }
@@ -64,8 +64,8 @@ public class meeting_room_2 {
 
     @Test
     public void testMeetingRoom() {
-        int[][] exampleOne = {{0,30}, {5,10}, {15,20}};
-        int[][] exampleTwo = {{7,10}, {2,4}};
+        int[][] exampleOne = { { 0, 30 }, { 5, 10 }, { 15, 20 } };
+        int[][] exampleTwo = { { 7, 10 }, { 2, 4 } };
         assertEquals(2, minMeetingRooms(exampleOne));
         assertEquals(2, minMeetingRooms2(exampleOne));
         assertEquals(1, minMeetingRooms(exampleTwo));
@@ -73,27 +73,36 @@ public class meeting_room_2 {
     }
 }
 
-/*abstract
-Explanation
-
-NeetCode way
-Put start time in a separate array, sort it
-Put end time in a sepearate array, sort it
-Maintain count, 
-
-start = [0,5,10]
-end = [10,15,30]
-Always pick the minimum value, if the minimum between this two is the start time, increment count
-0 < 10, count + 1
-5 < 10, count + 1
-Edge case, meeting is ending at 10, and starting at 10. We visit ending first, if we iterate over ending, it means an ending has end, decrement count
-
-the algorithm is doing is checking how many meetings begin before the earliest-ended meeting ends. 
-If, for instance, 3 meetings have started before the earliest possible meeting end, than we need 3 rooms. 
-Sorting the arrays helps in two things: first of all you can easily get the earliest meetings end time, 
-and secondly, it allows you to start looking for meetings ends only from next element in the ends array when you find some meeting start that is after the current end, 
-because all other meeting ends before the current in the sorted array will also be before the current meeting start
-
-Time: O(nlogn)
-Space: O(1)
-*/
+/*
+ * https://leetcode.com/problems/meeting-rooms-ii/
+ * Explanation
+ * 
+ * NeetCode way
+ * Put start time in a separate array, sort it
+ * Put end time in a sepearate array, sort it
+ * Maintain count
+ * 
+ * start = [0,5,10]
+ * end = [10,15,30]
+ * Always pick the minimum value, if the minimum between this two is the start
+ * time, increment count
+ * 0 < 10, count + 1
+ * 5 < 10, count + 1
+ * Edge case, meeting is ending at 10, and starting at 10. We visit ending
+ * first, if we iterate over ending, it means an ending has end, decrement count
+ * 
+ * the algorithm is doing is checking how many meetings begin before the
+ * earliest-ended meeting ends.
+ * If, for instance, 3 meetings have started before the earliest possible
+ * meeting end, than we need 3 rooms.
+ * Sorting the arrays helps in two things: first of all you can easily get the
+ * earliest meetings end time,
+ * and secondly, it allows you to start looking for meetings ends only from next
+ * element in the ends array when you find some meeting start that is after the
+ * current end,
+ * because all other meeting ends before the current in the sorted array will
+ * also be before the current meeting start
+ * 
+ * Time: O(nlogn)
+ * Space: O(1)
+ */
