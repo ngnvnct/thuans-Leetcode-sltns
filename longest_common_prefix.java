@@ -4,7 +4,7 @@ import org.junit.Test;
 
 public class longest_common_prefix {
     public String longestCommonPrefixHorizontal(String[] words) {
-        if (words.length == 0) {
+        if (words == null || words.length == 0) {
             return "";
         }
         String prefix = words[0];
@@ -49,8 +49,8 @@ public class longest_common_prefix {
     }
 }
 
-
-/*abstract
+/*
+https://leetcode.com/problems/longest-common-prefix/
 Explanation
 
 For horizontal scanning, we  take the first element as our prefix string, and we loop through the string array
