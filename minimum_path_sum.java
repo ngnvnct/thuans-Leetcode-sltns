@@ -52,7 +52,8 @@ public class minimum_path_sum {
     }
 }
 
-/*abstract
+/*
+https://leetcode.com/problems/minimum-path-sum/
 Explanation
 Similar to Unique Path. We filled the left side and down with its sum. Since you can only go left all the way, or down all the way for those column. Then, we loop i and j at 1, and take the minimum value
 either we take the top cell or the cell to the left, finally our dp will contain the minimum path

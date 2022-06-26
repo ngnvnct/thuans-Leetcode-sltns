@@ -34,6 +34,10 @@ public class valid_parentheses {
     }
 
     public boolean isValidDeque(String s) {
+        if (s.length() % 2 == 1) {
+            return false;
+        }
+        
         Deque<Character> stack = new ArrayDeque<>();
         
         for (int i = 0; i < s.length(); i++) {
@@ -52,6 +56,10 @@ public class valid_parentheses {
     }
 
     public boolean isValidOptimal(String s) {
+        if (s.length() % 2 == 1) {
+            return false;
+        }
+
         Deque<Character> stack = new ArrayDeque<>();
         Map<Character, Character> map = new HashMap<>();
         map.put('(', ')');
@@ -71,6 +79,31 @@ public class valid_parentheses {
         return stack.isEmpty();
     }
 
+    public boolean isValidOptimal2(String s) {
+        if (s.length() % 2 == 1) {
+            return false;
+        }
+
+        Map<Character, Character> map = new HashMap<>();
+        map.put('(', ')');
+        map.put('[', ']');
+        map.put('{', '}');
+        Deque<Character> stack = new ArrayDeque<>();
+        
+        for (int i = 0 ; i < s.length(); i++) {
+            char c = s.charAt(i);
+            
+            if (map.containsKey(c)) {
+                stack.addLast(map.get(c));
+            } else if (map.containsValue(c)) {
+                if (stack.isEmpty() || stack.removeLast() != c) {
+                    return false;
+                }
+            }
+        }
+        return stack.isEmpty();
+    }
+
     @Test
     public void testParentheses() {
         assertEquals(true, isValidStack("(){}[]"));
@@ -86,10 +119,15 @@ public class valid_parentheses {
         assertEquals(true, isValidOptimal("(141[])(){waga}((51afaw))()hh()"));
         assertEquals(true, isValidOptimal("(()agwg())((()agwga()())gawgwgag)"));
         assertEquals(true, isValidOptimal("(agwgg)([ghhheah%&@Q])"));
+        assertEquals(true, isValidOptimal2("(a)"));
+        assertEquals(true, isValidOptimal2("(141[])(){waga}((51afaw))()hh()"));
+        assertEquals(true, isValidOptimal2("(()agwg())((()agwga()())gawgwgag)"));
+        assertEquals(true, isValidOptimal2("(agwgg)([ghhheah%&@Q])"));
     }
 }
 
 /*
+https://leetcode.com/problems/valid-parentheses/
 Explanation
 
 A simple stack problem, if it is (,[ or { then push it onto the stack. Then if it is ), ], } peek the stack and if they match then pop it out. Finally, see if the stack is empty

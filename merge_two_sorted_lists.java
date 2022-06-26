@@ -23,7 +23,8 @@ public class merge_two_sorted_lists {
 }
 
 
-/*abstract
+/*
+https://leetcode.com/problems/merge-two-sorted-lists/
 Explanation
 
 We use a dummy node, and which value is smaller, we take it and point it to the dummy node
