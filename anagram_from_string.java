@@ -1,16 +1,12 @@
+import static org.junit.Assert.assertEquals;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import org.junit.Test;
+
 public class anagram_from_string {
-
-    public static void main(String[] args) {
-        String[] word = { "ACT", "TAC", "DOGG", "TCA", "BOB", "JUM" };
-        anagram_from_string sol = new anagram_from_string();
-        System.out.println(sol.findAnagram("CAT", word).toString());
-        System.out.println(sol.findAnagramSort("CAT", word).toString());
-    }
-
     public List<String> findAnagram(String anagram, String[] words) {
         List<String> res = new ArrayList<>();
         boolean notAnagram = false;
@@ -58,6 +54,14 @@ public class anagram_from_string {
             }
         }
         return res;
+    }
+
+    @Test
+    public void testAnagram() {
+        String[] exampleOne = { "ACT", "TAC", "DOGG", "TCA", "BOB", "JUM" };
+        List<String> expectedOne = new ArrayList<>(Arrays.asList("ACT", "TAC", "TCA"));
+        assertEquals(expectedOne, findAnagram("CAT", exampleOne));
+        assertEquals(expectedOne, findAnagramSort("CAT", exampleOne));
     }
 }
 
