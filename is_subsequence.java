@@ -1,4 +1,5 @@
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
@@ -61,12 +62,12 @@ public class is_subsequence {
 
     @Test
     public void testIsSubsequence() {
-        assertEquals(true, isSubsequence("abc", "ahbgdc"));
-        assertEquals(false, isSubsequence("axc", "ahbgdc"));
-        assertEquals(true, isSubsequence2("abc", "ahbgdc"));
-        assertEquals(false, isSubsequence2("axc", "ahbgdc"));
-        assertEquals(true, is_subsequenceDP("abc", "ahbgdc"));
-        assertEquals(false, is_subsequenceDP("axc", "ahbgdc"));
+        assertTrue(isSubsequence("abc", "ahbgdc"));
+        assertFalse(isSubsequence("axc", "ahbgdc"));
+        assertTrue(isSubsequence2("abc", "ahbgdc"));
+        assertFalse(isSubsequence2("axc", "ahbgdc"));
+        assertTrue(is_subsequenceDP("abc", "ahbgdc"));
+        assertFalse(is_subsequenceDP("axc", "ahbgdc"));
     }
 }
 
