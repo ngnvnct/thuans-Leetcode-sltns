@@ -5,7 +5,7 @@ import java.util.PriorityQueue;
 
 import org.junit.Test;
 
-public class apples_basket {
+public class How_Many_Apples_Can_You_Put_Into_The_Basket_1196 {
     public int maxNumberOfApples(int[] weight) {
         Arrays.sort(weight);
         int apples = 0;

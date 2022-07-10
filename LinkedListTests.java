@@ -101,7 +101,7 @@ public class LinkedListTests {
     public void testAddTwoLinkedLists() {
         ListNode exampleOne = addMany(new ListNode(2), new ArrayList<>(Arrays.asList(4, 3)));
         ListNode exampleTwo = addMany(new ListNode(5), new ArrayList<>(Arrays.asList(6, 4)));
-        ListNode output = add_two_numbers_ll.addTwoNumbers(exampleOne, exampleTwo);
+        ListNode output = Add_Two_Numbers_2.addTwoNumbers(exampleOne, exampleTwo);
         List<Integer> expectedNodes = new ArrayList<>(Arrays.asList(7, 0, 8));
         assertTrue(getNodesInArray(output).equals(expectedNodes));
 
@@ -111,7 +111,7 @@ public class LinkedListTests {
 
         ListNode exampleThree = addMany(new ListNode(9), new ArrayList<>(Arrays.asList(9)));
         ListNode exampleFour = new ListNode(1);
-        output = add_two_numbers_ll.addTwoNumbers(exampleThree, exampleFour);
+        output = Add_Two_Numbers_2.addTwoNumbers(exampleThree, exampleFour);
         expectedNodes = new ArrayList<>(Arrays.asList(0, 0, 1));
         assertTrue(getNodesInArray(output).equals(expectedNodes));
     }

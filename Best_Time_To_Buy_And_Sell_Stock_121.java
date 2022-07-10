@@ -1,11 +1,11 @@
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
-public class best_time_to_buy_and_sell_stock_i {
+public class Best_Time_To_Buy_And_Sell_Stock_121 {
     public static void main(String[] args) {
         int[] exampleOne = new int[] { 7, 1, 5, 3, 6, 4 };
         int[] exampleTwo = new int[] { 7, 6, 4, 3, 1 };
-        best_time_to_buy_and_sell_stock_i sol = new best_time_to_buy_and_sell_stock_i();
+        Best_Time_To_Buy_And_Sell_Stock_121 sol = new Best_Time_To_Buy_And_Sell_Stock_121();
         System.out.println(sol.maxProfit(exampleOne));
         System.out.println(sol.maxProfit(exampleTwo));
         System.out.println(sol.maxProfitDP(exampleOne));

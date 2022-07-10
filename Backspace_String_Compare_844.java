@@ -1,11 +1,12 @@
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
 
 import org.junit.Test;
 
-public class backspace_string_compare {
+public class Backspace_String_Compare_844 {
     public boolean backspaceCompare(String s, String t) {
         Deque<Character> stackS = new ArrayDeque<>();
         Deque<Character> stackT = new ArrayDeque<>();
@@ -88,16 +89,17 @@ public class backspace_string_compare {
 
     @Test
     public void testCompare() {
-        assertEquals(true, backspaceCompare("ab#c", "ad#c"));
-        assertEquals(true, backspaceCompare("ab##", "c#d#"));
-        assertEquals(false, backspaceCompare("a#c", "b"));
-        assertEquals(true, backspacePointers("ab#c", "ad#c"));
-        assertEquals(true, backspacePointers("ab##", "c#d#"));
-        assertEquals(false, backspacePointers("a#c", "b"));
+        assertTrue(backspaceCompare("ab#c", "ad#c"));
+        assertTrue(backspaceCompare("ab##", "c#d#"));
+        assertFalse(backspaceCompare("a#c", "b"));
+        assertTrue(backspacePointers("ab#c", "ad#c"));
+        assertTrue(backspacePointers("ab##", "c#d#"));
+        assertFalse(backspacePointers("a#c", "b"));
     }
 }
 
-/*abstract
+/*
+https://leetcode.com/problems/backspace-string-compare/
 Explanation
 
 

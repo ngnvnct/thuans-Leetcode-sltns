@@ -1,5 +1,5 @@
 
-public class add_two_numbers_ll {
+public class Add_Two_Numbers_2 {
     public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         int carry = 0;
         ListNode dummy = new ListNode(-1);

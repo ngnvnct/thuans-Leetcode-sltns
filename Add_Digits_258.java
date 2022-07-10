@@ -2,7 +2,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-public class add_digits {
+public class Add_Digits_258 {
 
     public int addDigitIteration(int n) {
         while (n > 9) {

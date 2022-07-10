@@ -2,7 +2,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-public class angle_between_hands_clock {
+public class Angle_Between_Hands_Of_A_Clock_1344 {
     public double angleClock(int hour, int minutes) {
         double hourAngle = (hour % 12 + ((double) minutes / 60)) * 30;
         double minuteAngle = minutes * 6;

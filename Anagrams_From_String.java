@@ -6,7 +6,7 @@ import java.util.List;
 
 import org.junit.Test;
 
-public class anagram_from_string {
+public class Anagrams_From_String {
     public List<String> findAnagram(String anagram, String[] words) {
         List<String> res = new ArrayList<>();
         boolean notAnagram = false;

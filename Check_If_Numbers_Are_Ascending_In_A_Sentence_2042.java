@@ -3,12 +3,12 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-public class ascending_numbers_in_sentence {
+public class Check_If_Numbers_Are_Ascending_In_A_Sentence_2042 {
     public static void main(String[] args) {
         String example1 = "1 box has 3 blue 4 red 6 green and 12 yellow marbles";
         String example2 = "hello world 5 x 5";
         String example3 = "sunset is at 7 51 pm overnight lows will be in the low 50 and 60 s";
-        ascending_numbers_in_sentence sol = new ascending_numbers_in_sentence();
+        Check_If_Numbers_Are_Ascending_In_A_Sentence_2042 sol = new Check_If_Numbers_Are_Ascending_In_A_Sentence_2042();
         System.out.println(sol.areNumbersAscending(example1));
         System.out.println(sol.areNumbersAscending(example2));
         System.out.println(sol.areNumbersAscending(example3));

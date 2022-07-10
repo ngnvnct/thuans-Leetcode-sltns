@@ -1,4 +1,4 @@
-public class alien_dictionary {
+public class Alien_Dictionary_269 {
     public String alienOrder(String[] words) {
         return "";
     }

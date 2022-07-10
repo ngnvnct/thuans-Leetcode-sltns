@@ -1,7 +1,7 @@
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
-public class binary_search {
+public class Binary_Search_704 {
     public int binarySearch(int[] nums, int target) {
         int left = 0;
         int right = nums.length - 1;

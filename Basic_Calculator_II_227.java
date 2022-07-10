@@ -4,7 +4,7 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 import org.junit.Test;
 
-public class basic_calculator_ii {
+public class Basic_Calculator_II_227 {
     public int calculate(String s) {
         if (s== null || s.length() == 0) {
             return 0;
