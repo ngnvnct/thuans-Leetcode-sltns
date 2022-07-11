@@ -8,7 +8,7 @@ import java.util.Set;
 
 import org.junit.Test;
 
-public class birthday_card_collection {
+public class Birthday_Card_Collection {
     public int[] birthdayCard(Set<Integer> collection, int d) {
         int temp = d;
         List<Integer> res = new ArrayList<>();
