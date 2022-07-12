@@ -1,7 +1,11 @@
+import static org.junit.Assert.assertEquals;
+
 import java.util.PriorityQueue;
 
-public class max_bags_with_full_capacity_of_rocks {
-    public int maximumBags(int[] capacity, int[] rocks, int additionalRocks) {
+import org.junit.Test;
+
+public class Maximum_Bags_With_Full_Capacity_Of_Rocks_2279 {
+    public int maximumBagsHeap(int[] capacity, int[] rocks, int additionalRocks) {
         PriorityQueue<Integer> minHeap = new PriorityQueue<>();
         int[] fill = new int[capacity.length];
         int count = 0;
@@ -28,4 +32,17 @@ public class max_bags_with_full_capacity_of_rocks {
         }
         return count;
     }
+
+    @Test
+    public void testRocks() {
+        assertEquals(3, maximumBagsHeap(new int[] {2,3,4,5}, new int[] {1,2,4,4}, 2));
+        assertEquals(3, maximumBagsHeap(new int[] {10,2,2}, new int[] {2,2,0}, 100));
+    }
 }
+
+/*
+ * https://leetcode.com/problems/maximum-bags-with-full-capacity-of-rocks/
+ * Explanation
+ * 
+ * 
+ */
