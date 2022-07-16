@@ -1,11 +1,12 @@
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import org.junit.Test;
 
-public class word_pattern {
+public class Word_Pattern_290 {
     public boolean wordPattern(String pattern, String s) {
         String[] word = s.split(" ");
         if (pattern.length() != word.length) {
@@ -31,22 +32,26 @@ public class word_pattern {
 
     @Test
     public void testPattern() {
-        assertEquals(true, wordPattern("abba", "dog cat cat dog"));
-        assertEquals(false, wordPattern("abba", "dog cat cat fish"));
-        assertEquals(false, wordPattern("aaaa", "dog cat cag dog"));
+        assertTrue(wordPattern("abba", "dog cat cat dog"));
+        assertFalse(wordPattern("abba", "dog cat cat fish"));
+        assertFalse(wordPattern("aaaa", "dog cat cag dog"));
     }
 }
 
 /*
-Explanation
-
-Similar to the pattern matching problem, but this time it is two strings
-
-Similarly, build a hashmap of word : pattern, and check if the map already contains the key, if it does check to see if it the same as the current pattern
-return false if not
-else the key is not in the map, but we have to check if the values are already being map somewhere, return false if it is
-else put it in the map
-
-Time: O(n)
-Space: O(n)
-*/
+ * https://leetcode.com/problems/word-pattern/
+ * Explanation
+ * 
+ * Similar to the pattern matching problem, but this time it is two strings
+ * 
+ * Similarly, build a hashmap of word : pattern, and check if the map already
+ * contains the key, if it does check to see if it the same as the current
+ * pattern
+ * return false if not
+ * else the key is not in the map, but we have to check if the values are
+ * already being map somewhere, return false if it is
+ * else put it in the map
+ * 
+ * Time: O(n)
+ * Space: O(n)
+ */
