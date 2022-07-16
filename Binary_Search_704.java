@@ -22,10 +22,17 @@ public class Binary_Search_704 {
     public void testBinarySearch() {
         assertEquals(4, binarySearch(new int[] { -1, 0, 3, 5, 9, 12 }, 9));
         assertEquals(-1, binarySearch(new int[] { -1, 0, 3, 5, 9, 12 }, 2));
+        assertEquals(3, binarySearch(new int[] { 0, 1, 21, 33, 45, 45, 61, 71, 72, 73 }, 33));
+        assertEquals(3, binarySearch(new int[] { 1, 5, 23, 111 }, 111));
+        assertEquals(1, binarySearch(new int[] { 1, 5, 23, 111 }, 5));
+        assertEquals(-1, binarySearch(new int[] { 1, 5, 23, 111 }, 35));
+        assertEquals(0, binarySearch(new int[] { 0, 1, 21, 33, 45, 45, 61, 71, 72, 73 }, 0));
+        assertEquals(1, binarySearch(new int[] { 0, 1, 21, 33, 45, 45, 61, 71, 72, 73 }, 1));
     }
 }
 
 /*
+ * Also appear on AlgoExpert
  * https://leetcode.com/problems/binary-search/
  * Explanation
  * 
