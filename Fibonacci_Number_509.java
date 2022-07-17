@@ -1,7 +1,7 @@
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
-public class fibonacci_number {
+public class Fibonacci_Number_509 {
     public int fib(int n) {
         if (n <= 1) {
             return n;
@@ -70,8 +70,9 @@ public class fibonacci_number {
 }
 
 /*
+ * Also appears on AlgoExpert
  * https://leetcode.com/problems/fibonacci-number/
- * Explanation:
+ * Explanation
  * 
  * Use Dynamic Programming to store expensive calculation (memoization). Have a
  * base case, then start with smaller values, and build a larger value using
