@@ -1,4 +1,4 @@
-public class linked_list_cycle {
+public class Linked_List_Cycle_141 {
     public boolean hasCycle(ListNode head) {
         ListNode fast = head;
         ListNode slow = head;
@@ -14,10 +14,11 @@ public class linked_list_cycle {
 }
 
 /*
-https://leetcode.com/problems/linked-list-cycle/
-Explanation
-Make a fast and slow pointer, if there is a cycle at some point they will meet at the cycle
-
-Time: O(n)
-Space: O(1)
-*/
+ * https://leetcode.com/problems/linked-list-cycle/
+ * Explanation
+ * Make a fast and slow pointer, if there is a cycle at some point they will
+ * meet at the cycle
+ * 
+ * Time: O(n)
+ * Space: O(1)
+ */
