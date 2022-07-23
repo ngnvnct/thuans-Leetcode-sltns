@@ -3,7 +3,7 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-public class Pairs_Sum {
+public class Pairs_Sum_1 {
 
     public boolean pairSum(String input) {
         int digits = 0;
