@@ -36,19 +36,19 @@ public class LinkedListTests {
         addMany(exampleOne, new ArrayList<>(Arrays.asList(6, 7, 8)));
         ListNode exampleTwo = new ListNode(1);
         addMany(exampleTwo, new ArrayList<>(Arrays.asList(3, 4, 5, 9, 10)));
-        ListNode output = merge_two_sorted_lists.mergeTwoLists(exampleOne, exampleTwo);
+        ListNode output = Merge_Two_Sorted_Lists_21.mergeTwoLists(exampleOne, exampleTwo);
         List<Integer> expectedNodes = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
         assertTrue(getNodesInArray(output).equals(expectedNodes));
 
         ListNode exampleThree = null;
         ListNode exampleFour = null;
-        output = merge_two_sorted_lists.mergeTwoLists(exampleThree, exampleFour);
+        output = Merge_Two_Sorted_Lists_21.mergeTwoLists(exampleThree, exampleFour);
         expectedNodes = new ArrayList<>(Arrays.asList());
         assertTrue(getNodesInArray(output).equals(expectedNodes));
 
         ListNode exampleSix = null;
         ListNode exampleSeven = new ListNode(0);
-        output = merge_two_sorted_lists.mergeTwoLists(exampleSix, exampleSeven);
+        output = Merge_Two_Sorted_Lists_21.mergeTwoLists(exampleSix, exampleSeven);
         expectedNodes = new ArrayList<>(Arrays.asList(0));
         assertTrue(getNodesInArray(output).equals(expectedNodes));
     }
@@ -70,29 +70,29 @@ public class LinkedListTests {
     public void testPalindromeLinkedList() {
         ListNode exampleOne = new ListNode(1);
         addMany(exampleOne, new ArrayList<>(Arrays.asList(2, 2, 1)));
-        boolean output = palindrome_linked_list.isPalindrome(exampleOne);
+        boolean output = Palindrome_Linked_List_234.isPalindrome(exampleOne);
         assertTrue(output == true);
 
         ListNode exampleTwo = new ListNode(1);
         addMany(exampleTwo, new ArrayList<>(Arrays.asList(2)));
-        output = palindrome_linked_list.isPalindrome(exampleTwo);
+        output = Palindrome_Linked_List_234.isPalindrome(exampleTwo);
         assertTrue(output == false);
     }
 
     @Test
     public void testReverseLinkedList() {
         ListNode exampleOne = addMany(new ListNode(1), new ArrayList<>(Arrays.asList(2, 3, 4, 5)));
-        ListNode output = reverse_linked_list.reverseListRecursive(exampleOne);
+        ListNode output = Reverse_Linked_List_206.reverseListRecursive(exampleOne);
         List<Integer> expectedNodes = new ArrayList<>(Arrays.asList(5, 4, 3, 2, 1));
         assertTrue(getNodesInArray(output).equals(expectedNodes));
 
         ListNode exampleTwo = addMany(new ListNode(1), new ArrayList<>(Arrays.asList(2)));
-        output = reverse_linked_list.reverseList(exampleTwo);
+        output = Reverse_Linked_List_206.reverseList(exampleTwo);
         expectedNodes = new ArrayList<>(Arrays.asList(2, 1));
         assertTrue(getNodesInArray(output).equals(expectedNodes));
 
         ListNode exampleThree = null;
-        output = reverse_linked_list.reverseList(exampleThree);
+        output = Reverse_Linked_List_206.reverseList(exampleThree);
         expectedNodes = new ArrayList<Integer>(Arrays.asList());
         assertTrue(getNodesInArray(output).equals(expectedNodes));
     }
