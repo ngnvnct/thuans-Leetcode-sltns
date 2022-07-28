@@ -5,7 +5,7 @@ import java.util.Map;
 
 import org.junit.Test;
 
-public class ransom_note {
+public class Ransom_Note_383 {
     public boolean canConstruct(String ransomNote, String magazine) {
         if (ransomNote.length() > magazine.length()) {
             return false;
@@ -64,6 +64,7 @@ public class ransom_note {
 }
 
 /*
+ * https://leetcode.com/problems/ransom-note/
  * Explanation
  * 
  * Using the bucket to count the alphabet, assuming all lower case
@@ -71,7 +72,7 @@ public class ransom_note {
  * can't construct, else subtract the character by one. When the loop ends
  * return true
  * 
- * Time: O(n)
+ * Time: O(m) where m is the length of the magazine, if magazine length is less than ransom length we turn false so the worst case occurs when m >= r
  * Space: O(26)
  * 
  * Two Hash Map ways: one for ransom and one for magazine
