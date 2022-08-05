@@ -50,8 +50,10 @@ public class Climbing_Stairs_70 {
 }
 
 /*
+ * Part of Leetcode75
  * https://leetcode.com/problems/climbing-stairs/
- * Explantion:
+ * Explantion
+ * 
  * Use Dynamic Programming to store expensive calculation (memoization). Have a
  * base case, then start with smaller values, and build a larger value usingthem.
  * 
