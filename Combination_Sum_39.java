@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class combination_sum {
+public class Combination_Sum_39 {
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
         if (candidates == null) {
             return null;
@@ -27,8 +27,9 @@ public class combination_sum {
 }
 
 /*
+https://leetcode.com/problems/combination-sum/
 Explanation
-A Dynamic Programming. 
+A Dynamic Programming problem
 
 [2,3,6,7]
 Take 2, include all the combination that sum up to the target
@@ -50,6 +51,8 @@ with [2,3], then dfs call will remove everything []
 then it will go to 6, and finally 7
 res: [[2,2,3]]
 
-Time: 2 decision tree, (2^t), t is the height
-Space: O
+Let N be the number of candidates, T be the target value, and M be the minimal value among the candidates
+
+Time: O(N ^ ((T/M) + 1))
+Space: O(T/M)
 */
