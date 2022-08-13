@@ -2,7 +2,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-public class count_primes {
+public class Count_Primes_204 {
     public int countPrimes(int n) {
         boolean[] primes = new boolean[n];
 
