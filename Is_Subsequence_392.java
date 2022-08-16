@@ -3,7 +3,7 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-public class is_subsequence {
+public class Is_Subsequence_392 {
     public boolean isSubsequence(String s, String t) {
         int sIndex = 0;
         int tIndex = 0;
@@ -72,6 +72,7 @@ public class is_subsequence {
 }
 
 /*
+ * Part of Leetcode75
  * https://leetcode.com/problems/is-subsequence/
  * Explanation
  * 
