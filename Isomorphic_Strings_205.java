@@ -8,7 +8,7 @@ import java.util.Set;
 
 import org.junit.Test;
 
-public class isomorphic_strings {
+public class Isomorphic_Strings_205 {
     public boolean isIsomorphic(String source, String target) {
         Map<Character, Character> map = new HashMap<>();
         Set<Character> set = new HashSet<>();
@@ -56,6 +56,7 @@ public class isomorphic_strings {
 }
 
 /*
+ * Part of Leetcode75
  * https://leetcode.com/problems/isomorphic-strings/
  * Explanation
  * 
