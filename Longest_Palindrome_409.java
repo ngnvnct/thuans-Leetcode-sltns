@@ -7,7 +7,7 @@ import java.util.Set;
 
 import org.junit.Test;
 
-public class longest_palindrome {
+public class Longest_Palindrome_409 {
     public int longestPalindrome(String s) {
         Map<Character, Integer> map = new HashMap<>();
 
@@ -57,6 +57,7 @@ public class longest_palindrome {
 }
 
 /*
+ * Part of Leetcode75
  * https://leetcode.com/problems/longest-palindrome/
  * Explanation
  * 
