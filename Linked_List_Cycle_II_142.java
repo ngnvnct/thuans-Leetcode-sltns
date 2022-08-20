@@ -40,7 +40,7 @@ public class Linked_List_Cycle_II_142 {
 }
 
 /*
- * Also appears on AlgoExpert
+ * Also appears on AlgoExpert, Leetcode75
  * https://leetcode.com/problems/linked-list-cycle-ii/
  * Explanation
  * 1->2->3->4->5->6->7

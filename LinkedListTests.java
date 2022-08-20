@@ -119,12 +119,12 @@ public class LinkedListTests {
     @Test
     public void testMiddleLinkedList() {
         ListNode exampleOne = addMany(new ListNode(1), new ArrayList<>(Arrays.asList(2, 3, 4, 5)));
-        ListNode output = middle_linked_list.middleNode(exampleOne);
+        ListNode output = Middle_Of_The_Linked_List_876.middleNode(exampleOne);
         List<Integer> expectedNodes = new ArrayList<>(Arrays.asList(3, 4, 5));
         assertTrue(getNodesInArray(output).equals(expectedNodes));
 
         ListNode exampleTwo = addMany(new ListNode(1), new ArrayList<>(Arrays.asList(2, 3, 4, 5, 6)));
-        output = middle_linked_list.middleNode(exampleTwo);
+        output = Middle_Of_The_Linked_List_876.middleNode(exampleTwo);
         expectedNodes = new ArrayList<>(Arrays.asList(4, 5, 6));
         assertTrue(getNodesInArray(output).equals(expectedNodes));
     }
