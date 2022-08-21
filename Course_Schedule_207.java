@@ -1,10 +1,11 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class course_schedule {
+public class Course_Schedule_207 {
     public boolean canFinish(int numCourses, int[][] prerequisites) {
-        if (numCourses == 0 || prerequisites == null || prerequisites.length == 0)
+        if (numCourses == 0 || prerequisites == null || prerequisites.length == 0) {
             return true; // ??
+        }
 
         // create the array lists to represent the courses
         List<List<Integer>> courses = new ArrayList<List<Integer>>(numCourses);
@@ -24,37 +25,34 @@ public class course_schedule {
             if (!dfs(i, courses, visited))
                 return false;
         }
-
         return true;
     }
 
     private boolean dfs(int course, List<List<Integer>> courses, int[] visited) {
-
         visited[course] = 1; // mark it being visited
-
         List<Integer> eligibleCourses = courses.get(course); // get its children
 
         // dfs its children
         for (int i = 0; i < eligibleCourses.size(); i++) {
             int eligibleCourse = eligibleCourses.get(i).intValue();
 
-            if (visited[eligibleCourse] == 1)
+            if (visited[eligibleCourse] == 1) {
                 return false; // has been visited while visiting its children - cycle !!!!
+            }
             if (visited[eligibleCourse] == 0) { // not visited
-                if (!dfs(eligibleCourse, courses, visited))
+                if (!dfs(eligibleCourse, courses, visited)) {
                     return false;
+                }
             }
 
         }
-
         visited[course] = 2; // mark it done visiting
         return true;
-
     }
 }
 
 /*
- * abstract
+ * https://leetcode.com/problems/course-schedule/
  * Explanation
  * This is a graph problem
  * 
@@ -82,4 +80,6 @@ public class course_schedule {
  * 3 [4] [] x
  * 4 [] x
  * 
+ * Time: O(|E| + |V|) where |V| is the number of courses and |E | is the number of dependencies
+ * Space: O(|E| + |V|)
  */
