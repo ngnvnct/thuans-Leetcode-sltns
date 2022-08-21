@@ -1,4 +1,4 @@
-public class middle_linked_list {
+public class Middle_Of_The_Linked_List_876 {
     public static ListNode middleNode(ListNode head) {
         ListNode fast = head;
         ListNode slow = head;
@@ -12,8 +12,10 @@ public class middle_linked_list {
 }
 
 /*
+ * Part of Leetcode75
  * https://leetcode.com/problems/middle-of-the-linked-list/
  * Explanation
+ * 
  * Two pointers, one fast and one slow, fast goes two steps and slow goes one
  * step
  * when fast becomes null, slow will be in the middle of the linked list
