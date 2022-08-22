@@ -47,8 +47,10 @@ public class Two_Sum_1 {
 }
 
 /*
+ * Part of Leetcode75
  * https://leetcode.com/problems/two-sum/
  * Explantion
+ * 
  * We want to make a HashMap to keep trace of the difference of the element.
  * First, we have an if-statement asking is the HashMap contains this element
  * If yes, we return the value of the key-value pair, along with the current
