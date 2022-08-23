@@ -2,7 +2,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-public class number_of_islands {
+public class Number_Of_Islands_200 {
     public int numIslands(char[][] grid) {
         if (grid == null || grid.length == 0) {
             return 0;
@@ -21,7 +21,7 @@ public class number_of_islands {
     }
 
     public int dfs(char[][] grid, int i, int j) {
-        if (i < 0 || i >= grid.length || j < 0 || j >= grid[i].length || grid[i][j] == '0') {
+        if (i < 0 || i >= grid.length || j < 0 || j >= grid[0].length || grid[i][j] == '0') {
             return 0;
         }
         grid[i][j] = '0';
@@ -54,8 +54,10 @@ public class number_of_islands {
 }
 
 /*
+ * Part of Leetcode75
  * https://leetcode.com/problems/number-of-islands/
  * Explanation
+ * 
  * This is a Graph problem, which can be solve using Depth First Search (DFS) or
  * BFS. DFS will be used here. First, we have a constraint if the length is 0 or
  * it is null, return 0
@@ -70,5 +72,5 @@ public class number_of_islands {
  * we call the dfs stack going down, up, to the left and to the right
  * 
  * Time: O(n)
- * Space: O(mn) because of recursion stack
+ * Space: O(m * n) because of recursion stack
  */
