@@ -24,9 +24,10 @@ public class Reverse_Linked_List_206 {
 }
 
 /*
- * Also appears on AlgoExpert
+ * Also appears on AlgoExpert, Leetcode75
  * https://leetcode.com/problems/reverse-linked-list/
  * Explanation
+ * 
  * A simple reverse LL problem
  * 
  * Time: O(n)
