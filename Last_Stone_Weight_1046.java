@@ -9,7 +9,9 @@ import org.junit.Test;
 
 public class Last_Stone_Weight_1046 {
     public int lastStoneWeight(int[] stones) {
-        PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder());
+        //PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder());
+        PriorityQueue<Integer> maxHeap = new PriorityQueue<>((a,b) -> Integer.compare(b,a));
+
         for (int stone : stones) {
             maxHeap.add(stone);
         }
@@ -67,6 +69,8 @@ public class Last_Stone_Weight_1046 {
  * 
  * We just put the element into the priority queue and take two element out, if
  * they are not the same, we add back in the diff value
+ * 
+ * Any method to reverse the natural ordering of the heap will work
  * 
  * Time: O(nlogn), maxHeap runtime
  * Space: O(n), maxHeap
