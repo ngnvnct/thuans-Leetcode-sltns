@@ -1,10 +1,14 @@
+import static org.junit.Assert.assertEquals;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class pascal_triangle_i {
+import org.junit.Test;
+
+public class Pascal_Triangle_118 {
 
     public static void main(String[] args) {
-        pascal_triangle_i Solution = new pascal_triangle_i();
+        Pascal_Triangle_118 Solution = new Pascal_Triangle_118();
         System.out.println(Solution.generate(6));
     }
 
@@ -21,6 +25,15 @@ public class pascal_triangle_i {
             // System.out.println("row " + i + " value " + res.get(i)); // keep this line
         }
         return triangle;
+    }
+
+    @Test
+    public void testTriangle() {
+        List<List<Integer>> expectedOne = List.of(List.of(1), List.of(1,1), List.of(1,2,1), List.of(1,3,3,1), List.of(1,4,6,4,1));
+        List<List<Integer>> expectedTwo = List.of(List.of(1));
+        
+        assertEquals(expectedOne, generate(5));
+        assertEquals(expectedTwo, generate(1));
     }
 }
 
