@@ -1,10 +1,10 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class pascal_triangle_ii {
+public class Pascal_Triangle_II_119 {
 
     public static void main(String[] args) {
-        pascal_triangle_ii Solution = new pascal_triangle_ii();
+        Pascal_Triangle_II_119 Solution = new Pascal_Triangle_II_119();
         System.out.println(Solution.getRow(3));
     }
 
