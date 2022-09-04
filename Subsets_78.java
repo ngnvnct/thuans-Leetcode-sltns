@@ -1,14 +1,13 @@
 import static org.junit.Assert.assertEquals;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import org.junit.Test;
 
-public class subsets {
+public class Subsets_78 {
     public static void main(String[] args) {
-        subsets sol = new subsets();
+        Subsets_78 sol = new Subsets_78();
         List<List<Integer>> result = sol.subset(new int[] {1,3});
         System.out.println("Subsets of {1,3}" + result);
 
@@ -39,19 +38,8 @@ public class subsets {
 
     @Test
     public void testSubset() {
-        List<List<Integer>> expectedOne = new ArrayList<>();
-        expectedOne.add(Arrays.asList(1));
-        expectedOne.add(new ArrayList<>());
-
-        List<List<Integer>> expectedTwo = new ArrayList<>();
-        expectedTwo.add(Arrays.asList(1,3,2));
-        expectedTwo.add(Arrays.asList(1,3));
-        expectedTwo.add(Arrays.asList(1,2));
-        expectedTwo.add(Arrays.asList(1));
-        expectedTwo.add(Arrays.asList(3,2));
-        expectedTwo.add(Arrays.asList(3));
-        expectedTwo.add(Arrays.asList(2));
-        expectedTwo.add(new ArrayList<>());
+        List<List<Integer>> expectedOne = List.of(List.of(1), List.of());
+        List<List<Integer>> expectedTwo = List.of(List.of(1,3,2), List.of(1,3), List.of(1,2), List.of(1), List.of(3,2), List.of(3), List.of(2), List.of());
 
         assertEquals(expectedOne, subset(new int[] {1}));
         assertEquals(expectedTwo, subset(new int[] {1,3,2}));
