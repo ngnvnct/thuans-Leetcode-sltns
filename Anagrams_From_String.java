@@ -59,9 +59,10 @@ public class Anagrams_From_String {
     @Test
     public void testAnagram() {
         String[] exampleOne = { "ACT", "TAC", "DOGG", "TCA", "BOB", "JUM" };
-        List<String> expectedOne = new ArrayList<>(Arrays.asList("ACT", "TAC", "TCA"));
-        assertEquals(expectedOne, findAnagram("CAT", exampleOne));
-        assertEquals(expectedOne, findAnagramSort("CAT", exampleOne));
+        List<String> exampleOneExpectedResult = new ArrayList<>(Arrays.asList("ACT", "TAC", "TCA"));
+        
+        assertEquals(exampleOneExpectedResult, findAnagram("CAT", exampleOne));
+        assertEquals(exampleOneExpectedResult, findAnagramSort("CAT", exampleOne));
     }
 }
 
