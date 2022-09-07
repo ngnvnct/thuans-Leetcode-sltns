@@ -60,13 +60,16 @@ public class Baseball_Game_682 {
 
     @Test
     public void testPoint() {
-        String[] one = { "5", "2", "C", "D", "+" };
-        String[] two = { "5", "-2", "4", "C", "D", "9", "+", "+" };
+        String[] exampleOne = { "5", "2", "C", "D", "+" };
+        int exampleOneExpectedResult = 30;
+        String[] exampleTwo = { "5", "-2", "4", "C", "D", "9", "+", "+" };
+        int exampleTwoExpectedResult = 27;
 
-        assertEquals(30, calPoints(one));
-        assertEquals(30, calPointOnePass(one));
-        assertEquals(27, calPoints(two));
-        assertEquals(27, calPointOnePass(two));
+        assertEquals(exampleOneExpectedResult, calPoints(exampleOne));
+        assertEquals(exampleTwoExpectedResult, calPoints(exampleTwo));
+
+        assertEquals(exampleOneExpectedResult, calPointOnePass(exampleOne));
+        assertEquals(exampleTwoExpectedResult, calPointOnePass(exampleTwo));
     }
 }
 
