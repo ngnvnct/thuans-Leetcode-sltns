@@ -6,20 +6,20 @@ import org.junit.Test;
 
 public class Basic_Calculator_II_227 {
     public int calculate(String s) {
-        if (s== null || s.length() == 0) {
+        if (s == null || s.length() == 0) {
             return 0;
         }
         Deque<Integer> stack = new ArrayDeque<>();
         char operation = '+';
         int currentNum = 0;
         int len = s.length();
-        
+
         for (int i = 0; i < s.length(); i++) {
             char currentChar = s.charAt(i);
             if (Character.isDigit(currentChar)) {
-                currentNum = 10 * currentNum + (currentChar -'0');
+                currentNum = 10 * currentNum + (currentChar - '0');
             }
-            if (!Character.isDigit(currentChar) && currentChar != ' ' || i == len-1) {
+            if (!Character.isDigit(currentChar) && currentChar != ' ' || i == len - 1) {
                 switch (operation) {
                     case '+':
                         stack.addFirst(currentNum);
@@ -85,12 +85,12 @@ public class Basic_Calculator_II_227 {
         int res = 0;
         int len = s.length();
         char operation = '+';
-        for (int i = 0; i< len; i++) {
+        for (int i = 0; i < len; i++) {
             char currentChar = s.charAt(i);
             if (Character.isDigit(currentChar)) {
                 currentNum = (currentNum * 10) + (currentChar - '0');
             }
-            if (!Character.isDigit(currentChar) && currentChar != ' ' || i == len-1) {
+            if (!Character.isDigit(currentChar) && currentChar != ' ' || i == len - 1) {
                 if (operation == '+') {
                     res += lastNum;
                     lastNum = currentNum;
@@ -112,19 +112,30 @@ public class Basic_Calculator_II_227 {
 
     @Test
     public void testCalculate() {
-        assertEquals(7, calculate("3+2*2"));
-        assertEquals(7, calculateOptimal("3+2*2"));
-        assertEquals(7, calculateEasy("3+2*2"));
-        assertEquals(1, calculate("3/2"));
-        assertEquals(1, calculateOptimal("3/2"));
-        assertEquals(1, calculateEasy("3/2"));
-        assertEquals(5, calculate("3+5 / 2"));
-        assertEquals(5, calculateOptimal("3+5 / 2"));
-        assertEquals(5, calculateEasy("3+5 / 2"));
+        String exampleOne = "3+2*2";
+        int exampleOneExpectedResult = 7;
+        String exampleTwo = "3/2";
+        int exampleTwoExpectedResult = 1;
+        String exampleThree = "3+5 / 2";
+        int exampleThreeExpectedResult = 5;
+
+        assertEquals(exampleOneExpectedResult, calculate(exampleOne));
+        assertEquals(exampleTwoExpectedResult, calculate(exampleTwo));
+        assertEquals(exampleThreeExpectedResult, calculate(exampleThree));
+
+        assertEquals(exampleOneExpectedResult, calculateEasy(exampleOne));
+        assertEquals(exampleTwoExpectedResult, calculateEasy(exampleTwo));
+        assertEquals(exampleThreeExpectedResult, calculateEasy(exampleThree));
+
+        assertEquals(exampleOneExpectedResult, calculateOptimal(exampleOne));
+        assertEquals(exampleTwoExpectedResult, calculateOptimal(exampleTwo));
+        assertEquals(exampleThreeExpectedResult, calculateOptimal(exampleThree));
+
     }
 }
 
 /*
+ * https://leetcode.com/problems/basic-calculator-ii/
  * Explanation
  * 
  * Using Stack: 4 types of operation (+), (-), (*), (/)
