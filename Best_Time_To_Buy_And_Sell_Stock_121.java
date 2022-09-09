@@ -66,13 +66,18 @@ public class Best_Time_To_Buy_And_Sell_Stock_121 {
     @Test
     public void testBuyStock() {
         int[] exampleOne = new int[] { 7, 1, 5, 3, 6, 4 };
+        int exampleOneExpectedResult = 5;
         int[] exampleTwo = new int[] { 7, 6, 4, 3, 1 };
-        assertEquals(5, maxProfit(exampleOne));
-        assertEquals(0, maxProfit(exampleTwo));
-        assertEquals(5, maxProfitDP(exampleOne));
-        assertEquals(0, maxProfitDP(exampleTwo));
-        assertEquals(5, maxProfitBF(exampleOne));
-        assertEquals(0, maxProfitBF(exampleTwo));
+        int exampleTwoExpectedResult = 0;
+
+        assertEquals(exampleOneExpectedResult, maxProfit(exampleOne));
+        assertEquals(exampleTwoExpectedResult, maxProfit(exampleTwo));
+
+        assertEquals(exampleOneExpectedResult, maxProfitDP(exampleOne));
+        assertEquals(exampleTwoExpectedResult, maxProfitDP(exampleTwo));
+
+        assertEquals(exampleOneExpectedResult, maxProfitBF(exampleOne));
+        assertEquals(exampleTwoExpectedResult, maxProfitBF(exampleTwo));
     }
 }
 
