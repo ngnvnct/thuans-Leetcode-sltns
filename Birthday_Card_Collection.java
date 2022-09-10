@@ -31,15 +31,9 @@ public class Birthday_Card_Collection {
 
     @Test
     public void testCard() {
-        Set<Integer> one = new HashSet<>(Arrays.asList(2, 4, 5));
-        int[] expectedOne = { 1, 3 };
-        Set<Integer> two = new HashSet<>(Arrays.asList(1, 2, 3, 4));
-        int[] expectedTwo = { 5 };
-        Set<Integer> three = new HashSet<>(Arrays.asList(4, 6, 12, 8));
-        int[] expectedThree = { 1, 2, 3, 5 };
-        assertArrayEquals(expectedOne, birthdayCard(one, 7));
-        assertArrayEquals(expectedTwo, birthdayCard(two, 5));
-        assertArrayEquals(expectedThree, birthdayCard(three, 14));
+        assertArrayEquals(new int[] { 1, 3 }, birthdayCard(new HashSet<>(Arrays.asList(2, 4, 5)), 7));
+        assertArrayEquals(new int[] { 5 }, birthdayCard(new HashSet<>(Arrays.asList(1, 2, 3, 4)), 5));
+        assertArrayEquals(new int[] { 1, 2, 3, 5 }, birthdayCard(new HashSet<>(Arrays.asList(4, 6, 12, 8)), 14));
     }
 }
 
