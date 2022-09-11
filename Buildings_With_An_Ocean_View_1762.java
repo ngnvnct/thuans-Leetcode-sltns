@@ -9,9 +9,9 @@ import org.junit.Test;
 
 public class Buildings_With_An_Ocean_View_1762 {
     public static void main(String[] args) {
-        int[] one = { 4, 2, 3, 1, 1 };
+        int[] exampleOne = { 4, 2, 3, 1, 1 };
         Buildings_With_An_Ocean_View_1762 solution = new Buildings_With_An_Ocean_View_1762();
-        System.out.println(Arrays.toString(solution.findBuildings(one)));
+        System.out.println(Arrays.toString(solution.findBuildings(exampleOne)));
     }
 
     public int[] findBuildings(int[] heights) {
@@ -50,12 +50,20 @@ public class Buildings_With_An_Ocean_View_1762 {
 
     @Test
     public void testOcean() {
-        assertArrayEquals(new int[] { 0, 2, 3 }, findBuildings(new int[] { 4, 2, 3, 1 }));
-        assertArrayEquals(new int[] { 0, 1, 2, 3 }, findBuildings(new int[] { 4, 3, 2, 1 }));
-        assertArrayEquals(new int[] { 1, 2, 3 }, findBuildings(new int[] { 1, 3, 2, 1 }));
-        assertArrayEquals(new int[] { 0, 2, 3 }, findBuildingsStack(new int[] { 4, 2, 3, 1 }));
-        assertArrayEquals(new int[] { 0, 1, 2, 3 }, findBuildingsStack(new int[] { 4, 3, 2, 1 }));
-        assertArrayEquals(new int[] { 1, 2, 3 }, findBuildingsStack(new int[] { 1, 3, 2, 1 }));
+        int[] exampleOne = new int[] { 4, 2, 3, 1 };
+        int[] exampleOneExpectedResult = new int[] { 0, 2, 3 };
+        int[] exampleTwo = new int[] { 4, 3, 2, 1 };
+        int[] exampleTwoExpectedResult = new int[] { 0, 1, 2, 3 };
+        int[] exampleThree = new int[] { 1, 3, 2, 1 };
+        int[] exampleThreeExpectedResult = new int[] { 1, 2, 3 };
+
+        assertArrayEquals(exampleOneExpectedResult, findBuildings(exampleOne));
+        assertArrayEquals(exampleTwoExpectedResult, findBuildings(exampleTwo));
+        assertArrayEquals(exampleThreeExpectedResult, findBuildings(exampleThree));
+
+        assertArrayEquals(exampleOneExpectedResult, findBuildingsStack(exampleOne));
+        assertArrayEquals(exampleTwoExpectedResult, findBuildingsStack(exampleTwo));
+        assertArrayEquals(exampleThreeExpectedResult, findBuildingsStack(exampleThree));
     }
 }
 
