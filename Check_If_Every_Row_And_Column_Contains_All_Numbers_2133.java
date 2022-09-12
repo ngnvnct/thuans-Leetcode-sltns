@@ -60,6 +60,7 @@ public class Check_If_Every_Row_And_Column_Contains_All_Numbers_2133 {
 
         assertTrue(checkValid(exampleOne));
         assertFalse(checkValid(exampleTwo));
+        
         assertTrue(checkValid2(exampleOne));
         assertFalse(checkValid2(exampleTwo));
     }
