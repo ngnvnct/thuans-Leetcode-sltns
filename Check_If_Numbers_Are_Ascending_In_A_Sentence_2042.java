@@ -69,6 +69,7 @@ public class Check_If_Numbers_Are_Ascending_In_A_Sentence_2042 {
         assertTrue(areNumbersAscending(example1));
         assertFalse(areNumbersAscending(example2));
         assertFalse(areNumbersAscending(example3));
+
         assertTrue(areNumbersAscending2(example1));
         assertFalse(areNumbersAscending2(example2));
         assertFalse(areNumbersAscending2(example3));
@@ -78,6 +79,7 @@ public class Check_If_Numbers_Are_Ascending_In_A_Sentence_2042 {
 /*
  * https://leetcode.com/problems/check-if-numbers-are-ascending-in-a-sentence/
  * Explanation
+ * 
  * Multiple ways to do it, tokenization or just loop through the string
  * normally, and get the num using our favorite formular
  * num = num * 10 + (currentChar - '0');
