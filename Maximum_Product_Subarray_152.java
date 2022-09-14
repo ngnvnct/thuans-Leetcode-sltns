@@ -62,7 +62,7 @@ public class Maximum_Product_Subarray_152 {
     @Test
     public void testMaxProduct() {
         int[] exampleOne = { 2, 3, -2, 4 };
-        int exampleOneExpectedResult = 7;
+        int exampleOneExpectedResult = 6;
         int[] exampleTwo = { -2, 0, -1 };
         int exampleTwoExpectedResult = 0;
 
@@ -80,6 +80,7 @@ public class Maximum_Product_Subarray_152 {
 /*
  * https://leetcode.com/problems/maximum-product-subarray/
  * Explanation
+ * 
  * We have to take account for 0 value, and odd/even number of negative numbers.
  * Multiplying with negative number max will become min and min will become max,
  * as soon as we encounter a negative element we swap max and min.
