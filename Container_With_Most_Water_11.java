@@ -50,13 +50,18 @@ public class Container_With_Most_Water_11 {
     @Test
     public void testMaxArea() {
         int[] exampleOne = { 1, 8, 6, 2, 5, 4, 8, 3, 7 };
+        int exampleOneExpectedResult = 49;
         int[] exampleTwo = { 1, 1 };
-        assertEquals(49, maxArea(exampleOne));
-        assertEquals(1, maxArea(exampleTwo));
-        assertEquals(49, maxArea2(exampleOne));
-        assertEquals(1, maxArea2(exampleTwo));
-        assertEquals(49, maxAreaBF(exampleOne));
-        assertEquals(1, maxAreaBF(exampleTwo));
+        int exampleTwoExpectedResult = 1;
+
+        assertEquals(exampleOneExpectedResult, maxArea(exampleOne));
+        assertEquals(exampleTwoExpectedResult, maxArea(exampleTwo));
+
+        assertEquals(exampleOneExpectedResult, maxArea2(exampleOne));
+        assertEquals(exampleTwoExpectedResult, maxArea2(exampleTwo));
+
+        assertEquals(exampleOneExpectedResult, maxAreaBF(exampleOne));
+        assertEquals(exampleTwoExpectedResult, maxAreaBF(exampleTwo));
     }
 }
 
@@ -65,7 +70,7 @@ public class Container_With_Most_Water_11 {
  * Explanation
  * Using two pointers approach. We take the length of the right and left
  * pointer, and multiply it by the minimum value of the height at left and the
- * height at right, since the minimum value determines how much water we can hold. 
+ * height at right, since the minimum value determines how much water we can hold.
  * 
  * If the height at left is smaller than
  * right, we move the left for a potential bigger height. If the left point and
