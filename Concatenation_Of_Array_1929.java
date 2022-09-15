@@ -22,10 +22,16 @@ public class Concatenation_Of_Array_1929 {
 
     @Test
     public void testConcatenation() {
-        assertArrayEquals(new int[] { 1, 2, 1, 1, 2, 1 }, getConcatenation(new int[] { 1, 2, 1 }));
-        assertArrayEquals(new int[] { 1, 3, 2, 1, 1, 3, 2, 1 }, getConcatenation(new int[] { 1, 3, 2, 1 }));
-        assertArrayEquals(new int[] { 1, 2, 1, 1, 2, 1 }, getConcatenation2(new int[] { 1, 2, 1 }));
-        assertArrayEquals(new int[] { 1, 3, 2, 1, 1, 3, 2, 1 }, getConcatenation2(new int[] { 1, 3, 2, 1 }));
+        int[] exampleOne = new int[] {1,2,1};
+        int[] exampleOneExpectedResult = new int[] {1,2,1,1,2,1};
+        int[] exampleTwo = new int[] {1,3,2,1};
+        int[] exampleTwoExpectedResult = new int[] {1,3,2,1,1,3,2,1};
+
+        assertArrayEquals(exampleOneExpectedResult, getConcatenation(exampleOne));
+        assertArrayEquals(exampleTwoExpectedResult, getConcatenation(exampleTwo));
+
+        assertArrayEquals(exampleOneExpectedResult, getConcatenation2(exampleOne));
+        assertArrayEquals(exampleTwoExpectedResult, getConcatenation2(exampleTwo));
     }
 }
 
