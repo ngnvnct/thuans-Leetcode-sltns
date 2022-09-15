@@ -14,19 +14,20 @@ public class house_robber_ii {
         if (n == 2) {
             return Math.max(nums[0], nums[1]);
         }
-        return Math.max(helperHouseRobberI(nums, 0, n-2), helperHouseRobberI(nums, 1, n-1));
-        //return Math.max(helperHouseRobberISpace(nums, 0, n-2), helperHouseRobberI(nums, 1, n-1));
+        return Math.max(helperHouseRobberI(nums, 0, n - 2), helperHouseRobberI(nums, 1, n - 1));
+        // return Math.max(helperHouseRobberISpace(nums, 0, n-2),
+        // helperHouseRobberI(nums, 1, n-1));
     }
 
     public int helperHouseRobberI(int[] nums, int start, int end) {
-        int[] dp = new int[end-start+1];
+        int[] dp = new int[end - start + 1];
         dp[0] = nums[start];
-        dp[1] = Math.max(nums[start], nums[start+1]);
+        dp[1] = Math.max(nums[start], nums[start + 1]);
 
         for (int i = 2; i < dp.length; i++) {
-            dp[i] = Math.max(nums[start+i] + dp[i-2], dp[i-1]);
+            dp[i] = Math.max(nums[start + i] + dp[i - 2], dp[i - 1]);
         }
-        return dp[dp.length-1];
+        return dp[dp.length - 1];
     }
 
     public int helperHouseRobberISpace(int[] nums, int start, int end) {
@@ -45,17 +46,20 @@ public class house_robber_ii {
 
     @Test
     public void testHouseRobber() {
-        int[] exampleOne = {2,3,2};
-        int[] exampleTwo = {1,2,3,1};
+        int[] exampleOne = { 2, 3, 2 };
+        int[] exampleTwo = { 1, 2, 3, 1 };
         assertEquals(3, houseRobber(exampleOne));
         assertEquals(4, houseRobber(exampleTwo));
     }
 }
 
 /*
-Explanation
-Bottom up DP Problem. It is just House Robber 1 and we call it twice, 1 going from 0 to n-2, and the other 1 to n-2
-
-Time: O(n)
-Space: O(n) or O(1)
-*/
+ * https://leetcode.com/problems/house-robber-ii/
+ * Explanation
+ * 
+ * Bottom up DP Problem. It is just House Robber 1 and we call it twice, 1 going
+ * from 0 to n-2, and the other 1 to n-2
+ * 
+ * Time: O(n)
+ * Space: O(n) or O(1)
+ */
