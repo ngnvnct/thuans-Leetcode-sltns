@@ -1,12 +1,12 @@
-import java.util.*;
 import org.junit.Test;
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Contains_Duplicate_217 {
-    public static void main(String[] args) {
-
-    }
-
     public boolean containsDuplicate(int[] nums) {
         Set<Integer> set = new HashSet<>();
         for (int num : nums) {
@@ -44,15 +44,18 @@ public class Contains_Duplicate_217 {
         int[] exampleOne = new int[] { 1, 2, 3, 1 };
         int[] exampleTwo = new int[] { 1, 2, 3, 4 };
         int[] exampleThree = new int[] { 1, 1, 1, 3, 3, 4, 3, 2, 4, 2 };
-        assertEquals(true, containsDuplicate(exampleOne));
-        assertEquals(false, containsDuplicate(exampleTwo));
-        assertEquals(true, containsDuplicate(exampleThree));
-        assertEquals(true, containsDuplicateSort(exampleOne));
-        assertEquals(false, containsDuplicateSort(exampleTwo));
-        assertEquals(true, containsDuplicateSort(exampleThree));
-        assertEquals(true, containsDuplicateBF(exampleOne));
-        assertEquals(false, containsDuplicateBF(exampleTwo));
-        assertEquals(true, containsDuplicateBF(exampleThree));
+
+        assertTrue(containsDuplicate(exampleOne));
+        assertFalse(containsDuplicate(exampleTwo));
+        assertTrue(containsDuplicate(exampleThree));
+
+        assertTrue(containsDuplicateSort(exampleOne));
+        assertFalse(containsDuplicateSort(exampleTwo));
+        assertTrue(containsDuplicateSort(exampleThree));
+        
+        assertTrue(containsDuplicateBF(exampleOne));
+        assertFalse(containsDuplicateBF(exampleTwo));
+        assertTrue(containsDuplicateBF(exampleThree));
     }
 }
 
