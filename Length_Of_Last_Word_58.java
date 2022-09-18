@@ -2,7 +2,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-public class length_last_words {
+public class Length_Of_Last_Word_58 {
     public int lengthOfLastWord(String s) {
         int p = s.length() - 1;
         while (p >= 0 && s.charAt(p) == ' ') {
@@ -45,18 +45,24 @@ public class length_last_words {
 
     @Test
     public void testLength() {
-        String one = "Hello World";
-        String two = "   fly me   to   the moon  ";
-        String three = "luffy is still joyboy";
-        assertEquals(5, lengthOfLastWord(one));
-        assertEquals(5, lengthOfLastWord2(one));
-        assertEquals(4, lengthOfLastWord(two));
-        assertEquals(4, lengthOfLastWord2(two));
-        assertEquals(6, lengthOfLastWord(three));
-        assertEquals(6, lengthOfLastWord2(three));
-        assertEquals(5, lengthOfLastWord3(one));
-        assertEquals(4, lengthOfLastWord3(two));
-        assertEquals(6, lengthOfLastWord3(three));
+        String exampleOne = "Hello World";
+        int exampleOneExpectedResult = 5;
+        String exampleTwo = "   fly me   to   the moon  ";
+        int exampleTwoExpectedResult = 4;
+        String exampleThree = "luffy is still joyboy";
+        int exampleThreeExpectedResult = 6;
+
+        assertEquals(exampleOneExpectedResult, lengthOfLastWord(exampleOne));
+        assertEquals(exampleTwoExpectedResult, lengthOfLastWord(exampleTwo));
+        assertEquals(6, lengthOfLastWord(exampleThree));
+
+        assertEquals(exampleOneExpectedResult, lengthOfLastWord2(exampleOne));
+        assertEquals(exampleTwoExpectedResult, lengthOfLastWord2(exampleTwo));
+        assertEquals(exampleThreeExpectedResult, lengthOfLastWord2(exampleThree));
+
+        assertEquals(exampleOneExpectedResult, lengthOfLastWord3(exampleOne));
+        assertEquals(exampleTwoExpectedResult, lengthOfLastWord3(exampleTwo));
+        assertEquals(exampleThreeExpectedResult, lengthOfLastWord3(exampleThree));
     }
 }
 
