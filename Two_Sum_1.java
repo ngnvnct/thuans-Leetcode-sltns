@@ -19,7 +19,7 @@ public class Two_Sum_1 {
                 }
             }
         }
-        return new int[] {};
+        return new int[0];
     }
 
     public int[] twoSum(int[] nums, int target) {
@@ -37,12 +37,20 @@ public class Two_Sum_1 {
 
     @Test
     public void testTwoSum() {
-        assertArrayEquals(new int[] { 0, 1 }, twoSum(new int[] { 2, 7, 11, 15 }, 9));
-        assertArrayEquals(new int[] { 1, 2 }, twoSum(new int[] { 3, 2, 4 }, 6));
-        assertArrayEquals(new int[] { 0, 1 }, twoSum(new int[] { 3, 3, }, 6));
-        assertArrayEquals(new int[] { 0, 1 }, twoSumBF(new int[] { 2, 7, 11, 15 }, 9));
-        assertArrayEquals(new int[] { 1, 2 }, twoSumBF(new int[] { 3, 2, 4 }, 6));
-        assertArrayEquals(new int[] { 0, 1 }, twoSumBF(new int[] { 3, 3, }, 6));
+        int[] exampleOne = new int[] { 2, 7, 11, 15 };
+        int[] exampleOneExpectedResult = new int[] { 0, 1 };
+        int[] exampleTwo = new int[] { 3, 2, 4 };
+        int[] exampleTwoExpectedResult = new int[] { 1, 2 };
+        int[] exampleThree = new int[] { 3, 3 };
+        int[] exampleThreeExpectedResult = new int[] { 0, 1 };
+
+        assertArrayEquals(exampleOneExpectedResult, twoSum(exampleOne, 9));
+        assertArrayEquals(exampleTwoExpectedResult, twoSum(exampleTwo, 6));
+        assertArrayEquals(exampleThreeExpectedResult, twoSum(exampleThree, 6));
+
+        assertArrayEquals(exampleOneExpectedResult, twoSumBF(exampleOne, 9));
+        assertArrayEquals(exampleTwoExpectedResult, twoSumBF(exampleTwo, 6));
+        assertArrayEquals(exampleThreeExpectedResult, twoSumBF(exampleThree, 6));
     }
 }
 
