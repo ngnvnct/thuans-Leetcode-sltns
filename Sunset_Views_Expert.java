@@ -40,32 +40,31 @@ public class Sunset_Views_Expert {
 
     @Test
     public void testSunset() {
-        int[] one = new int[] { 3, 5, 4, 4, 3, 1, 3, 2 };
-        int[] two = new int[] { 7, 1, 7, 8, 9, 8, 7, 6, 5, 4, 2, 5 };
-        int[] three = new int[] {10, 11};
-        int[] four = new int[] {2, 4};
-        int[] five = new int[] {1};
-        int[] six = new int[] {};
-        int[] seven = new int[] {7, 1, 7, 8, 9, 8, 7, 6, 5, 4, 2, 5};
-        int[] eight = new int[] {1,2,3,4,5,6};
-        int[] nine = new int[] {1, 2, 3, 1, 5, 6, 9, 1, 9, 9, 11, 10, 9, 12, 8};
-        int[] ten = new int[] {20, 2, 3, 1, 5, 6, 9, 1, 9, 9, 11, 10, 9, 12, 8};
+        int[] exampleOne = new int[] { 3, 5, 4, 4, 3, 1, 3, 2 };
+        int[] exampleTwo = new int[] { 7, 1, 7, 8, 9, 8, 7, 6, 5, 4, 2, 5 };
+        int[] exampleThree = new int[] {10, 11};
+        int[] exampleFour = new int[] {2, 4};
+        int[] exampleFive = new int[] {1};
+        int[] exampleSix = new int[0];
+        int[] exampleSeven = new int[] {7, 1, 7, 8, 9, 8, 7, 6, 5, 4, 2, 5};
+        int[] exampleEight = new int[] {1,2,3,4,5,6};
+        int[] exampleNine = new int[] {1, 2, 3, 1, 5, 6, 9, 1, 9, 9, 11, 10, 9, 12, 8};
+        int[] exampleTen = new int[] {20, 2, 3, 1, 5, 6, 9, 1, 9, 9, 11, 10, 9, 12, 8};
 
-        assertEquals(new ArrayList<>(Arrays.asList(1, 3, 6, 7)), sunsetViews(one, "EAST"));
-        assertEquals(new ArrayList<>(Arrays.asList(0, 1)), sunsetViews(one, "WEST"));
-        assertEquals(new ArrayList<>(Arrays.asList(4, 5, 6, 7, 11)), sunsetViews(two, "EAST"));
-        assertEquals(new ArrayList<>(Arrays.asList(1)), sunsetViews(three, "EAST"));
-        assertEquals(new ArrayList<>(Arrays.asList(0,1)), sunsetViews(four, "WEST"));
-        assertEquals(new ArrayList<>(Arrays.asList(0)), sunsetViews(five, "EAST"));
-        assertEquals(new ArrayList<>(), sunsetViews(six, "EAST"));
-        assertEquals(new ArrayList<>(), sunsetViews(six, "WEST"));
-        assertEquals(new ArrayList<>(Arrays.asList(4,5,6,7,11)), sunsetViews(seven, "EAST"));
-        assertEquals(new ArrayList<>(Arrays.asList(5)), sunsetViews(eight, "EAST"));
-        assertEquals(new ArrayList<>(Arrays.asList(0,1,2,3,4,5)), sunsetViews(eight, "WEST"));
-        assertEquals(new ArrayList<>(Arrays.asList(0, 1, 2, 4, 5, 6, 10, 13)), sunsetViews(nine, "WEST"));
-        assertEquals(new ArrayList<>(Arrays.asList(0,13,14)), sunsetViews(ten, "EAST"));
+        assertEquals(new ArrayList<>(Arrays.asList(1, 3, 6, 7)), sunsetViews(exampleOne, "EAST"));
+        assertEquals(new ArrayList<>(Arrays.asList(0, 1)), sunsetViews(exampleOne, "WEST"));
+        assertEquals(new ArrayList<>(Arrays.asList(4, 5, 6, 7, 11)), sunsetViews(exampleTwo, "EAST"));
+        assertEquals(new ArrayList<>(Arrays.asList(1)), sunsetViews(exampleThree, "EAST"));
+        assertEquals(new ArrayList<>(Arrays.asList(0,1)), sunsetViews(exampleFour, "WEST"));
+        assertEquals(new ArrayList<>(Arrays.asList(0)), sunsetViews(exampleFive, "EAST"));
+        assertEquals(new ArrayList<>(), sunsetViews(exampleSix, "EAST"));
+        assertEquals(new ArrayList<>(), sunsetViews(exampleSix, "WEST"));
+        assertEquals(new ArrayList<>(Arrays.asList(4,5,6,7,11)), sunsetViews(exampleSeven, "EAST"));
+        assertEquals(new ArrayList<>(Arrays.asList(5)), sunsetViews(exampleEight, "EAST"));
+        assertEquals(new ArrayList<>(Arrays.asList(0,1,2,3,4,5)), sunsetViews(exampleEight, "WEST"));
+        assertEquals(new ArrayList<>(Arrays.asList(0, 1, 2, 4, 5, 6, 10, 13)), sunsetViews(exampleNine, "WEST"));
+        assertEquals(new ArrayList<>(Arrays.asList(0,13,14)), sunsetViews(exampleTen, "EAST"));
     }
-    
 }
 
 /*
