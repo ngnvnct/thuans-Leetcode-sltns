@@ -30,11 +30,11 @@ public class Final_Value_Of_Variable_After_Performing_Operations_2011 {
 
     @Test
     public void testOperations() {
-        String[] exampleOne = {"--X","X++","X++"};
+        String[] exampleOne = { "--X", "X++", "X++" };
         int exampleOneExpectedResult = 1;
-        String[] exampleTwo = {"++X","++X","X++"};
+        String[] exampleTwo = { "++X", "++X", "X++" };
         int exampleTwoExpectedResult = 3;
-        String[] exampleThree = {"X++","++X","--X","X--"};
+        String[] exampleThree = { "X++", "++X", "--X", "X--" };
         int exampleThreeExpectedResult = 0;
 
         assertEquals(exampleOneExpectedResult, finalValueAfterOperations(exampleOne));
@@ -48,13 +48,16 @@ public class Final_Value_Of_Variable_After_Performing_Operations_2011 {
 }
 
 /*
-Explanation
-
-operations[i] will be either "++X", "X++", "--X", or "X--"
-
-Because of this constraint, it will always be a valid input. Therefore, we can just check the 1st index whether it is '-' or '+', then update accordingly
-Or, just take care of one operation "++X", "X++" using equals() method
-
-Time: O(n)
-Space: O(1)
-*/
+ * Explanation
+ * https://leetcode.com/problems/final-value-of-variable-after-performing-operations/
+ * 
+ * Operations[i] will be either "++X", "X++", "--X", or "X--"
+ * 
+ * Because of this constraint, it will always be a valid input. Therefore, we
+ * can just check the 1st index whether it is '-' or '+', then update
+ * accordingly
+ * Or, just take care of one operation "++X", "X++" using equals() method
+ * 
+ * Time: O(n)
+ * Space: O(1)
+ */
