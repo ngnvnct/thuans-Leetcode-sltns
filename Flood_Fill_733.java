@@ -24,11 +24,12 @@ public class Flood_Fill_733 {
     @Test
     public void testFillColor() {
         int[][] exampleOne = { { 1, 1, 1 }, { 1, 1, 0 }, { 1, 0, 1 } };
+        int[][] exampleOneExpectedResult = { { 2, 2, 2 }, { 2, 2, 0 }, { 2, 0, 1 } };
         int[][] exampleTwo = { { 0, 0, 0 }, { 0, 0, 0 } };
-        int[][] expectedOne = { { 2, 2, 2 }, { 2, 2, 0 }, { 2, 0, 1 } };
-        int[][] expectedTwo = { { 2, 2, 2 }, { 2, 2, 2 } };
-        assertArrayEquals(expectedOne, floodFill(exampleOne, 1, 1, 2));
-        assertArrayEquals(expectedTwo, floodFill(exampleTwo, 0, 0, 2));
+        int[][] exampleTwoExpectedResult = { { 2, 2, 2 }, { 2, 2, 2 } };
+
+        assertArrayEquals(exampleOneExpectedResult, floodFill(exampleOne, 1, 1, 2));
+        assertArrayEquals(exampleTwoExpectedResult, floodFill(exampleTwo, 0, 0, 2));
     }
 }
 
