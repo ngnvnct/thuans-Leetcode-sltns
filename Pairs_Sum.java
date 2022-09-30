@@ -4,7 +4,6 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
 public class Pairs_Sum {
-
     public boolean pairSum(String input) {
         int digits = 0;
         int sum = 0;
