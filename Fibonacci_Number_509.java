@@ -50,22 +50,34 @@ public class Fibonacci_Number_509 {
 
     @Test
     public void testFib() {
-        assertEquals(1, fib(2));
-        assertEquals(2, fib(3));
-        assertEquals(3, fib(4));
-        assertEquals(832040, fib(30));
-        assertEquals(1, fib2(2));
-        assertEquals(2, fib2(3));
-        assertEquals(3, fib2(4));
-        assertEquals(832040, fib2(30));
-        assertEquals(1, fibMath(2));
-        assertEquals(2, fibMath(3));
-        assertEquals(3, fibMath(4));
-        assertEquals(832040, fibMath(30));
-        assertEquals(1, fibRecursion(2));
-        assertEquals(2, fibRecursion(3));
-        assertEquals(3, fibRecursion(4));
-        assertEquals(832040, fibRecursion(30));
+        int exampleOne = 2;
+        int exampleOneExpectedResult = 1;
+        int exampleTwo = 3;
+        int exampleTwoExpectedResult = 2;
+        int exampleThree = 4;
+        int exampleThreeExpectedResult = 3;
+        int exampleFour = 30;
+        int exampleFourExpectedResult = 832040;
+
+        assertEquals(exampleOneExpectedResult, fib(exampleOne));
+        assertEquals(exampleTwoExpectedResult, fib(exampleTwo));
+        assertEquals(exampleThreeExpectedResult, fib(exampleThree));
+        assertEquals(exampleFourExpectedResult, fib(exampleFour));
+
+        assertEquals(exampleOneExpectedResult, fib2(exampleOne));
+        assertEquals(exampleTwoExpectedResult, fib2(exampleTwo));
+        assertEquals(exampleThreeExpectedResult, fib2(exampleThree));
+        assertEquals(exampleFourExpectedResult, fib2(exampleFour));
+
+        assertEquals(exampleOneExpectedResult, fibMath(exampleOne));
+        assertEquals(exampleTwoExpectedResult, fibMath(exampleTwo));
+        assertEquals(exampleThreeExpectedResult, fibMath(exampleThree));
+        assertEquals(exampleFourExpectedResult, fibMath(exampleFour));
+
+        assertEquals(exampleOneExpectedResult, fibRecursion(exampleOne));
+        assertEquals(exampleTwoExpectedResult, fibRecursion(exampleTwo));
+        assertEquals(exampleThreeExpectedResult, fibRecursion(exampleThree));
+        assertEquals(exampleFourExpectedResult, fibRecursion(exampleFour));
     }
 }
 
