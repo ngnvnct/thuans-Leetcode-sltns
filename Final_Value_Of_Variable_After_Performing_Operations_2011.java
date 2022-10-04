@@ -2,7 +2,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-public class final_value_after_performing_operations {
+public class Final_Value_Of_Variable_After_Performing_Operations_2011 {
     public int finalValueAfterOperations(String[] operations) {
         int x = 0;
         for (String operation : operations) {
@@ -30,16 +30,20 @@ public class final_value_after_performing_operations {
 
     @Test
     public void testOperations() {
-        String[] one = {"--X","X++","X++"};
-        String[] two = {"++X","++X","X++"};
-        String[] three = {"X++","++X","--X","X--"};
+        String[] exampleOne = {"--X","X++","X++"};
+        int exampleOneExpectedResult = 1;
+        String[] exampleTwo = {"++X","++X","X++"};
+        int exampleTwoExpectedResult = 3;
+        String[] exampleThree = {"X++","++X","--X","X--"};
+        int exampleThreeExpectedResult = 0;
 
-        assertEquals(1, finalValueAfterOperations(one));
-        assertEquals(3, finalValueAfterOperations(two));
-        assertEquals(0, finalValueAfterOperations(three));
-        assertEquals(1, finalValueAfterOperations2(one));
-        assertEquals(3, finalValueAfterOperations2(two));
-        assertEquals(0, finalValueAfterOperations2(three));
+        assertEquals(exampleOneExpectedResult, finalValueAfterOperations(exampleOne));
+        assertEquals(exampleTwoExpectedResult, finalValueAfterOperations(exampleTwo));
+        assertEquals(exampleThreeExpectedResult, finalValueAfterOperations(exampleThree));
+
+        assertEquals(exampleOneExpectedResult, finalValueAfterOperations2(exampleOne));
+        assertEquals(exampleTwoExpectedResult, finalValueAfterOperations2(exampleTwo));
+        assertEquals(exampleThreeExpectedResult, finalValueAfterOperations2(exampleThree));
     }
 }
 
