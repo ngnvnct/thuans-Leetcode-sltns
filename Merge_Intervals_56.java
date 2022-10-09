@@ -41,6 +41,7 @@ public class Merge_Intervals_56 {
 		}
 		Arrays.sort(intervals, (a, b) -> Integer.compare(a[0], b[0]));
 		LinkedList<int[]> merged = new LinkedList<>();
+		
 		for (int[] interval : intervals) {
 			if (merged.isEmpty() || merged.getLast()[1] < interval[0]) {
 				merged.add(interval);
@@ -54,13 +55,15 @@ public class Merge_Intervals_56 {
 	@Test
 	public void testMergeInterval() {
 		int[][] exampleOne = new int[][] { { 1, 3 }, { 2, 6 }, { 8, 10 }, { 15, 18 } };
+		int[][] exampleOneExpectedResult = new int[][] { { 1, 6 }, { 8, 10 }, { 15, 18 } };
 		int[][] exampleTwo = new int[][] { { 1, 4 }, { 4, 5 } };
-		int[][] expectedOne = new int[][] { { 1, 6 }, { 8, 10 }, { 15, 18 } };
-		int[][] expectedTwo = new int[][] { { 1, 5 } };
-		assertArrayEquals(expectedOne, merge(exampleOne));
-		assertArrayEquals(expectedTwo, merge(exampleTwo));
-		assertArrayEquals(expectedOne, merge2(exampleOne));
-		assertArrayEquals(expectedTwo, merge2(exampleTwo));
+		int[][] exampleTwoExpectedResult = new int[][] { { 1, 5 } };
+
+		assertArrayEquals(exampleOneExpectedResult, merge(exampleOne));
+		assertArrayEquals(exampleTwoExpectedResult, merge(exampleTwo));
+		
+		assertArrayEquals(exampleOneExpectedResult, merge2(exampleOne));
+		assertArrayEquals(exampleTwoExpectedResult, merge2(exampleTwo));
 	}
 }
 
