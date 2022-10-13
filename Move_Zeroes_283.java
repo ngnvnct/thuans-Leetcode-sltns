@@ -4,18 +4,17 @@ import java.util.Arrays;
 
 import org.junit.Test;
 
-public class move_zeroes {
-
+public class Move_Zeroes_283 {
     public static void main(String[] args) {
-        int[] one = {0,0,0,1,2,3};
-        move_zeroes sol = new move_zeroes();
-        sol.moveZeroes(one);
-        System.out.println(Arrays.toString(one));
+        int[] exampleOne = { 0, 0, 0, 1, 2, 3 };
+        Move_Zeroes_283 sol = new Move_Zeroes_283();
+        sol.moveZeroes(exampleOne);
+        System.out.println(Arrays.toString(exampleOne));
     }
 
     public void moveZeroes(int[] nums) {
         int currentIndex = 0;
-        for (int i =0; i < nums.length; i++) {
+        for (int i = 0; i < nums.length; i++) {
             if (nums[i] != 0) {
                 int temp = nums[currentIndex];
                 nums[currentIndex++] = nums[i];
@@ -26,7 +25,7 @@ public class move_zeroes {
 
     public void moveZeroesMinWrite(int[] nums) {
         int insertPos = 0;
-        for (int i =0; i < nums.length; i++) {
+        for (int i = 0; i < nums.length; i++) {
             if (nums[i] != 0) {
                 if (insertPos != i) {
                     nums[insertPos] = nums[i];
@@ -74,25 +73,28 @@ public class move_zeroes {
 
     @Test
     public void testZeroes() {
-        int[] one = {0,1,0,3,12};
-        assertEquals(3, countMoveZeroes(one));
+        assertEquals(3, countMoveZeroes(new int[] { 0, 1, 0, 3, 12 }));
     }
 }
 
 /*
-Explantion:
-We want to loop through an Array and check for index that doesn't have a 0. We keep an index at the start of the Array
-and only increment it after we swap it with the current element that is not 0.
-
-Method 1 do an unnessary swap if the element is not 0
-
-Method 2 and 3
-
-Time: O(n), looping through n elements of Array
-Space: O(1), input array doesn't count, if it does then O(n)
-
-countMoveZeroes was asked during facebook mock, want to return the number of non-zero element, when writeIndex finish updating, it will be at the next index, then we can return it as it will be
-the number of non zero element
-
-Ask during facebook mock interview
-*/
+ * https://leetcode.com/problems/move-zeroes/
+ * Explantion
+ * We want to loop through an Array and check for index that doesn't have a 0.
+ * We keep an index at the start of the Array
+ * and only increment it after we swap it with the current element that is not 0.
+ * 
+ * Method 1 do an unnessary swap if the element is not 0
+ * 
+ * Method 2 and 3 do minimum write
+ * 
+ * Time: O(n), looping through n elements of Array
+ * Space: O(1), input array doesn't count, if it does then O(n)
+ * 
+ * countMoveZeroes was asked during facebook mock, want to return the number of
+ * non-zero element, when writeIndex finish updating, it will be at the next
+ * index, then we can return it as it will be
+ * the number of non zero element
+ * 
+ * Ask during facebook mock interview
+ */
