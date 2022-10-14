@@ -2,13 +2,13 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-public class paint_house {
+public class Paint_House_256 {
     public int paintHouse(int[][] costs) {
         if (costs == null || costs.length == 0) {
             return 0;
         }
-
         int[] dp = new int[3];
+
         for (int i = 0; i < costs.length; i++) {
             int firstHouse = costs[i][0] + Math.min(dp[1], dp[2]);
             int secondHouse = costs[i][1] + Math.min(dp[0], dp[2]);
@@ -35,21 +35,25 @@ public class paint_house {
 
     @Test
     public void testPaintHouse() {
-        int[][] one = { { 17, 2, 17 }, { 16, 16, 5 }, { 14, 3, 19 } };
-        int[][] two = { { 7, 6, 2 } };
-        int[][] three = { { 17, 2, 17 }, { 8, 4, 10 }, { 6, 3, 19 }, { 4, 8, 12 } };
+        int[][] exampleOne = { { 17, 2, 17 }, { 16, 16, 5 }, { 14, 3, 19 } };
+        int exampleOneExpectedResult = 10;
+        int[][] exampleTwo = { { 7, 6, 2 } };
+        int exampleTwoExpectedResult = 2;
+        int[][] exampleThree = { { 17, 2, 17 }, { 8, 4, 10 }, { 6, 3, 19 }, { 4, 8, 12 } };
+        int exampleThreeExpectedResult = 17;
 
-        assertEquals(10, paintHouse(one));
-        assertEquals(2, paintHouse(two));
-        assertEquals(17, paintHouse(three));
-        assertEquals(10, paintHouse2(one));
-        assertEquals(2, paintHouse2(two));
-        assertEquals(17, paintHouse2(three));
+        assertEquals(exampleOneExpectedResult, paintHouse(exampleOne));
+        assertEquals(exampleTwoExpectedResult, paintHouse(exampleTwo));
+        assertEquals(exampleThreeExpectedResult, paintHouse(exampleThree));
+
+        assertEquals(exampleOneExpectedResult, paintHouse2(exampleOne));
+        assertEquals(exampleTwoExpectedResult, paintHouse2(exampleTwo));
+        assertEquals(exampleThreeExpectedResult, paintHouse2(exampleThree));
     }
 }
 
 /*
- * https://leetcode.com/problems/paint-house/
+ * https://leetcode.com/problems/paint-house/ LC Premium
  * Exlpanation
  * 
  * DP Appoarch
