@@ -7,15 +7,17 @@ import java.util.PriorityQueue;
 
 import org.junit.Test;
 
-public class relative_ranks {
+public class Relative_Ranks_506 {
     public String[] findRelativeRanks(int[] score) {
         PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder());
         Map<Integer, Integer> map = new HashMap<>();
+        String[] res = new String[score.length];
+
         for (int i = 0; i < score.length; i++) {
             maxHeap.add(score[i]);
             map.put(score[i], i);
         }
-        String[] res = new String[score.length];
+
         for (int i = 0; i < score.length; i++) {
             int rank = maxHeap.poll();
             int indexValue = map.get(rank);
@@ -26,7 +28,7 @@ public class relative_ranks {
             } else if (i == 2) {
                 res[indexValue] = "Bronze Medal";
             } else {
-                res[indexValue] = String.valueOf(i+1);
+                res[indexValue] = String.valueOf(i + 1);
             }
         }
         return res;
@@ -34,21 +36,24 @@ public class relative_ranks {
 
     @Test
     public void testRelativeRanks() {
-        int[] exampleOne = {5,4,3,2,1};
-        int[] exampleTwo = {10,3,8,9,4};
-        String[] expectedOne = {"Gold Medal","Silver Medal","Bronze Medal","4","5"};
-        String[] expectedTwo = {"Gold Medal","5","Bronze Medal","Silver Medal","4"};
-        assertArrayEquals(expectedOne, findRelativeRanks(exampleOne));
-        assertArrayEquals(expectedTwo, findRelativeRanks(exampleTwo));
+        String[] exampleOneExpectedResult = { "Gold Medal", "Silver Medal", "Bronze Medal", "4", "5" };
+        String[] exampleTwoExpectedResult = { "Gold Medal", "5", "Bronze Medal", "Silver Medal", "4" };
+
+        assertArrayEquals(exampleOneExpectedResult, findRelativeRanks(new int[] { 5, 4, 3, 2, 1 }));
+        assertArrayEquals(exampleTwoExpectedResult, findRelativeRanks(new int[] { 10, 3, 8, 9, 4 }));
     }
 }
 
 /*
-Explanation
-We have a max heap that store the largest value in the array, and a map to map the element with the index. 
-In our 2nd loop, the first one that get taken out of the heap will always be Gold Medal, and 2nd one will be Silver, and 3rd Bronze, so we can set map the index into our result.
-
-Time: O(nlogn), using heap
-Space: O(n), storing heap
-
-*/
+ * https://leetcode.com/problems/relative-ranks/
+ * Explanation
+ * 
+ * We have a max heap that store the largest value in the array, and a map to
+ * map the element with the index.
+ * In our 2nd loop, the first one that get taken out of the heap will always be
+ * Gold Medal, and 2nd one will be Silver, and 3rd Bronze, so we can set map the
+ * index into our result.
+ * 
+ * Time: O(nlogn), using heap
+ * Space: O(n), storing heap
+ */
