@@ -6,7 +6,7 @@ import java.util.Set;
 
 import org.junit.Test;
 
-public class remove_vowels_string {
+public class Remove_Vowels_From_A_String_1119 {
     public String removeVowels(String s) {
         Set<Character> set = new HashSet<>(Arrays.asList('a', 'e', 'i', 'o', 'u'));
         String res = "";
@@ -21,15 +21,16 @@ public class remove_vowels_string {
     }
 
     public String removeVowels2(String s) {
-        String res = "";
+        StringBuilder sb = new StringBuilder();
 
         for (int i = 0; i < s.length(); i++) {
-            if (isVowel(s.charAt(i))) {
+            char c = s.charAt(i);
+            if (isVowel(c)) {
                 continue;
             }
-            res += s.charAt(i);
+            sb.append(c);
         }
-        return res;
+        return sb.toString();
     }
 
     public boolean isVowel(char vowel) {
@@ -43,24 +44,28 @@ public class remove_vowels_string {
     @Test
     public void testRemoveVowels() {
         String exampleOne = "leetcodeisacommunityforcoders";
-        String expectedOne = "ltcdscmmntyfrcdrs";
+        String exampleOneExpectedResult = "ltcdscmmntyfrcdrs";
         String exampleTwo = "aeiou";
-        String expectedTwo = "";
+        String exampleTwoExpectedResult = "";
 
-        assertEquals(expectedOne, removeVowels(exampleOne));
-        assertEquals(expectedTwo, removeVowels(exampleTwo));
-        assertEquals(expectedOne, removeVowels2(exampleOne));
-        assertEquals(expectedTwo, removeVowels2(exampleTwo));
-        assertEquals(expectedOne, removeVowels3(exampleOne));
-        assertEquals(expectedTwo, removeVowels3(exampleTwo));
+        assertEquals(exampleOneExpectedResult, removeVowels(exampleOne));
+        assertEquals(exampleTwoExpectedResult, removeVowels(exampleTwo));
+
+        assertEquals(exampleOneExpectedResult, removeVowels2(exampleOne));
+        assertEquals(exampleTwoExpectedResult, removeVowels2(exampleTwo));
+
+        assertEquals(exampleOneExpectedResult, removeVowels3(exampleOne));
+        assertEquals(exampleTwoExpectedResult, removeVowels3(exampleTwo));
     }
 }
 
 /*
-Explanation
-
-We can make a set of vowels, then at each character, check if it is in the set, continue if it is, else add it to the result string
-
-Time: O(n)
-Space: O(5)
-*/
+ * https://leetcode.com/problems/remove-vowels-from-a-string/ LC Premium
+ * Explanation
+ * 
+ * We can make a set of vowels, then at each character, check if it is in the
+ * set, continue if it is, else add it to the result string
+ * 
+ * Time: O(n)
+ * Space: O(5)
+ */
