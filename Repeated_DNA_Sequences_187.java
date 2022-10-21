@@ -10,17 +10,17 @@ import java.util.Set;
 
 import org.junit.Test;
 
-public class repeated_dna_sequence {
+public class Repeated_DNA_Sequences_187 {
     public List<String> findRepeatedDnaSequences(String s) {
         if (s == null || s.length() <= 10) {
             return new ArrayList<String>();
         }
-        
+
         Set<String> set = new HashSet<>();
         Set<String> result = new HashSet<>();
-        
+
         int left = 0;
-        
+
         for (int right = 0; right < s.length(); right++) {
             if (right - left + 1 < 10) {
                 continue;
@@ -28,7 +28,7 @@ public class repeated_dna_sequence {
             while (left < right && right - left + 1 > 10) {
                 left++;
             }
-            
+
             String current = s.substring(left, right + 1);
             if (set.contains(current)) {
                 result.add(current);
@@ -42,12 +42,12 @@ public class repeated_dna_sequence {
         if (s == null || s.length() <= 10) {
             return new ArrayList<String>();
         }
-        
+
         Map<String, Integer> map = new HashMap<>();
         List<String> result = new ArrayList<>();
-        
+
         int left = 0;
-        
+
         for (int right = 0; right < s.length(); right++) {
             if (right - left + 1 < 10) {
                 continue;
@@ -55,7 +55,7 @@ public class repeated_dna_sequence {
             while (left < right && right - left + 1 > 10) {
                 left++;
             }
-            
+
             String current = s.substring(left, right + 1);
             int count = map.getOrDefault(current, 0) + 1;
             if (count == 2) {
@@ -75,41 +75,48 @@ public class repeated_dna_sequence {
         Set<String> res = new HashSet<>();
 
         for (int start = 0; start < n - end + 1; ++start) {
-          String current = s.substring(start, start + end);
-          if (seen.contains(current)) {
-              res.add(current);
-          }
-          seen.add(current);
+            String current = s.substring(start, start + end);
+            if (seen.contains(current)) {
+                res.add(current);
+            }
+            seen.add(current);
         }
         return new ArrayList<String>(res);
     }
 
-    @Test (timeout = 100)
+    @Test(timeout = 100)
     public void testDNA() {
-        String one = "AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT";
-        List<String> expectedOne = new ArrayList<>(Arrays.asList("AAAAACCCCC","CCCCCAAAAA"));
-        String two = "AAAAAAAAAAAAA";
-        List<String> expectedTwo = new ArrayList<>(Arrays.asList("AAAAAAAAAA"));
-        assertEquals(expectedOne, findRepeatedDnaSequences(one));
-        assertEquals(expectedOne, findRepeatedDnaSequencesMap(one));
-        assertEquals(expectedOne, findRepeatedDnaSequences3(one));
-        assertEquals(expectedTwo, findRepeatedDnaSequences(two));
-        assertEquals(expectedTwo, findRepeatedDnaSequencesMap(two));
-        assertEquals(expectedTwo, findRepeatedDnaSequences3(two));
+        String exampleOne = "AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT";
+        List<String> exampleOneExpectedResult = new ArrayList<>(Arrays.asList("AAAAACCCCC", "CCCCCAAAAA"));
+        String exampleTwo = "AAAAAAAAAAAAA";
+        List<String> exampleTwoExpectedResult = new ArrayList<>(Arrays.asList("AAAAAAAAAA"));
+
+        assertEquals(exampleOneExpectedResult, findRepeatedDnaSequences(exampleOne));
+        assertEquals(exampleTwoExpectedResult, findRepeatedDnaSequences(exampleTwo));
+
+        assertEquals(exampleOneExpectedResult, findRepeatedDnaSequencesMap(exampleOne));
+        assertEquals(exampleTwoExpectedResult, findRepeatedDnaSequencesMap(exampleTwo));
+
+        assertEquals(exampleOneExpectedResult, findRepeatedDnaSequences3(exampleOne));
+        assertEquals(exampleTwoExpectedResult, findRepeatedDnaSequences3(exampleTwo));
     }
 }
 
-
-/*abstract
-Explanation
-
-This is a slideing window technique. Either a set or a hash will work here. Linear time slice using substring and hashset
-"AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT"
-First you take the first 10 characters, "AAAAACCCCC", and see if it is in a hash set, if it is in the hash set, it meets the requirement we add it into our result hash set
-for map, we keep a count of the number of time it appears, >1 then it meets the requirement
-
-Then, we shift left and right by 1 "AAAACCCCCA" and repeat
-
-Time: O(N)
-Space: O(N)
-*/
+/*
+ * https://leetcode.com/problems/repeated-dna-sequences/
+ * Explanation
+ * 
+ * This is a slideing window technique. Either a set or a hash will work here.
+ * Linear time slice using substring and hashset
+ * "AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT"
+ * First you take the first 10 characters, "AAAAACCCCC", and see if it is in a
+ * hash set, if it is in the hash set, it meets the requirement we add it into
+ * our result hash set
+ * for map, we keep a count of the number of time it appears, >1 then it meets
+ * the requirement
+ * 
+ * Then, we shift left and right by 1 "AAAACCCCCA" and repeat
+ * 
+ * Time: O(N)
+ * Space: O(N)
+ */
