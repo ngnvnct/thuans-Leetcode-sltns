@@ -1,4 +1,5 @@
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
@@ -59,11 +60,11 @@ public class Can_Place_Flowers_605 {
         int[] exampleFour = { 0, 0, 1 };
         int[] exampleFive = { 1, 0, 0 };
 
-        assertEquals(false, canPlaceFlowers(exampleOne, 1));
-        assertEquals(false, canPlaceFlowers(exampleTwo, 1));
-        assertEquals(true, canPlaceFlowers(exampleThree, 1));
-        assertEquals(true, canPlaceFlowers(exampleFour, 1));
-        assertEquals(true, canPlaceFlowers(exampleFive, 1));
+        assertFalse(canPlaceFlowers(exampleOne, 1));
+        assertFalse(canPlaceFlowers(exampleTwo, 1));
+        assertTrue(canPlaceFlowers(exampleThree, 1));
+        assertTrue(canPlaceFlowers(exampleFour, 1));
+        assertTrue(canPlaceFlowers(exampleFive, 1));
 
         exampleOne = new int[] { 1, 0, 1 };
         exampleTwo = new int[] { 1, 0, 0, 1 };
@@ -71,19 +72,19 @@ public class Can_Place_Flowers_605 {
         exampleFour = new int[] { 0, 0, 1 };
         exampleFive = new int[] { 1, 0, 0 };
 
-        assertEquals(false, canPlaceFlowersMethodTwo(exampleOne, 1));
-        assertEquals(false, canPlaceFlowersMethodTwo(exampleTwo, 1));
-        assertEquals(true, canPlaceFlowersMethodTwo(exampleThree, 1));
-        assertEquals(true, canPlaceFlowersMethodTwo(exampleFour, 1));
-        assertEquals(true, canPlaceFlowersMethodTwo(exampleFive, 1));
+        assertFalse(canPlaceFlowersMethodTwo(exampleOne, 1));
+        assertFalse(canPlaceFlowersMethodTwo(exampleTwo, 1));
+        assertTrue(canPlaceFlowersMethodTwo(exampleThree, 1));
+        assertTrue(canPlaceFlowersMethodTwo(exampleFour, 1));
+        assertTrue(canPlaceFlowersMethodTwo(exampleFive, 1));
     }
 }
 
 /*
  * https://leetcode.com/problems/can-place-flowers/
  * Explanation
- * Greedy algorithm. If you can place a flower there, do so, and check for edge
- * case
+ * 
+ * Greedy algorithm. If you can place a flower there, do so, and check for edge case
  * Edge Case
  * [1,0,1] no
  * [1,0,0,1] no
