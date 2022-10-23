@@ -1,8 +1,9 @@
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-public class valid_palindrome {
+public class Valid_Palindrome_125 {
     public boolean isPalindrome(String s) {
         s = s.toLowerCase().replaceAll("[^0-9a-z]", "");
         for (int i = 0; i < s.length() / 2; i++) {
@@ -55,20 +56,24 @@ public class valid_palindrome {
         String exampleOne = "A man, a plan, a canal: Panama";
         String exampleTwo = "race a car";
         String exampleThree = " ";
-        assertEquals(true, isPalindrome(exampleOne));
-        assertEquals(true, isPalindrome2(exampleOne));
-        assertEquals(true, isPalindrome3(exampleOne));
-        assertEquals(false, isPalindrome(exampleTwo));
-        assertEquals(false, isPalindrome2(exampleTwo));
-        assertEquals(false, isPalindrome3(exampleTwo));
-        assertEquals(true, isPalindrome(exampleThree));
-        assertEquals(true, isPalindrome2(exampleThree));
-        assertEquals(true, isPalindrome3(exampleThree));
+
+        assertTrue(isPalindrome(exampleOne));
+        assertFalse(isPalindrome(exampleTwo));
+        assertTrue(isPalindrome(exampleThree));
+
+        assertTrue(isPalindrome2(exampleOne));
+        assertFalse(isPalindrome2(exampleTwo));
+        assertTrue(isPalindrome2(exampleThree));
+
+        assertTrue(isPalindrome3(exampleOne));
+        assertFalse(isPalindrome3(exampleTwo));
+        assertTrue(isPalindrome3(exampleThree));
     }
 }
 
 
 /*
+https://leetcode.com/problems/valid-palindrome/
 Explanation
 
 Method 1, replace everything to lowercase and remove space, we only need to check the first half of the string, since the other half is just the reverse of it, two pointer appoarch
