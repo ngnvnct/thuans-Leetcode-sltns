@@ -1,4 +1,5 @@
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
@@ -8,7 +9,7 @@ import java.util.Stack;
 
 import org.junit.Test;
 
-public class valid_parentheses {
+public class Valid_Parentheses_20 {
     public boolean isValidStack(String s) {
         if (s.length() % 2 == 1) {
             return false;
@@ -77,19 +78,30 @@ public class valid_parentheses {
 
     @Test
     public void testParentheses() {
-        assertEquals(true, isValidStack("(){}[]"));
-        assertEquals(true, isValidStack("()"));
-        assertEquals(false, isValidStack("(]"));
-        assertEquals(true, isValidDeque("(){}[]"));
-        assertEquals(true, isValidDeque("()"));
-        assertEquals(false, isValidDeque("(]"));
-        assertEquals(true, isValidIllegalChar("(){}[]"));
-        assertEquals(true, isValidIllegalChar("()"));
-        assertEquals(false, isValidIllegalChar("(]"));
-        assertEquals(true, isValidIllegalChar("(a)"));
-        assertEquals(true, isValidIllegalChar("(141[])(){waga}((51afaw))()hh()"));
-        assertEquals(true, isValidIllegalChar("(()agwg())((()agwga()())gawgwgag)"));
-        assertEquals(true, isValidIllegalChar("(agwgg)([ghhheah%&@Q])"));
+        String exampleOne = "(){}[]";
+        String exampleTwo = "()";
+        String exampleThree = "(]";
+        String exampleFour = "(a)";
+        String exampleFive = "(141[])(){waga}((51afaw))()hh()";
+        String exampleSix = "(()agwg())((()agwga()())gawgwgag)";
+        String exampleSeven = "(agwgg)([ghhheah%&@Q])";
+
+        assertTrue(isValidStack(exampleOne));
+        assertTrue(isValidStack(exampleTwo));
+        assertFalse(isValidStack(exampleThree));
+
+        assertTrue(isValidDeque(exampleOne));
+        assertTrue(isValidDeque(exampleTwo));
+        assertFalse(isValidDeque(exampleThree));
+
+        assertTrue(isValidIllegalChar(exampleOne));
+        assertTrue(isValidIllegalChar(exampleTwo));
+        assertFalse(isValidIllegalChar(exampleThree));
+        assertTrue(isValidIllegalChar(exampleFour));
+
+        assertTrue(isValidIllegalChar(exampleFive));
+        assertTrue(isValidIllegalChar(exampleSix));
+        assertTrue(isValidIllegalChar(exampleSeven));
     }
 }
 
