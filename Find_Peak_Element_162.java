@@ -2,10 +2,10 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-public class find_peak_elements {
+public class Find_Peak_Element_162 {
     public static void main (String[] args) {
         int[] test = new int[] {1,2,1,3,5,6,4};
-        find_peak_elements sol = new find_peak_elements();
+        Find_Peak_Element_162 sol = new Find_Peak_Element_162();
         System.out.println(sol.findPeakElementsLinear(test));
     }
 
@@ -61,7 +61,8 @@ public class find_peak_elements {
     }
 }
 
-/*abstract
+/*
+https://leetcode.com/problems/find-peak-element/
 Explanation
 
 Linear Scan is simple, when nums[i] > nums[i+1], return
