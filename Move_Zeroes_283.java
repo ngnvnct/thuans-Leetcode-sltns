@@ -1,3 +1,4 @@
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
 import java.util.Arrays;
@@ -73,7 +74,14 @@ public class Move_Zeroes_283 {
 
     @Test
     public void testZeroes() {
-        assertEquals(3, countMoveZeroes(new int[] { 0, 1, 0, 3, 12 }));
+        Move_Zeroes_283 sol = new Move_Zeroes_283();
+        int[] exampleOne = new int[] { 0, 1, 0, 3, 12 };
+        int[] exampleOneExpectedResult = new int[] { 1, 3, 12, 0, 0 };
+
+        sol.moveZeroesMinWrite2(exampleOne);
+
+        assertArrayEquals(exampleOneExpectedResult, exampleOne);
+        assertEquals(3, countMoveZeroes(exampleOne));
     }
 }
 
@@ -82,7 +90,8 @@ public class Move_Zeroes_283 {
  * Explantion
  * We want to loop through an Array and check for index that doesn't have a 0.
  * We keep an index at the start of the Array
- * and only increment it after we swap it with the current element that is not 0.
+ * and only increment it after we swap it with the current element that is not
+ * 0.
  * 
  * Method 1 do an unnessary swap if the element is not 0
  * 
