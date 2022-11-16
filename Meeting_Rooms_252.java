@@ -40,8 +40,6 @@ public class Meeting_Rooms_252 {
  * If the start time is before the end time, it means they are overlap. Overlap
  * = return False
  * 
- * 
  * Time: O(nlogn)
  * Space: O(1)
- * 
  */
