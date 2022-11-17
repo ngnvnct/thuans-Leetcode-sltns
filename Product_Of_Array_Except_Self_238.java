@@ -35,6 +35,27 @@ public class Product_Of_Array_Except_Self_238 {
         return res;
     }
 
+    public int[] productExceptSelfMethodThree(int[] nums) {
+        int[] prefix = new int[nums.length];
+        int[] suffix = new int[nums.length];
+        int[] res = new int[nums.length];
+        
+        prefix[0] = 1;
+        for (int i = 1; i < nums.length; i++) {
+            prefix[i] = nums[i-1] * prefix[i-1];
+        }
+        
+        suffix[nums.length-1] = 1;
+        for (int i = nums.length-2; i >= 0; i--) {
+            suffix[i] = nums[i+1] * suffix[i+1];
+        }
+        
+        for (int i = 0; i < res.length; i++) {
+            res[i] = prefix[i] * suffix[i];
+        }
+        return res;
+    }
+
     @Test
     public void testProductSelf() {
         int[] exampleOne = { 1, 2, 3, 4 };
@@ -47,12 +68,16 @@ public class Product_Of_Array_Except_Self_238 {
 
         assertArrayEquals(exampleOneExpectedResult, productExceptSelfMethodTwo(exampleOne));
         assertArrayEquals(exampleTwoExpectedResult, productExceptSelfMethodTwo(exampleTwo));
+
+        assertArrayEquals(exampleOneExpectedResult, productExceptSelfMethodThree(exampleOne));
+        assertArrayEquals(exampleTwoExpectedResult, productExceptSelfMethodThree(exampleTwo));
     }
 }
 
 /*
  * https://leetcode.com/problems/product-of-array-except-self/
  * Explanation
+ * 
  * First Position there is no prefix, we put a default value of 1
  * Method 1:
  * Fill the Array with 1, and going the loop calculate the prefix
