@@ -1,11 +1,12 @@
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import org.junit.Test;
 
-public class majority_element_sorted_array {
+public class Check_If_A_Number_Is_Majority_Element_In_A_Sorted_Array_1150 {
     public boolean isMajorityElement(int[] nums, int target) {
         int counter = 0;
         int k = nums.length / 2;
@@ -21,7 +22,7 @@ public class majority_element_sorted_array {
         int k = nums.length / 2;
         Map<Integer, Integer> map = new HashMap<>();
         for (int num : nums) {
-            map.put(num, map.getOrDefault(num,0) + 1);
+            map.put(num, map.getOrDefault(num, 0) + 1);
         }
         return map.containsKey(target) ? map.get(target) > k : false;
     }
@@ -36,12 +37,12 @@ public class majority_element_sorted_array {
 
     private int firstOccur(int[] nums, int target) {
         int left = 0;
-        int right = nums.length-1;
+        int right = nums.length - 1;
         while (left <= right) {
-            int mid = left + (right-left) / 2;
+            int mid = left + (right - left) / 2;
             if (nums[mid] < target) {
                 left = mid + 1;
-            } else if ( nums[mid] >= target) {
+            } else if (nums[mid] >= target) {
                 right = mid - 1;
             }
         }
@@ -50,9 +51,9 @@ public class majority_element_sorted_array {
 
     private int lastOccur(int[] nums, int target) {
         int left = 0;
-        int right = nums.length-1;
+        int right = nums.length - 1;
         while (left <= right) {
-            int mid = left + (right-left) / 2;
+            int mid = left + (right - left) / 2;
             if (nums[mid] <= target) {
                 left = mid + 1;
             } else if (nums[mid] > target) {
@@ -64,28 +65,31 @@ public class majority_element_sorted_array {
 
     @Test
     public void testMajority() {
-        int[] exampleOne = {2,4,5,5,5,5,5,6,6};
-        int target = 5;
+        int[] exampleOne = { 2, 4, 5, 5, 5, 5, 5, 6, 6 };
+        int[] exampleTwo = { 10, 100, 101, 101 };
 
-        assertEquals(true, isMajorityElement(exampleOne, target));
-        assertEquals(true, isMajorityElementHash(exampleOne, target));
-        assertEquals(true, isMajorityElementBinarySearch(exampleOne, target));
+        assertTrue(isMajorityElement(exampleOne, 5));
+        assertFalse(isMajorityElement(exampleTwo, 101));
 
-        int[] exampleTwo = {10,100,101,101};
-        target = 101;
-        assertEquals(false, isMajorityElement(exampleTwo, target));
-        assertEquals(false, isMajorityElementHash(exampleTwo, target));
-        assertEquals(false, isMajorityElementBinarySearch(exampleTwo, target));
+        assertTrue(isMajorityElementHash(exampleOne, 5));
+        assertFalse(isMajorityElementHash(exampleTwo, 101));
+
+        assertTrue(isMajorityElementBinarySearch(exampleOne, 5));
+        assertFalse(isMajorityElementBinarySearch(exampleTwo, 101));
     }
 }
 
 /*
-Explanation
-
-First method, linear search and get a counter. Return counter > nums.length / 2
-Second method, put it in a hash map and gets the number of occurence 
-Third method, we do a binary search, get the first occurence and the last occurence. Then from there we can get the range of occurence then check for majority
-
-Time: O(n), O(n), O(logn)
-Space: O(1), O(n), O(1)
-*/
+ * https://leetcode.com/problems/check-if-a-number-is-majority-element-in-a-sorted-array/
+ * Explanation
+ * 
+ * First method, linear search and get a counter. Return counter > nums.length /
+ * 2
+ * Second method, put it in a hash map and gets the number of occurence
+ * Third method, we do a binary search, get the first occurence and the last
+ * occurence. Then from there we can get the range of occurence then check for
+ * majority
+ * 
+ * Time: O(n), O(n), O(logn)
+ * Space: O(1), O(n), O(1)
+ */
