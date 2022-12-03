@@ -1,3 +1,4 @@
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
@@ -56,12 +57,12 @@ public class LinkedListTests {
     @Test
     public void testOddEvenLinkedList() {
         ListNode exampleOne = addMany(new ListNode(1), new ArrayList<>(Arrays.asList(2, 3, 4, 5)));
-        ListNode output = odd_even_linked_list.oddEvenList(exampleOne);
+        ListNode output = Odd_Even_Linked_List_328.oddEvenList(exampleOne);
         List<Integer> expectedNodes = new ArrayList<>(Arrays.asList(1, 3, 5, 2, 4));
         assertTrue(getNodesInArray(output).equals(expectedNodes));
 
         ListNode exampleTwo = addMany(new ListNode(2), new ArrayList<>(Arrays.asList(1, 3, 5, 6, 4, 7)));
-        output = odd_even_linked_list.oddEvenList(exampleTwo);
+        output = Odd_Even_Linked_List_328.oddEvenList(exampleTwo);
         expectedNodes = new ArrayList<>(Arrays.asList(2, 3, 6, 7, 1, 5, 4));
         assertTrue(getNodesInArray(output).equals(expectedNodes));
     }
@@ -122,10 +123,43 @@ public class LinkedListTests {
         ListNode output = Middle_Of_The_Linked_List_876.middleNode(exampleOne);
         List<Integer> expectedNodes = new ArrayList<>(Arrays.asList(3, 4, 5));
         assertTrue(getNodesInArray(output).equals(expectedNodes));
+        assertEquals(getNodesInArray(output), expectedNodes);
 
         ListNode exampleTwo = addMany(new ListNode(1), new ArrayList<>(Arrays.asList(2, 3, 4, 5, 6)));
         output = Middle_Of_The_Linked_List_876.middleNode(exampleTwo);
         expectedNodes = new ArrayList<>(Arrays.asList(4, 5, 6));
         assertTrue(getNodesInArray(output).equals(expectedNodes));
+        assertEquals(getNodesInArray(output), expectedNodes);
+    }
+
+    @Test
+    public void testReverseLinkedListII() {
+        ListNode exampleOne = addMany(new ListNode(1), new ArrayList<>(Arrays.asList(2, 3, 4, 5)));
+        ListNode output = Reverse_Linked_List_II_92.reverseBetween(exampleOne, 2, 4);
+        List<Integer> expectedNodes = new ArrayList<>(Arrays.asList(1, 4, 3, 2, 5));
+        assertTrue(getNodesInArray(output).equals(expectedNodes));
+        assertEquals(getNodesInArray(output), expectedNodes);
+
+        ListNode exampleTwo = new ListNode(5);
+        output = Reverse_Linked_List_II_92.reverseBetween(exampleTwo, 1, 1);
+        expectedNodes = new ArrayList<>(Arrays.asList(5));
+        assertTrue(getNodesInArray(output).equals(expectedNodes));
+        assertEquals(getNodesInArray(output), expectedNodes);
+    }
+
+    @Test
+    public void testParitionList() {
+        ListNode exampleOne = addMany(new ListNode(1), new ArrayList<>(Arrays.asList(4,3,2,5,2)));
+        ListNode output = Parition_List_86.partition(exampleOne, 3);
+        List<Integer> expectedNodes = new ArrayList<>(Arrays.asList(1,2,2,4,3,5));
+        assertTrue(getNodesInArray(output).equals(expectedNodes));
+        // 2nd way to test, this one gives me the value of the LinkedList
+        assertEquals(getNodesInArray(output), expectedNodes);
+
+        ListNode exampleTwo = addMany(new ListNode(2), new ArrayList<>(Arrays.asList(1)));
+        output = Parition_List_86.partition(exampleTwo, 2);
+        expectedNodes = new ArrayList<>(Arrays.asList(1,2));
+        assertTrue(getNodesInArray(output).equals(expectedNodes));
+        assertEquals(getNodesInArray(output), expectedNodes);
     }
 }
