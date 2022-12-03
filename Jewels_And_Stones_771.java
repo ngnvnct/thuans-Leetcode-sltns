@@ -45,8 +45,8 @@ public class Jewels_And_Stones_771 {
 }
 
 /*
- * Explanation
  * https://leetcode.com/problems/jewels-and-stones/
+ * Explanation
  * 
  * A Set problem. Store the set and check if stones contain it.
  * 
