@@ -38,12 +38,12 @@ public class Number_Of_Good_Pairs_1512 {
         int[] exampleThree = new int[] {1,2,3};
         int exampleThreeExpectedResult = 0;
 
-        assertEquals(exampleOneExpectedResult, numIdenticalPairs(exampleOne);
-        assertEquals(exampleTwoExpectedResult, numIdenticalPairs(exampleTwo);
-        assertEquals(exampleThreeExpectedResult, numIdenticalPairs(exampleThree));.
+        assertEquals(exampleOneExpectedResult, numIdenticalPairs(exampleOne));
+        assertEquals(exampleTwoExpectedResult, numIdenticalPairs(exampleTwo));
+        assertEquals(exampleThreeExpectedResult, numIdenticalPairs(exampleThree));
 
-        assertEquals(exampleOneExpectedResult, numIdenticalPairs2(exampleOne);
-        assertEquals(exampleTwoExpectedResult, numIdenticalPairs2(exampleTwo);
+        assertEquals(exampleOneExpectedResult, numIdenticalPairs2(exampleOne));
+        assertEquals(exampleTwoExpectedResult, numIdenticalPairs2(exampleTwo));
         assertEquals(exampleThreeExpectedResult, numIdenticalPairs2(exampleThree));
     }
 }
