@@ -2,7 +2,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-public class house_robber_ii {
+public class House_Robber_II_213 {
     public int houseRobber(int[] nums) {
         int n = nums.length;
         if (n == 0) {
