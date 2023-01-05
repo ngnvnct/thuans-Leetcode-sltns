@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace solution
+namespace Leetcode
 {
     public class Solution
     {
@@ -12,15 +12,11 @@ namespace solution
             Dictionary<int, int> map = new Dictionary<int, int>();
             for (int i = 0; i < nums.Length; i++)
             {
-                int diff = target - nums[i];
-                if (map.ContainsKey(diff))
+                if (map.ContainsKey(nums[i]))
                 {
-                    return new int[] { map[diff], i };
+                    return new int[] { map[nums[i]], i };
                 }
-                else
-                {
-                    map[nums[i]] = i;
-                }
+                map[target - nums[i]] = i;
             }
             return null;
         }
@@ -28,7 +24,7 @@ namespace solution
 
     public class Tests
     {
-        solution.Solution sol;
+        Leetcode.Solution sol;
         [SetUp]
         public void Setup()
         {
@@ -43,3 +39,24 @@ namespace solution
         }
     }
 }
+
+/*
+ * Part of Leetcode75
+ * https://leetcode.com/problems/two-sum/
+ * Explantion
+ * 
+ * We want to make a HashMap to keep trace of the difference of the element.
+ * First, we have an if-statement asking is the HashMap contains this element
+ * If yes, we return the value of the key-value pair, along with the current
+ * index
+ * Else, we put the key as the difference (target-nums[i]), and the value is the
+ * current index
+ * 
+ * Line 18 and 19 can be replace by return new int[] {map.get(nums[i]), i};
+ * 
+ * Brute Force way is two nested loop then check each one, O(n^2) time and O(1)
+ * space
+ * 
+ * Time: O(n), looping through n elements of Array
+ * Space: O(n), storing the Array in HashMap
+ */
