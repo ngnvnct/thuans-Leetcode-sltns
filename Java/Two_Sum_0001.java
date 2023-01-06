@@ -1,16 +1,17 @@
+package Java;
 import java.util.*;
 import org.junit.Test;
 import static org.junit.Assert.assertArrayEquals;
 
-public class Two_Sum_1 {
+public class Two_Sum_0001 {
     public static void main(String[] args) {
         int[] nums = new int[] { 2, 7, 11, 15 };
         int target = 9;
-        Two_Sum_1 solution = new Two_Sum_1();
+        Two_Sum_0001 solution = new Two_Sum_0001();
         System.out.println(Arrays.toString(solution.twoSum(nums, target)));
     }
 
-    public int[] twoSumBF(int[] nums, int target) {
+    public int[] twoSumBruteForce(int[] nums, int target) {
         for (int i = 0; i < nums.length; i++) {
             for (int j = i + 1; j < nums.length; j++) {
                 int sum = nums[i] + nums[j];
@@ -48,14 +49,13 @@ public class Two_Sum_1 {
         assertArrayEquals(exampleTwoExpectedResult, twoSum(exampleTwo, 6));
         assertArrayEquals(exampleThreeExpectedResult, twoSum(exampleThree, 6));
 
-        assertArrayEquals(exampleOneExpectedResult, twoSumBF(exampleOne, 9));
-        assertArrayEquals(exampleTwoExpectedResult, twoSumBF(exampleTwo, 6));
-        assertArrayEquals(exampleThreeExpectedResult, twoSumBF(exampleThree, 6));
+        assertArrayEquals(exampleOneExpectedResult, twoSumBruteForce(exampleOne, 9));
+        assertArrayEquals(exampleTwoExpectedResult, twoSumBruteForce(exampleTwo, 6));
+        assertArrayEquals(exampleThreeExpectedResult, twoSumBruteForce(exampleThree, 6));
     }
 }
 
 /*
- * Part of Leetcode75
  * https://leetcode.com/problems/two-sum/
  * Explantion
  * 

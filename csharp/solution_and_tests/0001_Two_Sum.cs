@@ -43,7 +43,6 @@ namespace Leetcode
 }
 
 /*
- * Part of Leetcode75
  * https://leetcode.com/problems/two-sum/
  * Explantion
  * 
