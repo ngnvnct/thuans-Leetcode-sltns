@@ -1,9 +1,7 @@
 ﻿using NUnit.Framework;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
-namespace Leetcode
+namespace Two_Sum_0001
 {
     public class Solution
     {
@@ -24,7 +22,7 @@ namespace Leetcode
 
     public class Tests
     {
-        Leetcode.Solution sol;
+        Two_Sum_0001.Solution sol;
         [SetUp]
         public void Setup()
         {
