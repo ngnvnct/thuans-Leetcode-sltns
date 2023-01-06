@@ -32,10 +32,12 @@ namespace Leetcode
         }
 
         [Test]
-        public void TestTwoSum()
+        [TestCase(new int[] { 2, 7, 11, 15 }, 9, ExpectedResult = new int[] { 0, 1 })]
+        [TestCase(new int[] { 3, 2, 4 }, 6, ExpectedResult = new int[] { 1, 2 })]
+        [TestCase(new int[] { 3, 3 }, 6, ExpectedResult = new int[] { 0, 1 })]
+        public int[] TestTwoSum(int[] nums, int target)
         {
-            Assert.AreEqual(new int[] { 1, 2 }, sol.TwoSum(new int[] { 0, 1, 2 }, 3));
-            Assert.AreNotEqual(new int[] { 0, 2 }, sol.TwoSum(new int[] { 0, 1, 2 }, 3));
+            return sol.TwoSum(nums, target);
         }
     }
 }
@@ -45,14 +47,12 @@ namespace Leetcode
  * https://leetcode.com/problems/two-sum/
  * Explantion
  * 
- * We want to make a HashMap to keep trace of the difference of the element.
- * First, we have an if-statement asking is the HashMap contains this element
+ * We want to make a Dictionary to keep trace of the difference of the element.
+ * First, we have an if-statement asking is the Dictionary contains this element
  * If yes, we return the value of the key-value pair, along with the current
  * index
  * Else, we put the key as the difference (target-nums[i]), and the value is the
  * current index
- * 
- * Line 18 and 19 can be replace by return new int[] {map.get(nums[i]), i};
  * 
  * Brute Force way is two nested loop then check each one, O(n^2) time and O(1)
  * space
