@@ -1,5 +1,5 @@
 ﻿using System;
-using Two_Sum_0001;
+using Two_Sum;
 
 namespace Leetcode
 {

@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
 using System.Collections.Generic;
 
-namespace Two_Sum_0001
+namespace Two_Sum
 {
     public class Solution
     {
@@ -22,7 +22,7 @@ namespace Two_Sum_0001
 
     public class Tests
     {
-        Two_Sum_0001.Solution sol;
+        Solution sol;
         [SetUp]
         public void Setup()
         {

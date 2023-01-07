@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using NUnit.Framework;
 
-namespace Leetcode_0412
+namespace Fizz_Buzz
 {
     class Solution
     {
