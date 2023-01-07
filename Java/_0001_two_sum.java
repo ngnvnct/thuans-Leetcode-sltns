@@ -1,13 +1,16 @@
 package Java;
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
 import org.junit.Test;
 import static org.junit.Assert.assertArrayEquals;
 
-public class Two_Sum_0001 {
+public class _0001_two_sum {
     public static void main(String[] args) {
         int[] nums = new int[] { 2, 7, 11, 15 };
         int target = 9;
-        Two_Sum_0001 solution = new Two_Sum_0001();
+        _0001_two_sum solution = new _0001_two_sum();
         System.out.println(Arrays.toString(solution.twoSum(nums, target)));
     }
 
@@ -38,20 +41,20 @@ public class Two_Sum_0001 {
 
     @Test
     public void testTwoSum() {
-        int[] exampleOne = new int[] { 2, 7, 11, 15 };
-        int[] exampleOneExpectedResult = new int[] { 0, 1 };
-        int[] exampleTwo = new int[] { 3, 2, 4 };
-        int[] exampleTwoExpectedResult = new int[] { 1, 2 };
-        int[] exampleThree = new int[] { 3, 3 };
-        int[] exampleThreeExpectedResult = new int[] { 0, 1 };
+        int[] testCase1 = new int[] { 2, 7, 11, 15 };
+        int[] testCase1ExpectedResult = new int[] { 0, 1 };
+        int[] testCase2 = new int[] { 3, 2, 4 };
+        int[] testCase2ExpectedResult = new int[] { 1, 2 };
+        int[] testCase3 = new int[] { 3, 3 };
+        int[] testCase3ExpectedResult = new int[] { 0, 1 };
 
-        assertArrayEquals(exampleOneExpectedResult, twoSum(exampleOne, 9));
-        assertArrayEquals(exampleTwoExpectedResult, twoSum(exampleTwo, 6));
-        assertArrayEquals(exampleThreeExpectedResult, twoSum(exampleThree, 6));
+        assertArrayEquals(testCase1ExpectedResult, twoSum(testCase1, 9));
+        assertArrayEquals(testCase2ExpectedResult, twoSum(testCase2, 6));
+        assertArrayEquals(testCase3ExpectedResult, twoSum(testCase3, 6));
 
-        assertArrayEquals(exampleOneExpectedResult, twoSumBruteForce(exampleOne, 9));
-        assertArrayEquals(exampleTwoExpectedResult, twoSumBruteForce(exampleTwo, 6));
-        assertArrayEquals(exampleThreeExpectedResult, twoSumBruteForce(exampleThree, 6));
+        assertArrayEquals(testCase1ExpectedResult, twoSumBruteForce(testCase1, 9));
+        assertArrayEquals(testCase2ExpectedResult, twoSumBruteForce(testCase2, 6));
+        assertArrayEquals(testCase3ExpectedResult, twoSumBruteForce(testCase3, 6));
     }
 }
 
