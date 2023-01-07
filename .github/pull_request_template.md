@@ -2,6 +2,7 @@
 [//]: # "Pull Request Template"
 [//]: # "Replace the placeholder values in the template below"
 
-- **File(s) Submission**: _0001-two-sum.java, 0002-add-two-numbers.java, etc..._
-- **Programming Language(s)**: _python, java, etc..._
-- **Submission URL**: _https://leetcode.com/problems/[problem-name]/submissions/xxxxxxxxx/_
+- **File(s) Submission**: 0001-two-sum.cs, 0002-add-two-numbers.cs, etc...
+- **Java File(s) Submission Exception**: \_0001_two_sum.java, \_0002_add_two_numbers.java, etc... The reason being Java doesn't accept (-) as class name, or a number at the start, since it is not a valid identifier, and it also messes up with the testing framework. Adding an underscore is a fix to prevent something like two-sum-0001.java
+- **Programming Language(s)**: python, java, etc...
+- **Submission URL**: https://leetcode.com/problems/[problem-name]/submissions/xxxxxxxxx/
