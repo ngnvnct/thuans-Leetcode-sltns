@@ -1,7 +1,7 @@
-# Leetcode solutions for [My own Leetcode Study Guide](https://docs.google.com/spreadsheets/d/1yd7kkIHFxB2gCoF8dt39thZIl4PYjL_qIK9_njMKI7s/edit?usp=sharing)
+# Leetcode solutions for [Leetcode Study Guide](https://docs.google.com/spreadsheets/d/1yd7kkIHFxB2gCoF8dt39thZIl4PYjL_qIK9_njMKI7s/edit?usp=sharing)
 Credit: [Neetcode](https://raw.githubusercontent.com/neetcode-gh/leetcode/main/README_template.md)
 
-[//]: > This repo hosts the solutions found on [NeetCode.io](https://neetcode.io) including the solutions shown on the [NeetCode YouTube channel](https://www.youtube.com/c/neetcode). The site will periodically be updated with new solutions from this repo!
+[//]: # > This repo hosts the solutions found on [NeetCode.io](https://neetcode.io) including the solutions shown on the [NeetCode YouTube channel](https://www.youtube.com/c/neetcode). The site will periodically be updated with new solutions from this repo!
 
 <br/>
 
@@ -38,26 +38,26 @@ Study Guide Path Recommendation:
    - Level 2: Binary Search and Sliding Window. These two are specialization of Two Pointers
    - Level 2.5: Rest of Stack
 2. **Intermediate**
-...2.Level 2.5: Linked List
-...2.Level 3a: Trees
-...2.Level 3.5a: Backtracking
-...2.Level 3.6a: 1-D Dynamic Programming and Graphs (lots of Backtracking)
-...2.Level 3b: Bit Manipulation
-...2.Level 3c: Math and Geometry 
+   -Level 2.5: Linked List
+   -Level 3a: Trees
+   -Level 3.5a: Backtracking
+   -Level 3.6a: 1-D Dynamic Programming and Graphs (lots of Backtracking)
+   -Level 3b: Bit Manipulation
+   -Level 3c: Math and Geometry 
 3. **Advanced**
-...3.Level 4a: Heap/Priority Queue
-...3.Level 4b: Intervals
-...3.Level 4c: Greedy
-...3.Level 5a: 2-D Dynamic Programming
-...3.Level 5b: Advanced Graph
-...3.Level 6: Tries
+   -Level 4a: Heap/Priority Queue
+   -Level 4b: Intervals
+   -Level 4c: Greedy
+   -Level 5a: 2-D Dynamic Programming
+   -Level 5b: Advanced Graph
+   -Level 6: Tries
 
 Starting from Intermediate Level, you can explore everything from that list and do not have to go in order. But you should do the Beginner category in order to learn the fundamentals.
 
 ## Contributing
 **Please read the [contributing guidlines](./CONTRIBUTING.md) before opening a PR**
 
-[//] To contribute, please fork this repo and open a PR adding a [missing solution](#missing-solutions) from the supported languages.
+[//]: # To contribute, please fork this repo and open a PR adding a [missing solution](#missing-solutions) from the supported languages.
 To contribute, please fork this repo and open a PR adding a missing solution from the supported languages.
 
 
@@ -75,4 +75,4 @@ TODO
 
 ---
 
-[//] <sub>Need to update the README? [Update the template instead.](README_template.md)</sub>
+[//]: # <sub>Need to update the README? [Update the template instead.](README_template.md)</sub>
