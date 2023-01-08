@@ -1,4 +1,4 @@
-# Leetcode solutions for [Leetcode Study Guide](https://docs.google.com/spreadsheets/d/1yd7kkIHFxB2gCoF8dt39thZIl4PYjL_qIK9_njMKI7s/edit?usp=sharing)
+# Leetcode solutions for [Personal Study Guide](https://docs.google.com/spreadsheets/d/1yd7kkIHFxB2gCoF8dt39thZIl4PYjL_qIK9_njMKI7s/edit?usp=sharing)
 Credit: [Neetcode](https://raw.githubusercontent.com/neetcode-gh/leetcode/main/README_template.md)
 
 [//]: # "> This repo hosts the solutions found on [NeetCode.io](https://neetcode.io) including the solutions shown on the [NeetCode YouTube channel](https://www.youtube.com/c/neetcode). The site will periodically be updated with new solutions from this repo!"
@@ -12,7 +12,7 @@ The study guide has problem lists from these lists:
 * [Leetcode Top Interview Questions](https://leetcode.com/problem-list/top-interview-questions/)
 * Extra problems practice recommended by me
 
-Currently support languages:
+# Currently support languages
 * Java
 * C#
 
@@ -30,7 +30,7 @@ VSCode installed:
 
 Solutions are also welcome for any other *supported* language on leetcode.com!
 
-Study Guide Path Recommendation:
+# Study Guide Roadmap
 1. **Beginner**
    - Level 0: Freebies
    - Level 1: Easy Array and Hashing, and Two Pointers and Easy Stack
@@ -71,7 +71,7 @@ If you would like to have collaborator permissions on the repo to merge your own
 
 ## Missing Solutions
 TODO
-[//] <completion-tables />
+[//]: # "<completion-tables />"
 
 ---
 
