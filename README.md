@@ -38,19 +38,19 @@ Solutions are also welcome for any other *supported* language on leetcode.com!
    - Level 2: Binary Search and Sliding Window. These two are specialization of Two Pointers
    - Level 2.5: Rest of Stack
 2. **Intermediate**
-   -Level 2.5: Linked List
-   -Level 3a: Trees
-   -Level 3.5a: Backtracking
-   -Level 3.6a: 1-D Dynamic Programming and Graphs (lots of Backtracking)
-   -Level 3b: Bit Manipulation
-   -Level 3c: Math and Geometry 
+   - Level 3a: Linked List
+   - Level 3b: Trees
+   - Level 3.5b: Backtracking
+   - Level 3.6b: 1-D Dynamic Programming and Graphs (lots of Backtracking)
+   - Level 3c: Bit Manipulation
+   - Level 3d: Math and Geometry 
 3. **Advanced**
-   -Level 4a: Heap/Priority Queue
-   -Level 4b: Intervals
-   -Level 4c: Greedy
-   -Level 5a: 2-D Dynamic Programming
-   -Level 5b: Advanced Graph
-   -Level 6: Tries
+   - Level 4a: Heap/Priority Queue
+   - Level 4b: Intervals
+   - Level 4c: Greedy
+   - Level 5a: 2-D Dynamic Programming
+   - Level 5b: Advanced Graph
+   - Level 6: Tries
 
 Starting from Intermediate Level, you can explore everything from that list and do not have to go in order. But you should do the Beginner category in order to learn the fundamentals.
 
