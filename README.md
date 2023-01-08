@@ -12,7 +12,7 @@ The study guide has problem lists from these lists:
 * [Leetcode Top Interview Questions](https://leetcode.com/problem-list/top-interview-questions/)
 * Extra problems practice recommended by me
 
-# Currently support languages
+# Currently supported languages
 * Java
 * C#
 
