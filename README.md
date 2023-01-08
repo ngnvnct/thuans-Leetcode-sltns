@@ -1,7 +1,7 @@
 # Leetcode solutions for [Leetcode Study Guide](https://docs.google.com/spreadsheets/d/1yd7kkIHFxB2gCoF8dt39thZIl4PYjL_qIK9_njMKI7s/edit?usp=sharing)
 Credit: [Neetcode](https://raw.githubusercontent.com/neetcode-gh/leetcode/main/README_template.md)
 
-[//]: # > This repo hosts the solutions found on [NeetCode.io](https://neetcode.io) including the solutions shown on the [NeetCode YouTube channel](https://www.youtube.com/c/neetcode). The site will periodically be updated with new solutions from this repo!
+[//]: # "> This repo hosts the solutions found on [NeetCode.io](https://neetcode.io) including the solutions shown on the [NeetCode YouTube channel](https://www.youtube.com/c/neetcode). The site will periodically be updated with new solutions from this repo!"
 
 <br/>
 
@@ -57,7 +57,7 @@ Starting from Intermediate Level, you can explore everything from that list and 
 ## Contributing
 **Please read the [contributing guidlines](./CONTRIBUTING.md) before opening a PR**
 
-[//]: # To contribute, please fork this repo and open a PR adding a [missing solution](#missing-solutions) from the supported languages.
+[//]: # "To contribute, please fork this repo and open a PR adding a [missing solution](#missing-solutions) from the supported languages."
 To contribute, please fork this repo and open a PR adding a missing solution from the supported languages.
 
 
@@ -75,4 +75,4 @@ TODO
 
 ---
 
-[//]: # <sub>Need to update the README? [Update the template instead.](README_template.md)</sub>
+[//]: # "<sub>Need to update the README? [Update the template instead.](README_template.md)</sub>"

@@ -9,7 +9,7 @@ Currently Support:
 
 Solutions are also welcome for any other *supported* language on leetcode.com!
 
-[//]: # To contribute, please fork this repo and open a PR adding a [missing solution](./README.md#missing-solutions) from the supported languages.
+[//]: # "To contribute, please fork this repo and open a PR adding a [missing solution](./README.md#missing-solutions) from the supported languages."
 To contribute, please fork this repo and open a PR adding a missing solution from the supported languages.
 
 If you would like to have collaborator permissions on the repo to merge your own PRs or review others' PRs please let me know. 
