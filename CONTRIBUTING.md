@@ -3,7 +3,7 @@ Credit: [Neetcode Contributing](https://raw.githubusercontent.com/neetcode-gh/le
 
 **Please read the [guidelines below](#contributing-guidelines) before opening a PR**
 
-Currently Support:
+Currently Supported:
 
 * Java
 * C#
@@ -38,7 +38,7 @@ If you would like to have collaborator permissions on the repo to merge your own
 
 **A:** You can keep your solution exactly the same as the one you submit to leetcode, you don't need to write tests or your own implementation of leetcode's built-ins. Your submission should include:
 1. The same one you submit to leetcode
-2. Some Unit Tests. I am fully aware that it is consider bad practice to include the test in the same file. But for the purpose of this repo, please do it. Unit Tests will help you think of edge cases in a real interview environment
+2. Some Unit Tests. I am fully aware that it is considered bad practice to include the test in the same file. But for the purpose of this repo, please do it. Unit Tests will help you think of edge cases in a real interview environment
 3. Your code should compile in a IDE of your choice and can run and pass each tests. Currently, I know VSCode can run C# and Java Unit Tests, and Visual Studio Code can run C# Unit Tests.
 4. An explanation walkthrough of how your code works. This can be helpful as you explain your solution in a real interview environment.
 ##
