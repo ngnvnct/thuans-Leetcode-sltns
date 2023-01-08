@@ -1,6 +1,7 @@
-# Leetcode solutions for [My personal comprehensive Leetcode Study Guide](https://docs.google.com/spreadsheets/d/1yd7kkIHFxB2gCoF8dt39thZIl4PYjL_qIK9_njMKI7s/edit?usp=sharing)
+# Leetcode solutions for [My own Leetcode Study Guide](https://docs.google.com/spreadsheets/d/1yd7kkIHFxB2gCoF8dt39thZIl4PYjL_qIK9_njMKI7s/edit?usp=sharing)
 Credit: [Neetcode](https://raw.githubusercontent.com/neetcode-gh/leetcode/main/README_template.md)
-[//] > This repo hosts the solutions found on [NeetCode.io](https://neetcode.io) including the solutions shown on the [NeetCode YouTube channel](https://www.youtube.com/c/neetcode). The site will periodically be updated with new solutions from this repo!
+
+[//]: > This repo hosts the solutions found on [NeetCode.io](https://neetcode.io) including the solutions shown on the [NeetCode YouTube channel](https://www.youtube.com/c/neetcode). The site will periodically be updated with new solutions from this repo!
 
 <br/>
 
@@ -31,11 +32,11 @@ Solutions are also welcome for any other *supported* language on leetcode.com!
 
 Study Guide Path Recommendation:
 1. **Beginner**
-...1.Level 0: Freebies
-...1.Level 1: Easy Array and Hashing, and Two Pointers and Easy Stack
-...1.Level 1.5: The rest of Array and Hashing and Two Pointers
-...1.Level 2: Binary Search and Sliding Window. These two are specialization of Two Pointers
-...1.Level 2.5: Rest of Stack
+   - Level 0: Freebies
+   - Level 1: Easy Array and Hashing, and Two Pointers and Easy Stack
+   - Level 1.5: The rest of Array and Hashing and Two Pointers
+   - Level 2: Binary Search and Sliding Window. These two are specialization of Two Pointers
+   - Level 2.5: Rest of Stack
 2. **Intermediate**
 ...2.Level 2.5: Linked List
 ...2.Level 3a: Trees
