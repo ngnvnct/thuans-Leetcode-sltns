@@ -7,27 +7,30 @@ class Solution:
         for num in nums:
             locMax = max(num, locMax + num)
             curMax = max(curMax, locMax)
-
         return curMax
 
 class TestCase(unittest.TestCase):
     def setUp(self):
         self.solution = Solution()
-        self.testCaseA = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
-        self.testCaseAExpected = 6
-        self.testCaseB = [1]
-        self.testCaseBExpected = 1
-        self.testCaseC = [5, 4, -1, 7, 8]
-        self.testCaseCExpected = 23
+        
+        self.testCase1 = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
+        self.testCase1ExpectedResult = 6
 
-    def testCaseA(self):
-        self.assertEqual(self.solution.maxSubArray(self.testCaseA), self.testCaseAExpected)
+        self.testCase2 = [1]
+        self.testCase2ExpectedResult = 1
 
-    def testCaseB(self):
-        self.assertEqual(self.solution.maxSubArray(self.testCaseB), self.testCaseBExpected)
+        self.testCase3 = [5, 4, -1, 7, 8]
+        self.testCase3ExpectedResult = 23
 
-    def testCaseC(self):
-        self.assertEqual(self.solution.maxSubArray(self.testCaseC), self.testCaseCExpected)
+    def testMaxSubArray1(self):
+        self.assertEqual(self.solution.maxSubArray(self.testCase1), self.testCase1ExpectedResult)
+
+    def testMaxSubArray2(self):
+        self.assertEqual(self.solution.maxSubArray(self.testCase2), self.testCase2ExpectedResult)
+
+    def testMaxSubArray3(self):
+        self.assertEqual(self.solution.maxSubArray(self.testCase3), self.testCase3ExpectedResult)
+
 
 if __name__ == "__main__":
     unittest.main()
