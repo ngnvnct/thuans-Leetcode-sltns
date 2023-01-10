@@ -4,7 +4,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
-public class _0283_move_zeroes {
+public class problem_0283_move_zeroes {
     public void moveZeroes(int[] nums) {
         int currentIndex = 0;
         for (int i = 0; i < nums.length; i++) {
@@ -66,7 +66,7 @@ public class _0283_move_zeroes {
 
     @Test
     public void testZeroes() {
-        _0283_move_zeroes sol = new _0283_move_zeroes();
+        problem_0283_move_zeroes sol = new problem_0283_move_zeroes();
         int[] testCase1 = new int[] { 0, 1, 0, 3, 12 };
         int[] testCase1ExpectedResult = new int[] { 1, 3, 12, 0, 0 };
 

@@ -7,11 +7,11 @@ import java.util.Map;
 import org.junit.Test;
 import static org.junit.Assert.assertArrayEquals;
 
-public class _0001_two_sum {
+public class problem_0001_two_sum {
     public static void main(String[] args) {
         int[] nums = new int[] { 2, 7, 11, 15 };
         int target = 9;
-        _0001_two_sum solution = new _0001_two_sum();
+        problem_0001_two_sum solution = new problem_0001_two_sum();
         System.out.println(Arrays.toString(solution.twoSum(nums, target)));
     }
 

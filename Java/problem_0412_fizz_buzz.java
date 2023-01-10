@@ -7,7 +7,7 @@ import java.util.List;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
-public class _0412_fizz_buzz {
+public class problem_0412_fizz_buzz {
     public List<String> fizzBuzz(int n) {
         List<String> res = new ArrayList<>();
         

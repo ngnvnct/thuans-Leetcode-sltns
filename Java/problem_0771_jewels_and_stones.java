@@ -6,7 +6,7 @@ import java.util.Set;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
-public class _0771_jewels_and_stones {
+public class problem_0771_jewels_and_stones {
     public int numJewelsInStonesSet(String jewels, String stones) {
         int jewelsCount = 0;
         Set<Character> bagOfJewels = new HashSet<>();

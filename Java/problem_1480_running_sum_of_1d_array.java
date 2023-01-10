@@ -3,7 +3,7 @@ package Java;
 import org.junit.Test;
 import static org.junit.Assert.assertArrayEquals;
 
-public class _1480_running_sum_of_1d_array {
+public class problem_1480_running_sum_of_1d_array {
     public int[] runningSum(int[] nums) {
         int[] runningSum = new int[nums.length];
         int totalSum = 0;

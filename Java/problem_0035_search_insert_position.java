@@ -3,7 +3,7 @@ package Java;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
-public class _0035_search_insert_position {
+public class problem_0035_search_insert_position {
     public int searchInsert(int[] nums, int target) {
         int leftPointer = 0;
         int rightPointer = nums.length - 1;

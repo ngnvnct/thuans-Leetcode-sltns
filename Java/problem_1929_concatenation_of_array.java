@@ -3,7 +3,7 @@ package Java;
 import org.junit.Test;
 import static org.junit.Assert.assertArrayEquals;
 
-public class _1929_concatenation_of_array {
+public class problem_1929_concatenation_of_array {
     public int[] getConcatenation(int[] nums) {
         int[] ans = new int[nums.length * 2];
         for (int i = 0; i < ans.length; i++) {

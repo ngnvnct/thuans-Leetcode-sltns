@@ -6,7 +6,7 @@ import java.util.Set;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
-public class _0804_unique_morse_code_words {
+public class problem_0804_unique_morse_code_words {
     public int uniqueMorseRepresentations(String[] words) {
         Set<String> uniqueTransformation = new HashSet<>();
         String[] morseAlphabet = { ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..",

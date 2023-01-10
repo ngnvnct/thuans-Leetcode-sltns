@@ -4,7 +4,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-public class _0680_valid_palindrome_ii {
+public class problem_0680_valid_palindrome_ii {
     public boolean validPalindrome(String s) {
         int leftPointer = 0;
         int rightPointer = s.length() - 1;
