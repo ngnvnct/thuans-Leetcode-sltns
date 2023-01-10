@@ -1,6 +1,5 @@
 import unittest
 
-
 class Solution:
     @staticmethod
     def maxSubArray(nums):
@@ -10,7 +9,6 @@ class Solution:
             curMax = max(curMax, locMax)
 
         return curMax
-
 
 class TestCase(unittest.TestCase):
     def setUp(self):
@@ -30,7 +28,6 @@ class TestCase(unittest.TestCase):
 
     def testCaseC(self):
         self.assertEqual(self.solution.maxSubArray(self.testCaseC), self.testCaseCExpected)
-
 
 if __name__ == "__main__":
     unittest.main()
