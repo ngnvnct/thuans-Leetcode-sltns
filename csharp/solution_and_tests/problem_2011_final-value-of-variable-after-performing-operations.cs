@@ -1,4 +1,19 @@
-﻿using NUnit.Framework;
+﻿/*
+ * https://leetcode.com/problems/final-value-of-variable-after-performing-operations/
+ * Explanation:
+ * 
+ * Operations[i] will be either "++X", "X++", "--X", or "X--"
+ * 
+ * Because of this constraint, it will always be a valid input. Therefore, we
+ * can just check the 1st index whether it is '-' or '+', then update
+ * accordingly
+ * Or, just take care of one operation "++X", "X++" using equals() method
+ * 
+ * Time: O(n)
+ * Space: O(1)
+ */
+
+using NUnit.Framework;
 
 namespace Final_Value_of_Variable_After_Performing_Operations
 {
@@ -68,18 +83,3 @@ namespace Final_Value_of_Variable_After_Performing_Operations
         }
     }
 }
-
-/*
- * Explanation
- * https://leetcode.com/problems/final-value-of-variable-after-performing-operations/
- * 
- * Operations[i] will be either "++X", "X++", "--X", or "X--"
- * 
- * Because of this constraint, it will always be a valid input. Therefore, we
- * can just check the 1st index whether it is '-' or '+', then update
- * accordingly
- * Or, just take care of one operation "++X", "X++" using equals() method
- * 
- * Time: O(n)
- * Space: O(1)
- */

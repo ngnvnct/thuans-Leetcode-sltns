@@ -1,6 +1,20 @@
-﻿using System;
+﻿/*
+ * https://leetcode.com/problems/jewels-and-stones/
+ * Explanation:
+ * 
+ * A Set problem. Store the set and check if stones contain it.
+ * 
+ * Time: O(m+n)
+ * Space: O(n) where n is the length of jewels
+ * 
+ * Second method make uses of String.Contains method. 
+ * The String.Contains() method in C# is used to return a value indicating whether a specified substring occurs within this string
+ * 
+ * Time: O(m+n) because String.Contains is O(n) operation
+ * Space: O(1) if not counting the input string
+ */
+
 using System.Collections.Generic;
-using System.Text;
 using NUnit.Framework;
 
 namespace Jewels_And_Stones
@@ -61,19 +75,3 @@ namespace Jewels_And_Stones
         }
     }
 }
-
-/*
- * https://leetcode.com/problems/jewels-and-stones/
- * Explanation
- * 
- * A Set problem. Store the set and check if stones contain it.
- * 
- * Time: O(m+n)
- * Space: O(n) where n is the length of jewels
- * 
- * Second method make uses of String.Contains method. 
- * The String.Contains() method in C# is used to return a value indicating whether a specified substring occurs within this string
- * 
- * Time: O(m+n) because String.Contains is O(n) operation
- * Space: O(1) if not counting the input string
- */

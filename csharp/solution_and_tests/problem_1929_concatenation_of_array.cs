@@ -1,6 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿/*
+ * https://leetcode.com/problems/concatenation-of-array/
+ * Explanation:
+ * 
+ * Method 1: Simlar to the N-th Tribonacci Number Problem
+ * https://leetcode.com/problems/n-th-tribonacci-number/
+ * We juse use mod to get the correct index.
+ * 0 mod 3 = 0, 1 mod 3 = 1, 2 mod 3 = 2
+ * 3 mod 3 = 0, 4 mod 3 = 1, 5 mod 3 = 2
+ * This method will have O(n) time where n is the length of the result array
+ * 
+ * Method 2: This method will have O(n) time where n is the length of the input
+ * array
+ * We loop through the input array, then set current index = current element at
+ * input array, then we also set the next set of index (i + nums.length) to be
+ * the same
+ * 
+ * Space: O(n) for output array
+ */
 using NUnit.Framework;
 
 namespace Concatenation_of_Array
@@ -54,23 +70,3 @@ namespace Concatenation_of_Array
         }
     }
 }
-
-/*
- * https://leetcode.com/problems/concatenation-of-array/
- * Explanation
- * 
- * Method 1: Simlar to the N-th Tribonacci Number Problem
- * https://leetcode.com/problems/n-th-tribonacci-number/
- * We juse use mod to get the correct index.
- * 0 mod 3 = 0, 1 mod 3 = 1, 2 mod 3 = 2
- * 3 mod 3 = 0, 4 mod 3 = 1, 5 mod 3 = 2
- * This method will have O(n) time where n is the length of the result array
- * 
- * Method 2: This method will have O(n) time where n is the length of the input
- * array
- * We loop through the input array, then set current index = current element at
- * input array, then we also set the next set of index (i + nums.length) to be
- * the same
- * 
- * Space: O(n) for output array
- */

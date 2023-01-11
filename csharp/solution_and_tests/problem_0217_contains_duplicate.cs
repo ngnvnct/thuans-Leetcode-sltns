@@ -1,4 +1,20 @@
-﻿using NUnit.Framework;
+﻿/*
+ * https://leetcode.com/problems/contains-duplicate/
+ * Explanation:
+ * 
+ * Create a HashSet and add the element to it. As it implements the Set
+ * Interface, duplicate values are not allowed.
+ * If an element is a duplicate, it will return true.
+ * 
+ * Time: O(n), lopping through the Array
+ * Space: O(n), storing the Array in a Set
+ * 
+ * Sorting: Sorting then linear search, O(n log n) time and O(1) space if
+ * heapsort is used. Althoug not a good idea to modify the input, make a copy
+ * instead
+ */
+
+using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 
@@ -62,19 +78,3 @@ namespace Contains_Duplicate
         }
     }
 }
-
-/*
- * https://leetcode.com/problems/contains-duplicate/
- * Explanation
- * 
- * Create a HashSet and add the element to it. As it implements the Set
- * Interface, duplicate values are not allowed.
- * If an element is a duplicate, it will return true.
- * 
- * Time: O(n), lopping through the Array
- * Space: O(n), storing the Array in a Set
- * 
- * Sorting: Sorting then linear search, O(n log n) time and O(1) space if
- * heapsort is used. Althoug not a good idea to modify the input, make a copy
- * instead
- */

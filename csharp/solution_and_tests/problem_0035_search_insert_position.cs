@@ -1,3 +1,12 @@
+/*
+ * https://leetcode.com/problems/search-insert-position/
+ * Explanation
+ * Similar to Binary Search https://leetcode.com/problems/binary-search/
+ * 
+ * Time: O(logn)
+ * Space: O(1)
+ */
+
 using NUnit.Framework;
 
 namespace Search_Insert_Position
@@ -46,11 +55,3 @@ namespace Search_Insert_Position
         }
     }
 }
-
-/*
- * Explanation
- * Similar to Binary Search
- * 
- * Time: O(logn)
- * Space: O(1)
- */

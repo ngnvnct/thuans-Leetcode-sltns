@@ -1,7 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
+﻿/*
+ * https://leetcode.com/problems/richest-customer-wealth/
+ * Explanation:
+ * 
+ * Straight forward problem, loop through each account then calculate the sum,
+ * wealth will be the max of current wealth or the new bank account sum.
+ * 
+ * Time: O(m * n)
+ * Space: O(1)
+ */
+
+using System;
 using System.Linq;
-using System.Text;
 using NUnit.Framework;
 
 namespace Richest_Customer_Wealth
@@ -44,14 +53,3 @@ namespace Richest_Customer_Wealth
         }
     }
 }
-
-/*
- * https://leetcode.com/problems/richest-customer-wealth/
- * Explanation
- * 
- * Straight forward problem, loop through each account then calculate the sum,
- * wealth will be the max of current wealth or the new bank account sum.
- * 
- * Time: O(m * n)
- * Space: O(1)
- */

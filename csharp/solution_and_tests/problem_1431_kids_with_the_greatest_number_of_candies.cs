@@ -1,7 +1,16 @@
-﻿using System;
+﻿/*
+ * https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/
+ * Explanation:
+ * 
+ * Find the upper limit, then check if adding the extra candies the new
+ * candies[i] is bigger than the upper limit
+ * 
+ * Time: O(n)
+ * Space: O(1)
+ */
+
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using NUnit.Framework;
 
 namespace Kids_With_the_Greatest_Number_of_Candies
@@ -40,14 +49,3 @@ namespace Kids_With_the_Greatest_Number_of_Candies
         }
     }
 }
-
-/*
- * https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/
- * Explanation
- * 
- * Find the upper limit, then check if adding the extra candies the new
- * candies[i] is bigger than the upper limit
- * 
- * Time: O(n)
- * Space: O(1)
- */

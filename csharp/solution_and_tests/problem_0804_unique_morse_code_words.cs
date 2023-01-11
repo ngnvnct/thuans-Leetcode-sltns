@@ -1,4 +1,15 @@
-﻿using System.Collections.Generic;
+﻿/*
+ * https://leetcode.com/problems/unique-morse-code-words/
+ * Explanation:
+ * 
+ * Put morse code out of the word in a string then add it to a hash set, return
+ * the size of the hash set is the unique morse code words
+ * 
+ * Time: O(n)
+ * Space: O(n)
+ */
+
+using System.Collections.Generic;
 using System.Text;
 using NUnit.Framework;
 
@@ -43,13 +54,3 @@ namespace Unique_Morse_Code_Words
         }
     }
 }
-
-/*
- * https://leetcode.com/problems/unique-morse-code-words/
- * 
- * Put morse code out of the word in a string then add it to a hash set, return
- * the size of the hash set is the unique morse code words
- * 
- * Time: O(n)
- * Space: O(n)
- */

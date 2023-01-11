@@ -1,6 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿/*
+ * https://leetcode.com/problems/running-sum-of-1d-array/
+ * Explanation:
+ * 
+ * There is a solution which use the input array and modify it, not ideal. Can
+ * start the loop at 0 or 1 it doesn't matter
+ * For solution 2 there is one extra calculation, other than that pretty
+ * obvious.
+ * 
+ * Time: O(n)
+ * Space: O(1) if we don't care about output array
+ */
+
 using NUnit.Framework;
 
 namespace Running_Sum_of_1d_Array
@@ -59,16 +69,3 @@ namespace Running_Sum_of_1d_Array
         }
     }
 }
-
-/*
- * https://leetcode.com/problems/running-sum-of-1d-array/
- * Explanation
- * 
- * There is a solution which use the input array and modify it, not ideal. Can
- * start the loop at 0 or 1 it doesn't matter
- * For solution 2 there is one extra calculation, other than that pretty
- * obvious.
- * 
- * Time: O(n)
- * Space: O(1) if we don't care about output array
- */

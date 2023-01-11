@@ -1,6 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿/*
+ * https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/
+ * Explanation:
+ * 
+ * Ask by Facebook Phone
+ * A naive solution is to use a stack, don't do that.
+ * Just ignore digits and signs and only count the ( or )
+ * Keep a variable currDepth that is the Math.max of current max and max depth,
+ * everytime you see an open, you increment currDepth and update a new max
+ * If you see a close parentheses, decrement currDepth
+ * 
+ * Not on leetcode, a facebook constraint is if a parentheses is unbalance,
+ * return -1, we have that if condition in the loop to terminate early
+ * At the end of the loop, we have to check if currMax is 0, if it is not zero
+ * that means it is unbalance, return -1
+ * 
+ * Time: O(n)
+ * Space: O(1)
+ */
+
+using System;
 using NUnit.Framework;
 
 namespace Maximum_Nesting_Depth_of_the_Parentheses
@@ -52,23 +70,3 @@ namespace Maximum_Nesting_Depth_of_the_Parentheses
         }
     }
 }
-
-/*
- * https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/
- * Explanation
- * 
- * Ask by Facebook Phone
- * A naive solution is to use a stack, don't do that.
- * Just ignore digits and signs and only count the ( or )
- * Keep a variable currDepth that is the Math.max of current max and max depth,
- * everytime you see an open, you increment currDepth and update a new max
- * If you see a close parentheses, decrement currDepth
- * 
- * Not on leetcode, a facebook constraint is if a parentheses is unbalance,
- * return -1, we have that if condition in the loop to terminate early
- * At the end of the loop, we have to check if currMax is 0, if it is not zero
- * that means it is unbalance, return -1
- * 
- * Time: O(n)
- * Space: O(1)
- */

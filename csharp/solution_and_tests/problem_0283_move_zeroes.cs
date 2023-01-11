@@ -1,3 +1,25 @@
+/*
+ * https://leetcode.com/problems/move-zeroes/
+ * Explanation:
+ * 
+ * We want to loop through an Array and check for index that doesn't have a 0.
+ * We keep an index at the start of the Array
+ * and only increment it after we swap it with the current element that is not
+ * 0.
+ * 
+ * This method does minimum write
+ * 
+ * Time: O(n), looping through n elements of Array
+ * Space: O(1), input array doesn't count, if it does then O(n)
+ * 
+ * CountMoveZeroes was asked during facebook mock, want to return the number of
+ * non-zero element, when writeIndex finish updating, it will be at the next
+ * index, then we can return it as it will be
+ * the number of non zero element
+ * 
+ * Ask during facebook mock interview
+ */
+
 using NUnit.Framework;
 
 namespace Move_Zeroes
@@ -76,24 +98,3 @@ namespace Move_Zeroes
         }
     }
 }
-
-/*
- * https://leetcode.com/problems/move-zeroes/
- * Explantion
- * We want to loop through an Array and check for index that doesn't have a 0.
- * We keep an index at the start of the Array
- * and only increment it after we swap it with the current element that is not
- * 0.
- * 
- * This method does minimum write
- * 
- * Time: O(n), looping through n elements of Array
- * Space: O(1), input array doesn't count, if it does then O(n)
- * 
- * CountMoveZeroes was asked during facebook mock, want to return the number of
- * non-zero element, when writeIndex finish updating, it will be at the next
- * index, then we can return it as it will be
- * the number of non zero element
- * 
- * Ask during facebook mock interview
- */

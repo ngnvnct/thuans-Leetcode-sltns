@@ -1,4 +1,14 @@
-﻿using System.Collections.Generic;
+﻿/*
+ * https://leetcode.com/problems/fizz-buzz/
+ * Explanation:
+ * 
+ * Use modulus % to return the remainder of two number after division
+ * 
+ * Time: O(n), n is input
+ * Space: O(n), storing the result
+ */
+
+using System.Collections.Generic;
 using NUnit.Framework;
 
 namespace Fizz_Buzz
@@ -72,12 +82,3 @@ namespace Fizz_Buzz
         }
     }
 }
-
-/*
- * https://leetcode.com/problems/fizz-buzz/
- * Explantion:
- * Use modulus % to return the remainder of two number after division
- * 
- * Time: O(n), n is input
- * Space: O(n), storing the result
- */
