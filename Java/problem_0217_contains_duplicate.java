@@ -1,3 +1,21 @@
+/*
+ * https://leetcode.com/problems/contains-duplicate/
+ * Explanation:
+ * 
+ * Create a HashSet and add the element to it. As it implements the Set
+ * Interface, duplicate values are not allowed.
+ * If an element is a duplicate, it will return true.
+ * 
+ * Brute Force: linear search, O(n^2) time and O(1) space
+ * 
+ * Sorting: Sorting then linear search, O(n log n) time and O(1) space if
+ * heapsort is used. Althoug not a good idea to modify the input, make a copy
+ * instead
+ * 
+ * Time: O(n), lopping through the Array
+ * Space: O(n), storing the Array in a Set
+ */
+
 package Java;
 
 import java.util.Arrays;
@@ -60,21 +78,3 @@ public class problem_0217_contains_duplicate {
         assertTrue(containsDuplicateLoops(testCase3));
     }
 }
-
-/*
- * https://leetcode.com/problems/contains-duplicate/
- * Explanation
- * 
- * Create a HashSet and add the element to it. As it implements the Set
- * Interface, duplicate values are not allowed.
- * If an element is a duplicate, it will return true.
- * 
- * Brute Force: linear search, O(n^2) time and O(1) space
- * 
- * Sorting: Sorting then linear search, O(n log n) time and O(1) space if
- * heapsort is used. Althoug not a good idea to modify the input, make a copy
- * instead
- * 
- * Time: O(n), lopping through the Array
- * Space: O(n), storing the Array in a Set
- */

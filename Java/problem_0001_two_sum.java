@@ -1,3 +1,23 @@
+/*
+ * https://leetcode.com/problems/two-sum/
+ * Explanation:
+ * 
+ * We want to make a HashMap to keep trace of the difference of the element.
+ * First, we have an if-statement asking is the HashMap contains this element
+ * If yes, we return the value of the key-value pair, along with the current
+ * index
+ * Else, we put the key as the difference (target-nums[i]), and the value is the
+ * current index
+ * 
+ * Line 18 and 19 can be replace by return new int[] {map.get(nums[i]), i};
+ * 
+ * Brute Force way is two nested loop then check each one, O(n^2) time and O(1)
+ * space
+ * 
+ * Time: O(n), looping through n elements of Array
+ * Space: O(n), storing the Array in HashMap
+ */
+
 package Java;
 
 import java.util.Arrays;
@@ -58,23 +78,3 @@ public class problem_0001_two_sum {
         assertArrayEquals(testCase3ExpectedResult, twoSumBruteForce(testCase3, 6));
     }
 }
-
-/*
- * https://leetcode.com/problems/two-sum/
- * Explantion
- * 
- * We want to make a HashMap to keep trace of the difference of the element.
- * First, we have an if-statement asking is the HashMap contains this element
- * If yes, we return the value of the key-value pair, along with the current
- * index
- * Else, we put the key as the difference (target-nums[i]), and the value is the
- * current index
- * 
- * Line 18 and 19 can be replace by return new int[] {map.get(nums[i]), i};
- * 
- * Brute Force way is two nested loop then check each one, O(n^2) time and O(1)
- * space
- * 
- * Time: O(n), looping through n elements of Array
- * Space: O(n), storing the Array in HashMap
- */

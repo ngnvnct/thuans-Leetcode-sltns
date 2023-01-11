@@ -1,3 +1,27 @@
+/*
+ * https://leetcode.com/problems/move-zeroes/
+ * Explanation:
+ * 
+ * We want to loop through an Array and check for index that doesn't have a 0.
+ * We keep an index at the start of the Array
+ * and only increment it after we swap it with the current element that is not
+ * 0.
+ * 
+ * Method 1 do an unnessary swap if the element is not 0
+ * 
+ * Method 2 and 3 do minimum write
+ * 
+ * Time: O(n), looping through n elements of Array
+ * Space: O(1), input array doesn't count, if it does then O(n)
+ * 
+ * countMoveZeroes was asked during facebook mock, want to return the number of
+ * non-zero element, when writeIndex finish updating, it will be at the next
+ * index, then we can return it as it will be
+ * the number of non zero element
+ * 
+ * Ask during facebook mock interview
+ */
+
 package Java;
 
 import org.junit.Test;
@@ -76,26 +100,3 @@ public class problem_0283_move_zeroes {
         assertEquals(3, countMoveZeroesMetaMockInterview(testCase1));
     }
 }
-
-/*
- * https://leetcode.com/problems/move-zeroes/
- * Explantion
- * We want to loop through an Array and check for index that doesn't have a 0.
- * We keep an index at the start of the Array
- * and only increment it after we swap it with the current element that is not
- * 0.
- * 
- * Method 1 do an unnessary swap if the element is not 0
- * 
- * Method 2 and 3 do minimum write
- * 
- * Time: O(n), looping through n elements of Array
- * Space: O(1), input array doesn't count, if it does then O(n)
- * 
- * countMoveZeroes was asked during facebook mock, want to return the number of
- * non-zero element, when writeIndex finish updating, it will be at the next
- * index, then we can return it as it will be
- * the number of non zero element
- * 
- * Ask during facebook mock interview
- */

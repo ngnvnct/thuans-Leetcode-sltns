@@ -1,3 +1,13 @@
+/*
+ * https://leetcode.com/problems/jewels-and-stones/
+ * Explanation:
+ * 
+ * A Set problem. Store the set and check if stones contain it.
+ * 
+ * Time: O(m+n)
+ * Space: O(n) where N i the jewels
+ */
+
 package Java;
 
 import java.util.HashSet;
@@ -45,13 +55,3 @@ public class problem_0771_jewels_and_stones {
 
     }
 }
-
-/*
- * https://leetcode.com/problems/jewels-and-stones/
- * Explanation
- * 
- * A Set problem. Store the set and check if stones contain it.
- * 
- * Time: O(m+n)
- * Space: O(n) where N i the jewels
- */

@@ -1,5 +1,13 @@
-package Java;
+/*
+ * https://leetcode.com/problems/search-insert-position/
+ * Explanation
+ * Similar to Binary Search https://leetcode.com/problems/binary-search/
+ * 
+ * Time: O(logn)
+ * Space: O(1)
+ */
 
+package Java;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
@@ -28,11 +36,3 @@ public class problem_0035_search_insert_position {
         assertEquals(4, searchInsert(testCase1, 7));
     }
 }
-
-/*
- * Explanation
- * Similar to Binary Search
- * 
- * Time: O(logn)
- * Space: O(1)
- */

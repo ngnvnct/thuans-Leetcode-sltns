@@ -1,3 +1,16 @@
+/*
+ * https://leetcode.com/problems/running-sum-of-1d-array/
+ * Explanation:
+ * 
+ * There is a solution which use the input array and modify it, not ideal. Can
+ * start the loop at 0 or 1 it doesn't matter
+ * For solution 1 there is one extra calculation, other than that pretty
+ * obvious.
+ * 
+ * Time: O(n)
+ * Space: O(1) if we don't care about output array, O(n) otherwise
+ */
+
 package Java;
 
 import org.junit.Test;
@@ -41,16 +54,3 @@ public class problem_1480_running_sum_of_1d_array {
         assertArrayEquals(testCase3ExpectedResult, runningSum(testCase3));
     }
 }
-
-/*
- * https://leetcode.com/problems/running-sum-of-1d-array/
- * Explanation
- * 
- * There is a solution which use the input array and modify it, not ideal. Can
- * start the loop at 0 or 1 it doesn't matter
- * For solution 1 there is one extra calculation, other than that pretty
- * obvious.
- * 
- * Time: O(n)
- * Space: O(1) if we don't care about output array, O(n) otherwise
- */

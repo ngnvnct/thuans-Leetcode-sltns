@@ -1,3 +1,14 @@
+/*
+ * https://leetcode.com/problems/unique-morse-code-words/
+ * Explanation:
+ * 
+ * Put morse code out of the word in a string then add it to a hash set, return
+ * the size of the hash set is the unique morse code words
+ * 
+ * Time: O(n)
+ * Space: O(n)
+ */
+
 package Java;
 
 import java.util.HashSet;
@@ -33,13 +44,3 @@ public class problem_0804_unique_morse_code_words {
         assertEquals(testCase2ExpectedResult, uniqueMorseRepresentations(testCase2));
     }
 }
-
-/*
- * https://leetcode.com/problems/unique-morse-code-words/
- * 
- * Put morse code out of the word in a string then add it to a hash set, return
- * the size of the hash set is the unique morse code words
- * 
- * Time: O(n)
- * Space: O(n)
- */

@@ -1,3 +1,13 @@
+/*
+ * https://leetcode.com/problems/fizz-buzz/
+ * Explanation:
+ * 
+ * Use modulus % to return the remainder of two number after division
+ * 
+ * Time: O(n), n is input
+ * Space: O(n), storing the result
+ */
+
 package Java;
 
 import java.util.ArrayList;
@@ -39,12 +49,3 @@ public class problem_0412_fizz_buzz {
         assertEquals(testCase3ExpectedResult, fizzBuzz(testCase3));
     }
 }
-
-/*
- * https://leetcode.com/problems/fizz-buzz/
- * Explantion:
- * Use modulus % to return the remainder of two number after division
- * 
- * Time: O(n), n is input
- * Space: O(n), storing the result
- */
