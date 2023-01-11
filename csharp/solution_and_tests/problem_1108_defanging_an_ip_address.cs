@@ -1,9 +1,19 @@
-﻿using System;
+﻿/*
+ * https://leetcode.com/problems/defanging-an-ip-address/description/
+ * Explanation:
+ * 
+ * Method 1 is straight forward. Method 2 is a shortening version of method 1. 
+ * Method 3 introduces Deque (Double-Ended Queue), which is another way of solving it
+ * 
+ * Time: O(n)
+ * Space: O(n)
+*/
+
 using System.Collections.Generic;
 using System.Text;
 using NUnit.Framework;
 
-namespace solution_and_tests
+namespace Defanging_an_IP_Address
 {
     class Solution
     {
@@ -37,7 +47,7 @@ namespace solution_and_tests
             {
                 deque.AddLast(c);
             }
-            while(deque.Count > 0)
+            while (deque.Count > 0)
             {
                 char c = deque.First.Value;
                 deque.RemoveFirst();
@@ -53,8 +63,7 @@ namespace solution_and_tests
             return sb.ToString();
         }
     }
-
-        class Tests
+    class Tests
     {
         Solution sol;
         [SetUp]
@@ -88,14 +97,3 @@ namespace solution_and_tests
         }
     }
 }
-
-/*
- * https://leetcode.com/problems/defanging-an-ip-address/description/
- * Explanation
- * 
- * Method 1 is straight forward. Method 2 is a shortening version of method 1. 
- * Method 3 introduces Deque (Double-Ended Queue), which is another way of solving it
- * 
- * Time: O(n)
- * Space: O(n)
-*/
