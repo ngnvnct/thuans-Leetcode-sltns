@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using NUnit.Framework;
 
 namespace Fizz_Buzz
@@ -53,13 +51,24 @@ namespace Fizz_Buzz
             int testCase1 = 3;
             int testCase2 = 5;
             int testCase3 = 15;
-            IList<string> expectedResult1 = new List<string> { "1", "2", "Fizz" };
-            IList<string> expectedResult2 = new List<string> { "1", "2", "Fizz", "4", "Buzz" };
+            IList<string> testCase1ExpectedResult = new List<string> { "1", "2", "Fizz" };
+            IList<string> testCase2ExpectedResult = new List<string> { "1", "2", "Fizz", "4", "Buzz" };
             IList<string> expectedResult3 = new List<string> { "1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz" };
 
-            CollectionAssert.AreEqual(expectedResult1, sol.FizzBuzz(testCase1));
-            CollectionAssert.AreEqual(expectedResult2, sol.FizzBuzz(testCase2));
+            CollectionAssert.AreEqual(testCase1ExpectedResult, sol.FizzBuzz(testCase1));
+            CollectionAssert.AreEqual(testCase2ExpectedResult, sol.FizzBuzz(testCase2));
             CollectionAssert.AreEqual(expectedResult3, sol.FizzBuzz(testCase3));
+        }
+
+        // Array in C# implements IList Interface
+        // Another way to test with parameters
+        [Test]
+        [TestCase(3, ExpectedResult = new string[] { "1", "2", "Fizz" })]
+        [TestCase(5, ExpectedResult = new string[] { "1", "2", "Fizz", "4", "Buzz" })]
+        [TestCase(15, ExpectedResult = new string[] { "1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz" })]
+        public IList<string> TestFizzBuzz2(int n)
+        {
+            return sol.FizzBuzz(n);
         }
     }
 }
