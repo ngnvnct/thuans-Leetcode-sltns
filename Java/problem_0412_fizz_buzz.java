@@ -20,7 +20,6 @@ import static org.junit.Assert.assertEquals;
 public class problem_0412_fizz_buzz {
     public List<String> fizzBuzz(int n) {
         List<String> res = new ArrayList<>();
-        
         for (int i = 1; i <= n; i++) {
             if (i % 15 == 0) {
                 res.add("FizzBuzz");

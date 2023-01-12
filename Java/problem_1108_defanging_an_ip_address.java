@@ -17,7 +17,6 @@ import static org.junit.Assert.assertEquals;
 public class problem_1108_defanging_an_ip_address {
     public String defangIPaddr(String address) {
         StringBuilder sb = new StringBuilder();
-
         for (char c : address.toCharArray())
         {
             if (c == '.') {

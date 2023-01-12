@@ -1,6 +1,7 @@
 /*
  * https://leetcode.com/problems/search-insert-position/
- * Explanation
+ * Explanation:
+ * 
  * Similar to Binary Search https://leetcode.com/problems/binary-search/
  * 
  * Time: O(logn)

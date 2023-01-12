@@ -27,10 +27,8 @@ public class problem_1614_maximum_nesting_depth_of_the_parentheses {
     public int maxDepth(String s) {
         int currMax = 0;
         int maxDepth = 0;
-
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
-
             if (c == '(') {
                 currMax++;
                 maxDepth = Math.max(currMax, maxDepth);

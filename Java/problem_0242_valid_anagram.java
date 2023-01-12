@@ -1,80 +1,6 @@
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-
-import org.junit.Test;
-
-public class Valid_Anagram_242 {
-    public boolean isAnagram(String s, String t) {
-        if (s.length() != t.length()) {
-            return false;
-        }
-        int[] alphabet = new int[26];
-        
-        for (int i = 0; i < s.length(); i++) {
-            alphabet[s.charAt(i) - 'a']++;
-        }
-
-        for (int i = 0; i < t.length(); i++) {
-            alphabet[t.charAt(i) - 'a']--;
-            if (alphabet[t.charAt(i) - 'a'] < 0) {
-                return false;
-            }
-        }
-
-        return true;
-    }
-
-    public boolean isAnagramSort(String s, String t) {
-        if (s.length() != t.length()) {
-            return false;
-        }
-        char[] sortS = s.toCharArray();
-        char[] sortT = t.toCharArray();
-        Arrays.sort(sortS);
-        Arrays.sort(sortT);
-        return Arrays.equals(sortS, sortT);
-    }
-
-    public boolean isAnagramFollowUp(String s, String t) {
-        if (s.length() != t.length()) {
-            return false;
-        }
-
-        Map<Character, Integer> map = new HashMap<>();
-
-        for (int i = 0; i < s.length(); i++) {
-            map.put(s.charAt(i), map.getOrDefault(s.charAt(i), 0) + 1);
-            map.put(t.charAt(i), map.getOrDefault(t.charAt(i), 0) - 1);
-        }
-
-        for (int value : map.values()) {
-            if (value != 0) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    @Test
-    public void testAnagram() {
-        assertTrue(isAnagram("anagram", "nagaram"));
-        assertFalse(isAnagram("rat", "cat"));
-        assertFalse(isAnagram("anagram", "agaram"));
-
-        assertTrue(isAnagramSort("anagram", "nagaram"));
-        assertFalse(isAnagramSort("rat", "cat"));
-        assertFalse(isAnagramSort("anagram", "agaram"));
-    }
-
-}
-
 /*
  * https://leetcode.com/problems/valid-anagram/
- * Explanation
+ * Explanation:
  * 
  * Make a alphabet array of 26 elements. Take the current character subtract by
  * 'a' to get the ASCII code value of that letter. For example, 'a' is 97 and
@@ -98,3 +24,71 @@ public class Valid_Anagram_242 {
  * Time: O(n)
  * Space: O(n)
  */
+
+package Java;
+
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.junit.Test;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
+public class problem_0242_valid_anagram {
+    public boolean isAnagram(String s, String t) {
+        if (s.length() != t.length()) {
+            return false;
+        }
+        int[] alphabet = new int[26];
+        for (int i = 0; i < s.length(); i++) {
+            alphabet[s.charAt(i) - 'a']++;
+        }
+        for (int i = 0; i < t.length(); i++) {
+            alphabet[t.charAt(i) - 'a']--;
+            if (alphabet[t.charAt(i) - 'a'] < 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public boolean isAnagramSort(String s, String t) {
+        if (s.length() != t.length()) {
+            return false;
+        }
+        char[] sortS = s.toCharArray();
+        char[] sortT = t.toCharArray();
+        Arrays.sort(sortS);
+        Arrays.sort(sortT);
+        return Arrays.equals(sortS, sortT);
+    }
+
+    public boolean isAnagramFollowUp(String s, String t) {
+        if (s.length() != t.length()) {
+            return false;
+        }
+        Map<Character, Integer> map = new HashMap<>();
+        for (int i = 0; i < s.length(); i++) {
+            map.put(s.charAt(i), map.getOrDefault(s.charAt(i), 0) + 1);
+            map.put(t.charAt(i), map.getOrDefault(t.charAt(i), 0) - 1);
+        }
+        for (int value : map.values()) {
+            if (value != 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    @Test
+    public void testAnagram() {
+        assertTrue(isAnagram("anagram", "nagaram"));
+        assertFalse(isAnagram("rat", "cat"));
+        assertFalse(isAnagram("anagram", "agaram"));
+
+        assertTrue(isAnagramSort("anagram", "nagaram"));
+        assertFalse(isAnagramSort("rat", "cat"));
+        assertFalse(isAnagramSort("anagram", "agaram"));
+    }
+}
