@@ -19,11 +19,9 @@ namespace Two_Sum_II_Input_Array_Is_Sorted
         {
             int leftPointer = 0;
             int rightPointer = numbers.Length - 1;
-
             while (leftPointer < rightPointer)
             {
                 int currSum = numbers[leftPointer] + numbers[rightPointer];
-
                 if (currSum == target)
                 {
                     return new int[] { leftPointer + 1, rightPointer + 1 };

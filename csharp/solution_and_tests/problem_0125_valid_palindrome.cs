@@ -22,7 +22,6 @@ namespace Valid_Palindrome
             int leftPointer = 0;
             int rightPointer = s.Length - 1;
             s = s.ToLower();
-
             while (leftPointer < rightPointer)
             {
                 while (!Char.IsLetterOrDigit(s[leftPointer]) && leftPointer < rightPointer)

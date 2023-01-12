@@ -26,13 +26,11 @@ namespace Container_With_Most_Water
             int leftPointer = 0;
             int rightPointer = height.Length - 1; ;
             int maxArea = 0;
-
             while (leftPointer < rightPointer)
             {
                 int currContainerLength = rightPointer - leftPointer;
                 int currArea = currContainerLength * Math.Min(height[leftPointer], height[rightPointer]);
                 maxArea = Math.Max(currArea, maxArea);
-
                 if (height[leftPointer] < height[rightPointer])
                 {
                     leftPointer++;
