@@ -61,6 +61,7 @@ namespace ThreeSum_Closest
         [Test]
         [TestCase(new int[] { -1, 2, 1, -4 }, 1, ExpectedResult = 2)]
         [TestCase(new int[] { 0, 0, 0 }, 1, ExpectedResult = 0)]
+        [TestCase(new int[] { 4, 0, 5, -5, 3, 3, 0, -4, -5 }, -2, ExpectedResult = -2)]
         public int ThreeSumClosest(int[] nums, int target)
         {
             return sol.ThreeSumClosest(nums, target);

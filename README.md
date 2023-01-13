@@ -27,6 +27,7 @@ VSCode installed:
 * Javafx (optional, uses for Pair<Key, Value> Object)
 * Search Editor: Apply Changes
 * IntelliCode and IntelliCode API Usage Examples
+* .NET Core Test Explorer
 
 Solutions are also welcome for any other *supported* language on leetcode.com!
 
