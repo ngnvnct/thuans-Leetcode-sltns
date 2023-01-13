@@ -1,6 +1,6 @@
 ﻿/*
  * https://leetcode.com/problems/paint-house/ LC Premium
- * Exlpanation:
+ * Explanation:
  * 
  * DP Appoarch
  * [17,2,17]

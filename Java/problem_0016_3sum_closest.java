@@ -32,7 +32,7 @@ public class problem_0016_3sum_closest {
                 if (Math.abs(diff) > Math.abs(closestThreeSum)) {
                     diff = closestThreeSum;
                 }
-                if (threeSum < 0) {
+                if (threeSum < target) {
                     left++;
                 } else {
                     right--;

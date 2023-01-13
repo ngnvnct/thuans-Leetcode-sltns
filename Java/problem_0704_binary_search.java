@@ -54,7 +54,7 @@ public class problem_0704_binary_search {
 
         int[] testCase5 = new int[] { 0, 1, 21, 33, 45, 45, 61, 71, 72, 73 };
         int testCase5Target = 5;
-        int testCase5ExpectedResult = 1;
+        int testCase5ExpectedResult = -1;
         int[] testCase6 = new int[] { 1, 5, 23, 111 };
         int testCase6Target = 35;
         int testCase6ExpectedResult = -1;
