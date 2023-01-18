@@ -1,8 +1,39 @@
+/*
+ * https://leetcode.com/problems/trapping-rain-water/
+ * Explanation:
+ * 
+ * maxLeft = 0,1,2,3
+ * maxRight = 1,2
+ * [L,L,L,L,L,L,L,L,R,R,R,R] <--- Pointer
+ * [0,1,0,2,1,0,1,3,2,1,2,1] <--- Input
+ * [0,0,1,0,1,2,1,0,0,1,0,0] <--- Trap Water, 1 + 1 + 2 +1 +1 = 6
+ * 
+ * 1. We can't have water at the end point, we move our pointer when maxLeft
+ * 2. We want the Min(maxLeft, maxRight)
+ * 3. We shift the pointer whenever maxLeft < maxRight or vice versa
+ * 4. Calculate it, if maxLeft/maxRight subtract by height[left]/height[right]
+ * and the result if negative, we set it to 0
+ * 5. Code Wise, if you update maxLeft or maxRight, you will never get a
+ * negative result
+ * 
+ * Time: O(n)
+ * Space: O(1)
+ * 
+ * Input [0,1,0,2,1,0,1,3,2,1,2,1]
+ * maxLeft [0,1,1,1,2,2,2,3,3,3,3,3]
+ * maxRight [3,3,3,3,3,3,3,2,2,2,1,0]
+ * 
+ * Min(l,r) [0,1,1,2,2,2,2,3,2,2,2,0]
+ * Input [0,1,0,2,1,0,1,3,2,1,2,1]
+ * Min-Input [0,0,1,0,1,2,1,0,0,1,0,0] = 1 + 1 + 2 + 1 + 1 = 6
+ * Calculation (Min(l,r) - heights > 0)
+ * Space: O(n)
+ */
+
 package Java;
 
-import static org.junit.Assert.assertEquals;
-
 import org.junit.Test;
+import static org.junit.Assert.assertEquals;
 
 public class problem_0042_trapping_rain_water {
     public int trap(int[] height) {
@@ -68,35 +99,3 @@ public class problem_0042_trapping_rain_water {
         assertEquals(testCase2ExpectedResult, trapMemory(testCase2));
     }
 }
-
-/*
- * https://leetcode.com/problems/trapping-rain-water/
- * Explanation:
- * 
- * maxLeft = 0,1,2,3
- * maxRight = 1,2
- * [L,L,L,L,L,L,L,L,R,R,R,R] <--- Pointer
- * [0,1,0,2,1,0,1,3,2,1,2,1] <--- Input
- * [0,0,1,0,1,2,1,0,0,1,0,0] <--- Trap Water, 1 + 1 + 2 +1 +1 = 6
- * 
- * 1. We can't have water at the end point, we move our pointer when maxLeft
- * 2. We want the Min(maxLeft, maxRight)
- * 3. We shift the pointer whenever maxLeft < maxRight or vice versa
- * 4. Calculate it, if maxLeft/maxRight subtract by height[left]/height[right]
- * and the result if negative, we set it to 0
- * 5. Code Wise, if you update maxLeft or maxRight, you will never get a
- * negative result
- * 
- * Time: O(n)
- * Space: O(1)
- * 
- * Input [0,1,0,2,1,0,1,3,2,1,2,1]
- * maxLeft [0,1,1,1,2,2,2,3,3,3,3,3]
- * maxRight [3,3,3,3,3,3,3,2,2,2,1,0]
- * 
- * Min(l,r) [0,1,1,2,2,2,2,3,2,2,2,0]
- * Input [0,1,0,2,1,0,1,3,2,1,2,1]
- * Min-Input [0,0,1,0,1,2,1,0,0,1,0,0] = 1 + 1 + 2 + 1 + 1 = 6
- * Calculation (Min(l,r) - heights > 0)
- * Space: O(n)
- */
