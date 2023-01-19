@@ -30,12 +30,15 @@ public class problem_0136_single_number {
 
     @Test
     public void testSingleNumber() {
-        int[] testCase1ExpectedResult = { 2, 2, 1 };
-        int[] testCase2ExpectedResult = { 4, 1, 2, 1, 2 };
-        int[] testCase3ExpectedResult = { 1 };
+        int[] testCase1 = { 2, 2, 1 };
+        int testCase1ExpectedResult = 1;
+        int[] testCase2 = { 4, 1, 2, 1, 2 };
+        int testCase2ExpectedResult = 4;
+        int[] testCase3 = { 1 };
+        int testCase3ExpectedResult = 1;
 
-        assertEquals(1, singleNumber(testCase1ExpectedResult));
-        assertEquals(4, singleNumber(testCase2ExpectedResult));
-        assertEquals(1, singleNumber(testCase3ExpectedResult));
+        assertEquals(testCase1ExpectedResult, singleNumber(testCase1));
+        assertEquals(testCase2ExpectedResult, singleNumber(testCase2));
+        assertEquals(testCase3ExpectedResult, singleNumber(testCase3));
     }
 }
