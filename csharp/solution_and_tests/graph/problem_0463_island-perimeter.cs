@@ -1,4 +1,27 @@
-﻿using NUnit.Framework;
+﻿/*
+ * https://leetcode.com/problems/island-perimeter/
+ * Explanation:
+ * 
+ * Similar to https://leetcode.com/problems/number-of-islands/
+ * 
+ * This is a Graph problem, which can be solve using Depth First Search (DFS) or
+ * BFS. DFS will be used here. First, we have a constraint if the length is 0 or
+ * it is null, return 0
+ * then we want to loop through the grid row and columns, and if we encounter a
+ * 1, we want to do something with it. In this case, we will call dfs to check
+ * for perimeter
+ * 
+ * In our DFS call, we want to have a constraint check, if it is out of bound or
+ * we encounter a 0, we want to return 1
+ * else, we mark each visited 0 with a -1 so we don't revisit it again, then we
+ * call the dfs stack going down, up, to the left and to the right, trying to
+ * get to the base case, and add it to our perimeter
+ * 
+ * Time: O(MN)
+ * Space: O(1)
+ */
+ 
+using NUnit.Framework;
 
 namespace Island_Perimeter
 {
