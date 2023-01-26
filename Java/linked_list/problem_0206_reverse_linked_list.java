@@ -1,5 +1,18 @@
+/*
+ * https://leetcode.com/problems/reverse-linked-list/
+ * Explanation:
+ * 
+ * A simple reverse LL problem
+ * 
+ * Time: O(n)
+ * Space: O(1) for iterative, O(n) for recursive
+ * 
+ * Write the test case in LinkedListTest.java
+ */
 
-public class Reverse_Linked_List_206 {
+package linked_list;
+
+public class problem_0206_reverse_linked_list {
     public static ListNode reverseList(ListNode head) {
         ListNode prev = null;
         ListNode curr = head;
@@ -22,16 +35,3 @@ public class Reverse_Linked_List_206 {
         return newHead;
     }
 }
-
-/*
- * Also appears on AlgoExpert, Leetcode75
- * https://leetcode.com/problems/reverse-linked-list/
- * Explanation
- * 
- * A simple reverse LL problem
- * 
- * Time: O(n)
- * Space: O(1) for iterative, O(n) for recursive
- * 
- * Write the test case in LinkedListTest.java
- */

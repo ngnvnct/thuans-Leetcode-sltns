@@ -1,7 +1,8 @@
+package linked_list;
 import java.util.HashSet;
 import java.util.Set;
 
-public class intersection_two_linked_lists {
+public class problem_0160_intersection_two_linked_lists {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         if (headA == null || headB == null) {
             return null;
