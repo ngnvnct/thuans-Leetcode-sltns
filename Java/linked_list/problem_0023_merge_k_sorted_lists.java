@@ -1,3 +1,14 @@
+/*
+ * https://leetcode.com/problems/merge-k-sorted-lists/
+ * Explanation:
+ * 
+ * Using a min heap, we add the smallest value to the heap
+ * then we pop it out and form a new list
+ * 
+ * Time: O(nlogk)
+ * Space: O(n)
+ */
+
 package linked_list;
 
 import java.util.PriorityQueue;
@@ -21,13 +32,3 @@ public class problem_0023_merge_k_sorted_lists {
         return dummy.next;
     }
 }
-
-/*
- * abstract
- * Explanation
- * Using a min heap, we add the smallest value to the heap
- * then we pop it out and form a new list
- * 
- * Time: O(nlogk)
- * Space: O(n)
- */
