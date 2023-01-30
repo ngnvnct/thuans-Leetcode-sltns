@@ -19,11 +19,16 @@
  * 
  * Time: O(max(n,m)) where n and m are the length of l1 and l2
  * Space: O(max(n,m)), the length of the new list is at most max(n,m) + 1
- * 
- * Write test in LinkedListTests.java
  */
 
 package linked_list;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import org.junit.Test;
+import static org.junit.Assert.assertTrue;
 
 public class problem_0002_add_two_numbers {
     public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
@@ -49,5 +54,25 @@ public class problem_0002_add_two_numbers {
             curr.next = new ListNode(carry);
         }
         return dummy.next;
+    }
+
+    @Test
+    public void testAddTwoLinkedLists() {
+        ListNode node = new ListNode();
+        ListNode testCase1 = node.addMany(new ListNode(2), new ArrayList<>(Arrays.asList(4, 3)));
+        ListNode testCase2 = node.addMany(new ListNode(5), new ArrayList<>(Arrays.asList(6, 4)));
+        ListNode output = problem_0002_add_two_numbers.addTwoNumbers(testCase1, testCase2);
+        List<Integer> expectedNodes = new ArrayList<>(Arrays.asList(7, 0, 8));
+        assertTrue(node.getNodesInArray(output).equals(expectedNodes));
+
+        // 2nd way to test
+        ListNode expectedNodes2 = node.addMany(new ListNode(7), new ArrayList<>(Arrays.asList(0, 8)));
+        assertTrue(node.getNodesInArray(expectedNodes2).equals(node.getNodesInArray(output)));
+
+        ListNode testCase3 = node.addMany(new ListNode(9), new ArrayList<>(Arrays.asList(9)));
+        ListNode testCase4 = new ListNode(1);
+        output = problem_0002_add_two_numbers.addTwoNumbers(testCase3, testCase4);
+        expectedNodes = new ArrayList<>(Arrays.asList(0, 0, 1));
+        assertTrue(node.getNodesInArray(output).equals(expectedNodes));
     }
 }

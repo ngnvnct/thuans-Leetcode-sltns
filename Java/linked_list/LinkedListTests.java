@@ -32,30 +32,7 @@ public class LinkedListTests {
         }
         return nodes;
     }
-
-    @Test
-    public void testMergeTwoSortedLists() {
-        ListNode testCase1 = new ListNode(2);
-        addMany(testCase1, new ArrayList<>(Arrays.asList(6, 7, 8)));
-        ListNode testCase2 = new ListNode(1);
-        addMany(testCase2, new ArrayList<>(Arrays.asList(3, 4, 5, 9, 10)));
-        ListNode output = problem_0021_merge_two_sorted_lists.mergeTwoLists(testCase1, testCase2);
-        List<Integer> expectedNodes = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
-        assertTrue(getNodesInArray(output).equals(expectedNodes));
-
-        ListNode testCase3 = null;
-        ListNode testCase4 = null;
-        output = problem_0021_merge_two_sorted_lists.mergeTwoLists(testCase3, testCase4);
-        expectedNodes = new ArrayList<>(Arrays.asList());
-        assertTrue(getNodesInArray(output).equals(expectedNodes));
-
-        ListNode testCase6 = null;
-        ListNode testCase7 = new ListNode(0);
-        output = problem_0021_merge_two_sorted_lists.mergeTwoLists(testCase6, testCase7);
-        expectedNodes = new ArrayList<>(Arrays.asList(0));
-        assertTrue(getNodesInArray(output).equals(expectedNodes));
-    }
-
+    
     @Test
     public void testOddEvenLinkedList() {
         ListNode testCase1 = addMany(new ListNode(1), new ArrayList<>(Arrays.asList(2, 3, 4, 5)));
@@ -97,25 +74,6 @@ public class LinkedListTests {
         ListNode testCase3 = null;
         output = problem_0206_reverse_linked_list.reverseList(testCase3);
         expectedNodes = new ArrayList<Integer>(Arrays.asList());
-        assertTrue(getNodesInArray(output).equals(expectedNodes));
-    }
-
-    @Test
-    public void testAddTwoLinkedLists() {
-        ListNode testCase1 = addMany(new ListNode(2), new ArrayList<>(Arrays.asList(4, 3)));
-        ListNode testCase2 = addMany(new ListNode(5), new ArrayList<>(Arrays.asList(6, 4)));
-        ListNode output = problem_0002_add_two_numbers.addTwoNumbers(testCase1, testCase2);
-        List<Integer> expectedNodes = new ArrayList<>(Arrays.asList(7, 0, 8));
-        assertTrue(getNodesInArray(output).equals(expectedNodes));
-
-        // 2nd way to test
-        ListNode expectedNodes2 = addMany(new ListNode(7), new ArrayList<>(Arrays.asList(0, 8)));
-        assertTrue(getNodesInArray(expectedNodes2).equals(getNodesInArray(output)));
-
-        ListNode testCase3 = addMany(new ListNode(9), new ArrayList<>(Arrays.asList(9)));
-        ListNode testCase4 = new ListNode(1);
-        output = problem_0002_add_two_numbers.addTwoNumbers(testCase3, testCase4);
-        expectedNodes = new ArrayList<>(Arrays.asList(0, 0, 1));
         assertTrue(getNodesInArray(output).equals(expectedNodes));
     }
 

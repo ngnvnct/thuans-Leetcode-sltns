@@ -11,11 +11,16 @@
  * 
  * Time: O(n + m)
  * Space: O(1)
- * 
- * Write the test case in LinkedListTests.java
  */
 
 package linked_list;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import org.junit.Test;
+import static org.junit.Assert.assertTrue;
 
 public class problem_0021_merge_two_sorted_lists {
     public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
@@ -37,5 +42,29 @@ public class problem_0021_merge_two_sorted_lists {
             dummy.next = l1;
         }
         return head.next;
+    }
+
+    @Test
+    public void testMergeTwoSortedLists() {
+        ListNode node = new ListNode();
+        ListNode testCase1FirstList = new ListNode(2);
+        node.addMany(testCase1FirstList, new ArrayList<>(Arrays.asList(6, 7, 8)));
+        ListNode testCase1SecondList = new ListNode(1);
+        node.addMany(testCase1SecondList, new ArrayList<>(Arrays.asList(3, 4, 5, 9, 10)));
+        ListNode output = problem_0021_merge_two_sorted_lists.mergeTwoLists(testCase1FirstList, testCase1SecondList);
+        List<Integer> expectedNodes = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+        assertTrue(node.getNodesInArray(output).equals(expectedNodes));
+
+        ListNode testCase2FirstList = null;
+        ListNode testCase2SecondList = null;
+        output = problem_0021_merge_two_sorted_lists.mergeTwoLists(testCase2FirstList, testCase2SecondList);
+        expectedNodes = new ArrayList<>(Arrays.asList());
+        assertTrue(node.getNodesInArray(output).equals(expectedNodes));
+
+        ListNode testCase3FirstList = null;
+        ListNode testCase3SecondList = new ListNode(0);
+        output = problem_0021_merge_two_sorted_lists.mergeTwoLists(testCase3FirstList, testCase3SecondList);
+        expectedNodes = new ArrayList<>(Arrays.asList(0));
+        assertTrue(node.getNodesInArray(output).equals(expectedNodes));
     }
 }
