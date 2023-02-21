@@ -57,6 +57,13 @@
 
 package linked_list;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import org.junit.Test;
+import static org.junit.Assert.assertTrue;
+
 public class problem_0328_odd_even_linked_list {
     public static ListNode oddEvenList(ListNode head) {
         if (head == null) {
@@ -74,5 +81,19 @@ public class problem_0328_odd_even_linked_list {
         }
         oddList.next = evenHead;
         return head;
+    }
+
+    @Test
+    public void testOddEvenLinkedList() {
+        ListNode node = new ListNode();
+        ListNode testCase1 = node.addMany(new ListNode(1), new ArrayList<>(Arrays.asList(2, 3, 4, 5)));
+        ListNode output = problem_0328_odd_even_linked_list.oddEvenList(testCase1);
+        List<Integer> expectedNodes = new ArrayList<>(Arrays.asList(1, 3, 5, 2, 4));
+        assertTrue(node.getNodesInArray(output).equals(expectedNodes));
+
+        ListNode testCase2 = node.addMany(new ListNode(2), new ArrayList<>(Arrays.asList(1, 3, 5, 6, 4, 7)));
+        output = problem_0328_odd_even_linked_list.oddEvenList(testCase2);
+        expectedNodes = new ArrayList<>(Arrays.asList(2, 3, 6, 7, 1, 5, 4));
+        assertTrue(node.getNodesInArray(output).equals(expectedNodes));
     }
 }

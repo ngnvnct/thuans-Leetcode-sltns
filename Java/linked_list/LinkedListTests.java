@@ -34,50 +34,6 @@ public class LinkedListTests {
     }
     
     @Test
-    public void testOddEvenLinkedList() {
-        ListNode testCase1 = addMany(new ListNode(1), new ArrayList<>(Arrays.asList(2, 3, 4, 5)));
-        ListNode output = problem_0328_odd_even_linked_list.oddEvenList(testCase1);
-        List<Integer> expectedNodes = new ArrayList<>(Arrays.asList(1, 3, 5, 2, 4));
-        assertTrue(getNodesInArray(output).equals(expectedNodes));
-
-        ListNode testCase2 = addMany(new ListNode(2), new ArrayList<>(Arrays.asList(1, 3, 5, 6, 4, 7)));
-        output = problem_0328_odd_even_linked_list.oddEvenList(testCase2);
-        expectedNodes = new ArrayList<>(Arrays.asList(2, 3, 6, 7, 1, 5, 4));
-        assertTrue(getNodesInArray(output).equals(expectedNodes));
-    }
-
-    @Test
-    public void testPalindromeLinkedList() {
-        ListNode testCase1 = new ListNode(1);
-        addMany(testCase1, new ArrayList<>(Arrays.asList(2, 2, 1)));
-        boolean output = problem_0234_palindrome_linked_list.isPalindrome(testCase1);
-        assertTrue(output == true);
-
-        ListNode testCase2 = new ListNode(1);
-        addMany(testCase2, new ArrayList<>(Arrays.asList(2)));
-        output = problem_0234_palindrome_linked_list.isPalindrome(testCase2);
-        assertTrue(output == false);
-    }
-
-    @Test
-    public void testReverseLinkedList() {
-        ListNode testCase1 = addMany(new ListNode(1), new ArrayList<>(Arrays.asList(2, 3, 4, 5)));
-        ListNode output = problem_0206_reverse_linked_list.reverseListRecursive(testCase1);
-        List<Integer> expectedNodes = new ArrayList<>(Arrays.asList(5, 4, 3, 2, 1));
-        assertTrue(getNodesInArray(output).equals(expectedNodes));
-
-        ListNode testCase2 = addMany(new ListNode(1), new ArrayList<>(Arrays.asList(2)));
-        output = problem_0206_reverse_linked_list.reverseList(testCase2);
-        expectedNodes = new ArrayList<>(Arrays.asList(2, 1));
-        assertTrue(getNodesInArray(output).equals(expectedNodes));
-
-        ListNode testCase3 = null;
-        output = problem_0206_reverse_linked_list.reverseList(testCase3);
-        expectedNodes = new ArrayList<Integer>(Arrays.asList());
-        assertTrue(getNodesInArray(output).equals(expectedNodes));
-    }
-
-    @Test
     public void testMiddleLinkedList() {
         ListNode testCase1 = addMany(new ListNode(1), new ArrayList<>(Arrays.asList(2, 3, 4, 5)));
         ListNode output = problem_0876_middle_of_the_linked_list.middleNode(testCase1);
