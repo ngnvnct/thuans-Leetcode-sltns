@@ -7,7 +7,6 @@
  * Time: O(n)
  * Space: O(1) for iterative, O(n) for recursive
  * 
- * Write the test case in LinkedListTest.java
  */
 
 package linked_list;

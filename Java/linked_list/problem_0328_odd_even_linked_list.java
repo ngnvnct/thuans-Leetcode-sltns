@@ -51,8 +51,6 @@
  * 
  * Time: O(n)
  * Space: O(1)
- * 
- * Write the test case in LinkedListTests.java
  */
 
 package linked_list;
