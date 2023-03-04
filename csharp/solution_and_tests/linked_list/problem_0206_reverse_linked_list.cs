@@ -13,14 +13,13 @@
 
 using List_Node;
 using System.Collections.Generic;
-
 using NUnit.Framework;
 
 namespace Reverse_Linked_List
 {
     class Solution
     {
-        public ListNode ReverseList(ListNode head)
+        public static ListNode ReverseList(ListNode head)
         {
             ListNode prev = null;
             ListNode curr = head;
@@ -34,7 +33,7 @@ namespace Reverse_Linked_List
             return prev;
         }
 
-        public ListNode ReverseListRecursive(ListNode head)
+        public static ListNode ReverseListRecursive(ListNode head)
         {
             if (head == null || head.next == null)
             {
@@ -68,9 +67,9 @@ namespace Reverse_Linked_List
             ListNode testCase3 = null;
             List<int> testCase3ExpectedResult = new List<int>();
 
-            CollectionAssert.AreEqual(testCase1ExpectedResult, node.GetNodesInArray(sol.ReverseList(testCase1)));
-            CollectionAssert.AreEqual(testCase2ExpectedResult, node.GetNodesInArray(sol.ReverseList(testCase2)));
-            CollectionAssert.AreEqual(testCase3ExpectedResult, node.GetNodesInArray(sol.ReverseList(testCase3)));
+            CollectionAssert.AreEqual(testCase1ExpectedResult, node.GetNodesInArray(Solution.ReverseList(testCase1)));
+            CollectionAssert.AreEqual(testCase2ExpectedResult, node.GetNodesInArray(Solution.ReverseList(testCase2)));
+            CollectionAssert.AreEqual(testCase3ExpectedResult, node.GetNodesInArray(Solution.ReverseList(testCase3)));
         }
 
         [Test]
@@ -83,9 +82,9 @@ namespace Reverse_Linked_List
             ListNode testCase3 = null;
             List<int> testCase3ExpectedResult = new List<int>();
 
-            CollectionAssert.AreEqual(testCase1ExpectedResult, node.GetNodesInArray(sol.ReverseListRecursive(testCase1)));
-            CollectionAssert.AreEqual(testCase2ExpectedResult, node.GetNodesInArray(sol.ReverseListRecursive(testCase2)));
-            CollectionAssert.AreEqual(testCase3ExpectedResult, node.GetNodesInArray(sol.ReverseListRecursive(testCase3)));
+            CollectionAssert.AreEqual(testCase1ExpectedResult, node.GetNodesInArray(Solution.ReverseListRecursive(testCase1)));
+            CollectionAssert.AreEqual(testCase2ExpectedResult, node.GetNodesInArray(Solution.ReverseListRecursive(testCase2)));
+            CollectionAssert.AreEqual(testCase3ExpectedResult, node.GetNodesInArray(Solution.ReverseListRecursive(testCase3)));
         }
     }
 }
