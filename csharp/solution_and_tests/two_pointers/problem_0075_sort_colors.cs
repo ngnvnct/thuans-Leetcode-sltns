@@ -20,7 +20,7 @@ namespace Sort_Colors
 {
     class Solution
     {
-        public void SortColors(int[] nums)
+        public static void SortColors(int[] nums)
         {
             int zeroIndex = 0;
             int currIndex = 0;
@@ -46,7 +46,7 @@ namespace Sort_Colors
             }
         }
 
-        public int[] TestSortColor(int[] nums)
+        public static int[] TestSortColor(int[] nums)
         {
             SortColors(nums);
             return nums;
@@ -55,19 +55,12 @@ namespace Sort_Colors
 
     class Tests
     {
-        Solution sol;
-        [SetUp]
-        public void SetUp()
-        {
-            sol = new Solution();
-        }
-
         [Test]
         [TestCase(new int[] { 2, 0, 2, 1, 1, 0 }, ExpectedResult = new int[] { 0, 0, 1, 1, 2, 2 })]
         [TestCase(new int[] { 2, 0, 1 }, ExpectedResult = new int[] { 0, 1, 2 })]
         public int[] TestSortColor(int[] nums)
         {
-            return sol.TestSortColor(nums);
+            return Solution.TestSortColor(nums);
         }
     }
 }

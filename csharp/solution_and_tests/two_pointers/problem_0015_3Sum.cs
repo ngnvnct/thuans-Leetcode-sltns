@@ -25,7 +25,7 @@ namespace ThreeSum
 {
     class Solution
     {
-        public IList<IList<int>> ThreeSum(int[] nums)
+        public static IList<IList<int>> ThreeSum(int[] nums)
         {
             Array.Sort(nums);
             IList<IList<int>> triplets = new List<IList<int>>();
@@ -69,13 +69,6 @@ namespace ThreeSum
 
     class Tests
     {
-        Solution sol;
-        [SetUp]
-        public void SetUp()
-        {
-            sol = new Solution();
-        }
-
         [Test]
         public void TestThreeSum()
         {
@@ -86,10 +79,9 @@ namespace ThreeSum
             int[] testCase3 = new int[] { 0, 0, 0 };
             int[][] testCase3ExpectedResult = new int[][] { new int[] { 0, 0, 0 } };
 
-            CollectionAssert.AreEqual(testCase1ExpectedResult, sol.ThreeSum(testCase1));
-            CollectionAssert.AreEqual(testCase2ExpectedResult, sol.ThreeSum(testCase2));
-            CollectionAssert.AreEqual(testCase3ExpectedResult, sol.ThreeSum(testCase3));
+            CollectionAssert.AreEqual(testCase1ExpectedResult, Solution.ThreeSum(testCase1));
+            CollectionAssert.AreEqual(testCase2ExpectedResult, Solution.ThreeSum(testCase2));
+            CollectionAssert.AreEqual(testCase3ExpectedResult, Solution.ThreeSum(testCase3));
         }
-
     }
 }

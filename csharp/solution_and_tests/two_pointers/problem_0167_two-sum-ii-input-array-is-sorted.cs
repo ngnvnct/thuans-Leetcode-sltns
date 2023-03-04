@@ -15,7 +15,7 @@ namespace Two_Sum_II_Input_Array_Is_Sorted
 {
     class Solution
     {
-        public int[] TwoSum(int[] numbers, int target)
+        public static int[] TwoSum(int[] numbers, int target)
         {
             int leftPointer = 0;
             int rightPointer = numbers.Length - 1;
@@ -41,20 +41,13 @@ namespace Two_Sum_II_Input_Array_Is_Sorted
 
     class Tests
     {
-        Solution sol;
-        [SetUp]
-        public void SetUp()
-        {
-            sol = new Solution();
-        }
-
         [Test]
         [TestCase(new int[] { 2, 7, 11, 15 }, 9, ExpectedResult = new int[] { 1, 2 })]
         [TestCase(new int[] { 2, 3, 4 }, 6, ExpectedResult = new int[] { 1, 3 })]
         [TestCase(new int[] { -1, 0 }, -1, ExpectedResult = new int[] { 1, 2 })]
         public int[] TestTwoSum(int[] numbers, int target)
         {
-            return sol.TwoSum(numbers, target);
+            return Solution.TwoSum(numbers, target);
         }
     }
 }

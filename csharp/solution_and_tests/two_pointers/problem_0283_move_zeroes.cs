@@ -26,7 +26,7 @@ namespace Move_Zeroes
 {
     public class Solution
     {
-        public void MoveZeroes(int[] nums)
+        public static void MoveZeroes(int[] nums)
         {
             int readIndex = 0;
             int writeIndex = 0;
@@ -48,7 +48,7 @@ namespace Move_Zeroes
             }
         }
 
-        public int CountMoveZeroesMetaMockInterview(int[] nums)
+        public static int CountMoveZeroesMetaMockInterview(int[] nums)
         {
             int readIndex = 0;
             int writeIndex = 0;
@@ -73,19 +73,12 @@ namespace Move_Zeroes
 
     public class Tests
     {
-        Solution sol;
-        [SetUp]
-        public void Setup()
-        {
-            sol = new Solution();
-        }
-
         [Test]
         [TestCase(new int[] { 1, 3, 12, 0, 0 }, new int[] { 0, 1, 0, 3, 12 })]
         [TestCase(new int[] { 0 }, new int[] { 0 })]
         public void TestMoveZeroes(int[] expectedResult, int[] nums)
         {
-            sol.MoveZeroes(nums);
+            Solution.MoveZeroes(nums);
             Assert.AreEqual(expectedResult, nums);
         }
 
@@ -94,7 +87,7 @@ namespace Move_Zeroes
         [TestCase(new int[] { 0 }, ExpectedResult = 0)]
         public int TestCountMoveZeroes(int[] nums)
         {
-            return sol.CountMoveZeroesMetaMockInterview(nums);
+            return Solution.CountMoveZeroesMetaMockInterview(nums);
         }
     }
 }
