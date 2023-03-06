@@ -19,7 +19,7 @@ namespace Maximum_Subarray
 {
     class Solution
     {
-        public int MaxSubArray(int[] nums)
+        public static int MaxSubArray(int[] nums)
         {
             int maxSubSum = nums[0];
             int totalSum = 0;
@@ -38,13 +38,6 @@ namespace Maximum_Subarray
 
     class Tests
     {
-        Solution sol;
-        [SetUp]
-        public void SetUp()
-        {
-            sol = new Solution();
-        }
-
         [Test]
         [TestCase(new int[] { -2, 2, 5, -11, 6 }, ExpectedResult = 7)]
         [TestCase(new int[] { -2, 1, -3, 4, -1, 2, 1, -5, 4 }, ExpectedResult = 6)]
@@ -52,7 +45,7 @@ namespace Maximum_Subarray
         [TestCase(new int[] { 5, 4, -1, 7, 8 }, ExpectedResult = 23)]
         public int TestMaxSubArray(int[] nums)
         {
-            return sol.MaxSubArray(nums);
+            return Solution.MaxSubArray(nums);
         }
     }
 }
