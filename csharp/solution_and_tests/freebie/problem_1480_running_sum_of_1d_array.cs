@@ -17,7 +17,7 @@ namespace Running_Sum_of_1d_Array
 {
     class Solution
     {
-        public int[] RunningSum(int[] nums)
+        public static int[] RunningSum(int[] nums)
         {
             int[] runningSum = new int[nums.Length];
             runningSum[0] = nums[0];
@@ -28,7 +28,7 @@ namespace Running_Sum_of_1d_Array
             return runningSum;
         }
 
-        public int[] RunningSum2(int[] nums)
+        public static int[] RunningSum2(int[] nums)
         {
             int[] runningSum = new int[nums.Length];
             int totalSum = 0;
@@ -43,20 +43,13 @@ namespace Running_Sum_of_1d_Array
 
     public class Tests
     {
-        Solution sol;
-        [SetUp]
-        public void Setup()
-        {
-            sol = new Solution();
-        }
-
         [Test]
         [TestCase(new int[] { 1, 2, 3, 4 }, ExpectedResult = new int[] { 1, 3, 6, 10 })]
         [TestCase(new int[] { 1, 1, 1, 1, 1 }, ExpectedResult = new int[] { 1, 2, 3, 4, 5 })]
         [TestCase(new int[] { 3, 1, 2, 10, 1 }, ExpectedResult = new int[] { 3, 4, 6, 16, 17 })]
         public int[] TestRunningSum(int[] nums)
         {
-            return sol.RunningSum(nums);
+            return Solution.RunningSum(nums);
         }
 
         [Test]
@@ -65,7 +58,7 @@ namespace Running_Sum_of_1d_Array
         [TestCase(new int[] { 3, 1, 2, 10, 1 }, ExpectedResult = new int[] { 3, 4, 6, 16, 17 })]
         public int[] TestRunningSum2(int[] nums)
         {
-            return sol.RunningSum2(nums);
+            return Solution.RunningSum2(nums);
         }
     }
 }

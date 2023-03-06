@@ -19,7 +19,7 @@ namespace Final_Value_of_Variable_After_Performing_Operations
 {
     class Solution
     {
-        public int FinalValueAfterOperations(string[] operations)
+        public static int FinalValueAfterOperations(string[] operations)
         {
             int x = 0;
             foreach (string operation in operations)
@@ -37,7 +37,7 @@ namespace Final_Value_of_Variable_After_Performing_Operations
             return x;
         }
 
-        public int FinalValueAfterOperations2(string[] operations)
+        public static int FinalValueAfterOperations2(string[] operations)
         {
             int x = 0;
             foreach (string operation in operations)
@@ -57,20 +57,13 @@ namespace Final_Value_of_Variable_After_Performing_Operations
 
     public class Tests
     {
-        Solution sol;
-        [SetUp]
-        public void Setup()
-        {
-            sol = new Solution();
-        }
-
         [Test]
         [TestCase(new object[] { "--X", "X++", "X++" }, ExpectedResult = 1)]
         [TestCase(new object[] { "++X", "++X", "X++" }, ExpectedResult = 3)]
         [TestCase(new object[] { "X++", "++X", "--X", "X--" }, ExpectedResult = 0)]
         public int TestFinalValueAfterOperations(params string[] words)
         {
-            return sol.FinalValueAfterOperations(words);
+            return Solution.FinalValueAfterOperations(words);
         }
 
         [Test]
@@ -79,7 +72,7 @@ namespace Final_Value_of_Variable_After_Performing_Operations
         [TestCase(new object[] { "X++", "++X", "--X", "X--" }, ExpectedResult = 0)]
         public int TestFinalValueAfterOperations2(params string[] words)
         {
-            return sol.FinalValueAfterOperations2(words);
+            return Solution.FinalValueAfterOperations2(words);
         }
     }
 }

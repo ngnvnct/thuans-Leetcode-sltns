@@ -23,7 +23,7 @@ namespace Concatenation_of_Array
 {
     class Solution
     {
-        public int[] GetConcatenation(int[] nums)
+        public static int[] GetConcatenation(int[] nums)
         {
             int[] ans = new int[nums.Length * 2];
             for (int i = 0; i < ans.Length; i++)
@@ -33,7 +33,7 @@ namespace Concatenation_of_Array
             return ans;
         }
 
-        public int[] GetConcatenation2(int[] nums)
+        public static int[] GetConcatenation2(int[] nums)
         {
             int[] ans = new int[nums.Length * 2];
             for (int i = 0; i < nums.Length; i++)
@@ -46,19 +46,12 @@ namespace Concatenation_of_Array
 
     public class Tests
     {
-        Solution sol;
-        [SetUp]
-        public void Setup()
-        {
-            sol = new Solution();
-        }
-
         [Test]
         [TestCase(new int[] { 1, 2, 1 }, ExpectedResult = new int[] { 1, 2, 1, 1, 2, 1 })]
         [TestCase(new int[] { 1, 3, 2, 1 }, ExpectedResult = new int[] { 1, 3, 2, 1, 1, 3, 2, 1 })]
         public int[] TestGetConcatenation(int[] nums)
         {
-            return sol.GetConcatenation(nums);
+            return Solution.GetConcatenation(nums);
         }
 
         [Test]
@@ -66,7 +59,7 @@ namespace Concatenation_of_Array
         [TestCase(new int[] { 1, 3, 2, 1 }, ExpectedResult = new int[] { 1, 3, 2, 1, 1, 3, 2, 1 })]
         public int[] TestGetConcatenation2(int[] nums)
         {
-            return sol.GetConcatenation2(nums);
+            return Solution.GetConcatenation2(nums);
         }
     }
 }

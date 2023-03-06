@@ -17,7 +17,7 @@ namespace Unique_Morse_Code_Words
 {
     class Solution
     {
-        public int UniqueMorseRepresentations(string[] words)
+        public static int UniqueMorseRepresentations(string[] words)
         {
             string[] morseAlphabet = new string[] { ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..",
                 ".---", "-.-", ".-..", "--", "-.", "---", ".--.",
@@ -38,19 +38,12 @@ namespace Unique_Morse_Code_Words
 
     public class Tests
     {
-        Solution sol;
-        [SetUp]
-        public void Setup()
-        {
-            sol = new Solution();
-        }
-
         [Test]
         [TestCase(new object[] { "gin", "zen", "gig", "msg" }, ExpectedResult = 2)]
         [TestCase(new object[] { "a" }, ExpectedResult = 1)]
         public int TestValidPalindrome(params string[] words)
         {
-            return sol.UniqueMorseRepresentations(words);
+            return Solution.UniqueMorseRepresentations(words);
         }
     }
 }
