@@ -20,7 +20,7 @@ namespace Binary_Search
 {
     class Solution
     {
-        public int Search(int[] nums, int target)
+        public static int Search(int[] nums, int target)
         {
             int leftPointer = 0;
             int rightPointer = nums.Length - 1;
@@ -46,13 +46,6 @@ namespace Binary_Search
 
     class Test
     {
-        Solution sol;
-        [SetUp]
-        public void SetUp()
-        {
-            sol = new Solution();
-        }
-
         [Test]
         [TestCase(new int[] { -1, 0, 3, 5, 9, 12 }, 9, ExpectedResult = 4)]
         [TestCase(new int[] { -1, 0, 3, 5, 9, 12 }, 2, ExpectedResult = -1)]
@@ -64,7 +57,7 @@ namespace Binary_Search
         [TestCase(new int[] { 0, 1, 21, 33, 45, 45, 61, 71, 72, 73 }, 1, ExpectedResult = 1)]
         public int TestSearch(int[] nums, int target)
         {
-            return sol.Search(nums, target);
+            return Solution.Search(nums, target);
         }
     }
 }

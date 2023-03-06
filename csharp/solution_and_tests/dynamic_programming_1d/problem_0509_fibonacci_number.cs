@@ -17,7 +17,7 @@ namespace Fibonacci_Number
 {
     class Solution
     {
-        public int Fib(int n)
+        public static int Fib(int n)
         {
             if (n <= 1)
             {
@@ -39,13 +39,6 @@ namespace Fibonacci_Number
 
     class Tests
     {
-        Solution sol;
-        [SetUp]
-        public void SetUp()
-        {
-            sol = new Solution();
-        }
-
         [Test]
         [TestCase(2, ExpectedResult = 1)]
         [TestCase(3, ExpectedResult = 2)]
@@ -53,7 +46,7 @@ namespace Fibonacci_Number
         [TestCase(30, ExpectedResult = 832040)]
         public int TestFib(int n)
         {
-            return sol.Fib(n);
+            return Solution.Fib(n);
         }
     }
 }

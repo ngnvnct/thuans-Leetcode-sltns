@@ -32,7 +32,7 @@ namespace Maximum_Product_Subarray
 {
     class Solution
     {
-        public int MaxProduct(int[] nums)
+        public static int MaxProduct(int[] nums)
         {
             int maxProduct = nums[0];
             int currMin = 1;
@@ -53,7 +53,7 @@ namespace Maximum_Product_Subarray
             return maxProduct;
         }
 
-        public int MaxProductSwap(int[] nums)
+        public static int MaxProductSwap(int[] nums)
         {
             int currMax = nums[0];
             int currMin = nums[0];
@@ -73,7 +73,7 @@ namespace Maximum_Product_Subarray
             return maxProduct;
         }
 
-        public int MaxProductMethodThree(int[] nums)
+        public static int MaxProductMethodThree(int[] nums)
         {
             int maxProduct = nums.Max();
             (int currMin, int currMax) = (1, 1);
@@ -90,19 +90,12 @@ namespace Maximum_Product_Subarray
 
     class Tests
     {
-        Solution sol;
-        [SetUp]
-        public void SetUp()
-        {
-            sol = new Solution();
-        }
-
         [Test]
         [TestCase(new int[] { 2, 3, -2, 4 }, ExpectedResult = 6)]
         [TestCase(new int[] { -2, 0, -1 }, ExpectedResult = 0)]
         public int TestMaxProduct(int[] nums)
         {
-            return sol.MaxProduct(nums);
+            return Solution.MaxProduct(nums);
         }
 
         [Test]
@@ -110,7 +103,7 @@ namespace Maximum_Product_Subarray
         [TestCase(new int[] { -2, 0, -1 }, ExpectedResult = 0)]
         public int TestMaxProductSwap(int[] nums)
         {
-            return sol.MaxProductSwap(nums);
+            return Solution.MaxProductSwap(nums);
         }
 
         [Test]
@@ -118,7 +111,7 @@ namespace Maximum_Product_Subarray
         [TestCase(new int[] { -2, 0, -1 }, ExpectedResult = 0)]
         public int TestMaxProductMethodThree(int[] nums)
         {
-            return sol.MaxProductMethodThree(nums);
+            return Solution.MaxProductMethodThree(nums);
         }
     }
 }

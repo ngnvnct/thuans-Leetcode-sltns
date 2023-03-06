@@ -21,7 +21,7 @@ namespace Climbing_Stairs
 {
     class Solution
     {
-        public int ClimbStairs(int n)
+        public static int ClimbStairs(int n)
         {
             if (n < 3)
             {
@@ -43,20 +43,13 @@ namespace Climbing_Stairs
 
     class Tests
     {
-        Solution sol;
-        [SetUp]
-        public void SetUp()
-        {
-            sol = new Solution();
-        }
-
         [Test]
         [TestCase(2, ExpectedResult = 2)]
         [TestCase(3, ExpectedResult = 3)]
         [TestCase(45, ExpectedResult = 1836311903)]
         public int TestClimbStairs(int n)
         {
-            return sol.ClimbStairs(n);
+            return Solution.ClimbStairs(n);
         }
     }
 }

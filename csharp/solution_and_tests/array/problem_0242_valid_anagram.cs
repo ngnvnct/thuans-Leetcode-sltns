@@ -33,7 +33,7 @@ namespace Valid_Anagram
 {
     class Solution
     {
-        public bool IsAnagram(string s, string t)
+        public static bool IsAnagram(string s, string t)
         {
             if (s.Length != t.Length)
             {
@@ -55,7 +55,7 @@ namespace Valid_Anagram
             return true;
         }
 
-        public bool IsAnagramSort(String s, String t)
+        public static bool IsAnagramSort(String s, String t)
         {
             if (s.Length != t.Length)
             {
@@ -71,20 +71,13 @@ namespace Valid_Anagram
 
     class Tests
     {
-        Solution sol;
-        [SetUp]
-        public void SetUp()
-        {
-            sol = new Solution();
-        }
-
         [Test]
         [TestCase("anagram", "nagaram", ExpectedResult = true)]
         [TestCase("rat", "cat", ExpectedResult = false)]
         [TestCase("anagram", "agaram", ExpectedResult = false)]
         public bool TestIsAnagram(string s, string t)
         {
-            return sol.IsAnagram(s, t);
+            return Solution.IsAnagram(s, t);
         }
 
         [Test]
@@ -93,7 +86,7 @@ namespace Valid_Anagram
         [TestCase("anagram", "agaram", ExpectedResult = false)]
         public bool TestIsAnagramSort(string s, string t)
         {
-            return sol.IsAnagramSort(s, t);
+            return Solution.IsAnagramSort(s, t);
         }
     }
 }
