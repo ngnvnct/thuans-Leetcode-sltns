@@ -19,7 +19,7 @@
  * Testing: reverseStringTest and reverseStringRecursionTest are just method to test the reverse methods
  */
 
-package stack_queue;
+package two_pointers;
 
 import org.junit.Test;
 import static org.junit.Assert.assertArrayEquals;

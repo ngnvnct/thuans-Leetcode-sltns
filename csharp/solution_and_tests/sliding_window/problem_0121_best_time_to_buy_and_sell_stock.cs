@@ -16,7 +16,7 @@ namespace Best_Time_to_Buy_and_Sell_Stock
 {
     class Solution
     {
-        public int MaxProfit(int[] prices)
+        public static int MaxProfit(int[] prices)
         {
             if (prices == null)
             {
@@ -35,19 +35,12 @@ namespace Best_Time_to_Buy_and_Sell_Stock
 
     class Tests
     {
-        Solution sol;
-        [SetUp]
-        public void SetUp()
-        {
-            sol = new Solution();
-        }
-
         [Test]
         [TestCase(new int[] { 7, 1, 5, 3, 6, 4 }, ExpectedResult = 5)]
         [TestCase(new int[] { 7, 6, 4, 3, 1 }, ExpectedResult = 0)]
         public int TestMaxProfit(int[] prices)
         {
-            return sol.MaxProfit(prices);
+            return Solution.MaxProfit(prices);
         }
     }
 }

@@ -18,7 +18,7 @@ namespace Meeting_Rooms
 {
     class Solution
     {
-        public bool CanAttendMeetings(int[][] intervals)
+        public static bool CanAttendMeetings(int[][] intervals)
         {
             Array.Sort(intervals, (a, b) => a[0].CompareTo(b[0]));
             for (int i = 1; i < intervals.Length; i++)
@@ -36,21 +36,14 @@ namespace Meeting_Rooms
 
     class Tests
     {
-        Solution sol;
-        [SetUp]
-        public void SetUp()
-        {
-            sol = new Solution();
-        }
-
         [Test]
         public void TestCanAttendMeetings()
         {
             int[][] testCase1 = new int[][] { new int[] { 0, 30 }, new int[] { 5, 10 }, new int[] { 15, 20 } };
             int[][] testCase2 = new int[][] { new int[] { 7, 10 }, new int[] { 2, 4 } };
 
-            Assert.IsFalse(sol.CanAttendMeetings(testCase1));
-            Assert.IsTrue(sol.CanAttendMeetings(testCase2));
+            Assert.IsFalse(Solution.CanAttendMeetings(testCase1));
+            Assert.IsTrue(Solution.CanAttendMeetings(testCase2));
         }
     }
 }

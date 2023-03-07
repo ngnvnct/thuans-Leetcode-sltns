@@ -17,7 +17,7 @@ namespace Defanging_an_IP_Address
 {
     class Solution
     {
-        public string DefangIPaddr(string address)
+        public static string DefangIPaddr(string address)
         {
             StringBuilder sb = new StringBuilder();
             foreach (char c in address)
@@ -34,12 +34,12 @@ namespace Defanging_an_IP_Address
             return sb.ToString();
         }
 
-        public string DefangIPaddr2(string address)
+        public static string DefangIPaddr2(string address)
         {
             return address.Replace(".", "[.]");
         }
 
-        public string DefangIPaddrDeque(string address)
+        public static string DefangIPaddrDeque(string address)
         {
             LinkedList<char> deque = new LinkedList<char>();
             StringBuilder sb = new StringBuilder();
@@ -65,19 +65,12 @@ namespace Defanging_an_IP_Address
     }
     class Tests
     {
-        Solution sol;
-        [SetUp]
-        public void Setup()
-        {
-            sol = new Solution();
-        }
-
         [Test]
         [TestCase("1.1.1.1", ExpectedResult = "1[.]1[.]1[.]1")]
         [TestCase("255.100.50.0", ExpectedResult = "255[.]100[.]50[.]0")]
         public string TestDefangIPaddr(string address)
         {
-            return sol.DefangIPaddr(address);
+            return Solution.DefangIPaddr(address);
         }
 
         [Test]
@@ -85,7 +78,7 @@ namespace Defanging_an_IP_Address
         [TestCase("255.100.50.0", ExpectedResult = "255[.]100[.]50[.]0")]
         public string TestDefangIPaddr2(string address)
         {
-            return sol.DefangIPaddr2(address);
+            return Solution.DefangIPaddr2(address);
         }
 
         [Test]
@@ -93,7 +86,7 @@ namespace Defanging_an_IP_Address
         [TestCase("255.100.50.0", ExpectedResult = "255[.]100[.]50[.]0")]
         public string TestDefangIpaddrDeque(string address)
         {
-            return sol.DefangIPaddrDeque(address);
+            return Solution.DefangIPaddrDeque(address);
         }
     }
 }

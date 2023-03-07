@@ -17,7 +17,7 @@ namespace Richest_Customer_Wealth
 {
     class Solution
     {
-        public int MaximumWealth(int[][] accounts)
+        public static int MaximumWealth(int[][] accounts)
         {
             int richestCustomerWealth = 0;
             foreach (int[] account in accounts)
@@ -30,13 +30,6 @@ namespace Richest_Customer_Wealth
 
     class Tests
     {
-        Solution sol;
-        [SetUp]
-        public void Setup()
-        {
-            sol = new Solution();
-        }
-
         [Test]
         public void TestMaximumWealth()
         {
@@ -47,9 +40,9 @@ namespace Richest_Customer_Wealth
             int[][] testCase3 = new int[][] { new int[] { 2, 8, 7 }, new int[] { 7, 1, 3 }, new int[] { 1, 9, 5 } };
             int testCase3ExpectedResult = 17;
 
-            Assert.AreEqual(testCase1ExpectedResult, sol.MaximumWealth(testCase1));
-            Assert.AreEqual(testCase2ExpectedResult, sol.MaximumWealth(testCase2));
-            Assert.AreEqual(testCase3ExpectedResult, sol.MaximumWealth(testCase3));
+            Assert.AreEqual(testCase1ExpectedResult, Solution.MaximumWealth(testCase1));
+            Assert.AreEqual(testCase2ExpectedResult, Solution.MaximumWealth(testCase2));
+            Assert.AreEqual(testCase3ExpectedResult, Solution.MaximumWealth(testCase3));
         }
     }
 }

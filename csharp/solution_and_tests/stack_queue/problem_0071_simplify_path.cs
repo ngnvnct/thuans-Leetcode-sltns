@@ -14,6 +14,8 @@
  * 
  * Time: O(n)
  * Space: O(2n) -> O(n), split component array and the stack
+ * 
+ * Fix Violation CA1834: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1834
  */
 
 using NUnit.Framework;
@@ -25,7 +27,7 @@ namespace Simplify_Path
 {
     class Solution
     {
-        public string SimplifyPath(string path)
+        public static string SimplifyPath(string path)
         {
             LinkedList<string> deque = new LinkedList<string>();
             string[] components = path.Split("/");
@@ -50,7 +52,7 @@ namespace Simplify_Path
             StringBuilder res = new StringBuilder();
             foreach (string element in deque)
             {
-                res.Append("/").Append(element);
+                res.Append('/').Append(element);
             }
             return res.Length > 0 ? res.ToString() : "/";
         }
@@ -58,20 +60,13 @@ namespace Simplify_Path
 
     class Tests
     {
-        Solution sol;
-        [SetUp]
-        public void SetUp()
-        {
-            sol = new Solution();
-        }
-
         [Test]
         [TestCase("/home/", ExpectedResult = "/home")]
         [TestCase("/../", ExpectedResult = "/")]
         [TestCase("/home//foo/", ExpectedResult = "/home/foo")]
         public string TestSimplifyPath(string path)
         {
-            return sol.SimplifyPath(path);
+            return Solution.SimplifyPath(path);
         }
     }
 }

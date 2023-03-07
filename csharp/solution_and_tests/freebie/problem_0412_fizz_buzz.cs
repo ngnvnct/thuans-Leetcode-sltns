@@ -15,7 +15,7 @@ namespace Fizz_Buzz
 {
     class Solution
     {
-        public IList<string> FizzBuzz(int n)
+        public static IList<string> FizzBuzz(int n)
         {
             IList<string> res = new List<string>(n);
             for (int i = 1; i <= n; i++)
@@ -42,13 +42,6 @@ namespace Fizz_Buzz
     }
     public class Tests
     {
-        Solution sol;
-        [SetUp]
-        public void Setup()
-        {
-            sol = new Solution();
-        }
-
         /* C# Test Explanation
          * Cannot use non-constant expression in TestCase, and IList is one of them
          * Have to do it like this, or use TestCaseSource. This set up works
@@ -65,9 +58,9 @@ namespace Fizz_Buzz
             IList<string> testCase2ExpectedResult = new List<string> { "1", "2", "Fizz", "4", "Buzz" };
             IList<string> expectedResult3 = new List<string> { "1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz" };
 
-            CollectionAssert.AreEqual(testCase1ExpectedResult, sol.FizzBuzz(testCase1));
-            CollectionAssert.AreEqual(testCase2ExpectedResult, sol.FizzBuzz(testCase2));
-            CollectionAssert.AreEqual(expectedResult3, sol.FizzBuzz(testCase3));
+            CollectionAssert.AreEqual(testCase1ExpectedResult, Solution.FizzBuzz(testCase1));
+            CollectionAssert.AreEqual(testCase2ExpectedResult, Solution.FizzBuzz(testCase2));
+            CollectionAssert.AreEqual(expectedResult3, Solution.FizzBuzz(testCase3));
         }
 
         // Array in C# implements IList Interface
@@ -78,7 +71,7 @@ namespace Fizz_Buzz
         [TestCase(15, ExpectedResult = new string[] { "1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz" })]
         public IList<string> TestFizzBuzz2(int n)
         {
-            return sol.FizzBuzz(n);
+            return Solution.FizzBuzz(n);
         }
     }
 }

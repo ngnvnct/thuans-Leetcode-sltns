@@ -27,7 +27,7 @@ namespace Valid_Palindrome_II
 {
     class Solution
     {
-        public bool ValidPalindrome(string s)
+        public static bool ValidPalindrome(string s)
         {
             int leftPointer = 0;
             int rightPointer = s.Length - 1;
@@ -43,7 +43,7 @@ namespace Valid_Palindrome_II
             return true;
         }
 
-        public bool IsPalindrome(String s, int leftPointer, int rightPointer)
+        public static bool IsPalindrome(String s, int leftPointer, int rightPointer)
         {
             while (leftPointer < rightPointer)
             {
@@ -59,13 +59,6 @@ namespace Valid_Palindrome_II
     }
     public class Tests
     {
-        Solution sol;
-        [SetUp]
-        public void Setup()
-        {
-            sol = new Solution();
-        }
-
         [Test]
         [TestCase("aba", ExpectedResult = true)]
         [TestCase("abca", ExpectedResult = true)]
@@ -73,7 +66,7 @@ namespace Valid_Palindrome_II
         [TestCase("abccbxa", ExpectedResult = true)]
         public bool TestValidPalindrome(string s)
         {
-            return sol.ValidPalindrome(s);
+            return Solution.ValidPalindrome(s);
         }
     }
 }

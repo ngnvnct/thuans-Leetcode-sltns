@@ -27,7 +27,7 @@ namespace Majority_Element
 {
     class Solution
     {
-        public int MajorityElement(int[] nums)
+        public static int MajorityElement(int[] nums)
         {
             int count = 0;
             int candidate = 0;
@@ -53,7 +53,7 @@ namespace Majority_Element
             return candidate;
         }
 
-        public int MajorityElementSort(int[] nums)
+        public static int MajorityElementSort(int[] nums)
         {
             Array.Sort(nums);
             return nums[nums.Length / 2];
@@ -62,19 +62,12 @@ namespace Majority_Element
 
     class Tests
     {
-        Solution sol;
-        [SetUp]
-        public void Setup()
-        {
-            sol = new Solution();
-        }
-
         [Test]
         [TestCase(new int[] { 3, 2, 3 }, ExpectedResult = 3)]
         [TestCase(new int[] { 2, 2, 1, 1, 1, 2, 2 }, ExpectedResult = 2)]
         public int TestMajorityElement(int[] nums)
         {
-            return sol.MajorityElement(nums);
+            return Solution.MajorityElement(nums);
         }
 
         [Test]
@@ -82,7 +75,7 @@ namespace Majority_Element
         [TestCase(new int[] { 2, 2, 1, 1, 1, 2, 2 }, ExpectedResult = 2)]
         public int TestMajorityElementSort(int[] nums)
         {
-            return sol.MajorityElementSort(nums);
+            return Solution.MajorityElementSort(nums);
         }
     }
 }

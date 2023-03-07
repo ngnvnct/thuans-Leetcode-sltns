@@ -21,7 +21,7 @@ namespace Jewels_And_Stones
 {
     class Solution
     {
-        public int NumJewelsInStones(string jewels, string stones)
+        public static int NumJewelsInStones(string jewels, string stones)
         {
             HashSet<char> bagOfJewels = new HashSet<char>(jewels);
             int jewelCount = 0;
@@ -35,7 +35,7 @@ namespace Jewels_And_Stones
             return jewelCount;
         }
 
-        public int NumJewelsInStonesStringContains(string jewels, string stones)
+        public static int NumJewelsInStonesStringContains(string jewels, string stones)
         {
             int jewelCount = 0;
             foreach (char stone in stones)
@@ -51,19 +51,12 @@ namespace Jewels_And_Stones
 
     class Tests
     {
-        Solution sol;
-        [SetUp]
-        public void Setup()
-        {
-            sol = new Solution();
-        }
-
         [Test]
         [TestCase("aA", "aAAbbbb", ExpectedResult = 3)]
         [TestCase("z", "ZZ", ExpectedResult = 0)]
         public int TestNumJewelsInStones(string jewels, string stones)
         {
-            return sol.NumJewelsInStones(jewels, stones);
+            return Solution.NumJewelsInStones(jewels, stones);
         }
 
         [Test]
@@ -71,7 +64,7 @@ namespace Jewels_And_Stones
         [TestCase("z", "ZZ", ExpectedResult = 0)]
         public int TestNumJewelsInStonesStringContains(string jewels, string stones)
         {
-            return sol.NumJewelsInStonesStringContains(jewels, stones);
+            return Solution.NumJewelsInStonesStringContains(jewels, stones);
         }
     }
 }

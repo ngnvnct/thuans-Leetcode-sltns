@@ -14,7 +14,7 @@ namespace Search_Insert_Position
 {
     public class Solution
     {
-        public int SearchInsert(int[] nums, int target)
+        public static int SearchInsert(int[] nums, int target)
         {
             int leftPointer = 0;
             int rightPointer = nums.Length - 1;
@@ -39,20 +39,13 @@ namespace Search_Insert_Position
     }
     public class Tests
     {
-        Solution sol;
-        [SetUp]
-        public void Setup()
-        {
-            sol = new Solution();
-        }
-
         [Test]
         [TestCase(new int[] { 1, 3, 5, 6 }, 5, ExpectedResult = 2)]
         [TestCase(new int[] { 1, 3, 5, 6 }, 2, ExpectedResult = 1)]
         [TestCase(new int[] { 1, 3, 5, 6 }, 7, ExpectedResult = 4)]
         public int TestSearchInsert(int[] nums, int target)
         {
-            return sol.SearchInsert(nums, target);
+            return Solution.SearchInsert(nums, target);
         }
     }
 }

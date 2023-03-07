@@ -20,7 +20,7 @@ namespace Single_Number
 {
     class Solution
     {
-        public int SingleNumber(int[] nums)
+        public static int SingleNumber(int[] nums)
         {
             int bitWise = 0;
             foreach (int num in nums)
@@ -33,20 +33,13 @@ namespace Single_Number
 
     class Tests
     {
-        Solution sol;
-        [SetUp]
-        public void SetUp()
-        {
-            sol = new Solution();
-        }
-
         [Test]
         [TestCase(new int[] { 2, 2, 1 }, ExpectedResult = 1)]
         [TestCase(new int[] { 4, 1, 2, 1, 2 }, ExpectedResult = 4)]
         [TestCase(new int[] { 1 }, ExpectedResult = 1)]
         public int TestSingleNumber(int[] nums)
         {
-            return sol.SingleNumber(nums);
+            return Solution.SingleNumber(nums);
         }
     }
 }

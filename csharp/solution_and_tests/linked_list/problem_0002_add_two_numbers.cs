@@ -29,7 +29,7 @@ namespace Add_Two_Numbers
 {
     class Solution
     {
-        public ListNode AddTwoNumbers(ListNode l1, ListNode l2)
+        public static ListNode AddTwoNumbers(ListNode l1, ListNode l2)
         {
             int carry = 0;
             ListNode dummy = new ListNode(-1);
@@ -61,12 +61,10 @@ namespace Add_Two_Numbers
 
     class Tests
     {
-        Solution sol;
         ListNode node;
         [SetUp]
         public void SetUp()
         {
-            sol = new Solution();
             node = new ListNode();
         }
 
@@ -80,8 +78,8 @@ namespace Add_Two_Numbers
             ListNode testCase2SecondNum = new ListNode(1);
             List<int> testCase2ExpectedResult = new List<int> { 0, 0, 1 };
 
-            CollectionAssert.AreEqual(testCase1ExpectedResult, node.GetNodesInArray(sol.AddTwoNumbers(testCase1FirstNum, testCase1SecondNum)));
-            CollectionAssert.AreEqual(testCase2ExpectedResult, node.GetNodesInArray(sol.AddTwoNumbers(testCase2FirstNum, testCase2SecondNum)));
+            CollectionAssert.AreEqual(testCase1ExpectedResult, node.GetNodesInArray(Solution.AddTwoNumbers(testCase1FirstNum, testCase1SecondNum)));
+            CollectionAssert.AreEqual(testCase2ExpectedResult, node.GetNodesInArray(Solution.AddTwoNumbers(testCase2FirstNum, testCase2SecondNum)));
         }
     }
 }

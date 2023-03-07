@@ -21,7 +21,7 @@ namespace Container_With_Most_Water
 {
     class Solution
     {
-        public int MaxArea(int[] height)
+        public static int MaxArea(int[] height)
         {
             int leftPointer = 0;
             int rightPointer = height.Length - 1; ;
@@ -46,19 +46,12 @@ namespace Container_With_Most_Water
 
     class Tests
     {
-        Solution sol;
-        [SetUp]
-        public void Setup()
-        {
-            sol = new Solution();
-        }
-
         [Test]
         [TestCase(new int[] { 1, 8, 6, 2, 5, 4, 8, 3, 7 }, ExpectedResult = 49)]
         [TestCase(new int[] { 1, 1 }, ExpectedResult = 1)]
         public int TestMaxArea(int[] height)
         {
-            return sol.MaxArea(height);
+            return Solution.MaxArea(height);
         }
     }
 }

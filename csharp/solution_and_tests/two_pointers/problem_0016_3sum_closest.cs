@@ -19,7 +19,7 @@ namespace ThreeSum_Closest
 {
     class Solution
     {
-        public int ThreeSumClosest(int[] nums, int target)
+        public static int ThreeSumClosest(int[] nums, int target)
         {
             Array.Sort(nums);
             int diff = Int32.MaxValue;
@@ -51,20 +51,13 @@ namespace ThreeSum_Closest
 
     class Tests
     {
-        Solution sol;
-        [SetUp]
-        public void SetUp()
-        {
-            sol = new Solution();
-        }
-
         [Test]
         [TestCase(new int[] { -1, 2, 1, -4 }, 1, ExpectedResult = 2)]
         [TestCase(new int[] { 0, 0, 0 }, 1, ExpectedResult = 0)]
         [TestCase(new int[] { 4, 0, 5, -5, 3, 3, 0, -4, -5 }, -2, ExpectedResult = -2)]
         public int TestThreeSumClosest(int[] nums, int target)
         {
-            return sol.ThreeSumClosest(nums, target);
+            return Solution.ThreeSumClosest(nums, target);
         }
     }
 }

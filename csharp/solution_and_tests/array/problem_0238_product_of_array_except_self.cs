@@ -51,7 +51,7 @@ namespace Product_of_Array_Except_Self
 {
     class Solution
     {
-        public int[] ProductExceptSelf(int[] nums)
+        public static int[] ProductExceptSelf(int[] nums)
         {
             int[] productArray = new int[nums.Length];
             productArray[0] = 1;
@@ -71,19 +71,12 @@ namespace Product_of_Array_Except_Self
 
     class Tests
     {
-        Solution sol;
-        [SetUp]
-        public void SetUp()
-        {
-            sol = new Solution();
-        }
-
         [Test]
         [TestCase(new int[] { 1, 2, 3, 4 }, ExpectedResult = new int[] { 24, 12, 8, 6 })]
         [TestCase(new int[] { -1, 1, 0, -3, 3 }, ExpectedResult = new int[] { 0, 0, 9, 0, 0 })]
         public int[] TestProductExceptSelf(int[] nums)
         {
-            return sol.ProductExceptSelf(nums);
+            return Solution.ProductExceptSelf(nums);
         }
     }
 }

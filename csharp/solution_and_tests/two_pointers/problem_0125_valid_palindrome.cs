@@ -17,7 +17,7 @@ namespace Valid_Palindrome
 {
     class Solution
     {
-        public bool IsPalindrome(string s)
+        public static bool IsPalindrome(string s)
         {
             int leftPointer = 0;
             int rightPointer = s.Length - 1;
@@ -43,19 +43,13 @@ namespace Valid_Palindrome
 
     class Tests
     {
-        Solution sol;
-        [SetUp]
-        public void Setup()
-        {
-            sol = new Solution();
-        }
         [Test]
         [TestCase("A man, a plan, a canal: Panama", ExpectedResult = true)]
         [TestCase("race a car", ExpectedResult = false)]
         [TestCase("", ExpectedResult = true)]
         public bool TestIsPalindrome(string s)
         {
-            return sol.IsPalindrome(s);
+            return Solution.IsPalindrome(s);
         }
     }
 }

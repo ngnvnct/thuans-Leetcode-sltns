@@ -25,7 +25,7 @@ namespace Maximum_Nesting_Depth_of_the_Parentheses
 {
     class Solution
     {
-        public int MaxDepth(string s)
+        public static int MaxDepth(string s)
         {
             int currDepth = 0;
             int maxDepth = 0;
@@ -52,13 +52,6 @@ namespace Maximum_Nesting_Depth_of_the_Parentheses
 
     class Test
     {
-        Solution sol;
-        [SetUp]
-        public void Setup()
-        {
-            sol = new Solution();
-        }
-
         [Test]
         [TestCase("(1+(2*3)+((8)/4))+1", ExpectedResult = 3)]
         [TestCase("(1)+((2))+(((3)))", ExpectedResult = 3)]
@@ -66,7 +59,7 @@ namespace Maximum_Nesting_Depth_of_the_Parentheses
         [TestCase("((())", ExpectedResult = -1)]
         public int TestMaxDepth(string s)
         {
-            return sol.MaxDepth(s);
+            return Solution.MaxDepth(s);
         }
     }
 }

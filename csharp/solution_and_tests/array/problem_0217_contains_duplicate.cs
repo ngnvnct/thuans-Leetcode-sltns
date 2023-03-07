@@ -22,7 +22,7 @@ namespace Contains_Duplicate
 {
     class Solution
     {
-        public bool ContainsDuplicateSet(int[] nums)
+        public static bool ContainsDuplicateSet(int[] nums)
         {
             HashSet<int> noDuplicate = new HashSet<int>();
             foreach (int num in nums)
@@ -36,7 +36,7 @@ namespace Contains_Duplicate
             return false;
         }
 
-        public bool ContainsDuplicateSort(int[] nums)
+        public static bool ContainsDuplicateSort(int[] nums)
         {
             Array.Sort(nums);
             for (int i = 1; i < nums.Length; i++)
@@ -52,20 +52,13 @@ namespace Contains_Duplicate
 
     public class Tests
     {
-        Solution sol;
-        [SetUp]
-        public void Setup()
-        {
-            sol = new Solution();
-        }
-
         [Test]
         [TestCase(new int[] { 1, 2, 3, 1 }, ExpectedResult = true)]
         [TestCase(new int[] { 1, 2, 3, 4 }, ExpectedResult = false)]
         [TestCase(new int[] { 1, 1, 1, 3, 3, 4, 3, 2, 4, 2 }, ExpectedResult = true)]
         public bool TestContainsDuplicateSort(int[] nums)
         {
-            return sol.ContainsDuplicateSort(nums);
+            return Solution.ContainsDuplicateSort(nums);
         }
 
         [Test]
@@ -74,7 +67,7 @@ namespace Contains_Duplicate
         [TestCase(new int[] { 1, 1, 1, 3, 3, 4, 3, 2, 4, 2 }, ExpectedResult = true)]
         public bool TestContainsDuplicateSet(int[] nums)
         {
-            return sol.ContainsDuplicateSet(nums);
+            return Solution.ContainsDuplicateSet(nums);
         }
     }
 }

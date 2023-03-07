@@ -30,7 +30,7 @@ namespace Paint_House
 {
     class Solution
     {
-        public int MinCost(int[][] costs)
+        public static int MinCost(int[][] costs)
         {
             int[] previousRow = new int[3];
             for (int i = 0; i < costs.Length; i++)
@@ -48,13 +48,6 @@ namespace Paint_House
 
     class Tests
     {
-        Solution sol;
-        [SetUp]
-        public void Setup()
-        {
-            sol = new Solution();
-        }
-
         public void TestMinCost()
         {
             int[][] testCase1 = new int[][] {new int[] { 17, 2, 17 }, new int[] { 16, 16, 5 }, new int[] { 14, 3, 19 } };
@@ -64,9 +57,9 @@ namespace Paint_House
             int[][] testCase3 = new int[][] { new int[] { 17, 2, 17 }, new int[] { 8, 4, 10 }, new int[] { 6, 3, 19 }, new int[] { 4, 8, 12 } };
             int testCase3ExpectedResult = 17;
 
-            Assert.AreEqual(testCase1ExpectedResult, sol.MinCost(testCase1));
-            Assert.AreEqual(testCase2ExpectedResult, sol.MinCost(testCase2));
-            Assert.AreEqual(testCase3ExpectedResult, sol.MinCost(testCase3));
+            Assert.AreEqual(testCase1ExpectedResult, Solution.MinCost(testCase1));
+            Assert.AreEqual(testCase2ExpectedResult, Solution.MinCost(testCase2));
+            Assert.AreEqual(testCase3ExpectedResult, Solution.MinCost(testCase3));
         }
     }
 }
