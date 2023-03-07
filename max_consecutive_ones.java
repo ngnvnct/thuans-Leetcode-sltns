@@ -57,14 +57,14 @@ public class max_consecutive_ones {
 
     @Test
     public void testMaxConsecutiveOnes() {
-        int[] exampleOne = new int[] {1,1,0,1,1,1};
-        int[] exampleTwo = new int[] {1,0,1,1,0,1};
-        assertEquals(3, findMaxConsecutiveOnes(exampleOne));
-        assertEquals(2, findMaxConsecutiveOnes(exampleTwo));
-        assertEquals(3, findMaxConsecutiveOnes2(exampleOne));
-        assertEquals(2, findMaxConsecutiveOnes2(exampleTwo));
-        assertEquals(3, findMaxConsecutiveOnes3(exampleOne));
-        assertEquals(2, findMaxConsecutiveOnes3(exampleTwo));
+        int[] testCase1 = new int[] {1,1,0,1,1,1};
+        int[] testCase2 = new int[] {1,0,1,1,0,1};
+        assertEquals(3, findMaxConsecutiveOnes(testCase1));
+        assertEquals(2, findMaxConsecutiveOnes(testCase2));
+        assertEquals(3, findMaxConsecutiveOnes2(testCase1));
+        assertEquals(2, findMaxConsecutiveOnes2(testCase2));
+        assertEquals(3, findMaxConsecutiveOnes3(testCase1));
+        assertEquals(2, findMaxConsecutiveOnes3(testCase2));
     }
 }
 

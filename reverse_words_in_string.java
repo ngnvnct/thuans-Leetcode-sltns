@@ -60,15 +60,13 @@ public class reverse_words_in_string {
 
     @Test(timeout = 100)
     public void testReverse() {
-        String one = "the sky is blue";
-        String expectedOne = "blue is sky the";
-        String two = "    hello   world ";
-        String expectedTwo = "world hello";
-        String three = "a good     example";
-        String expectedThree = "example good a";
-        assertEquals(expectedOne,reverseWords(one));
-        assertEquals(expectedTwo, reverseWords(two));
-        assertEquals(expectedThree, reverseWords(three));
+        String testCase1ExpectedResult = "blue is sky the";
+        String testCase2ExpectedResult = "world hello";
+        String testCase3ExpectedResult = "example good a";
+        
+        assertEquals(testCase1ExpectedResult,reverseWords("the sky is blue"));
+        assertEquals(testCase2ExpectedResult, reverseWords("    hello   world "));
+        assertEquals(testCase3ExpectedResult, reverseWords("a good     example"));
     }
 }
 

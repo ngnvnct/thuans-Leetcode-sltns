@@ -43,19 +43,19 @@ public class Remove_Vowels_From_A_String_1119 {
 
     @Test
     public void testRemoveVowels() {
-        String exampleOne = "leetcodeisacommunityforcoders";
-        String exampleOneExpectedResult = "ltcdscmmntyfrcdrs";
-        String exampleTwo = "aeiou";
-        String exampleTwoExpectedResult = "";
+        String testCase1 = "leetcodeisacommunityforcoders";
+        String testCase1ExpectedResult = "ltcdscmmntyfrcdrs";
+        String testCase2 = "aeiou";
+        String testCase2ExpectedResult = "";
 
-        assertEquals(exampleOneExpectedResult, removeVowels(exampleOne));
-        assertEquals(exampleTwoExpectedResult, removeVowels(exampleTwo));
+        assertEquals(testCase1ExpectedResult, removeVowels(testCase1));
+        assertEquals(testCase2ExpectedResult, removeVowels(testCase2));
 
-        assertEquals(exampleOneExpectedResult, removeVowels2(exampleOne));
-        assertEquals(exampleTwoExpectedResult, removeVowels2(exampleTwo));
+        assertEquals(testCase1ExpectedResult, removeVowels2(testCase1));
+        assertEquals(testCase2ExpectedResult, removeVowels2(testCase2));
 
-        assertEquals(exampleOneExpectedResult, removeVowels3(exampleOne));
-        assertEquals(exampleTwoExpectedResult, removeVowels3(exampleTwo));
+        assertEquals(testCase1ExpectedResult, removeVowels3(testCase1));
+        assertEquals(testCase2ExpectedResult, removeVowels3(testCase2));
     }
 }
 

@@ -39,20 +39,20 @@ public class Find_Target_Indices_After_Sorting_Array_2089 {
 
     @Test
     public void testFind() {
-        int[] exampleOne = { 1, 2, 5, 2, 3 };
-        List<Integer> exampleOneExpectedResult = new ArrayList<>(Arrays.asList(1, 2));
-        int[] exampleTwo = { 1, 2, 5, 2, 3 };
-        List<Integer> exampleTwoExpectedResult = new ArrayList<>(Arrays.asList(3));
-        int[] exampleThree = { 1, 2, 5, 2, 3 };
-        List<Integer> exampleThreeExpectedResult = new ArrayList<>(Arrays.asList(4));
+        int[] testCase1 = { 1, 2, 5, 2, 3 };
+        List<Integer> testCase1ExpectedResult = new ArrayList<>(Arrays.asList(1, 2));
+        int[] testCase2 = { 1, 2, 5, 2, 3 };
+        List<Integer> testCase2ExpectedResult = new ArrayList<>(Arrays.asList(3));
+        int[] testCase3 = { 1, 2, 5, 2, 3 };
+        List<Integer> testCase3ExpectedResult = new ArrayList<>(Arrays.asList(4));
 
-        assertEquals(exampleOneExpectedResult, targetIndicesNoSort(exampleOne, 2));
-        assertEquals(exampleTwoExpectedResult, targetIndicesNoSort(exampleTwo, 3));
-        assertEquals(exampleThreeExpectedResult, targetIndicesNoSort(exampleThree, 5));
+        assertEquals(testCase1ExpectedResult, targetIndicesNoSort(testCase1, 2));
+        assertEquals(testCase2ExpectedResult, targetIndicesNoSort(testCase2, 3));
+        assertEquals(testCase3ExpectedResult, targetIndicesNoSort(testCase3, 5));
         
-        assertEquals(exampleOneExpectedResult, targetIndices(exampleOne, 2));
-        assertEquals(exampleTwoExpectedResult, targetIndices(exampleTwo, 3));
-        assertEquals(exampleThreeExpectedResult, targetIndices(exampleThree, 5));
+        assertEquals(testCase1ExpectedResult, targetIndices(testCase1, 2));
+        assertEquals(testCase2ExpectedResult, targetIndices(testCase2, 3));
+        assertEquals(testCase3ExpectedResult, targetIndices(testCase3, 5));
     }
 }
 

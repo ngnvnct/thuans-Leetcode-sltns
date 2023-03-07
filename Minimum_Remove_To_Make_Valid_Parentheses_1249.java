@@ -66,20 +66,20 @@ public class Minimum_Remove_To_Make_Valid_Parentheses_1249 {
 
     @Test
     public void testMinRemove() {
-        String exampleOne = "a)b(c)d(((";
-        String exampleOneExpectedResult = "ab(c)d";
-        String exampleTwo = "lee(t(c)o)de)";
-        String exampleTwoExpectedResult = "lee(t(c)o)de";
-        String exampleThree = "))((";
-        String exampleThreeExpectedResult = "";
+        String testCase1 = "a)b(c)d(((";
+        String testCase1ExpectedResult = "ab(c)d";
+        String testCase2 = "lee(t(c)o)de)";
+        String testCase2ExpectedResult = "lee(t(c)o)de";
+        String testCase3 = "))((";
+        String testCase3ExpectedResult = "";
 
-        assertEquals(exampleOneExpectedResult, minRemoveToMakeValid(exampleOne));
-        assertEquals(exampleTwoExpectedResult, minRemoveToMakeValid(exampleTwo));
-        assertEquals(exampleThreeExpectedResult, minRemoveToMakeValid(exampleThree));
+        assertEquals(testCase1ExpectedResult, minRemoveToMakeValid(testCase1));
+        assertEquals(testCase2ExpectedResult, minRemoveToMakeValid(testCase2));
+        assertEquals(testCase3ExpectedResult, minRemoveToMakeValid(testCase3));
 
-        assertEquals(exampleOneExpectedResult, minRemoveToMakeValidReverse(exampleOne));
-        assertEquals(exampleTwoExpectedResult, minRemoveToMakeValidReverse(exampleTwo));
-        assertEquals(exampleThreeExpectedResult, minRemoveToMakeValidReverse(exampleThree));
+        assertEquals(testCase1ExpectedResult, minRemoveToMakeValidReverse(testCase1));
+        assertEquals(testCase2ExpectedResult, minRemoveToMakeValidReverse(testCase2));
+        assertEquals(testCase3ExpectedResult, minRemoveToMakeValidReverse(testCase3));
     }
 }
 

@@ -30,12 +30,12 @@ public class k_diff_pairs {
 
     @Test
     public void testFindPair() {
-        int[] exampleOne = {3,1,4,1,5};
-        assertEquals(2, findPairs(exampleOne, 2));
-        int[] exampleTwo = {1,2,3,4,5};
-        assertEquals(4, findPairs(exampleTwo, 1));
-        int[] exampleThree = {1,3,1,5,4};
-        assertEquals(1, findPairs(exampleThree, 0));
+        int[] testCase1 = {3,1,4,1,5};
+        assertEquals(2, findPairs(testCase1, 2));
+        int[] testCase2 = {1,2,3,4,5};
+        assertEquals(4, findPairs(testCase2, 1));
+        int[] testCase3 = {1,3,1,5,4};
+        assertEquals(1, findPairs(testCase3, 0));
     }
 }
 

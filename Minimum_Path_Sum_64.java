@@ -46,10 +46,10 @@ public class Minimum_Path_Sum_64 {
 
     @Test
     public void testMinPathSum() {
-        int[][] exampleOne = { { 1, 3, 1 }, { 1, 5, 1 }, { 4, 2, 1 } };
-        int[][] exampleTwo = { { 1, 2, 3 }, { 4, 5, 6 } };
-        assertEquals(7, minPathSum(exampleOne));
-        assertEquals(12, minPathSum(exampleTwo));
+        int[][] testCase1 = { { 1, 3, 1 }, { 1, 5, 1 }, { 4, 2, 1 } };
+        int[][] testCase2 = { { 1, 2, 3 }, { 4, 5, 6 } };
+        assertEquals(7, minPathSum(testCase1));
+        assertEquals(12, minPathSum(testCase2));
     }
 }
 

@@ -42,20 +42,20 @@ public class subsets_ii {
 
     @Test
     public void testSubsets() {
-        List<List<Integer>> expectedOne = new ArrayList<>();
-        expectedOne.add(Arrays.asList(1));
-        expectedOne.add(new ArrayList<>());
+        List<List<Integer>> testCase1ExpectedResult = new ArrayList<>();
+        testCase1ExpectedResult.add(Arrays.asList(1));
+        testCase1ExpectedResult.add(new ArrayList<>());
 
-        List<List<Integer>> expectedTwo = new ArrayList<>();
-        expectedTwo.add(Arrays.asList(1,3,3));
-        expectedTwo.add(Arrays.asList(1,3));
-        expectedTwo.add(Arrays.asList(1));
-        expectedTwo.add(Arrays.asList(3,3));
-        expectedTwo.add(Arrays.asList(3));
-        expectedTwo.add(new ArrayList<>());
+        List<List<Integer>> testCase2ExpectedResult = new ArrayList<>();
+        testCase2ExpectedResult.add(Arrays.asList(1,3,3));
+        testCase2ExpectedResult.add(Arrays.asList(1,3));
+        testCase2ExpectedResult.add(Arrays.asList(1));
+        testCase2ExpectedResult.add(Arrays.asList(3,3));
+        testCase2ExpectedResult.add(Arrays.asList(3));
+        testCase2ExpectedResult.add(new ArrayList<>());
 
-        assertEquals(expectedOne, subsets(new int[] {1}));
-        assertEquals(expectedTwo, subsets(new int[] {1,3,3}));
+        assertEquals(testCase1ExpectedResult, subsets(new int[] {1}));
+        assertEquals(testCase2ExpectedResult, subsets(new int[] {1,3,3}));
     }
 }
 

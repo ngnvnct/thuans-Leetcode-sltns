@@ -78,30 +78,30 @@ public class Valid_Parentheses_20 {
 
     @Test
     public void testParentheses() {
-        String exampleOne = "(){}[]";
-        String exampleTwo = "()";
-        String exampleThree = "(]";
-        String exampleFour = "(a)";
-        String exampleFive = "(141[])(){waga}((51afaw))()hh()";
-        String exampleSix = "(()agwg())((()agwga()())gawgwgag)";
-        String exampleSeven = "(agwgg)([ghhheah%&@Q])";
+        String testCase1 = "(){}[]";
+        String testCase2 = "()";
+        String testCase3 = "(]";
+        String testCase4 = "(a)";
+        String testCase5 = "(141[])(){waga}((51afaw))()hh()";
+        String testCase6 = "(()agwg())((()agwga()())gawgwgag)";
+        String testCase7 = "(agwgg)([ghhheah%&@Q])";
 
-        assertTrue(isValidStack(exampleOne));
-        assertTrue(isValidStack(exampleTwo));
-        assertFalse(isValidStack(exampleThree));
+        assertTrue(isValidStack(testCase1));
+        assertTrue(isValidStack(testCase2));
+        assertFalse(isValidStack(testCase3));
 
-        assertTrue(isValidDeque(exampleOne));
-        assertTrue(isValidDeque(exampleTwo));
-        assertFalse(isValidDeque(exampleThree));
+        assertTrue(isValidDeque(testCase1));
+        assertTrue(isValidDeque(testCase2));
+        assertFalse(isValidDeque(testCase3));
 
-        assertTrue(isValidIllegalChar(exampleOne));
-        assertTrue(isValidIllegalChar(exampleTwo));
-        assertFalse(isValidIllegalChar(exampleThree));
-        assertTrue(isValidIllegalChar(exampleFour));
+        assertTrue(isValidIllegalChar(testCase1));
+        assertTrue(isValidIllegalChar(testCase2));
+        assertFalse(isValidIllegalChar(testCase3));
+        assertTrue(isValidIllegalChar(testCase4));
 
-        assertTrue(isValidIllegalChar(exampleFive));
-        assertTrue(isValidIllegalChar(exampleSix));
-        assertTrue(isValidIllegalChar(exampleSeven));
+        assertTrue(isValidIllegalChar(testCase5));
+        assertTrue(isValidIllegalChar(testCase6));
+        assertTrue(isValidIllegalChar(testCase7));
     }
 }
 

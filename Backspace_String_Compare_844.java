@@ -89,19 +89,28 @@ public class Backspace_String_Compare_844 {
 
     @Test
     public void testCompare() {
-        assertTrue(backspaceCompare("ab#c", "ad#c"));
-        assertTrue(backspaceCompare("ab##", "c#d#"));
-        assertFalse(backspaceCompare("a#c", "b"));
-        assertTrue(backspacePointers("ab#c", "ad#c"));
-        assertTrue(backspacePointers("ab##", "c#d#"));
-        assertFalse(backspacePointers("a#c", "b"));
+        String testCase1 = "ad#c";
+        String testCase1ExpectedResult = "ab#c";
+        String testCase2 = "c#d#";
+        String testCase2ExpectedResult = "ab##";
+        String testCase3 = "b";
+        String testCase3ExpectedResult = "a#c";
+
+        assertTrue(backspaceCompare(testCase1ExpectedResult, testCase1));
+        assertTrue(backspaceCompare(testCase2ExpectedResult, testCase2));
+        assertFalse(backspaceCompare(testCase3ExpectedResult, testCase3));
+
+        assertTrue(backspacePointers(testCase1ExpectedResult, testCase1));
+        assertTrue(backspacePointers(testCase2ExpectedResult, testCase2));
+        assertFalse(backspacePointers(testCase3ExpectedResult, testCase3));
     }
 }
 
 /*
+Leetcode75
 https://leetcode.com/problems/backspace-string-compare/
 Explanation
 
-
+wee
 
 */

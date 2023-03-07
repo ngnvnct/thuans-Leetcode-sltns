@@ -7,12 +7,12 @@ import org.junit.Test;
 
 public class Three_Sum_Duplicate_Expert {
     public static void main(String[] args) {
-        int[][] exampleOneExpectedResult = { { -8, 2, 6 }, { -8, 3, 5 }, { -6, 1, 5 } };
-        List<int[]> exampleOne = new ArrayList<>(Arrays.asList(exampleOneExpectedResult));
+        int[][] testCase1ExpectedResult = { { -8, 2, 6 }, { -8, 3, 5 }, { -6, 1, 5 } };
+        List<int[]> testCase1 = new ArrayList<>(Arrays.asList(testCase1ExpectedResult));
         Three_Sum_Duplicate_Expert sol = new Three_Sum_Duplicate_Expert();
-        System.out.println(Arrays.deepToString(exampleOneExpectedResult));
-        System.out.println(Arrays.deepToString(exampleOne.toArray(new int[exampleOne.size()][])));
-        System.out.println(Arrays.deepToString(sol.threeSum(new int[] { 12, 3, 1, 2, -6, 5, -8, 6 }, 0).toArray((new int[exampleOneExpectedResult.length][]))));
+        System.out.println(Arrays.deepToString(testCase1ExpectedResult));
+        System.out.println(Arrays.deepToString(testCase1.toArray(new int[testCase1.size()][])));
+        System.out.println(Arrays.deepToString(sol.threeSum(new int[] { 12, 3, 1, 2, -6, 5, -8, 6 }, 0).toArray((new int[testCase1ExpectedResult.length][]))));
     }
 
     public List<int[]> threeSum(int[] nums, int targetSum) {
@@ -44,13 +44,13 @@ public class Three_Sum_Duplicate_Expert {
 
     @Test
     public void testThreeSumDuplicate() {
-        int[][] exampleOneExpectedResult = { { -8, 2, 6 }, { -8, 3, 5 }, { -6, 1, 5 } };
-        int[][] exampleTwoExpectedResult = { { -8, 2, 6 }, { -8, 3, 5 }, { -6, 0, 6 }, { -6, 1, 5 }, { -1, 0, 1 } };
-        int[][] exampleThreeExpectedResult = new int[0][0];
+        int[][] testCase1ExpectedResult = { { -8, 2, 6 }, { -8, 3, 5 }, { -6, 1, 5 } };
+        int[][] testCase2ExpectedResult = { { -8, 2, 6 }, { -8, 3, 5 }, { -6, 0, 6 }, { -6, 1, 5 }, { -1, 0, 1 } };
+        int[][] testCase3ExpectedResult = new int[0][0];
 
-        assertArrayEquals(exampleOneExpectedResult, threeSum(new int[] { 12, 3, 1, 2, -6, 5, -8, 6 }, 0).toArray((new int[exampleOneExpectedResult.length][])));
-        assertArrayEquals(exampleTwoExpectedResult, threeSum(new int[] { 12, 3, 1, 2, -6, 5, 0, -8, -1, 6 }, 0).toArray((new int[exampleTwoExpectedResult.length][])));
-        assertArrayEquals(exampleThreeExpectedResult, threeSum(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 15 }, 33).toArray((new int[exampleThreeExpectedResult.length][])));
+        assertArrayEquals(testCase1ExpectedResult, threeSum(new int[] { 12, 3, 1, 2, -6, 5, -8, 6 }, 0).toArray((new int[testCase1ExpectedResult.length][])));
+        assertArrayEquals(testCase2ExpectedResult, threeSum(new int[] { 12, 3, 1, 2, -6, 5, 0, -8, -1, 6 }, 0).toArray((new int[testCase2ExpectedResult.length][])));
+        assertArrayEquals(testCase3ExpectedResult, threeSum(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 15 }, 33).toArray((new int[testCase3ExpectedResult.length][])));
     }
 }
 

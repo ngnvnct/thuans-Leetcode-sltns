@@ -33,14 +33,14 @@ public class Destroying_Asteroids_2126 {
 
     @Test
     public void testDestroyed() {
-        int[] exampleOne = { 3, 9, 19, 5, 21 };
-        int[] exampleTwo = { 4, 9, 23, 4 };
+        int[] testCase1 = { 3, 9, 19, 5, 21 };
+        int[] testCase2 = { 4, 9, 23, 4 };
 
-        assertTrue(asteroidsDestroyed(10, exampleOne));
-        assertFalse(asteroidsDestroyed(5, exampleTwo));
+        assertTrue(asteroidsDestroyed(10, testCase1));
+        assertFalse(asteroidsDestroyed(5, testCase2));
 
-        assertTrue(asteroidsDestroyedLong(10, exampleOne));
-        assertFalse(asteroidsDestroyedLong(5, exampleTwo));
+        assertTrue(asteroidsDestroyedLong(10, testCase1));
+        assertFalse(asteroidsDestroyedLong(5, testCase2));
 
     }
 }

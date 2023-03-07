@@ -116,28 +116,28 @@ public class Reformat_Date_1507 {
 
     @Test
     public void testDate() {
-        String exampleOne = "20th Oct 2052";
-        String exampleOneExpectedResult = "2052-10-20";
-        String exampleTwo = "6th Jun 1933";
-        String exampleTwoExpectedResult = "1933-06-06";
-        String exampleThree = "26th May 1960";
-        String exampleThreeExpectedResult = "1960-05-26";
+        String testCase1 = "20th Oct 2052";
+        String testCase1ExpectedResult = "2052-10-20";
+        String testCase2 = "6th Jun 1933";
+        String testCase2ExpectedResult = "1933-06-06";
+        String testCase3 = "26th May 1960";
+        String testCase3ExpectedResult = "1960-05-26";
 
-        assertEquals(exampleOneExpectedResult, reformatDate(exampleOne));
-        assertEquals(exampleTwoExpectedResult, reformatDate(exampleTwo));
-        assertEquals(exampleThreeExpectedResult, reformatDate(exampleThree));
+        assertEquals(testCase1ExpectedResult, reformatDate(testCase1));
+        assertEquals(testCase2ExpectedResult, reformatDate(testCase2));
+        assertEquals(testCase3ExpectedResult, reformatDate(testCase3));
 
-        assertEquals(exampleOneExpectedResult, reformatDateBruteForce(exampleOne));
-        assertEquals(exampleTwoExpectedResult, reformatDateBruteForce(exampleTwo));
-        assertEquals(exampleThreeExpectedResult, reformatDateBruteForce(exampleThree));
+        assertEquals(testCase1ExpectedResult, reformatDateBruteForce(testCase1));
+        assertEquals(testCase2ExpectedResult, reformatDateBruteForce(testCase2));
+        assertEquals(testCase3ExpectedResult, reformatDateBruteForce(testCase3));
 
-        assertEquals(exampleOneExpectedResult, reformatDateMap(exampleOne));
-        assertEquals(exampleTwoExpectedResult, reformatDateMap(exampleTwo));
-        assertEquals(exampleThreeExpectedResult, reformatDateMap(exampleThree));
+        assertEquals(testCase1ExpectedResult, reformatDateMap(testCase1));
+        assertEquals(testCase2ExpectedResult, reformatDateMap(testCase2));
+        assertEquals(testCase3ExpectedResult, reformatDateMap(testCase3));
 
-        assertEquals(exampleOneExpectedResult, reformateDateSubstring(exampleOne));
-        assertEquals(exampleTwoExpectedResult, reformateDateSubstring(exampleTwo));
-        assertEquals(exampleThreeExpectedResult, reformateDateSubstring(exampleThree));
+        assertEquals(testCase1ExpectedResult, reformateDateSubstring(testCase1));
+        assertEquals(testCase2ExpectedResult, reformateDateSubstring(testCase2));
+        assertEquals(testCase3ExpectedResult, reformateDateSubstring(testCase3));
     }
 }
 

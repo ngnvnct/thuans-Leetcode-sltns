@@ -55,24 +55,24 @@ public class First_Unique_Character_In_A_String_387 {
 
     @Test
     public void testUniq() {
-        String exampleOne = "leetcode";
-        int exampleOneExpectedResult = 0;
-        String exampleTwo = "loveleetcode";
-        int exampleTwoExpectedResult = 2;
-        String exampleThree = "aabb";
-        int exampleThreeExpectedResult = -1;
+        String testCase1 = "leetcode";
+        int testCase1ExpectedResult = 0;
+        String testCase2 = "loveleetcode";
+        int testCase2ExpectedResult = 2;
+        String testCase3 = "aabb";
+        int testCase3ExpectedResult = -1;
 
-        assertEquals(exampleOneExpectedResult, firstUniqCharArray(exampleOne));
-        assertEquals(exampleTwoExpectedResult, firstUniqCharArray(exampleTwo));
-        assertEquals(exampleThreeExpectedResult, firstUniqCharArray(exampleThree));
+        assertEquals(testCase1ExpectedResult, firstUniqCharArray(testCase1));
+        assertEquals(testCase2ExpectedResult, firstUniqCharArray(testCase2));
+        assertEquals(testCase3ExpectedResult, firstUniqCharArray(testCase3));
 
-        assertEquals(exampleOneExpectedResult, firstUniqCharMap(exampleOne));
-        assertEquals(exampleTwoExpectedResult, firstUniqCharMap(exampleTwo));
-        assertEquals(exampleThreeExpectedResult, firstUniqCharMap(exampleThree));
+        assertEquals(testCase1ExpectedResult, firstUniqCharMap(testCase1));
+        assertEquals(testCase2ExpectedResult, firstUniqCharMap(testCase2));
+        assertEquals(testCase3ExpectedResult, firstUniqCharMap(testCase3));
 
-        assertEquals(exampleOneExpectedResult, firstUniqCharQueue(exampleOne));
-        assertEquals(exampleTwoExpectedResult, firstUniqCharQueue(exampleTwo));
-        assertEquals(exampleThreeExpectedResult, firstUniqCharQueue(exampleThree));
+        assertEquals(testCase1ExpectedResult, firstUniqCharQueue(testCase1));
+        assertEquals(testCase2ExpectedResult, firstUniqCharQueue(testCase2));
+        assertEquals(testCase3ExpectedResult, firstUniqCharQueue(testCase3));
     }
 }
 

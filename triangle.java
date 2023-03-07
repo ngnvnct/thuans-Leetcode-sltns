@@ -26,7 +26,7 @@ public class triangle {
         int[][] dp = new int[triangle.size()+1][triangle.size()+1];
 
         for (int level = triangle.size()-1; level >= 0; level--) {
-            for (int j = 0; j <= triangle.get(level).size(); j++) {
+            for (int j = 0; j < triangle.get(level).size(); j++) {
                 dp[level][j] = Math.min(dp[level+1][j], dp[level+1][j+1]) + triangle.get(level).get(j);
             }
         }
@@ -36,12 +36,15 @@ public class triangle {
 
     @Test
     public void testTriangle() {
-        List<List<Integer>> exampleOne = List.of(List.of(2), List.of(3,4), List.of(6,5,7), List.of(4,1,8,3));
-        List<List<Integer>> exampleTwo = List.of(List.of(-10));
-        assertEquals(11, minimumTotal(exampleOne));
-        assertEquals(-10, minimumTotal(exampleTwo));
-        assertEquals(11, minimumTotal2(exampleOne));
-        assertEquals(-10, minimumTotal2(exampleTwo));
+        List<List<Integer>> testCase1 = List.of(List.of(2), List.of(3,4), List.of(6,5,7), List.of(4,1,8,3));
+        int testCase1ExpectedResult = 11;
+        List<List<Integer>> testCase2 = List.of(List.of(-10));
+        int testCase2ExpectedResult = -10;
+
+        assertEquals(testCase1ExpectedResult, minimumTotal(testCase1));
+        assertEquals(testCase2ExpectedResult, minimumTotal(testCase2));
+        assertEquals(testCase1ExpectedResult, minimumTotal2(testCase1));
+        assertEquals(testCase2ExpectedResult, minimumTotal2(testCase2));
     }
 }
 

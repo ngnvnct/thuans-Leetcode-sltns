@@ -34,14 +34,14 @@ public class Three_Consecutive_Odds_1550 {
 
     @Test
     public void testThreeOdd() {
-        int[] exampleOne = { 2, 6, 4, 1 };
-        int[] exampleTwo = { 1, 2, 34, 3, 4, 5, 7, 23, 21 };
+        int[] testCase1 = { 2, 6, 4, 1 };
+        int[] testCase2 = { 1, 2, 34, 3, 4, 5, 7, 23, 21 };
 
-        assertFalse(threeConsecutiveOdds(exampleOne));
-        assertTrue(threeConsecutiveOdds(exampleTwo));
+        assertFalse(threeConsecutiveOdds(testCase1));
+        assertTrue(threeConsecutiveOdds(testCase2));
 
-        assertFalse(threeConsecutiveOdds2(exampleOne));
-        assertTrue(threeConsecutiveOdds2(exampleTwo));
+        assertFalse(threeConsecutiveOdds2(testCase1));
+        assertTrue(threeConsecutiveOdds2(testCase2));
     }
 }
 

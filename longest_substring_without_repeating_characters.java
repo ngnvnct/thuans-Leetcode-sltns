@@ -57,22 +57,22 @@ public class longest_substring_without_repeating_characters {
 
     @Test
     public void testLongestSubstring() {
-        String exampleOne = "abcabcbb";
-        String exampleTwo = "bbbbb";
-        String exampleThree = "pwwkew";
-        String exampleFour = "abcbza";
-        assertEquals(3, lengthOfLongestSubstring(exampleOne));
-        assertEquals(1, lengthOfLongestSubstring(exampleTwo));
-        assertEquals(3, lengthOfLongestSubstring(exampleThree));
-        assertEquals(4, lengthOfLongestSubstring(exampleFour));
-        assertEquals(3, lengthOfLongestSubstring2(exampleOne));
-        assertEquals(1, lengthOfLongestSubstring2(exampleTwo));
-        assertEquals(3, lengthOfLongestSubstring2(exampleThree));
-        assertEquals(4, lengthOfLongestSubstring2(exampleFour));
-        assertEquals(3, lengthOfLongestSubstring3(exampleOne));
-        assertEquals(1, lengthOfLongestSubstring3(exampleTwo));
-        assertEquals(3, lengthOfLongestSubstring3(exampleThree));
-        assertEquals(4, lengthOfLongestSubstring3(exampleFour));
+        String testCase1 = "abcabcbb";
+        String testCase2 = "bbbbb";
+        String testCase3 = "pwwkew";
+        String testCase4 = "abcbza";
+        assertEquals(3, lengthOfLongestSubstring(testCase1));
+        assertEquals(1, lengthOfLongestSubstring(testCase2));
+        assertEquals(3, lengthOfLongestSubstring(testCase3));
+        assertEquals(4, lengthOfLongestSubstring(testCase4));
+        assertEquals(3, lengthOfLongestSubstring2(testCase1));
+        assertEquals(1, lengthOfLongestSubstring2(testCase2));
+        assertEquals(3, lengthOfLongestSubstring2(testCase3));
+        assertEquals(4, lengthOfLongestSubstring2(testCase4));
+        assertEquals(3, lengthOfLongestSubstring3(testCase1));
+        assertEquals(1, lengthOfLongestSubstring3(testCase2));
+        assertEquals(3, lengthOfLongestSubstring3(testCase3));
+        assertEquals(4, lengthOfLongestSubstring3(testCase4));
     }
 }
 

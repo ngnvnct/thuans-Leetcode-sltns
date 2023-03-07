@@ -27,16 +27,16 @@ public class jump_game {
 
     @Test
     public void testJumpGame() {
-        int[] exampleOne = { 2, 3, 1, 1, 4 };
-        assertTrue(canJump(exampleOne));
-        assertTrue(canJumpTwo(exampleOne));
-        int[] exampleTwo = { 3, 2, 1, 0, 4 };
-        assertFalse(canJump(exampleTwo));
-        assertFalse(canJumpTwo(exampleTwo));
+        int[] testCase1 = { 2, 3, 1, 1, 4 };
+        assertTrue(canJump(testCase1));
+        assertTrue(canJumpTwo(testCase1));
+        int[] testCase2 = { 3, 2, 1, 0, 4 };
+        assertFalse(canJump(testCase2));
+        assertFalse(canJumpTwo(testCase2));
 
-        int[] exampleThree = { 2, 0, 0 };
-        assertTrue(canJump(exampleThree));
-        assertTrue(canJumpTwo(exampleThree));
+        int[] testCase3 = { 2, 0, 0 };
+        assertTrue(canJump(testCase3));
+        assertTrue(canJumpTwo(testCase3));
     }
 }
 

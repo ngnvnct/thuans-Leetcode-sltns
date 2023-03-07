@@ -34,17 +34,17 @@ public class Unique_Number_Of_Occurrences_1207 {
 
     @Test
     public void testUnique() {
-        int[] exampleOne = { 1, 2, 2, 1, 1, 3 };
-        int[] exampleTwo = { 1, 2 };
-        int[] exampleThree = { -3, 0, 1, -3, 1, 1, 1, -3, 10, 0 };
+        int[] testCase1 = { 1, 2, 2, 1, 1, 3 };
+        int[] testCase2 = { 1, 2 };
+        int[] testCase3 = { -3, 0, 1, -3, 1, 1, 1, -3, 10, 0 };
 
-        assertTrue(uniqueOccurences(exampleOne));
-        assertFalse(uniqueOccurences(exampleTwo));
-        assertTrue(uniqueOccurences(exampleThree));
+        assertTrue(uniqueOccurences(testCase1));
+        assertFalse(uniqueOccurences(testCase2));
+        assertTrue(uniqueOccurences(testCase3));
 
-        assertTrue(uniqueOccurences2(exampleOne));
-        assertFalse(uniqueOccurences2(exampleTwo));
-        assertTrue(uniqueOccurences2(exampleThree));
+        assertTrue(uniqueOccurences2(testCase1));
+        assertFalse(uniqueOccurences2(testCase2));
+        assertTrue(uniqueOccurences2(testCase3));
     }
 }
 

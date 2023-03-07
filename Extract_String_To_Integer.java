@@ -8,9 +8,9 @@ import org.junit.Test;
 
 public class Extract_String_To_Integer {
     public static void main(String[] args) {
-        String[] exampleOne = { "A2D", "1B", "3F5", "67FE2", "AA" };
+        String[] testCase1 = { "A2D", "1B", "3F5", "67FE2", "AA" };
         Extract_String_To_Integer sol = new Extract_String_To_Integer();
-        System.out.println(sol.extract(exampleOne).toString());
+        System.out.println(sol.extract(testCase1).toString());
     }
 
     public List<Integer> extract(String[] words) {

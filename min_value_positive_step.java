@@ -27,12 +27,12 @@ public class min_value_positive_step {
 
     @Test
     public void testMinStartValue() {
-        int[] exampleOne = {-3,2,-3,4,2};
-        int[] exampleTwo = {1,2};
-        int[] exampleThree = {1,-2,-3};
-        assertEquals(5, minStartValue(exampleOne));
-        assertEquals(1, minStartValue(exampleTwo));
-        assertEquals(5, minStartValue(exampleThree));
+        int[] testCase1 = {-3,2,-3,4,2};
+        int[] testCase2 = {1,2};
+        int[] testCase3 = {1,-2,-3};
+        assertEquals(5, minStartValue(testCase1));
+        assertEquals(1, minStartValue(testCase2));
+        assertEquals(5, minStartValue(testCase3));
     }
 }
 

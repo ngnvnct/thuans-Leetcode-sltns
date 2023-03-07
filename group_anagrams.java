@@ -6,19 +6,19 @@ import java.util.Map;
 
 public class group_anagrams {
     public static void main (String[] args) {
-        String[] exampleOne = {"eat","tea","tan","ate","nat","bat"};
-        String[] exampleTwo = {""};
-        String[] exampleThree = {"a"};
+        String[] testCase1 = {"eat","tea","tan","ate","nat","bat"};
+        String[] testCase2 = {""};
+        String[] testCase3 = {"a"};
         group_anagrams Solution = new group_anagrams();
-        System.out.println(Solution.groupAnagrams(exampleOne));
-        System.out.println(Solution.groupAnagrams(exampleTwo));
-        System.out.println(Solution.groupAnagrams(exampleThree));
-        System.out.println(Solution.groupAnagrams2(exampleOne));
-        System.out.println(Solution.groupAnagrams2(exampleTwo));
-        System.out.println(Solution.groupAnagrams2(exampleThree));
-        System.out.println(Solution.groupAnagrams3(exampleOne));
-        System.out.println(Solution.groupAnagrams3(exampleTwo));
-        System.out.println(Solution.groupAnagrams3(exampleThree));
+        System.out.println(Solution.groupAnagrams(testCase1));
+        System.out.println(Solution.groupAnagrams(testCase2));
+        System.out.println(Solution.groupAnagrams(testCase3));
+        System.out.println(Solution.groupAnagrams2(testCase1));
+        System.out.println(Solution.groupAnagrams2(testCase2));
+        System.out.println(Solution.groupAnagrams2(testCase3));
+        System.out.println(Solution.groupAnagrams3(testCase1));
+        System.out.println(Solution.groupAnagrams3(testCase2));
+        System.out.println(Solution.groupAnagrams3(testCase3));
     }
     public List<List<String>> groupAnagrams(String[] s) {
         List<List<String>> res = new ArrayList<>();

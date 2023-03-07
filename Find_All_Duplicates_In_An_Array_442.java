@@ -67,28 +67,28 @@ public class Find_All_Duplicates_In_An_Array_442 {
 
     @Test
     public void testDuplicate() {
-        int[] exampleOne = { 4, 3, 2, 7, 8, 2, 3, 1 };
-        List<Integer> exampleOneExpectedResult = new ArrayList<>(Arrays.asList(2, 3));
-        int[] exampleTwo = { 1, 1, 2 };
-        List<Integer> exampleTwoExpectedResult = new ArrayList<>(Arrays.asList(1));
-        int[] exampleThree = { 1 };
-        List<Integer> exampleThreeExpectedResult = new ArrayList<>();
+        int[] testCase1 = { 4, 3, 2, 7, 8, 2, 3, 1 };
+        List<Integer> testCase1ExpectedResult = new ArrayList<>(Arrays.asList(2, 3));
+        int[] testCase2 = { 1, 1, 2 };
+        List<Integer> testCase2ExpectedResult = new ArrayList<>(Arrays.asList(1));
+        int[] testCase3 = { 1 };
+        List<Integer> testCase3ExpectedResult = new ArrayList<>();
 
-        assertEquals(exampleOneExpectedResult, findDuplicates(exampleOne));
-        assertEquals(exampleTwoExpectedResult, findDuplicates(exampleTwo));
-        assertEquals(exampleThreeExpectedResult, findDuplicates(exampleThree));
+        assertEquals(testCase1ExpectedResult, findDuplicates(testCase1));
+        assertEquals(testCase2ExpectedResult, findDuplicates(testCase2));
+        assertEquals(testCase3ExpectedResult, findDuplicates(testCase3));
 
-        assertEquals(exampleOneExpectedResult, findDuplicatesSort(exampleOne));
-        assertEquals(exampleTwoExpectedResult, findDuplicatesSort(exampleTwo));
-        assertEquals(exampleThreeExpectedResult, findDuplicatesSort(exampleThree));
+        assertEquals(testCase1ExpectedResult, findDuplicatesSort(testCase1));
+        assertEquals(testCase2ExpectedResult, findDuplicatesSort(testCase2));
+        assertEquals(testCase3ExpectedResult, findDuplicatesSort(testCase3));
 
-        assertEquals(exampleOneExpectedResult, findDuplicates3(exampleOne));
-        assertEquals(exampleTwoExpectedResult, findDuplicates3(exampleTwo));
-        assertEquals(exampleThreeExpectedResult, findDuplicates3(exampleThree));
+        assertEquals(testCase1ExpectedResult, findDuplicates3(testCase1));
+        assertEquals(testCase2ExpectedResult, findDuplicates3(testCase2));
+        assertEquals(testCase3ExpectedResult, findDuplicates3(testCase3));
 
-        assertEquals(exampleOneExpectedResult, findDuplicates4(exampleOne));
-        assertEquals(exampleTwoExpectedResult, findDuplicates4(exampleTwo));
-        assertEquals(exampleThreeExpectedResult, findDuplicates4(exampleThree));
+        assertEquals(testCase1ExpectedResult, findDuplicates4(testCase1));
+        assertEquals(testCase2ExpectedResult, findDuplicates4(testCase2));
+        assertEquals(testCase3ExpectedResult, findDuplicates4(testCase3));
     }
 }
 

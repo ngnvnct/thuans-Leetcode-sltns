@@ -37,14 +37,14 @@ public class Two_Sum_Less_Than_K_1099 {
 
     @Test
     public void testSumK() {
-        int[] exampleOne = { 34, 23, 1, 24, 75, 33, 54, 8 };
-        int[] exampleTwo = { 10, 20, 30 };
+        int[] testCase1 = { 34, 23, 1, 24, 75, 33, 54, 8 };
+        int[] testCase2 = { 10, 20, 30 };
 
-        assertEquals(58, twoSumLessThanK(exampleOne, 60));
-        assertEquals(-1, twoSumLessThanK(exampleTwo, 15));
+        assertEquals(58, twoSumLessThanK(testCase1, 60));
+        assertEquals(-1, twoSumLessThanK(testCase2, 15));
 
-        assertEquals(58, twoSumLessThanKBruteForce(exampleOne, 60));
-        assertEquals(-1, twoSumLessThanKBruteForce(exampleTwo, 15));
+        assertEquals(58, twoSumLessThanKBruteForce(testCase1, 60));
+        assertEquals(-1, twoSumLessThanKBruteForce(testCase2, 15));
     }
 }
 

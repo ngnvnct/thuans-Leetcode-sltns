@@ -37,13 +37,13 @@ public class Remove_Duplicate_Letters_316 {
 
     @Test
     public void testDuplicate() {
-        String exampleOne = "bcabc";
-        String exampleOneExpectedResult = "abc";
-        String exampleTwo = "cbacdcbc";
-        String exampleTwoExpectedResult = "acdb";
+        String testCase1 = "bcabc";
+        String testCase1ExpectedResult = "abc";
+        String testCase2 = "cbacdcbc";
+        String testCase2ExpectedResult = "acdb";
 
-        assertEquals(exampleOneExpectedResult, removeDuplicateLetters(exampleOne));
-        assertEquals(exampleTwoExpectedResult, removeDuplicateLetters(exampleTwo));
+        assertEquals(testCase1ExpectedResult, removeDuplicateLetters(testCase1));
+        assertEquals(testCase2ExpectedResult, removeDuplicateLetters(testCase2));
     }
 }
 

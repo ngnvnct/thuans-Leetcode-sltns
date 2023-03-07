@@ -38,20 +38,20 @@ public class max_product_two_elements {
 
     @Test
     public void testMaxProduct() {
-        int[] exampleOne = {3,4,5,2};
-        int[] exampleTwo = {1,5,4,5};
-        int[] exampleThree = {3,7};
-        assertEquals(12, maxProductHeap(exampleOne));
-        assertEquals(12, maxProductSort(exampleOne));
-        assertEquals(12, maxProductSpace(exampleOne));
+        int[] testCase1 = {3,4,5,2};
+        int[] testCase2 = {1,5,4,5};
+        int[] testCase3 = {3,7};
+        assertEquals(12, maxProductHeap(testCase1));
+        assertEquals(12, maxProductSort(testCase1));
+        assertEquals(12, maxProductSpace(testCase1));
 
-        assertEquals(16, maxProductHeap(exampleTwo));
-        assertEquals(16, maxProductSort(exampleTwo));
-        assertEquals(16, maxProductSpace(exampleTwo));
+        assertEquals(16, maxProductHeap(testCase2));
+        assertEquals(16, maxProductSort(testCase2));
+        assertEquals(16, maxProductSpace(testCase2));
 
-        assertEquals(12, maxProductHeap(exampleThree));
-        assertEquals(12, maxProductSort(exampleThree));
-        assertEquals(12, maxProductSpace(exampleThree));
+        assertEquals(12, maxProductHeap(testCase3));
+        assertEquals(12, maxProductSort(testCase3));
+        assertEquals(12, maxProductSpace(testCase3));
     }
 }
 

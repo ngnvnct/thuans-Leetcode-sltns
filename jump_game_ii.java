@@ -35,9 +35,9 @@ public class jump_game_ii {
 
     @Test
     public void testJump() {
-        int[] exampleOne = {2,3,1,1,4};
-        assertEquals(2, jump(exampleOne));
-        assertEquals(2, jump2(exampleOne));
+        int[] testCase1 = {2,3,1,1,4};
+        assertEquals(2, jump(testCase1));
+        assertEquals(2, jump2(testCase1));
     }
 }
 

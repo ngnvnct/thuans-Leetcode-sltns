@@ -31,20 +31,20 @@ public class Number_Of_Good_Pairs_1512 {
 
     @Test
     public void testPairs() {
-        int[] exampleOne = new int[] {1,2,3,1,1,3};
-        int exampleOneExpectedResult = 4;
-        int[] exampleTwo = new int[] {1,1,1,1};
-        int exampleTwoExpectedResult = 6;
-        int[] exampleThree = new int[] {1,2,3};
-        int exampleThreeExpectedResult = 0;
+        int[] testCase1 = new int[] {1,2,3,1,1,3};
+        int testCase1ExpectedResult = 4;
+        int[] testCase2 = new int[] {1,1,1,1};
+        int testCase2ExpectedResult = 6;
+        int[] testCase3 = new int[] {1,2,3};
+        int testCase3ExpectedResult = 0;
 
-        assertEquals(exampleOneExpectedResult, numIdenticalPairs(exampleOne));
-        assertEquals(exampleTwoExpectedResult, numIdenticalPairs(exampleTwo));
-        assertEquals(exampleThreeExpectedResult, numIdenticalPairs(exampleThree));
+        assertEquals(testCase1ExpectedResult, numIdenticalPairs(testCase1));
+        assertEquals(testCase2ExpectedResult, numIdenticalPairs(testCase2));
+        assertEquals(testCase3ExpectedResult, numIdenticalPairs(testCase3));
 
-        assertEquals(exampleOneExpectedResult, numIdenticalPairs2(exampleOne));
-        assertEquals(exampleTwoExpectedResult, numIdenticalPairs2(exampleTwo));
-        assertEquals(exampleThreeExpectedResult, numIdenticalPairs2(exampleThree));
+        assertEquals(testCase1ExpectedResult, numIdenticalPairs2(testCase1));
+        assertEquals(testCase2ExpectedResult, numIdenticalPairs2(testCase2));
+        assertEquals(testCase3ExpectedResult, numIdenticalPairs2(testCase3));
     }
 }
 

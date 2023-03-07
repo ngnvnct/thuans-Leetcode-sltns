@@ -64,12 +64,12 @@ public class Meeting_Rooms_II_253 {
 
     @Test
     public void testMeetingRoom() {
-        int[][] exampleOne = { { 0, 30 }, { 5, 10 }, { 15, 20 } };
-        int[][] exampleTwo = { { 7, 10 }, { 2, 4 } };
-        assertEquals(2, minMeetingRooms(exampleOne));
-        assertEquals(2, minMeetingRooms2(exampleOne));
-        assertEquals(1, minMeetingRooms(exampleTwo));
-        assertEquals(1, minMeetingRooms2(exampleTwo));
+        int[][] testCase1 = { { 0, 30 }, { 5, 10 }, { 15, 20 } };
+        int[][] testCase2 = { { 7, 10 }, { 2, 4 } };
+        assertEquals(2, minMeetingRooms(testCase1));
+        assertEquals(2, minMeetingRooms2(testCase1));
+        assertEquals(1, minMeetingRooms(testCase2));
+        assertEquals(1, minMeetingRooms2(testCase2));
     }
 }
 

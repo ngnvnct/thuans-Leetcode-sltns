@@ -17,12 +17,12 @@ public class smallest_index_equal_value {
 
     @Test
     public void testSmallest() {
-        int[] one = {0,1,2};
-        int[] two = {4,3,2,1};
-        int[] three = {1,2,3,4,5,6,7,8,9,10};
-        assertEquals(0, smallestEqual(one));
-        assertEquals(2, smallestEqual(two));
-        assertEquals(-1, smallestEqual(three));
+        int[] testCase1 = {0,1,2};
+        int[] testCase2 = {4,3,2,1};
+        int[] testCase3 = {1,2,3,4,5,6,7,8,9,10};
+        assertEquals(0, smallestEqual(testCase1));
+        assertEquals(2, smallestEqual(testCase2));
+        assertEquals(-1, smallestEqual(testCase3));
     }
 }
 

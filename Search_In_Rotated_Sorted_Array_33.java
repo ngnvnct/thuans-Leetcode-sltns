@@ -86,15 +86,15 @@ public class Search_In_Rotated_Sorted_Array_33 {
 
     @Test
     public void testSearch() {
-        int[] exampleOne = { 4, 5, 6, 7, 0, 1, 2 };
-        int[] exampleTwo = { 1 };
+        int[] testCase1 = { 4, 5, 6, 7, 0, 1, 2 };
+        int[] testCase2 = { 1 };
         
-        assertEquals(4, search(exampleOne, 0));
-        assertEquals(-1, search(exampleOne, 3));
-        assertEquals(-1, search(exampleTwo, 0));
-        assertEquals(4, searchMethod2(exampleOne, 0));
-        assertEquals(-1, searchMethod2(exampleOne, 3));
-        assertEquals(-1, searchMethod2(exampleTwo, 0));
+        assertEquals(4, search(testCase1, 0));
+        assertEquals(-1, search(testCase1, 3));
+        assertEquals(-1, search(testCase2, 0));
+        assertEquals(4, searchMethod2(testCase1, 0));
+        assertEquals(-1, searchMethod2(testCase1, 3));
+        assertEquals(-1, searchMethod2(testCase2, 0));
     }
 }
 

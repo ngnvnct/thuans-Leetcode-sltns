@@ -32,19 +32,19 @@ public class Final_Prices_With_A_Special_Discount_In_A_Shop_1475 {
 
     @Test
     public void testPrice() {
-        int[] exampleOne = { 8, 4, 6, 2, 3 };
-        int[] exampleOneExpectedResult = { 4, 2, 4, 2, 3 };
-        int[] exampleTwo = { 1, 2, 3, 4, 5 };
-        int[] exampleTwoExpectedResult = { 1, 2, 3, 4, 5 };
+        int[] testCase1 = { 8, 4, 6, 2, 3 };
+        int[] testCase1ExpectedResult = { 4, 2, 4, 2, 3 };
+        int[] testCase2 = { 1, 2, 3, 4, 5 };
+        int[] testCase2ExpectedResult = { 1, 2, 3, 4, 5 };
 
-        assertArrayEquals(exampleOneExpectedResult, finalPricesStack(exampleOne));
-        assertArrayEquals(exampleTwoExpectedResult, finalPricesStack(exampleTwo));
+        assertArrayEquals(testCase1ExpectedResult, finalPricesStack(testCase1));
+        assertArrayEquals(testCase2ExpectedResult, finalPricesStack(testCase2));
 
-        exampleOne = new int[] { 8, 4, 6, 2, 3 };
-        exampleTwo = new int[] { 1, 2, 3, 4, 5 };
+        testCase1 = new int[] { 8, 4, 6, 2, 3 };
+        testCase2 = new int[] { 1, 2, 3, 4, 5 };
 
-        assertArrayEquals(exampleOneExpectedResult, finalPrices(exampleOne));
-        assertArrayEquals(exampleTwoExpectedResult, finalPrices(exampleTwo));
+        assertArrayEquals(testCase1ExpectedResult, finalPrices(testCase1));
+        assertArrayEquals(testCase2ExpectedResult, finalPrices(testCase2));
     }
 }
 

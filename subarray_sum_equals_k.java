@@ -51,19 +51,19 @@ public class subarray_sum_equals_k {
 
     @Test
     public void testSum() {
-        int[] one = {1,1,1};
-        int[] two = {1,2,3};
-        int[] three = {3,4,7,2,-3,1,4,2};
+        int[] testCase1 = {1,1,1};
+        int[] testCase2 = {1,2,3};
+        int[] testCase3 = {3,4,7,2,-3,1,4,2};
 
-        assertEquals(2, subArrayEasy(one, 2));
-        assertEquals(2, subArraySpace(one, 2));
-        assertEquals(2, subArraySum(one, 2));
-        assertEquals(2, subArrayEasy(two, 3));
-        assertEquals(2, subArraySpace(two, 3));
-        assertEquals(2, subArraySum(two, 3));
-        assertEquals(4, subArrayEasy(three, 7));
-        assertEquals(4, subArraySpace(three, 7));
-        assertEquals(4, subArraySum(three, 7));
+        assertEquals(2, subArrayEasy(testCase1, 2));
+        assertEquals(2, subArraySpace(testCase1, 2));
+        assertEquals(2, subArraySum(testCase1, 2));
+        assertEquals(2, subArrayEasy(testCase2, 3));
+        assertEquals(2, subArraySpace(testCase2, 3));
+        assertEquals(2, subArraySum(testCase2, 3));
+        assertEquals(4, subArrayEasy(testCase3, 7));
+        assertEquals(4, subArraySpace(testCase3, 7));
+        assertEquals(4, subArraySum(testCase3, 7));
     }
 }
 

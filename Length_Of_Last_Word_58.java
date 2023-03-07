@@ -45,24 +45,24 @@ public class Length_Of_Last_Word_58 {
 
     @Test
     public void testLength() {
-        String exampleOne = "Hello World";
-        int exampleOneExpectedResult = 5;
-        String exampleTwo = "   fly me   to   the moon  ";
-        int exampleTwoExpectedResult = 4;
-        String exampleThree = "luffy is still joyboy";
-        int exampleThreeExpectedResult = 6;
+        String testCase1 = "Hello World";
+        int testCase1ExpectedResult = 5;
+        String testCase2 = "   fly me   to   the moon  ";
+        int testCase2ExpectedResult = 4;
+        String testCase3 = "luffy is still joyboy";
+        int testCase3ExpectedResult = 6;
 
-        assertEquals(exampleOneExpectedResult, lengthOfLastWord(exampleOne));
-        assertEquals(exampleTwoExpectedResult, lengthOfLastWord(exampleTwo));
-        assertEquals(6, lengthOfLastWord(exampleThree));
+        assertEquals(testCase1ExpectedResult, lengthOfLastWord(testCase1));
+        assertEquals(testCase2ExpectedResult, lengthOfLastWord(testCase2));
+        assertEquals(6, lengthOfLastWord(testCase3));
 
-        assertEquals(exampleOneExpectedResult, lengthOfLastWord2(exampleOne));
-        assertEquals(exampleTwoExpectedResult, lengthOfLastWord2(exampleTwo));
-        assertEquals(exampleThreeExpectedResult, lengthOfLastWord2(exampleThree));
+        assertEquals(testCase1ExpectedResult, lengthOfLastWord2(testCase1));
+        assertEquals(testCase2ExpectedResult, lengthOfLastWord2(testCase2));
+        assertEquals(testCase3ExpectedResult, lengthOfLastWord2(testCase3));
 
-        assertEquals(exampleOneExpectedResult, lengthOfLastWord3(exampleOne));
-        assertEquals(exampleTwoExpectedResult, lengthOfLastWord3(exampleTwo));
-        assertEquals(exampleThreeExpectedResult, lengthOfLastWord3(exampleThree));
+        assertEquals(testCase1ExpectedResult, lengthOfLastWord3(testCase1));
+        assertEquals(testCase2ExpectedResult, lengthOfLastWord3(testCase2));
+        assertEquals(testCase3ExpectedResult, lengthOfLastWord3(testCase3));
     }
 }
 

@@ -28,10 +28,10 @@ public class Finding_The_Users_Active_Minutes_1817 {
 
     @Test
     public void testUAM() {
-        int[][] exampleOne = { { 0, 5 }, { 1, 2 }, { 0, 2 }, { 0, 5 }, { 1, 3 } };
-        int[][] exampleTwo = { { 1, 1 }, { 2, 2 }, { 2, 3 } };
-        assertArrayEquals(new int[] { 0, 2, 0, 0, 0 }, findingUAM(exampleOne, 5));
-        assertArrayEquals(new int[] { 1, 1, 0, 0 }, findingUAM(exampleTwo, 4));
+        int[][] testCase1 = { { 0, 5 }, { 1, 2 }, { 0, 2 }, { 0, 5 }, { 1, 3 } };
+        int[][] testCase2 = { { 1, 1 }, { 2, 2 }, { 2, 3 } };
+        assertArrayEquals(new int[] { 0, 2, 0, 0, 0 }, findingUAM(testCase1, 5));
+        assertArrayEquals(new int[] { 1, 1, 0, 0 }, findingUAM(testCase2, 4));
     }
 }
 

@@ -41,10 +41,10 @@ public class minimum_time_difference {
 
     @Test
     public void testMinDifference() {
-        List<String> exampleOne = new ArrayList<>(Arrays.asList("23:59","00:00"));
-        List<String> exampleTwo = new ArrayList<>(Arrays.asList("00:00","23:59","00:00"));
-        assertEquals(1, findMinDifferent(exampleOne));
-        assertEquals(0, findMinDifferent(exampleTwo));
+        List<String> testCase1 = new ArrayList<>(Arrays.asList("23:59","00:00"));
+        List<String> testCase2 = new ArrayList<>(Arrays.asList("00:00","23:59","00:00"));
+        assertEquals(1, findMinDifferent(testCase1));
+        assertEquals(0, findMinDifferent(testCase2));
     }
 }
 

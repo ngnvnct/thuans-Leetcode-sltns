@@ -32,16 +32,16 @@ public class Making_File_Names_Unique_1487 {
 
     @Test
     public void testUniqueFileName() {
-        String[] exampleOne = { "pes", "fifa", "gta", "pes(2019)" };
-        String[] exampleOneExpectedResult = { "pes", "fifa", "gta", "pes(2019)" };
-        String[] exampleTwo = { "gta", "gta(1)", "gta", "avalon" };
-        String[] exampleTwoExpectedResult = { "gta", "gta(1)", "gta(2)", "avalon" };
-        String[] exampleThree = { "onepiece", "onepiece(1)", "onepiece(2)", "onepiece(3)", "onepiece" };
-        String[] exampleThreeExpectedResult = { "onepiece", "onepiece(1)", "onepiece(2)", "onepiece(3)","onepiece(4)" };
+        String[] testCase1 = { "pes", "fifa", "gta", "pes(2019)" };
+        String[] testCase1ExpectedResult = { "pes", "fifa", "gta", "pes(2019)" };
+        String[] testCase2 = { "gta", "gta(1)", "gta", "avalon" };
+        String[] testCase2ExpectedResult = { "gta", "gta(1)", "gta(2)", "avalon" };
+        String[] testCase3 = { "onepiece", "onepiece(1)", "onepiece(2)", "onepiece(3)", "onepiece" };
+        String[] testCase3ExpectedResult = { "onepiece", "onepiece(1)", "onepiece(2)", "onepiece(3)","onepiece(4)" };
 
-        assertArrayEquals(exampleOneExpectedResult, getFolderNames(exampleOne));
-        assertArrayEquals(exampleTwoExpectedResult, getFolderNames(exampleTwo));
-        assertArrayEquals(exampleThreeExpectedResult, getFolderNames(exampleThree));
+        assertArrayEquals(testCase1ExpectedResult, getFolderNames(testCase1));
+        assertArrayEquals(testCase2ExpectedResult, getFolderNames(testCase2));
+        assertArrayEquals(testCase3ExpectedResult, getFolderNames(testCase3));
     }
 }
 

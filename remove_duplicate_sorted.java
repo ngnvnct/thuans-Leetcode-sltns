@@ -18,11 +18,11 @@ public class remove_duplicate_sorted {
 
     @Test
     public void testRemoveDuplicate() {
-        int[] exampleOne = new int[] {1,1,2};
-        assertEquals(2, removeDuplicates(exampleOne));
+        int[] testCase1 = new int[] {1,1,2};
+        assertEquals(2, removeDuplicates(testCase1));
 
-        int[] exampleTwo = new int[] {0,0,1,1,1,2,2,3,3,4};
-        assertEquals(5, removeDuplicates(exampleTwo));
+        int[] testCase2 = new int[] {0,0,1,1,1,2,2,3,3,4};
+        assertEquals(5, removeDuplicates(testCase2));
     }
 }
 

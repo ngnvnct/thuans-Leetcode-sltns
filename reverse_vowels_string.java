@@ -55,12 +55,12 @@ public class reverse_vowels_string {
 
     @Test
     public void testReverseVowels() {
-        String exampleOne = "hello";
-        String exampleTwo = "leetcode";
-        assertEquals("holle", reverseVowels(exampleOne));
-        assertEquals("holle", reverseVowels2(exampleOne));
-        assertEquals("leotcede", reverseVowels(exampleTwo));
-        assertEquals("leotcede", reverseVowels2(exampleTwo));
+        String testCase1 = "hello";
+        String testCase2 = "leetcode";
+        assertEquals("holle", reverseVowels(testCase1));
+        assertEquals("holle", reverseVowels2(testCase1));
+        assertEquals("leotcede", reverseVowels(testCase2));
+        assertEquals("leotcede", reverseVowels2(testCase2));
     }
 }
 

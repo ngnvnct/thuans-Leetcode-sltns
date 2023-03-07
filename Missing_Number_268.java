@@ -55,24 +55,24 @@ public class Missing_Number_268 {
 
     @Test
     public void testMissingNumber() {
-        int[] exampleOne = {3,0,1};
-        int exampleOneExpectedResult = 2;
-        int[] exampleTwo = {0,1};
-        int exampleTwoExpectedResult = 2;
-        int[] exampleThree = {9,6,4,2,3,5,7,0,1};
-        int exampleThreeExpectedResult = 8;
+        int[] testCase1 = {3,0,1};
+        int testCase1ExpectedResult = 2;
+        int[] testCase2 = {0,1};
+        int testCase2ExpectedResult = 2;
+        int[] testCase3 = {9,6,4,2,3,5,7,0,1};
+        int testCase3ExpectedResult = 8;
 
-        assertEquals(exampleOneExpectedResult, missingNumber(exampleOne));
-        assertEquals(exampleTwoExpectedResult, missingNumber(exampleTwo));
-        assertEquals(exampleThreeExpectedResult, missingNumber(exampleThree));
+        assertEquals(testCase1ExpectedResult, missingNumber(testCase1));
+        assertEquals(testCase2ExpectedResult, missingNumber(testCase2));
+        assertEquals(testCase3ExpectedResult, missingNumber(testCase3));
 
-        assertEquals(exampleOneExpectedResult, missingNumberBit(exampleOne));
-        assertEquals(exampleTwoExpectedResult, missingNumberBit(exampleTwo));
-        assertEquals(exampleThreeExpectedResult, missingNumberBit(exampleThree));
+        assertEquals(testCase1ExpectedResult, missingNumberBit(testCase1));
+        assertEquals(testCase2ExpectedResult, missingNumberBit(testCase2));
+        assertEquals(testCase3ExpectedResult, missingNumberBit(testCase3));
 
-        assertEquals(exampleOneExpectedResult, missingNumberBinarySearch(exampleOne));
-        assertEquals(exampleTwoExpectedResult, missingNumberBinarySearch(exampleTwo));
-        assertEquals(exampleThreeExpectedResult, missingNumberBinarySearch(exampleThree));
+        assertEquals(testCase1ExpectedResult, missingNumberBinarySearch(testCase1));
+        assertEquals(testCase2ExpectedResult, missingNumberBinarySearch(testCase2));
+        assertEquals(testCase3ExpectedResult, missingNumberBinarySearch(testCase3));
     }
 }
 

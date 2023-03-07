@@ -32,16 +32,16 @@ public class First_Letter_To_Appear_Twice_2351 {
 
     @Test
     public void testLetter() {
-        String exampleOne = "abccbaacz";
-        char exampleOneExpectedResult = 'c';
-        String exampleTwo = "abcdd";
-        char exampleTwoExpectedResult = 'd';
+        String testCase1 = "abccbaacz";
+        char testCase1ExpectedResult = 'c';
+        String testCase2 = "abcdd";
+        char testCase2ExpectedResult = 'd';
 
-        assertEquals(exampleOneExpectedResult, repeatedCharacter(exampleOne));
-        assertEquals(exampleTwoExpectedResult, repeatedCharacter(exampleTwo));
+        assertEquals(testCase1ExpectedResult, repeatedCharacter(testCase1));
+        assertEquals(testCase2ExpectedResult, repeatedCharacter(testCase2));
 
-        assertEquals(exampleOneExpectedResult, repeatedCharacter2(exampleOne));
-        assertEquals(exampleTwoExpectedResult, repeatedCharacter2(exampleTwo));
+        assertEquals(testCase1ExpectedResult, repeatedCharacter2(testCase1));
+        assertEquals(testCase2ExpectedResult, repeatedCharacter2(testCase2));
     }
 }
 

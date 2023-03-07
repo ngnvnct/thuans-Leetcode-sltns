@@ -36,11 +36,11 @@ public class Relative_Ranks_506 {
 
     @Test
     public void testRelativeRanks() {
-        String[] exampleOneExpectedResult = { "Gold Medal", "Silver Medal", "Bronze Medal", "4", "5" };
-        String[] exampleTwoExpectedResult = { "Gold Medal", "5", "Bronze Medal", "Silver Medal", "4" };
+        String[] testCase1ExpectedResult = { "Gold Medal", "Silver Medal", "Bronze Medal", "4", "5" };
+        String[] testCase2ExpectedResult = { "Gold Medal", "5", "Bronze Medal", "Silver Medal", "4" };
 
-        assertArrayEquals(exampleOneExpectedResult, findRelativeRanks(new int[] { 5, 4, 3, 2, 1 }));
-        assertArrayEquals(exampleTwoExpectedResult, findRelativeRanks(new int[] { 10, 3, 8, 9, 4 }));
+        assertArrayEquals(testCase1ExpectedResult, findRelativeRanks(new int[] { 5, 4, 3, 2, 1 }));
+        assertArrayEquals(testCase2ExpectedResult, findRelativeRanks(new int[] { 10, 3, 8, 9, 4 }));
     }
 }
 

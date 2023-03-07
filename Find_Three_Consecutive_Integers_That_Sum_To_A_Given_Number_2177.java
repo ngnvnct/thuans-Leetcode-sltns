@@ -23,16 +23,16 @@ public class Find_Three_Consecutive_Integers_That_Sum_To_A_Given_Number_2177 {
 
     @Test
     public void testSumOfThree() {
-        long exampleOne = 33;
-        long[] exampleOneExpectedResult = { 10, 11, 12 };
-        long exampleTwo = 4;
-        long[] exampleTwoExpectedResult = {};
+        long testCase1 = 33;
+        long[] testCase1ExpectedResult = { 10, 11, 12 };
+        long testCase2 = 4;
+        long[] testCase2ExpectedResult = {};
 
-        assertArrayEquals(exampleOneExpectedResult, sumOfThree(exampleOne));
-        assertArrayEquals(exampleTwoExpectedResult, sumOfThree(exampleTwo));
+        assertArrayEquals(testCase1ExpectedResult, sumOfThree(testCase1));
+        assertArrayEquals(testCase2ExpectedResult, sumOfThree(testCase2));
 
-        assertArrayEquals(exampleOneExpectedResult, sumOfThree2(exampleOne));
-        assertArrayEquals(exampleTwoExpectedResult, sumOfThree2(exampleTwo));
+        assertArrayEquals(testCase1ExpectedResult, sumOfThree2(testCase1));
+        assertArrayEquals(testCase2ExpectedResult, sumOfThree2(testCase2));
     }
 }
 

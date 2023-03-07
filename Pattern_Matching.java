@@ -8,10 +8,10 @@ import org.junit.Test;
 
 public class Pattern_Matching {
     public static void main(String[] args) {
-        String[] exampleTwo = { "hat", "mat", "kick" };
+        String[] testCase2 = { "hat", "mat", "kick" };
         char[] patternTwo = { 'a', 'b', 'a' };
         Pattern_Matching sol = new Pattern_Matching();
-        System.out.println(sol.patternMatching(exampleTwo, patternTwo));
+        System.out.println(sol.patternMatching(testCase2, patternTwo));
     }
 
     public boolean patternMatching(String[] words, char[] pattern) {
@@ -39,13 +39,13 @@ public class Pattern_Matching {
 
     @Test
     public void testPattern() {
-        String[] exampleOne = { "cat", "dog", "dog" };
+        String[] testCase1 = { "cat", "dog", "dog" };
         char[] patternOne = { 'a', 'b', 'b' };
-        String[] exampleTwo = { "hat", "mat", "kick" };
+        String[] testCase2 = { "hat", "mat", "kick" };
         char[] patternTwo = { 'a', 'b', 'a' };
 
-        assertTrue(patternMatching(exampleOne, patternOne));
-        assertFalse(patternMatching(exampleTwo, patternTwo));
+        assertTrue(patternMatching(testCase1, patternOne));
+        assertFalse(patternMatching(testCase2, patternTwo));
     }
 }
 

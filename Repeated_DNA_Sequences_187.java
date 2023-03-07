@@ -86,19 +86,19 @@ public class Repeated_DNA_Sequences_187 {
 
     @Test(timeout = 100)
     public void testDNA() {
-        String exampleOne = "AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT";
-        List<String> exampleOneExpectedResult = new ArrayList<>(Arrays.asList("AAAAACCCCC", "CCCCCAAAAA"));
-        String exampleTwo = "AAAAAAAAAAAAA";
-        List<String> exampleTwoExpectedResult = new ArrayList<>(Arrays.asList("AAAAAAAAAA"));
+        String testCase1 = "AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT";
+        List<String> testCase1ExpectedResult = new ArrayList<>(Arrays.asList("AAAAACCCCC", "CCCCCAAAAA"));
+        String testCase2 = "AAAAAAAAAAAAA";
+        List<String> testCase2ExpectedResult = new ArrayList<>(Arrays.asList("AAAAAAAAAA"));
 
-        assertEquals(exampleOneExpectedResult, findRepeatedDnaSequences(exampleOne));
-        assertEquals(exampleTwoExpectedResult, findRepeatedDnaSequences(exampleTwo));
+        assertEquals(testCase1ExpectedResult, findRepeatedDnaSequences(testCase1));
+        assertEquals(testCase2ExpectedResult, findRepeatedDnaSequences(testCase2));
 
-        assertEquals(exampleOneExpectedResult, findRepeatedDnaSequencesMap(exampleOne));
-        assertEquals(exampleTwoExpectedResult, findRepeatedDnaSequencesMap(exampleTwo));
+        assertEquals(testCase1ExpectedResult, findRepeatedDnaSequencesMap(testCase1));
+        assertEquals(testCase2ExpectedResult, findRepeatedDnaSequencesMap(testCase2));
 
-        assertEquals(exampleOneExpectedResult, findRepeatedDnaSequences3(exampleOne));
-        assertEquals(exampleTwoExpectedResult, findRepeatedDnaSequences3(exampleTwo));
+        assertEquals(testCase1ExpectedResult, findRepeatedDnaSequences3(testCase1));
+        assertEquals(testCase2ExpectedResult, findRepeatedDnaSequences3(testCase2));
     }
 }
 

@@ -72,24 +72,24 @@ public class Longest_Consecutive_Sequence_128 {
 
     @Test
     public void testLongestSequence() {
-        int[] exampleOne = new int[] { 100, 4, 200, 1, 3, 2 };
-        int exampleOneExpectedResult = 4;
-        int[] exampleTwo = new int[] { 1, 2, 0, 1 };
-        int exampleTwoExpectedResult = 3;
-        int[] exampleThree = new int[] { 0, 3, 7, 2, 5, 8, 4, 6, 0, 1 };
-        int exampleThreeExpectedResult = 9;
+        int[] testCase1 = new int[] { 100, 4, 200, 1, 3, 2 };
+        int testCase1ExpectedResult = 4;
+        int[] testCase2 = new int[] { 1, 2, 0, 1 };
+        int testCase2ExpectedResult = 3;
+        int[] testCase3 = new int[] { 0, 3, 7, 2, 5, 8, 4, 6, 0, 1 };
+        int testCase3ExpectedResult = 9;
 
-        assertEquals(exampleOneExpectedResult, longestConsecutive(exampleOne));
-        assertEquals(exampleTwoExpectedResult, longestConsecutive(exampleTwo));
-        assertEquals(exampleThreeExpectedResult, longestConsecutive(exampleThree));
+        assertEquals(testCase1ExpectedResult, longestConsecutive(testCase1));
+        assertEquals(testCase2ExpectedResult, longestConsecutive(testCase2));
+        assertEquals(testCase3ExpectedResult, longestConsecutive(testCase3));
 
-        assertEquals(exampleOneExpectedResult, longestConsecutive2(exampleOne));
-        assertEquals(exampleTwoExpectedResult, longestConsecutive2(exampleTwo));
-        assertEquals(exampleThreeExpectedResult, longestConsecutive2(exampleThree));
+        assertEquals(testCase1ExpectedResult, longestConsecutive2(testCase1));
+        assertEquals(testCase2ExpectedResult, longestConsecutive2(testCase2));
+        assertEquals(testCase3ExpectedResult, longestConsecutive2(testCase3));
 
-        assertEquals(exampleOneExpectedResult, longestConsecutiveSet(exampleOne));
-        assertEquals(exampleTwoExpectedResult, longestConsecutiveSet(exampleTwo));
-        assertEquals(exampleThreeExpectedResult, longestConsecutiveSet(exampleThree));
+        assertEquals(testCase1ExpectedResult, longestConsecutiveSet(testCase1));
+        assertEquals(testCase2ExpectedResult, longestConsecutiveSet(testCase2));
+        assertEquals(testCase3ExpectedResult, longestConsecutiveSet(testCase3));
     }
 }
 

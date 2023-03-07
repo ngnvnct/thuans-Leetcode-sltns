@@ -42,14 +42,14 @@ public class Last_Stone_Weight_1046 {
 
     @Test
     public void testLastStoneWeight() {
-        List<Integer> exampleOne = Arrays.asList(2, 7, 4, 1, 8, 1);
+        List<Integer> testCase1 = Arrays.asList(2, 7, 4, 1, 8, 1);
         int[] arrayOne = { 2, 7, 4, 1, 8, 1 };
-        List<Integer> exampleTwo = Arrays.asList(1);
+        List<Integer> testCase2 = Arrays.asList(1);
         int[] arrayTwo = { 1 };
         assertEquals(1, lastStoneWeight(arrayOne));
-        assertEquals(1, lastStoneWeightList(exampleOne));
+        assertEquals(1, lastStoneWeightList(testCase1));
         assertEquals(1, lastStoneWeight(arrayTwo));
-        assertEquals(1, lastStoneWeightList(exampleTwo));
+        assertEquals(1, lastStoneWeightList(testCase2));
     }
 }
 

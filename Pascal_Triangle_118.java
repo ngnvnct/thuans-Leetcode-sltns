@@ -29,11 +29,11 @@ public class Pascal_Triangle_118 {
 
     @Test
     public void testTriangle() {
-        List<List<Integer>> exampleOneExpectedResult = List.of(List.of(1), List.of(1,1), List.of(1,2,1), List.of(1,3,3,1), List.of(1,4,6,4,1));
-        List<List<Integer>> exampleTwoExpectedResult = List.of(List.of(1));
+        List<List<Integer>> testCase1ExpectedResult = List.of(List.of(1), List.of(1,1), List.of(1,2,1), List.of(1,3,3,1), List.of(1,4,6,4,1));
+        List<List<Integer>> testCase2ExpectedResult = List.of(List.of(1));
         
-        assertEquals(exampleOneExpectedResult, generate(5));
-        assertEquals(exampleTwoExpectedResult, generate(1));
+        assertEquals(testCase1ExpectedResult, generate(5));
+        assertEquals(testCase2ExpectedResult, generate(1));
     }
 }
 

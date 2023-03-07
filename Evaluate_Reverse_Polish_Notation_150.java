@@ -93,24 +93,24 @@ public class Evaluate_Reverse_Polish_Notation_150 {
 
     @Test
     public void testRPN() {
-        String[] exampleOne = { "2", "1", "+", "3", "*" };
-        int exampleOneExpectedResult = 9;
-        String[] exampleTwo = { "4", "13", "5", "/", "+" };
-        int exampleTwoExpectedResult = 6;
-        String[] exampleThree = { "10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+" };
-        int exampleThreeExpectedResult = 22;
+        String[] testCase1 = { "2", "1", "+", "3", "*" };
+        int testCase1ExpectedResult = 9;
+        String[] testCase2 = { "4", "13", "5", "/", "+" };
+        int testCase2ExpectedResult = 6;
+        String[] testCase3 = { "10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+" };
+        int testCase3ExpectedResult = 22;
 
-        assertEquals(exampleOneExpectedResult, evalRPN(exampleOne));
-        assertEquals(exampleTwoExpectedResult, evalRPN(exampleTwo));
-        assertEquals(exampleThreeExpectedResult, evalRPN(exampleThree));
+        assertEquals(testCase1ExpectedResult, evalRPN(testCase1));
+        assertEquals(testCase2ExpectedResult, evalRPN(testCase2));
+        assertEquals(testCase3ExpectedResult, evalRPN(testCase3));
 
-        assertEquals(exampleOneExpectedResult, evalRPNMethodTwo(exampleOne));
-        assertEquals(exampleTwoExpectedResult, evalRPNMethodTwo(exampleTwo));
-        assertEquals(exampleThreeExpectedResult, evalRPNMethodTwo(exampleThree));
+        assertEquals(testCase1ExpectedResult, evalRPNMethodTwo(testCase1));
+        assertEquals(testCase2ExpectedResult, evalRPNMethodTwo(testCase2));
+        assertEquals(testCase3ExpectedResult, evalRPNMethodTwo(testCase3));
 
-        assertEquals(exampleOneExpectedResult, evalRPNMethodThree(exampleOne));
-        assertEquals(exampleTwoExpectedResult, evalRPNMethodThree(exampleTwo));
-        assertEquals(exampleThreeExpectedResult, evalRPNMethodThree(exampleThree));
+        assertEquals(testCase1ExpectedResult, evalRPNMethodThree(testCase1));
+        assertEquals(testCase2ExpectedResult, evalRPNMethodThree(testCase2));
+        assertEquals(testCase3ExpectedResult, evalRPNMethodThree(testCase3));
     }
 }
 

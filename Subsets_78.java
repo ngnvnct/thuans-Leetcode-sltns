@@ -38,11 +38,11 @@ public class Subsets_78 {
 
     @Test
     public void testSubset() {
-        List<List<Integer>> exampleOneExpectedResult = List.of(List.of(1), List.of());
-        List<List<Integer>> exampleTwoExpectedResult = List.of(List.of(1,3,2), List.of(1,3), List.of(1,2), List.of(1), List.of(3,2), List.of(3), List.of(2), List.of());
+        List<List<Integer>> testCase1ExpectedResult = List.of(List.of(1), List.of());
+        List<List<Integer>> testCase2ExpectedResult = List.of(List.of(1,3,2), List.of(1,3), List.of(1,2), List.of(1), List.of(3,2), List.of(3), List.of(2), List.of());
 
-        assertEquals(exampleOneExpectedResult, subset(new int[] {1}));
-        assertEquals(exampleTwoExpectedResult, subset(new int[] {1,3,2}));
+        assertEquals(testCase1ExpectedResult, subset(new int[] {1}));
+        assertEquals(testCase2ExpectedResult, subset(new int[] {1,3,2}));
     }
 }
 

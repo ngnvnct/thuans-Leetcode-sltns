@@ -18,11 +18,11 @@ public class remove_element {
 
     @Test
     public void testRemoveDuplicate() {
-        int[] exampleOne = new int[] {3,2,2,3};
-        assertEquals(2, removeElement(exampleOne,3));
+        int[] testCase1 = new int[] {3,2,2,3};
+        assertEquals(2, removeElement(testCase1,3));
 
-        int[] exampleTwo = new int[] {0,1,2,2,3,0,4,2};
-        assertEquals(5, removeElement(exampleTwo,2));
+        int[] testCase2 = new int[] {0,1,2,2,3,0,4,2};
+        assertEquals(5, removeElement(testCase2,2));
     }
 }
 

@@ -60,11 +60,11 @@ public class Spiral_Matrix_54 {
 
     @Test
     public void testSpiralMatrix() {
-        List<Integer> exampleOneExpectedResult = new ArrayList<>(Arrays.asList(1, 2, 3, 6, 9, 8, 7, 4, 5));
-        List<Integer> exampleTwoExpectedResult = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 8, 12, 11, 10, 9, 5, 6, 7));
+        List<Integer> testCase1ExpectedResult = new ArrayList<>(Arrays.asList(1, 2, 3, 6, 9, 8, 7, 4, 5));
+        List<Integer> testCase2ExpectedResult = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 8, 12, 11, 10, 9, 5, 6, 7));
 
-        assertEquals(exampleOneExpectedResult, spiralOrder(new int[][] { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } }));
-        assertEquals(exampleTwoExpectedResult,
+        assertEquals(testCase1ExpectedResult, spiralOrder(new int[][] { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } }));
+        assertEquals(testCase2ExpectedResult,
                 spiralOrder(new int[][] { { 1, 2, 3, 4 }, { 5, 6, 7, 8 }, { 9, 10, 11, 12 } }));
     }
 }

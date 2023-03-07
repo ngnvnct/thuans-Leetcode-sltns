@@ -38,13 +38,13 @@ public class single_threaded_cpu {
 
     @Test
     public void testCPU() {
-        int[][] exampleOne = {{1,2},{2,4},{3,2},{4,1}};
+        int[][] testCase1 = {{1,2},{2,4},{3,2},{4,1}};
         int[] expected = {0,2,3,1};
-        int[][] exampleTwo = {{7,10},{7,12},{7,5},{7,4},{7,2}};
-        int[] expectedTwo = {4,3,2,0,1};
+        int[][] testCase2 = {{7,10},{7,12},{7,5},{7,4},{7,2}};
+        int[] testCase2ExpectedResult = {4,3,2,0,1};
 
-        assertEquals(Arrays.toString(expected),Arrays.toString(getOrder(exampleOne)));
-        assertEquals(Arrays.toString(expectedTwo), Arrays.toString(getOrder(exampleTwo)));
+        assertEquals(Arrays.toString(expected),Arrays.toString(getOrder(testCase1)));
+        assertEquals(Arrays.toString(testCase2ExpectedResult), Arrays.toString(getOrder(testCase2)));
     }
 }
 

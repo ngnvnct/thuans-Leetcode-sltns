@@ -45,16 +45,16 @@ public class longest_string_chain {
 
     @Test
     public void testLongestStrChain() {
-        String[] exampleOne = { "a", "b", "ba", "bca", "bda", "bdca" };
-        String[] exampleTwo = { "xbc", "pcxbcf", "xb", "cxbc", "pcxbc" };
-        String[] exampleThree = { "abcd", "dbqca" };
+        String[] testCase1 = { "a", "b", "ba", "bca", "bda", "bdca" };
+        String[] testCase2 = { "xbc", "pcxbcf", "xb", "cxbc", "pcxbc" };
+        String[] testCase3 = { "abcd", "dbqca" };
 
-        assertEquals(4, longestStrChain(exampleOne));
-        assertEquals(4, longestStrChain(exampleOne));
-        assertEquals(5, longestStrChainMethod2(exampleTwo));
-        assertEquals(5, longestStrChainMethod2(exampleTwo));
-        assertEquals(1, longestStrChain(exampleThree));
-        assertEquals(1, longestStrChain(exampleThree));
+        assertEquals(4, longestStrChain(testCase1));
+        assertEquals(4, longestStrChain(testCase1));
+        assertEquals(5, longestStrChainMethod2(testCase2));
+        assertEquals(5, longestStrChainMethod2(testCase2));
+        assertEquals(1, longestStrChain(testCase3));
+        assertEquals(1, longestStrChain(testCase3));
     }
 }
 

@@ -65,17 +65,17 @@ public class Check_If_A_Number_Is_Majority_Element_In_A_Sorted_Array_1150 {
 
     @Test
     public void testMajority() {
-        int[] exampleOne = { 2, 4, 5, 5, 5, 5, 5, 6, 6 };
-        int[] exampleTwo = { 10, 100, 101, 101 };
+        int[] testCase1 = { 2, 4, 5, 5, 5, 5, 5, 6, 6 };
+        int[] testCase2 = { 10, 100, 101, 101 };
 
-        assertTrue(isMajorityElement(exampleOne, 5));
-        assertFalse(isMajorityElement(exampleTwo, 101));
+        assertTrue(isMajorityElement(testCase1, 5));
+        assertFalse(isMajorityElement(testCase2, 101));
 
-        assertTrue(isMajorityElementHash(exampleOne, 5));
-        assertFalse(isMajorityElementHash(exampleTwo, 101));
+        assertTrue(isMajorityElementHash(testCase1, 5));
+        assertFalse(isMajorityElementHash(testCase2, 101));
 
-        assertTrue(isMajorityElementBinarySearch(exampleOne, 5));
-        assertFalse(isMajorityElementBinarySearch(exampleTwo, 101));
+        assertTrue(isMajorityElementBinarySearch(testCase1, 5));
+        assertFalse(isMajorityElementBinarySearch(testCase2, 101));
     }
 }
 

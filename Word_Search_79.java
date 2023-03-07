@@ -39,13 +39,13 @@ public class Word_Search_79 {
     @Test
     public void testWordSearch() {
         char[][] boardOne = { { 'A', 'B', 'C', 'E' }, { 'S', 'F', 'C', 'S' }, { 'A', 'D', 'E', 'E' } };
-        String exampleOne = "ABCCED";
-        String exampleTwo = "SEE";
-        String exampleThree = "ABCB";
+        String testCase1 = "ABCCED";
+        String testCase2 = "SEE";
+        String testCase3 = "ABCB";
         
-        assertTrue(wordSearch(boardOne, exampleOne));
-        assertTrue(wordSearch(boardOne, exampleTwo));
-        assertFalse(wordSearch(boardOne, exampleThree));
+        assertTrue(wordSearch(boardOne, testCase1));
+        assertTrue(wordSearch(boardOne, testCase2));
+        assertFalse(wordSearch(boardOne, testCase3));
     }
 }
 

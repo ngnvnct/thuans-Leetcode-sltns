@@ -42,15 +42,15 @@ public class Min_Cost_Climbing_Stairs_746 {
 
     @Test
     public void testClimbingStairs() {
-        int[] exampleOne = new int[] { 10, 15, 20 };
-        assertEquals(15, minCostClimbingStairs(exampleOne));
-        assertEquals(15, minCostClimbingStairsDP(exampleOne));
-        assertEquals(15, minstCostClimbingStairsRecursion(exampleOne));
+        int[] testCase1 = new int[] { 10, 15, 20 };
+        assertEquals(15, minCostClimbingStairs(testCase1));
+        assertEquals(15, minCostClimbingStairsDP(testCase1));
+        assertEquals(15, minstCostClimbingStairsRecursion(testCase1));
 
-        int[] exampleTwo = new int[] { 1, 100, 1, 1, 1, 100, 1, 1, 100, 1 };
-        assertEquals(6, minCostClimbingStairs(exampleTwo));
-        assertEquals(6, minCostClimbingStairsDP(exampleTwo));
-        assertEquals(6, minstCostClimbingStairsRecursion(exampleTwo));
+        int[] testCase2 = new int[] { 1, 100, 1, 1, 1, 100, 1, 1, 100, 1 };
+        assertEquals(6, minCostClimbingStairs(testCase2));
+        assertEquals(6, minCostClimbingStairsDP(testCase2));
+        assertEquals(6, minstCostClimbingStairsRecursion(testCase2));
     }
 }
 

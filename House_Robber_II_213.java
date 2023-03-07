@@ -46,10 +46,10 @@ public class House_Robber_II_213 {
 
     @Test
     public void testHouseRobber() {
-        int[] exampleOne = { 2, 3, 2 };
-        int[] exampleTwo = { 1, 2, 3, 1 };
-        assertEquals(3, houseRobber(exampleOne));
-        assertEquals(4, houseRobber(exampleTwo));
+        int[] testCase1 = { 2, 3, 2 };
+        int[] testCase2 = { 1, 2, 3, 1 };
+        assertEquals(3, houseRobber(testCase1));
+        assertEquals(4, houseRobber(testCase2));
     }
 }
 

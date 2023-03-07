@@ -34,21 +34,21 @@ public class Number_Of_Islands_200 {
 
     @Test
     public void testIslands() {
-        char[][] exampleOne = {
+        char[][] testCase1 = {
                 { '1', '1', '1', '1', '0' },
                 { '1', '1', '0', '1', '0' },
                 { '1', '1', '0', '0', '0' },
                 { '0', '0', '0', '0', '0' }
         };
-        assertEquals(1, numIslands(exampleOne));
+        assertEquals(1, numIslands(testCase1));
 
-        char[][] exampleTwo = {
+        char[][] testCase2 = {
                 { '1', '1', '0', '0', '0' },
                 { '1', '1', '0', '0', '0' },
                 { '0', '0', '1', '0', '0' },
                 { '0', '0', '0', '1', '1' }
         };
-        assertEquals(3, numIslands(exampleTwo));
+        assertEquals(3, numIslands(testCase2));
     }
 
 }

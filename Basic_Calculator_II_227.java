@@ -112,24 +112,24 @@ public class Basic_Calculator_II_227 {
 
     @Test
     public void testCalculate() {
-        String exampleOne = "3+2*2";
-        int exampleOneExpectedResult = 7;
-        String exampleTwo = "3/2";
-        int exampleTwoExpectedResult = 1;
-        String exampleThree = "3+5 / 2";
-        int exampleThreeExpectedResult = 5;
+        String testCase1 = "3+2*2";
+        int testCase1ExpectedResult = 7;
+        String testCase2 = "3/2";
+        int testCase2ExpectedResult = 1;
+        String testCase3 = "3+5 / 2";
+        int testCase3ExpectedResult = 5;
 
-        assertEquals(exampleOneExpectedResult, calculate(exampleOne));
-        assertEquals(exampleTwoExpectedResult, calculate(exampleTwo));
-        assertEquals(exampleThreeExpectedResult, calculate(exampleThree));
+        assertEquals(testCase1ExpectedResult, calculate(testCase1));
+        assertEquals(testCase2ExpectedResult, calculate(testCase2));
+        assertEquals(testCase3ExpectedResult, calculate(testCase3));
 
-        assertEquals(exampleOneExpectedResult, calculateEasy(exampleOne));
-        assertEquals(exampleTwoExpectedResult, calculateEasy(exampleTwo));
-        assertEquals(exampleThreeExpectedResult, calculateEasy(exampleThree));
+        assertEquals(testCase1ExpectedResult, calculateEasy(testCase1));
+        assertEquals(testCase2ExpectedResult, calculateEasy(testCase2));
+        assertEquals(testCase3ExpectedResult, calculateEasy(testCase3));
 
-        assertEquals(exampleOneExpectedResult, calculateOptimal(exampleOne));
-        assertEquals(exampleTwoExpectedResult, calculateOptimal(exampleTwo));
-        assertEquals(exampleThreeExpectedResult, calculateOptimal(exampleThree));
+        assertEquals(testCase1ExpectedResult, calculateOptimal(testCase1));
+        assertEquals(testCase2ExpectedResult, calculateOptimal(testCase2));
+        assertEquals(testCase3ExpectedResult, calculateOptimal(testCase3));
 
     }
 }

@@ -48,15 +48,15 @@ public class two_sum_closest_to_zero {
 
     @Test (timeout = 100)
     public void testTwoSumClosest() {
-        int[] one = {1, 60, -10, 70, -80, 85};
-        int[] two = {-8, -66, -60};
-        int[] three = {-21,-67,-37,-18,4,-65};
-        assertEquals(5, twoSumClosest(one));
-        assertEquals(-68, twoSumClosest(two));
-        assertEquals(-14, twoSumClosest(three));
-        assertEquals(5, twoSumClosestSort(one));
-        assertEquals(-68, twoSumClosestSort(two));
-        assertEquals(-14, twoSumClosestSort(three));
+        int[] testCase1 = {1, 60, -10, 70, -80, 85};
+        int[] testCase2 = {-8, -66, -60};
+        int[] testCase3 = {-21,-67,-37,-18,4,-65};
+        assertEquals(5, twoSumClosest(testCase1));
+        assertEquals(-68, twoSumClosest(testCase2));
+        assertEquals(-14, twoSumClosest(testCase3));
+        assertEquals(5, twoSumClosestSort(testCase1));
+        assertEquals(-68, twoSumClosestSort(testCase2));
+        assertEquals(-14, twoSumClosestSort(testCase3));
     }
 }
 

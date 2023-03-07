@@ -31,16 +31,16 @@ public class Minimum_Moves_To_Equal_Array_Elements_453 {
 
     @Test
     public void testMoves() {
-        int[] exampleOne = new int[] {1,2,3};
-        int exampleOneExpectedResult = 3;
-        int[] exampleTwo = new int[] {1,1,1};
-        int exampleTwoExpectedResult = 0;
+        int[] testCase1 = new int[] {1,2,3};
+        int testCase1ExpectedResult = 3;
+        int[] testCase2 = new int[] {1,1,1};
+        int testCase2ExpectedResult = 0;
 
-        assertEquals(exampleOneExpectedResult, minMoves(exampleOne));
-        assertEquals(exampleTwoExpectedResult, minMoves(exampleTwo));
+        assertEquals(testCase1ExpectedResult, minMoves(testCase1));
+        assertEquals(testCase2ExpectedResult, minMoves(testCase2));
 
-        assertEquals(exampleOneExpectedResult, minMovesLinear(exampleOne));
-        assertEquals(exampleTwoExpectedResult, minMovesLinear(exampleTwo));
+        assertEquals(testCase1ExpectedResult, minMovesLinear(testCase1));
+        assertEquals(testCase2ExpectedResult, minMovesLinear(testCase2));
     }
 }
 

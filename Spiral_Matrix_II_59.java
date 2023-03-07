@@ -1,6 +1,4 @@
 import static org.junit.Assert.assertArrayEquals;
-import static org.junit.Assert.assertEquals;
-
 import org.junit.Test;
 
 public class Spiral_Matrix_II_59 {
@@ -45,11 +43,11 @@ public class Spiral_Matrix_II_59 {
 
     @Test
     public void testGenerateSpiralMatrix() {
-        int[][] exampleOneExpectedResult = new int[][] { { 1, 2, 3 }, { 8, 9, 4 }, { 7, 6, 5 } };
-        int[][] exampleTwoExpectedResult = new int[][] { { 1 } };
+        int[][] testCase1ExpectedResult = new int[][] { { 1, 2, 3 }, { 8, 9, 4 }, { 7, 6, 5 } };
+        int[][] testCase2ExpectedResult = new int[][] { { 1 } };
 
-        assertArrayEquals(exampleOneExpectedResult, generateMatrix(3));
-        assertArrayEquals(exampleTwoExpectedResult, generateMatrix(1));
+        assertArrayEquals(testCase1ExpectedResult, generateMatrix(3));
+        assertArrayEquals(testCase2ExpectedResult, generateMatrix(1));
     }
 }
 

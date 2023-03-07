@@ -7,14 +7,14 @@ import org.junit.Test;
 
 public class Number_Of_Different_Integers_In_A_String_1805 {
     public static void main(String[] args) {
-        String exampleOne = "16727895959129";
-        String exampleTwo = "a123bc34d8ef34";
-        String exampleThree = "leet1234code234";
+        String testCase1 = "16727895959129";
+        String testCase2 = "a123bc34d8ef34";
+        String testCase3 = "leet1234code234";
         String four = "a1b01c001";
         Number_Of_Different_Integers_In_A_String_1805 sol = new Number_Of_Different_Integers_In_A_String_1805();
-        System.out.println(sol.numDifferentIntegers2(exampleOne));
-        System.out.println(sol.numDifferentIntegers2(exampleTwo));
-        System.out.println(sol.numDifferentIntegers2(exampleThree));
+        System.out.println(sol.numDifferentIntegers2(testCase1));
+        System.out.println(sol.numDifferentIntegers2(testCase2));
+        System.out.println(sol.numDifferentIntegers2(testCase3));
         System.out.println(sol.numDifferentIntegers2(four));
     }
 
@@ -66,24 +66,24 @@ public class Number_Of_Different_Integers_In_A_String_1805 {
 
     @Test
     public void testInteger() {
-        String exampleOne = "16727895959129";
-        int exampleOneExpectedResult = 1;
-        String exampleTwo = "a123bc34d8ef34";
-        int exampleTwoExpectedResult = 3;
-        String exampleThree = "leet1234code234";
-        int exampleThreeExpectedResult = 2;
-        String exampleFour = "a1b01c001";
-        int exampleFourExpectedResult = 1;
+        String testCase1 = "16727895959129";
+        int testCase1ExpectedResult = 1;
+        String testCase2 = "a123bc34d8ef34";
+        int testCase2ExpectedResult = 3;
+        String testCase3 = "leet1234code234";
+        int testCase3ExpectedResult = 2;
+        String testCase4 = "a1b01c001";
+        int testCase4ExpectedResult = 1;
         
-        assertEquals(exampleOneExpectedResult, numDifferentIntegers(exampleOne));
-        assertEquals(exampleTwoExpectedResult, numDifferentIntegers(exampleTwo));
-        assertEquals(exampleThreeExpectedResult, numDifferentIntegers(exampleThree));
-        assertEquals(exampleFourExpectedResult, numDifferentIntegers(exampleFour));
+        assertEquals(testCase1ExpectedResult, numDifferentIntegers(testCase1));
+        assertEquals(testCase2ExpectedResult, numDifferentIntegers(testCase2));
+        assertEquals(testCase3ExpectedResult, numDifferentIntegers(testCase3));
+        assertEquals(testCase4ExpectedResult, numDifferentIntegers(testCase4));
 
-        assertEquals(exampleOneExpectedResult, numDifferentIntegers2(exampleOne));
-        assertEquals(exampleTwoExpectedResult, numDifferentIntegers2(exampleTwo));
-        assertEquals(exampleThreeExpectedResult, numDifferentIntegers2(exampleThree));
-        assertEquals(exampleFourExpectedResult, numDifferentIntegers2(exampleFour));
+        assertEquals(testCase1ExpectedResult, numDifferentIntegers2(testCase1));
+        assertEquals(testCase2ExpectedResult, numDifferentIntegers2(testCase2));
+        assertEquals(testCase3ExpectedResult, numDifferentIntegers2(testCase3));
+        assertEquals(testCase4ExpectedResult, numDifferentIntegers2(testCase4));
     }
 }
 

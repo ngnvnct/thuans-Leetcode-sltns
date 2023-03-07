@@ -54,16 +54,16 @@ public class Merge_Intervals_56 {
 
 	@Test
 	public void testMergeInterval() {
-		int[][] exampleOne = new int[][] { { 1, 3 }, { 2, 6 }, { 8, 10 }, { 15, 18 } };
-		int[][] exampleOneExpectedResult = new int[][] { { 1, 6 }, { 8, 10 }, { 15, 18 } };
-		int[][] exampleTwo = new int[][] { { 1, 4 }, { 4, 5 } };
-		int[][] exampleTwoExpectedResult = new int[][] { { 1, 5 } };
+		int[][] testCase1 = new int[][] { { 1, 3 }, { 2, 6 }, { 8, 10 }, { 15, 18 } };
+		int[][] testCase1ExpectedResult = new int[][] { { 1, 6 }, { 8, 10 }, { 15, 18 } };
+		int[][] testCase2 = new int[][] { { 1, 4 }, { 4, 5 } };
+		int[][] testCase2ExpectedResult = new int[][] { { 1, 5 } };
 
-		assertArrayEquals(exampleOneExpectedResult, merge(exampleOne));
-		assertArrayEquals(exampleTwoExpectedResult, merge(exampleTwo));
+		assertArrayEquals(testCase1ExpectedResult, merge(testCase1));
+		assertArrayEquals(testCase2ExpectedResult, merge(testCase2));
 		
-		assertArrayEquals(exampleOneExpectedResult, merge2(exampleOne));
-		assertArrayEquals(exampleTwoExpectedResult, merge2(exampleTwo));
+		assertArrayEquals(testCase1ExpectedResult, merge2(testCase1));
+		assertArrayEquals(testCase2ExpectedResult, merge2(testCase2));
 	}
 }
 

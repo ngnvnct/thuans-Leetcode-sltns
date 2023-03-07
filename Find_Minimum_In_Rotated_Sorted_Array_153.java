@@ -37,20 +37,20 @@ public class Find_Minimum_In_Rotated_Sorted_Array_153 {
 
     @Test
     public void testFindMin() {
-        int[] exampleOne = { 3, 4, 5, 1, 2 };
-        int exampleOneExpectedResult = 1;
-        int[] exampleTwo = { 4, 5, 6, 7, 0, 1, 2 };
-        int exampleTwoExpectedResult = 0;
-        int[] exampleThree = { 11, 13, 15, 17 };
-        int exampleThreeExpectedResult = 11;
+        int[] testCase1 = { 3, 4, 5, 1, 2 };
+        int testCase1ExpectedResult = 1;
+        int[] testCase2 = { 4, 5, 6, 7, 0, 1, 2 };
+        int testCase2ExpectedResult = 0;
+        int[] testCase3 = { 11, 13, 15, 17 };
+        int testCase3ExpectedResult = 11;
 
-        assertEquals(exampleOneExpectedResult, findMinMethodOne(exampleOne));
-        assertEquals(exampleTwoExpectedResult, findMinMethodOne(exampleTwo));
-        assertEquals(exampleThreeExpectedResult, findMinMethodOne(exampleThree));
+        assertEquals(testCase1ExpectedResult, findMinMethodOne(testCase1));
+        assertEquals(testCase2ExpectedResult, findMinMethodOne(testCase2));
+        assertEquals(testCase3ExpectedResult, findMinMethodOne(testCase3));
 
-        assertEquals(exampleOneExpectedResult, findMinMethodTwo(exampleOne));
-        assertEquals(exampleTwoExpectedResult, findMinMethodTwo(exampleTwo));
-        assertEquals(exampleThreeExpectedResult, findMinMethodTwo(exampleThree));
+        assertEquals(testCase1ExpectedResult, findMinMethodTwo(testCase1));
+        assertEquals(testCase2ExpectedResult, findMinMethodTwo(testCase2));
+        assertEquals(testCase3ExpectedResult, findMinMethodTwo(testCase3));
     }
 }
 

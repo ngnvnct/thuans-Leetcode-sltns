@@ -55,14 +55,14 @@ public class Check_If_Every_Row_And_Column_Contains_All_Numbers_2133 {
 
     @Test
     public void testMatrix() {
-        int[][] exampleOne = { { 1, 2, 3 }, { 3, 1, 2 }, { 2, 3, 1 } };
-        int[][] exampleTwo = { { 1, 1, 1 }, { 1, 2, 3 }, { 1, 2, 3 } };
+        int[][] testCase1 = { { 1, 2, 3 }, { 3, 1, 2 }, { 2, 3, 1 } };
+        int[][] testCase2 = { { 1, 1, 1 }, { 1, 2, 3 }, { 1, 2, 3 } };
 
-        assertTrue(checkValid(exampleOne));
-        assertFalse(checkValid(exampleTwo));
+        assertTrue(checkValid(testCase1));
+        assertFalse(checkValid(testCase2));
         
-        assertTrue(checkValid2(exampleOne));
-        assertFalse(checkValid2(exampleTwo));
+        assertTrue(checkValid2(testCase1));
+        assertFalse(checkValid2(testCase2));
     }
 }
 

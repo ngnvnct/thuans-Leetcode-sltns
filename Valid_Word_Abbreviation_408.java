@@ -51,11 +51,11 @@ public class Valid_Word_Abbreviation_408 {
 
     @Test
     public void testAbbr() {
-        String exampleOne = "internationalization";
+        String testCase1 = "internationalization";
         String abbrOne = "i12iz4n";
-        String exampleTwo = "apple";
+        String testCase2 = "apple";
         String abbrTwo = "a2e";
-        String exampleThree = "substitution";
+        String testCase3 = "substitution";
         String abbrThree = "s10n";
         String abbrThree2 = "sub4u4";
         String abbrThree3 = "12";
@@ -63,14 +63,14 @@ public class Valid_Word_Abbreviation_408 {
         String abbrThree5 = "s55n";
         String abbrThree6 = "s010n";
 
-        assertTrue(validWordAbbreviation(exampleOne, abbrOne));
-        assertFalse(validWordAbbreviation(exampleTwo, abbrTwo));
-        assertTrue(validWordAbbreviation(exampleThree, abbrThree));
-        assertTrue(validWordAbbreviation(exampleThree, abbrThree2));
-        assertTrue(validWordAbbreviation(exampleThree, abbrThree3));
-        assertTrue(validWordAbbreviation(exampleThree, abbrThree4));
-        assertFalse(validWordAbbreviation(exampleThree, abbrThree5));
-        assertFalse(validWordAbbreviation(exampleThree, abbrThree6));
+        assertTrue(validWordAbbreviation(testCase1, abbrOne));
+        assertFalse(validWordAbbreviation(testCase2, abbrTwo));
+        assertTrue(validWordAbbreviation(testCase3, abbrThree));
+        assertTrue(validWordAbbreviation(testCase3, abbrThree2));
+        assertTrue(validWordAbbreviation(testCase3, abbrThree3));
+        assertTrue(validWordAbbreviation(testCase3, abbrThree4));
+        assertFalse(validWordAbbreviation(testCase3, abbrThree5));
+        assertFalse(validWordAbbreviation(testCase3, abbrThree6));
     }
 }
 

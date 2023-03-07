@@ -36,12 +36,12 @@ public class song_duration_divisible60 {
 
     @Test
     public void testSongDivisibleBy60() {
-        int[] exampleOne = {30,20,150,100,40};
-        int[] exampleTwo = {60,60,60};
-        assertEquals(3, numPairsDivisisbleBy60(exampleOne));
-        assertEquals(3, numPairsDivisisbleBy60(exampleTwo));
-        assertEquals(3, numPairsDivisisbleBy60Array(exampleOne));
-        assertEquals(3, numPairsDivisisbleBy60Array(exampleTwo));
+        int[] testCase1 = {30,20,150,100,40};
+        int[] testCase2 = {60,60,60};
+        assertEquals(3, numPairsDivisisbleBy60(testCase1));
+        assertEquals(3, numPairsDivisisbleBy60(testCase2));
+        assertEquals(3, numPairsDivisisbleBy60Array(testCase1));
+        assertEquals(3, numPairsDivisisbleBy60Array(testCase2));
 
     }
 }

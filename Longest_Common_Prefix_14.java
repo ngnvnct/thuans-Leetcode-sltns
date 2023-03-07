@@ -37,20 +37,20 @@ public class Longest_Common_Prefix_14 {
 
     @Test
     public void testPrefix() {
-        String[] exampleOne = { "horse", "honk", "hope" };
-        String exampleOneExpectedResult = "ho";
-        String[] exampleTwo = { "verylong", "verygood", "ve" };
-        String exampleTwoExpectedResult = "ve";
-        String[] exampleThree = { "dog", "racecar", "car" };
-        String exampleThreeExpectedResult = "";
+        String[] testCase1 = { "horse", "honk", "hope" };
+        String testCase1ExpectedResult = "ho";
+        String[] testCase2 = { "verylong", "verygood", "ve" };
+        String testCase2ExpectedResult = "ve";
+        String[] testCase3 = { "dog", "racecar", "car" };
+        String testCase3ExpectedResult = "";
 
-        assertEquals(exampleOneExpectedResult, longestCommonPrefixHorizontal(exampleOne));
-        assertEquals(exampleTwoExpectedResult, longestCommonPrefixHorizontal(exampleTwo));
-        assertEquals(exampleThreeExpectedResult, longestCommonPrefixHorizontal(exampleThree));
+        assertEquals(testCase1ExpectedResult, longestCommonPrefixHorizontal(testCase1));
+        assertEquals(testCase2ExpectedResult, longestCommonPrefixHorizontal(testCase2));
+        assertEquals(testCase3ExpectedResult, longestCommonPrefixHorizontal(testCase3));
 
-        assertEquals(exampleOneExpectedResult, longestCommonPrefixVertical(exampleOne));
-        assertEquals(exampleTwoExpectedResult, longestCommonPrefixVertical(exampleTwo));
-        assertEquals(exampleThreeExpectedResult, longestCommonPrefixVertical(exampleThree));
+        assertEquals(testCase1ExpectedResult, longestCommonPrefixVertical(testCase1));
+        assertEquals(testCase2ExpectedResult, longestCommonPrefixVertical(testCase2));
+        assertEquals(testCase3ExpectedResult, longestCommonPrefixVertical(testCase3));
     }
 }
 
