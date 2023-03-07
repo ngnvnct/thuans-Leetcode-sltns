@@ -48,12 +48,10 @@ namespace Reverse_Linked_List
 
     class Tests
     {
-        Solution sol;
         ListNode node;
         [SetUp]
         public void SetUp()
         {
-            sol = new Solution();
             node = new ListNode();
         }
 
