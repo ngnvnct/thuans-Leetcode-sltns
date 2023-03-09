@@ -18,7 +18,7 @@ The study guide has problem lists from these lists:
 
 Make sure you have these framework installed:
 * VSCode Java: hamcrest-core-1.3 and junit-4.13.2. Get the Extension Pack for Java.
-* Visual Studio Code C#: .NET Core 3.1 SDK (which should be included in .NET 6.0), Microsoft.NET.Test.Sdk and NUnit 3.13.1.
+* Visual Studio Code C#: .NET 7.0 SDK, Microsoft.NET.Test.Sdk 17.5.0, NUnit 3.13.3, coverlet.collector 3.2.0, NUnit3TestAdapter 4.4.2 (Managed NuGet Packages Solution).
 * VSCode C#: .vscode/launch.json and .vscode/tasks.json should be good to run C# on it.
 
 VSCode installed:
