@@ -1,6 +1,12 @@
 name: Build Python Package and Run unittest
 
-on: [push]
+on:
+  push:
+    paths:
+      - 'python/**'
+  pull_request:
+    paths:
+      - 'python/**'
 
 jobs:
   build:
