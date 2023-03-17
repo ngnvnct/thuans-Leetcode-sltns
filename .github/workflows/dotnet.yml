@@ -12,6 +12,9 @@ on:
 jobs:
   build:
 
+    env:
+      build_config: 'Release'
+      solution: 'csharp/solution_and_tests.sln'
     runs-on: ubuntu-latest
 
     steps:
@@ -21,11 +24,8 @@ jobs:
       with:
         dotnet-version: 7.0.x
     - name: Restore dependencies
-      run: dotnet restore 
-      working-directory: csharp/solution_and_tests
+      run: dotnet restore $solution
     - name: Build
-      run: dotnet build --configuration Release --no-restore
-      working-directory: csharp/solution_and_tests
+      run: dotnet build $solution --configuration $build_config --no-restore
     - name: Test
-      run: dotnet test ./solution_and_tests.sln  --configuration Release --verbosity normal
-      working-directory: csharp
+      run: dotnet test $solution  --configuration $build_config --verbosity normal
