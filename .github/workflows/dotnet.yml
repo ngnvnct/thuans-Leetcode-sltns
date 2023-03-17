@@ -24,6 +24,6 @@ jobs:
       run: dotnet restore
       working-directory: csharp
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build solution_and_tests.sln --no-restore
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test solution_and_tests.sln --no-build --verbosity normal
