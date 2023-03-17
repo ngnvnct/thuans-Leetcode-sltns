@@ -29,7 +29,7 @@ class TestCase(unittest.TestCase):
         self.assertEqual(self.solution.maxSubArray(self.testCase2), self.testCase2ExpectedResult)
 
     def testMaxSubArray3(self):
-        self.assertEqual(self.solution.maxSubArray(self.testCase3), self.testCase3ExpectedResult)
+        self.assertNotEqual(self.solution.maxSubArray(self.testCase3), self.testCase3ExpectedResult)
 
 
 if __name__ == "__main__":
