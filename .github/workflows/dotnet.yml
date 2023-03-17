@@ -5,9 +5,11 @@ name: Build C# .NET Solution
 
 on:
   push:
-    branches: [ "master" ]
+    paths:
+      - 'csharp/solution_and_tests/**'
   pull_request:
-    branches: [ "master" ]
+    paths:
+      - 'csharp/solution_and_tests/**'
 
 jobs:
   build:
