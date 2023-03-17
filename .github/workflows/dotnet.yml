@@ -27,5 +27,5 @@ jobs:
       run: dotnet build --configuration Release --no-restore
       working-directory: csharp/solution_and_tests
     - name: Test
-      run: dotnet test ./solution_and_tests.sln  --no-build --verbosity normal
+      run: dotnet test ./solution_and_tests.sln  --configuration Release --verbosity normal
       working-directory: csharp
