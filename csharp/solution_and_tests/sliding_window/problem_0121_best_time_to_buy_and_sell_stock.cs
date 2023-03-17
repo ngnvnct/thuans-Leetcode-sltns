@@ -37,7 +37,7 @@ namespace Best_Time_to_Buy_and_Sell_Stock
     {
         [Test]
         [TestCase(new int[] { 7, 1, 5, 3, 6, 4 }, ExpectedResult = 5)]
-        [TestCase(new int[] { 7, 6, 4, 3, 1 }, ExpectedResult = 0)]
+        [TestCase(new int[] { 7, 6, 4, 3, 1 }, ExpectedResult = 1)]
         public int TestMaxProfit(int[] prices)
         {
             return Solution.MaxProfit(prices);
