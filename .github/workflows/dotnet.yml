@@ -22,7 +22,7 @@ jobs:
         dotnet-version: 7.0.x
     - name: Restore dependencies
       run: dotnet restore
-      working-directory: csharp
+      working-directory: csharp/solution_and_tests
     - name: Build
       run: dotnet build solution_and_tests.sln --no-restore
     - name: Test
