@@ -18,7 +18,7 @@
     </dependencies>
     
     <build>
-        <testSourceDirectory>Leetcode/Java</testSourceDirectory>
+        <testSourceDirectory>Leetcode/Java/**</testSourceDirectory>
 	    <plugins>
 		    <plugin>
 			    <groupId>org.apache.maven.plugins</groupId>
