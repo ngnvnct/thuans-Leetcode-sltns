@@ -7,21 +7,6 @@
     <groupId>org.example</groupId>
     <artifactId>JavaLeetcode</artifactId>
     <version>1.0</version>
-    
-    <build>
-        <plugins>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-plugin</artifactId>
-            <version>3.0.0</version>
-            <configuration>
-            <includes>
-                <include>**/problem*.java</include>
-            </includes>
-            </configuration>
-        </plugin>
-        </plugins>
-    </build>
 
     <dependencies>
         <dependency>
@@ -31,6 +16,28 @@
             <scope>test</scope>
             </dependency>
     </dependencies>
+    
+    <build>
+	    <plugins>
+		    <plugin>
+			    <groupId>org.apache.maven.plugins</groupId>
+			    <artifactId>maven-surefire-plugin</artifactId>
+			    <version>2.22.0</version>
+			    <dependencies>
+				    <dependency>
+					    <groupId>org.apache.maven.surefire</groupId>
+					    <artifactId>surefire-junit4</artifactId>
+					    <version>2.22.0</version>
+				    </dependency>
+			    </dependencies>
+			    <configuration>
+				    <includes>
+					    <include>**/*.java</include>
+				    </includes>
+			    </configuration>
+		    </plugin>
+	    </plugins>
+    </build>
 
     <reporting>
 	<plugins>
