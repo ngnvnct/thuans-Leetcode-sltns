@@ -17,6 +17,10 @@
             </dependency>
     </dependencies>
 
+    <includes>
+    <include>**/problem*.java</include>
+    </includes>
+
     <reporting>
 	<plugins>
 		<plugin>
