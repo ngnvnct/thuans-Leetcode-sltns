@@ -8,7 +8,7 @@
  * Space: O(n) where N i the jewels
  */
 
-package array;
+package freebie;
 
 import java.util.HashSet;
 import java.util.Set;
