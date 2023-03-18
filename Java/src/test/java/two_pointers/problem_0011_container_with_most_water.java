@@ -82,5 +82,6 @@ public class problem_0011_container_with_most_water {
 
         assertEquals(testCase1ExpectedResult, maxAreaBF(testCase1));
         assertEquals(testCase2ExpectedResult, maxAreaBF(testCase2));
+        assertEquals(0, maxAreaBF(testCase2));
     }
 }
