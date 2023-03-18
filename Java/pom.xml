@@ -18,6 +18,7 @@
     </dependencies>
     
     <build>
+        <sourceDirectory>${project.basedir}/Java/**</sourceDirectory>
         <testSourceDirectory>${project.basedir}/Java/**</testSourceDirectory>
 	    <plugins>
 		    <plugin>
