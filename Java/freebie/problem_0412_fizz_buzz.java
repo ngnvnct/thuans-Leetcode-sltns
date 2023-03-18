@@ -46,5 +46,6 @@ public class problem_0412_fizz_buzz {
         assertEquals(testCase1ExpectedResult, fizzBuzz(testCase1));
         assertEquals(testCase2ExpectedResult, fizzBuzz(testCase2));
         assertEquals(testCase3ExpectedResult, fizzBuzz(testCase3));
+        assertEquals(0, fizzBuzz(testCase3));
     }
 }
