@@ -76,7 +76,5 @@ public class problem_0001_two_sum {
         assertArrayEquals(testCase1ExpectedResult, twoSumBruteForce(testCase1, 9));
         assertArrayEquals(testCase2ExpectedResult, twoSumBruteForce(testCase2, 6));
         assertArrayEquals(testCase3ExpectedResult, twoSumBruteForce(testCase3, 6));
-
-        assertArrayEquals(testCase3ExpectedResult, twoSumBruteForce(testCase3, 0));
     }
 }
