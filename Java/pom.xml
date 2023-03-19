@@ -18,7 +18,6 @@
     </dependencies>
 
     <build>
-        <testSourceDirectory>${project.basedir}/Java/array</testSourceDirectory>
 	    <plugins>
 		    <plugin>
 			    <groupId>org.apache.maven.plugins</groupId>
