@@ -42,5 +42,6 @@ public class problem_0258_add_digits {
         
         assertEquals(testCase1ExpectedResult, addDigitIteration(testCase1));
         assertEquals(testCase1ExpectedResult, addDigitMath(testCase1));
+        assertEquals(0, addDigitMath(testCase1));
     }
 }
