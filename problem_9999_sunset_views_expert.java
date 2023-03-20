@@ -6,9 +6,9 @@ import java.util.Arrays;
 import java.util.Deque;
 import org.junit.Test;
 
-public class Sunset_Views_Expert {
+public class problem_9999_sunset_views_expert {
     public static void main(String[] args) {
-        Sunset_Views_Expert sol = new Sunset_Views_Expert();
+        problem_9999_sunset_views_expert sol = new problem_9999_sunset_views_expert();
         System.out.println(Arrays.toString(sol.sunsetViews(new int[] { 3, 5, 4, 4, 3, 1, 3, 2 }, "EAST").toArray()));
         System.out.println(Arrays.toString(sol.sunsetViews(new int[] { 3, 5, 4, 4, 3, 1, 3, 2 }, "WEST").toArray()));
         System.out.println(Arrays.toString(sol.sunsetViews(new int[] { 10, 11 }, "EAST").toArray()));
@@ -70,7 +70,7 @@ public class Sunset_Views_Expert {
 /*
  * The exact problem as Building Ocean 1762, AlgoExpert
  * https://leetcode.com/problems/buildings-with-an-ocean-view/
- * Explanation
+ * Explanation:
  * 
  * Use a Deque, then add elements into it. If it is "EAST" side, then addFirst,
  * the first element in the array will be at the head

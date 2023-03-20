@@ -1,10 +1,40 @@
-import static org.junit.Assert.assertEquals;
+/*
+ * https://leetcode.com/problems/baseball-game/
+ * Explanation:
+ * 
+ * Constraints
+ * 1 <= ops.length <= 1000
+ * ops[i] is "C", "D", "+", or a string representing an integer in the range [-3 * 104, 3 * 104].
+ * For operation "+", there will always be at least two previous scores on the
+ * record.
+ * For operations "C" and "D", there will always be at least one previous score
+ * on the record.
+ * 
+ * Challenge: Code it so that I am not bounded by the constraint ("C" when there
+ * are no score on the record)
+ * 
+ * For Java: Using Stack shows that you're not as familiar with language as the
+ * interviewer probably wants you to be.
+ * Stack is a rather old collection that extends Vector, has performance issues
+ * due to each method in it being synchronized,
+ * and violates some best practices around interfaces, so it is considered
+ * legacy nowadays.
+ * 
+ * https://docs.oracle.com/javase/7/docs/api/java/util/Deque.html
+ * Use Deque instead
+ * https://docs.oracle.com/javase/7/docs/api/java/util/Deque.html
+ * 
+ * Time: O(n)
+ * Space: O(n)
+ */
 
 import java.util.ArrayDeque;
 import java.util.Deque;
+
+import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
-public class Baseball_Game_682 {
+public class problem_0682_baseball_game {
     public int calPoints(String[] ops) {
         Deque<Integer> stack = new ArrayDeque<>();
 
@@ -72,33 +102,3 @@ public class Baseball_Game_682 {
         assertEquals(testCase2ExpectedResult, calPointOnePass(testCase2));
     }
 }
-
-/*
- * https://leetcode.com/problems/baseball-game/
- * Explanation
- * 
- * Constraints
- * 1 <= ops.length <= 1000
- * ops[i] is "C", "D", "+", or a string representing an integer in the range [-3 * 104, 3 * 104].
- * For operation "+", there will always be at least two previous scores on the
- * record.
- * For operations "C" and "D", there will always be at least one previous score
- * on the record.
- * 
- * Challenge: Code it so that I am not bounded by the constraint ("C" when there
- * are no score on the record)
- * 
- * For Java: Using Stack shows that you're not as familiar with language as the
- * interviewer probably wants you to be.
- * Stack is a rather old collection that extends Vector, has performance issues
- * due to each method in it being synchronized,
- * and violates some best practices around interfaces, so it is considered
- * legacy nowadays.
- * 
- * https://docs.oracle.com/javase/7/docs/api/java/util/Deque.html
- * Use Deque instead
- * https://docs.oracle.com/javase/7/docs/api/java/util/Deque.html
- * 
- * Time: O(n)
- * Space: O(n)
- */

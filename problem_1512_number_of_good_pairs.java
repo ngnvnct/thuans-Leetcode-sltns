@@ -1,8 +1,18 @@
+/*
+ * https://leetcode.com/problems/number-of-good-pairs/
+ * Explanation
+ * 
+ * Two for loops or use the math property n(n-1)/2 to determine the number of pairs of a given number of items
+ * 
+ * Time: O(n^2) or O(n)
+ * Space: O(1) or O(100)
+ */
+
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-public class Number_Of_Good_Pairs_1512 {
+public class problem_1512_number_of_good_pairs {
     public int numIdenticalPairs(int[] nums) {
         int identicalPairs = 0;
         for (int i = 0; i < nums.length; i++) {
@@ -47,13 +57,3 @@ public class Number_Of_Good_Pairs_1512 {
         assertEquals(testCase3ExpectedResult, numIdenticalPairs2(testCase3));
     }
 }
-
-/*
- * https://leetcode.com/problems/number-of-good-pairs/
- * Explanation
- * 
- * Two for loops or use the math property n(n-1)/2 to determine the number of pairs of a given number of items
- * 
- * Time: O(n^2) or O(n)
- * Space: O(1) or O(100)
- */

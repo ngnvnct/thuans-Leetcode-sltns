@@ -1,8 +1,27 @@
-import static org.junit.Assert.assertEquals;
+/*
+ * https://leetcode.com/problems/angle-between-hands-of-a-clock/
+ * Explanation:
+ * 
+ * 12 hours hand complet whole circle cover 360 degree
+ * 1 hour - 360 / 12 = 30
+ * 1 hour = 30 degree
+ * 1 minute, hours hand rotate 30 degree / 60 = 0.5 degree
+ * total angle of minutes by hour hand is minutes/60 * 30 or minutes * 0.5
+ * 
+ * 1 minute = 360 / 60 = 6 degree
+ * 
+ * If the angle is obtuse (>180) convert it to acute (0 <= x <= 180)
+ * 
+ * new JUnit Test for double value
+ * 
+ * Time: O(1)
+ * Space: O(1)
+ */
 
+import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
-public class Angle_Between_Hands_Of_A_Clock_1344 {
+public class problem_1344_angle_between_hands_of_a_clock {
     public double angleClock(int hour, int minutes) {
         double hourAngle = (hour % 12 + ((double) minutes / 60)) * 30;
         double minuteAngle = minutes * 6;
@@ -36,23 +55,3 @@ public class Angle_Between_Hands_Of_A_Clock_1344 {
         assertEquals(76.5, angleClock2(1, 57), 0.0);
     }
 }
-
-/*
- * https://leetcode.com/problems/angle-between-hands-of-a-clock/
- * Explanation
- * 
- * 12 hours hand complet whole circle cover 360 degree
- * 1 hour - 360 / 12 = 30
- * 1 hour = 30 degree
- * 1 minute, hours hand rotate 30 degree / 60 = 0.5 degree
- * total angle of minutes by hour hand is minutes/60 * 30 or minutes * 0.5
- * 
- * 1 minute = 360 / 60 = 6 degree
- * 
- * If the angle is obtuse (>180) convert it to acute (0 <= x <= 180)
- * 
- * new JUnit Test for double value
- * 
- * Time: O(1)
- * Space: O(1)
- */

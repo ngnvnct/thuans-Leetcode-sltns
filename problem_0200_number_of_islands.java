@@ -1,8 +1,28 @@
-import static org.junit.Assert.assertEquals;
+/*
+ * https://leetcode.com/problems/number-of-islands/
+ * Explanation:
+ * 
+ * This is a Graph problem, which can be solve using Depth First Search (DFS) or
+ * BFS. DFS will be used here. First, we have a constraint if the length is 0 or
+ * it is null, return 0
+ * then we want to loop through the grid row and columns, and if we encounter a
+ * 1, we want to do something with it. In this case, we will call dfs to check
+ * for number of islands
+ * and add it to our final result.
+ * 
+ * In our DFS call, we want to have a constraint check, if it is out of bound or
+ * we encounter a 0, we return 0
+ * else, we mark each visited "1" with a "0" so we don't revisit it again, then
+ * we call the dfs stack going down, up, to the left and to the right
+ * 
+ * Time: O(n)
+ * Space: O(m * n) because of recursion stack
+ */
 
+import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
-public class Number_Of_Islands_200 {
+public class problem_0200_number_of_islands {
     public int numIslands(char[][] grid) {
         if (grid == null || grid.length == 0) {
             return 0;
@@ -50,27 +70,4 @@ public class Number_Of_Islands_200 {
         };
         assertEquals(3, numIslands(testCase2));
     }
-
 }
-
-/*
- * Part of Leetcode75
- * https://leetcode.com/problems/number-of-islands/
- * Explanation
- * 
- * This is a Graph problem, which can be solve using Depth First Search (DFS) or
- * BFS. DFS will be used here. First, we have a constraint if the length is 0 or
- * it is null, return 0
- * then we want to loop through the grid row and columns, and if we encounter a
- * 1, we want to do something with it. In this case, we will call dfs to check
- * for number of islands
- * and add it to our final result.
- * 
- * In our DFS call, we want to have a constraint check, if it is out of bound or
- * we encounter a 0, we return 0
- * else, we mark each visited "1" with a "0" so we don't revisit it again, then
- * we call the dfs stack going down, up, to the left and to the right
- * 
- * Time: O(n)
- * Space: O(m * n) because of recursion stack
- */

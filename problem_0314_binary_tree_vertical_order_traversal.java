@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
-public class Binary_Tree_Vertical_Order_Traversal_314 {
+public class problem_0314_binary_tree_vertical_order_traversal {
     public List<List<Integer>> verticalOrder(TreeNode root) {
         if (root == null) {
             return new ArrayList<>();
@@ -42,7 +42,7 @@ public class Binary_Tree_Vertical_Order_Traversal_314 {
 
 /*
  * https://leetcode.com/problems/binary-tree-vertical-order-traversal/
- * Explanation
+ * Explanation:
  * 
  * Using BFS, if a node is at level N in the final result, its left child must
  * exist in level N - 1, and right child must exist in N + 1

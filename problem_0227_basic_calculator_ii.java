@@ -1,10 +1,39 @@
+/*
+ * https://leetcode.com/problems/basic-calculator-ii/
+ * Explanation:
+ * 
+ * Using Stack: 4 types of operation (+), (-), (*), (/)
+ * without parenthesis, (*) and (/) takes precedence.
+ * 
+ * If it is 0-9, add it to currentNumber
+ * Else, evaluate. (+) and (-) are evaluate later based on the next operation.
+ * So we must store the currentNumber to be used later,
+ * push it to the stack
+ * If we see (-), we push -currentNum
+ * 
+ * Stack Time: O(n)
+ * Stack Space: O(n)
+ * 
+ * Optimal, instead of pop all the values from the stack and add to the result.
+ * We could add the values to the result before hand and keep track of the last
+ * calculated number
+ * if it is (+) or (-1), add lastNum to the res instead of pushing it to the
+ * stack, currentNum would be updated to lastNum for next iteration
+ * if it is (*) or (/), we must evaluate lastNum * currentNum and update the
+ * lastNum with the result of the expression
+ * 
+ * 
+ * Optimal Time: O(n)
+ * Space: O(1)
+ */
+
 import static org.junit.Assert.assertEquals;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
 import org.junit.Test;
 
-public class Basic_Calculator_II_227 {
+public class problem_0227_basic_calculator_ii {
     public int calculate(String s) {
         if (s == null || s.length() == 0) {
             return 0;
@@ -133,32 +162,3 @@ public class Basic_Calculator_II_227 {
 
     }
 }
-
-/*
- * https://leetcode.com/problems/basic-calculator-ii/
- * Explanation
- * 
- * Using Stack: 4 types of operation (+), (-), (*), (/)
- * without parenthesis, (*) and (/) takes precedence.
- * 
- * If it is 0-9, add it to currentNumber
- * Else, evaluate. (+) and (-) are evaluate later based on the next operation.
- * So we must store the currentNumber to be used later,
- * push it to the stack
- * If we see (-), we push -currentNum
- * 
- * Stack Time: O(n)
- * Stack Space: O(n)
- * 
- * Optimal, instead of pop all the values from the stack and add to the result.
- * We could add the values to the result before hand and keep track of the last
- * calculated number
- * if it is (+) or (-1), add lastNum to the res instead of pushing it to the
- * stack, currentNum would be updated to lastNum for next iteration
- * if it is (*) or (/), we must evaluate lastNum * currentNum and update the
- * lastNum with the result of the expression
- * 
- * 
- * Optimal Time: O(n)
- * Space: O(1)
- */

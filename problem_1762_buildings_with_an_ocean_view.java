@@ -1,3 +1,26 @@
+/*
+ * https://leetcode.com/problems/buildings-with-an-ocean-view/
+ * Explanation:
+ * 
+ * Given the problem, we can loop from right to left, because the one at the
+ * left is always going to be an ocean view
+ * keep the maximum to the right while traversing
+ * 
+ * Our initial List will have the right to left index, so when we add it into
+ * our result, we have to put the last element of the list as the 0-indexed
+ * Can use a stack to make the last loop more readable
+ * 
+ * Time: O(n)
+ * Space: O(n) if the solution is in Java, because we don't know the size of the
+ * output array at the begining, we created an extra ArrayList
+ * to support O(1) push operation. ArrayList can have at most n values, so for
+ * java space is O(n)
+ * 
+ * Facebook asks this
+ * first part was to count how many buildings have an ocean view (the list size)
+ * second part was to print the index
+ */
+
 import static org.junit.Assert.assertArrayEquals;
 
 import java.util.ArrayDeque;
@@ -7,13 +30,7 @@ import java.util.Deque;
 import java.util.List;
 import org.junit.Test;
 
-public class Buildings_With_An_Ocean_View_1762 {
-    public static void main(String[] args) {
-        int[] testCase1 = { 4, 2, 3, 1, 1 };
-        Buildings_With_An_Ocean_View_1762 solution = new Buildings_With_An_Ocean_View_1762();
-        System.out.println(Arrays.toString(solution.findBuildings(testCase1)));
-    }
-
+public class problem_1762_buildings_with_an_ocean_view {
     public int[] findBuildings(int[] heights) {
         List<Integer> temp = new ArrayList<>();
         int maxHeight = -1;
@@ -66,25 +83,3 @@ public class Buildings_With_An_Ocean_View_1762 {
         assertArrayEquals(testCase3ExpectedResult, findBuildingsStack(testCase3));
     }
 }
-
-/*
- * https://leetcode.com/problems/buildings-with-an-ocean-view/
- * Explanation
- * Given the problem, we can loop from right to left, because the one at the
- * left is always going to be an ocean view
- * keep the maximum to the right while traversing
- * 
- * Our initial List will have the right to left index, so when we add it into
- * our result, we have to put the last element of the list as the 0-indexed
- * Can use a stack to make the last loop more readable
- * 
- * Time: O(n)
- * Space: O(n) if the solution is in Java, because we don't know the size of the
- * output array at the begining, we created an extra ArrayList
- * to support O(1) push operation. ArrayList can have at most n values, so for
- * java space is O(n)
- * 
- * Facebook asks this
- * first part was to count how many buildings have an ocean view (the list size)
- * second part was to print the index
- */
