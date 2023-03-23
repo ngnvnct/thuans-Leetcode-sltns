@@ -41,6 +41,11 @@ namespace Unique_Morse_Code_Words
         [Test]
         [TestCase(new object[] { "gin", "zen", "gig", "msg" }, ExpectedResult = 2)]
         [TestCase(new object[] { "a" }, ExpectedResult = 1)]
+        [TestCase(new object[] { "a", "b", "c" }, ExpectedResult = 3)]
+        [TestCase(new object[] { "ab", "cd", "ef" }, ExpectedResult = 3)]
+        [TestCase(new object[] { "abcdefghijklmnopqrstuvwxyz" }, ExpectedResult = 1)]
+        [TestCase(new object[] { "hello", "world" }, ExpectedResult = 2)]
+        [TestCase(new object[] { "", "" }, ExpectedResult = 1)]
         public int TestValidPalindrome(params string[] words)
         {
             return Solution.UniqueMorseRepresentations(words);

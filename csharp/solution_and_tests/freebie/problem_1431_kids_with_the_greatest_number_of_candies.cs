@@ -36,6 +36,11 @@ namespace Kids_With_the_Greatest_Number_of_Candies
         [TestCase(new int[] { 2, 3, 5, 1, 3 }, 3, ExpectedResult = new bool[] { true, true, true, false, true })]
         [TestCase(new int[] { 4, 2, 1, 1, 2 }, 1, ExpectedResult = new bool[] { true, false, false, false, false })]
         [TestCase(new int[] { 12, 1, 12 }, 10, ExpectedResult = new bool[] { true, false, true })]
+        [TestCase(new int[] { 2, 3, 5, 1, 3 }, 2, ExpectedResult = new bool[] { false, true, true, false, true })]
+        [TestCase(new int[] { 4, 2, 1, 1, 2 }, 1, ExpectedResult = new bool[] { true, false, false, false, false })]
+        [TestCase(new int[] { 10, 7, 12, 15, 10 }, 5, ExpectedResult = new bool[] { true, false, true, true, true })]
+        [TestCase(new int[] { 1, 1, 1, 1, 1 }, 1, ExpectedResult = new bool[] { true, true, true, true, true })]
+        [TestCase(new int[] { 5, 3, 2, 8, 6 }, 4, ExpectedResult = new bool[] { true, false, false, true, true })]
         public IList<bool> TestKidsWithCandies(int[] candies, int extraCandies)
         {
             return Solution.KidsWithCandies(candies, extraCandies);

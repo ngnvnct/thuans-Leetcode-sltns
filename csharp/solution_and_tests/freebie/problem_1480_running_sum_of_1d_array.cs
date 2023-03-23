@@ -47,6 +47,8 @@ namespace Running_Sum_of_1d_Array
         [TestCase(new int[] { 1, 2, 3, 4 }, ExpectedResult = new int[] { 1, 3, 6, 10 })]
         [TestCase(new int[] { 1, 1, 1, 1, 1 }, ExpectedResult = new int[] { 1, 2, 3, 4, 5 })]
         [TestCase(new int[] { 3, 1, 2, 10, 1 }, ExpectedResult = new int[] { 3, 4, 6, 16, 17 })]
+        [TestCase(new int[] { 1 }, ExpectedResult = new int[] { 1 })]
+        [TestCase(new int[] { 1, -2, 3, -4 }, ExpectedResult = new int[] { 1, -1, 2, -2 })]
         public int[] TestRunningSum(int[] nums)
         {
             return Solution.RunningSum(nums);
@@ -56,6 +58,8 @@ namespace Running_Sum_of_1d_Array
         [TestCase(new int[] { 1, 2, 3, 4 }, ExpectedResult = new int[] { 1, 3, 6, 10 })]
         [TestCase(new int[] { 1, 1, 1, 1, 1 }, ExpectedResult = new int[] { 1, 2, 3, 4, 5 })]
         [TestCase(new int[] { 3, 1, 2, 10, 1 }, ExpectedResult = new int[] { 3, 4, 6, 16, 17 })]
+        [TestCase(new int[] { 1 }, ExpectedResult = new int[] { 1 })]
+        [TestCase(new int[] { 1, -2, 3, -4 }, ExpectedResult = new int[] { 1, -1, 2, -2 })]
         public int[] TestRunningSum2(int[] nums)
         {
             return Solution.RunningSum2(nums);

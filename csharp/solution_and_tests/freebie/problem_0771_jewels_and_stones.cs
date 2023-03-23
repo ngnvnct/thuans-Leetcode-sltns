@@ -54,6 +54,9 @@ namespace Jewels_And_Stones
         [Test]
         [TestCase("aA", "aAAbbbb", ExpectedResult = 3)]
         [TestCase("z", "ZZ", ExpectedResult = 0)]
+        [TestCase("", "abcd", ExpectedResult = 0)]
+        [TestCase("A", "a", ExpectedResult = 0)]
+        [TestCase("abcd", "abcd", ExpectedResult = 4)]
         public int TestNumJewelsInStones(string jewels, string stones)
         {
             return Solution.NumJewelsInStones(jewels, stones);
@@ -62,6 +65,9 @@ namespace Jewels_And_Stones
         [Test]
         [TestCase("aA", "aAAbbbb", ExpectedResult = 3)]
         [TestCase("z", "ZZ", ExpectedResult = 0)]
+        [TestCase("", "abcd", ExpectedResult = 0)]
+        [TestCase("A", "a", ExpectedResult = 0)]
+        [TestCase("abcd", "abcd", ExpectedResult = 4)]
         public int TestNumJewelsInStonesStringContains(string jewels, string stones)
         {
             return Solution.NumJewelsInStonesStringContains(jewels, stones);
