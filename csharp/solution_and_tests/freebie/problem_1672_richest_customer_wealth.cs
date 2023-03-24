@@ -39,10 +39,19 @@ namespace Richest_Customer_Wealth
             int testCase2ExpectedResult = 10;
             int[][] testCase3 = new int[][] { new int[] { 2, 8, 7 }, new int[] { 7, 1, 3 }, new int[] { 1, 9, 5 } };
             int testCase3ExpectedResult = 17;
+            int[][] testCase4 = new int[][] { new int[] { 0, 0, 0 }, new int[] { 0, 0, 0 } };
+            int testCase4ExpectedResult = 0;
+            int[][] testCase5 = new int[][] { new int[] { 5, 5, 5 }, new int[] { 10, 10, 10 }, new int[] { 15, 15, 15 } };
+            int testCase5ExpectedResult = 45;
+            int[][] testCase6 = new int[][] { new int[] { 1000 } };
+            int testCase6ExpectedResult = 1000;
 
             Assert.AreEqual(testCase1ExpectedResult, Solution.MaximumWealth(testCase1));
             Assert.AreEqual(testCase2ExpectedResult, Solution.MaximumWealth(testCase2));
             Assert.AreEqual(testCase3ExpectedResult, Solution.MaximumWealth(testCase3));
+            Assert.AreEqual(testCase4ExpectedResult, Solution.MaximumWealth(testCase4));
+            Assert.AreEqual(testCase5ExpectedResult, Solution.MaximumWealth(testCase5));
+            Assert.AreEqual(testCase6ExpectedResult, Solution.MaximumWealth(testCase6));
         }
     }
 }

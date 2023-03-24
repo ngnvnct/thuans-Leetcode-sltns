@@ -57,6 +57,12 @@ namespace Maximum_Nesting_Depth_of_the_Parentheses
         [TestCase("(1)+((2))+(((3)))", ExpectedResult = 3)]
         [TestCase("8*((1*(5+6))*(8/6))", ExpectedResult = 3)]
         [TestCase("((())", ExpectedResult = -1)]
+        [TestCase("()", ExpectedResult = 1)]
+        [TestCase("(())", ExpectedResult = 2)]
+        [TestCase("(()())", ExpectedResult = 2)]
+        [TestCase("()()", ExpectedResult = 1)]
+        [TestCase("(()", ExpectedResult = -1)]
+        [TestCase(")()(", ExpectedResult = -1)]
         public int TestMaxDepth(string s)
         {
             return Solution.MaxDepth(s);

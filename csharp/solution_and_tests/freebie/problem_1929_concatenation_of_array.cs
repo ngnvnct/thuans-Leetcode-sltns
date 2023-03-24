@@ -49,6 +49,11 @@ namespace Concatenation_of_Array
         [Test]
         [TestCase(new int[] { 1, 2, 1 }, ExpectedResult = new int[] { 1, 2, 1, 1, 2, 1 })]
         [TestCase(new int[] { 1, 3, 2, 1 }, ExpectedResult = new int[] { 1, 3, 2, 1, 1, 3, 2, 1 })]
+        [TestCase(new int[] { }, ExpectedResult = new int[] { })]
+        [TestCase(new int[] { 1 }, ExpectedResult = new int[] { 1, 1 })]
+        [TestCase(new int[] { 5, 7, 8 }, ExpectedResult = new int[] { 5, 7, 8, 5, 7, 8 })]
+        [TestCase(new int[] { 2, 4, 6, 8, 10 }, ExpectedResult = new int[] { 2, 4, 6, 8, 10, 2, 4, 6, 8, 10 })]
+        [TestCase(new int[] { -1, 0, 1 }, ExpectedResult = new int[] { -1, 0, 1, -1, 0, 1 })]
         public int[] TestGetConcatenation(int[] nums)
         {
             return Solution.GetConcatenation(nums);
@@ -57,6 +62,11 @@ namespace Concatenation_of_Array
         [Test]
         [TestCase(new int[] { 1, 2, 1 }, ExpectedResult = new int[] { 1, 2, 1, 1, 2, 1 })]
         [TestCase(new int[] { 1, 3, 2, 1 }, ExpectedResult = new int[] { 1, 3, 2, 1, 1, 3, 2, 1 })]
+        [TestCase(new int[] { }, ExpectedResult = new int[] { })]
+        [TestCase(new int[] { 1 }, ExpectedResult = new int[] { 1, 1 })]
+        [TestCase(new int[] { 5, 7, 8 }, ExpectedResult = new int[] { 5, 7, 8, 5, 7, 8 })]
+        [TestCase(new int[] { 2, 4, 6, 8, 10 }, ExpectedResult = new int[] { 2, 4, 6, 8, 10, 2, 4, 6, 8, 10 })]
+        [TestCase(new int[] { -1, 0, 1 }, ExpectedResult = new int[] { -1, 0, 1, -1, 0, 1 })]
         public int[] TestGetConcatenation2(int[] nums)
         {
             return Solution.GetConcatenation2(nums);

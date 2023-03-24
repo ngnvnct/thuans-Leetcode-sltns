@@ -68,6 +68,9 @@ namespace Defanging_an_IP_Address
         [Test]
         [TestCase("1.1.1.1", ExpectedResult = "1[.]1[.]1[.]1")]
         [TestCase("255.100.50.0", ExpectedResult = "255[.]100[.]50[.]0")]
+        [TestCase("192.168.0.1", ExpectedResult = "192[.]168[.]0[.]1")]
+        [TestCase("10.0.0.0", ExpectedResult = "10[.]0[.]0[.]0")]
+        [TestCase("172.16.0.0", ExpectedResult = "172[.]16[.]0[.]0")]
         public string TestDefangIPaddr(string address)
         {
             return Solution.DefangIPaddr(address);
@@ -76,6 +79,9 @@ namespace Defanging_an_IP_Address
         [Test]
         [TestCase("1.1.1.1", ExpectedResult = "1[.]1[.]1[.]1")]
         [TestCase("255.100.50.0", ExpectedResult = "255[.]100[.]50[.]0")]
+        [TestCase("192.168.0.1", ExpectedResult = "192[.]168[.]0[.]1")]
+        [TestCase("10.0.0.0", ExpectedResult = "10[.]0[.]0[.]0")]
+        [TestCase("172.16.0.0", ExpectedResult = "172[.]16[.]0[.]0")]
         public string TestDefangIPaddr2(string address)
         {
             return Solution.DefangIPaddr2(address);
@@ -84,6 +90,9 @@ namespace Defanging_an_IP_Address
         [Test]
         [TestCase("1.1.1.1", ExpectedResult = "1[.]1[.]1[.]1")]
         [TestCase("255.100.50.0", ExpectedResult = "255[.]100[.]50[.]0")]
+        [TestCase("192.168.0.1", ExpectedResult = "192[.]168[.]0[.]1")]
+        [TestCase("10.0.0.0", ExpectedResult = "10[.]0[.]0[.]0")]
+        [TestCase("172.16.0.0", ExpectedResult = "172[.]16[.]0[.]0")]
         public string TestDefangIpaddrDeque(string address)
         {
             return Solution.DefangIPaddrDeque(address);

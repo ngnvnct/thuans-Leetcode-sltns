@@ -69,6 +69,11 @@ namespace Fizz_Buzz
         [TestCase(3, ExpectedResult = new string[] { "1", "2", "Fizz" })]
         [TestCase(5, ExpectedResult = new string[] { "1", "2", "Fizz", "4", "Buzz" })]
         [TestCase(15, ExpectedResult = new string[] { "1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz" })]
+        [TestCase(0, ExpectedResult = new string[] { })]
+        [TestCase(1, ExpectedResult = new string[] { "1" })]
+        [TestCase(2, ExpectedResult = new string[] { "1", "2" })]
+        [TestCase(7, ExpectedResult = new string[] { "1", "2", "Fizz", "4", "Buzz", "Fizz", "7" })]
+        [TestCase(20, ExpectedResult = new string[] { "1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz", "16", "17", "Fizz", "19", "Buzz" })]
         public IList<string> TestFizzBuzz2(int n)
         {
             return Solution.FizzBuzz(n);

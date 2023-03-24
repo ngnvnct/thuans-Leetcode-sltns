@@ -64,6 +64,7 @@ namespace Valid_Palindrome_II
         [TestCase("abca", ExpectedResult = true)]
         [TestCase("abc", ExpectedResult = false)]
         [TestCase("abccbxa", ExpectedResult = true)]
+        [TestCase("raceacar", ExpectedResult = true)]
         public bool TestValidPalindrome(string s)
         {
             return Solution.ValidPalindrome(s);
