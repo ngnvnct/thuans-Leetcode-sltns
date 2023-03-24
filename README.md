@@ -1,8 +1,6 @@
 # Leetcode solutions for [Personal Study Guide](https://docs.google.com/spreadsheets/d/1yd7kkIHFxB2gCoF8dt39thZIl4PYjL_qIK9_njMKI7s/edit?usp=sharing)
 Credit: [Neetcode](https://raw.githubusercontent.com/neetcode-gh/leetcode/main/README_template.md)
 
-[//]: # "> This repo hosts the solutions found on [NeetCode.io](https://neetcode.io) including the solutions shown on the [NeetCode YouTube channel](https://www.youtube.com/c/neetcode). The site will periodically be updated with new solutions from this repo!"
-
 <br/>
 
 The study guide has problem lists from these lists:
@@ -15,9 +13,10 @@ The study guide has problem lists from these lists:
 # Currently supported languages
 * Java
 * C#
+* Python
 
 Make sure you have these framework installed:
-* VSCode Java: hamcrest-core-1.3 and junit-4.13.2. Get the Extension Pack for Java.
+* VSCode Java: Get the Extension Pack for Java. It uses Maven to build the project and JUnit5
 * Visual Studio Code C#: .NET 7.0 SDK, Microsoft.NET.Test.Sdk 17.5.0, NUnit 3.13.3, coverlet.collector 3.2.0, NUnit3TestAdapter 4.4.2 (Managed NuGet Packages Solution).
 * VSCode C#: .vscode/launch.json and .vscode/tasks.json should be good to run C# on it.
 
@@ -28,6 +27,7 @@ VSCode installed:
 * Search Editor: Apply Changes
 * IntelliCode and IntelliCode API Usage Examples
 * .NET Core Test Explorer
+* Pylance and Python
 
 Solutions are also welcome for any other *supported* language on leetcode.com!
 
@@ -62,7 +62,9 @@ Starting from Intermediate Level, you can explore everything from that list and 
 To contribute, please fork this repo and open a PR adding a missing solution from the supported languages.
 
 
-If you would like to have collaborator permissions on the repo to merge your own PRs or review others' PRs please let me know. 
+If you would like to have collaborator permissions on the repo to merge your own PRs or review others' PRs please let me know.
+
+Please note, currently there are Maven, Dotnet and Python builds of the projet in GitHub actions, to make sure your code is good before merge.
 
 ## Credits
 
