@@ -11,8 +11,8 @@
 
 package freebie;
 
-import org.junit.Test;
-import static org.junit.Assert.assertEquals;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class problem_1672_richest_customer_wealth {
     public int maxWealth(int[][] accounts) {

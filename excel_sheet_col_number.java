@@ -1,6 +1,6 @@
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class excel_sheet_col_number {
     public int titleToNumber(String columnTitle) {

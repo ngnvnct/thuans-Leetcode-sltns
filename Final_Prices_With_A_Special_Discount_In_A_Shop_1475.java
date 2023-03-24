@@ -1,9 +1,9 @@
-import static org.junit.Assert.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 import java.util.ArrayDeque;
 import java.util.Arrays;
 import java.util.Deque;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class Final_Prices_With_A_Special_Discount_In_A_Shop_1475 {
     public int[] finalPrices(int[] prices) {

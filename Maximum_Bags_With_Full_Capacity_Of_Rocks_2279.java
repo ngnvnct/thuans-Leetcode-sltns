@@ -1,4 +1,4 @@
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.PriorityQueue;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class Maximum_Bags_With_Full_Capacity_Of_Rocks_2279 {
     public int maximumBagsHeap(int[] capacity, int[] rocks, int additionalRocks) {

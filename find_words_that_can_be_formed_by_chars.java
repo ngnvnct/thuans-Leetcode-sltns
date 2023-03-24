@@ -1,6 +1,6 @@
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class find_words_that_can_be_formed_by_chars {
     public int countCharacters(String[] words, String chars) {

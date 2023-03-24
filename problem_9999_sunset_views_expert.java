@@ -1,10 +1,10 @@
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Deque;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class problem_9999_sunset_views_expert {
     public static void main(String[] args) {

@@ -16,8 +16,8 @@
 
 package binary_search;
 
-import org.junit.Test;
-import static org.junit.Assert.assertEquals;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class problem_0704_binary_search {
     public int binarySearch(int[] nums, int target) {

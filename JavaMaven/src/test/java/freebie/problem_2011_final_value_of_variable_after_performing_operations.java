@@ -15,8 +15,8 @@
 
 package freebie;
 
-import org.junit.Test;
-import static org.junit.Assert.assertEquals;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class problem_2011_final_value_of_variable_after_performing_operations {
     public int finalValueAfterOperations(String[] operations) {

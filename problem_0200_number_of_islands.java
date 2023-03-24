@@ -19,8 +19,8 @@
  * Space: O(m * n) because of recursion stack
  */
 
-import static org.junit.Assert.assertEquals;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 
 public class problem_0200_number_of_islands {
     public int numIslands(char[][] grid) {

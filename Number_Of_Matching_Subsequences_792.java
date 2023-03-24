@@ -1,9 +1,9 @@
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class Number_Of_Matching_Subsequences_792 {
     public int numMatchingSubseq(String s, String[] words) {

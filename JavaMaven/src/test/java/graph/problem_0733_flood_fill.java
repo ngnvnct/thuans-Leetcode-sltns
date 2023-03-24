@@ -23,9 +23,9 @@
 
 package graph;
 
-import static org.junit.Assert.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class problem_0733_flood_fill {
     public int[][] floodFill(int[][] image, int sr, int sc, int newColor) {

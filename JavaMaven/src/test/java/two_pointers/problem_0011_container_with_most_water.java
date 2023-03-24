@@ -19,8 +19,8 @@
 
 package two_pointers;
 
-import org.junit.Test;
-import static org.junit.Assert.assertEquals;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class problem_0011_container_with_most_water {
     public int maxArea(int[] height) {

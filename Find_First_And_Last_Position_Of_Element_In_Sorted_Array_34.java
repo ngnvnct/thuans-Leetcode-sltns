@@ -1,6 +1,6 @@
-import static org.junit.Assert.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class Find_First_And_Last_Position_Of_Element_In_Sorted_Array_34 {
     public int[] searchRange(int[] nums, int target) {

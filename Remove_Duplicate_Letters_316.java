@@ -1,4 +1,4 @@
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
@@ -7,7 +7,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class Remove_Duplicate_Letters_316 {
     public String removeDuplicateLetters(String s) {

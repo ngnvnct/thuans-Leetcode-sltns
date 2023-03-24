@@ -49,8 +49,8 @@ package array;
 
 import java.util.Arrays;
 
-import org.junit.Test;
-import static org.junit.Assert.assertArrayEquals;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class problem_0238_product_of_array_except_self {
     public int[] productExceptSelfMethodOne(int[] nums) {

@@ -27,11 +27,11 @@
  * Space: O(1)
  */
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class problem_0227_basic_calculator_ii {
     public int calculate(String s) {

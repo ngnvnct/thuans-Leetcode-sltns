@@ -1,10 +1,10 @@
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.Arrays;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class Maximum_Units_On_A_Truck_1710 {
     public int maximumUnits(int[][] boxTypes, int truckSize) {

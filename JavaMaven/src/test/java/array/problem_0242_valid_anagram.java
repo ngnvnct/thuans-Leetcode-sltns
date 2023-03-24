@@ -31,9 +31,9 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.junit.Test;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class problem_0242_valid_anagram {
     public boolean isAnagram(String s, String t) {
@@ -86,9 +86,19 @@ public class problem_0242_valid_anagram {
         assertTrue(isAnagram("anagram", "nagaram"));
         assertFalse(isAnagram("rat", "cat"));
         assertFalse(isAnagram("anagram", "agaram"));
-
+        assertFalse(isAnagram("anagram", "anagrams"));
+        assertFalse(isAnagram("anagrams", "anagram"));
+        assertTrue(isAnagram("listen", "silent"));
+        assertFalse(isAnagram("listen", "silen"));
+        assertFalse(isAnagram("listen", "silennt"));
+    
         assertTrue(isAnagramSort("anagram", "nagaram"));
         assertFalse(isAnagramSort("rat", "cat"));
         assertFalse(isAnagramSort("anagram", "agaram"));
+        assertFalse(isAnagramSort("anagram", "anagrams"));
+        assertFalse(isAnagramSort("anagrams", "anagram"));
+        assertTrue(isAnagramSort("listen", "silent"));
+        assertFalse(isAnagramSort("listen", "silen"));
+        assertFalse(isAnagramSort("listen", "silennt"));
     }
 }

@@ -1,6 +1,6 @@
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class sign_product_array {
     public int arraySignNaive(int[] nums) {

@@ -14,8 +14,8 @@
 
 package dynamic_programming_1d;
 
-import org.junit.Test;
-import static org.junit.Assert.assertEquals;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class problem_0509_fibonacci_number {
     public int fib(int n) {

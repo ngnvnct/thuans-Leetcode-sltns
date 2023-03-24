@@ -21,14 +21,14 @@
  * second part was to print the index
  */
 
-import static org.junit.Assert.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Deque;
 import java.util.List;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class problem_1762_buildings_with_an_ocean_view {
     public int[] findBuildings(int[] heights) {

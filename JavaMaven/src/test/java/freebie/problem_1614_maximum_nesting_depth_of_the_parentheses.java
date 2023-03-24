@@ -20,8 +20,8 @@
 
 package freebie;
 
-import org.junit.Test;
-import static org.junit.Assert.assertEquals;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class problem_1614_maximum_nesting_depth_of_the_parentheses {
     public int maxDepth(String s) {

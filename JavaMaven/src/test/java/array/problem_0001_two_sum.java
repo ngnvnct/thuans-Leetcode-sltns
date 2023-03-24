@@ -24,8 +24,8 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.junit.Test;
-import static org.junit.Assert.assertArrayEquals;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class problem_0001_two_sum {
     public static void main(String[] args) {
@@ -66,15 +66,23 @@ public class problem_0001_two_sum {
         int[] testCase1ExpectedResult = new int[] { 0, 1 };
         int[] testCase2 = new int[] { 3, 2, 4 };
         int[] testCase2ExpectedResult = new int[] { 1, 2 };
-        int[] testCase3 = new int[] { 3, 3 };
-        int[] testCase3ExpectedResult = new int[] { 0, 1 };
-
+        int[] testCase3 = new int[] { 3, 1, 5 };
+        int[] testCase3ExpectedResult = new int[] { 0, 2 };
+        int[] testCase4 = new int[] { 1, 6, 3, 4 };
+        int[] testCase4ExpectedResult = new int[] { 0, 3 };
+        int[] testCase5 = new int[] { 5, 8, 7 };
+        int[] testCase5ExpectedResult = new int[] { 0, 1 };
+    
         assertArrayEquals(testCase1ExpectedResult, twoSum(testCase1, 9));
         assertArrayEquals(testCase2ExpectedResult, twoSum(testCase2, 6));
-        assertArrayEquals(testCase3ExpectedResult, twoSum(testCase3, 6));
-
+        assertArrayEquals(testCase3ExpectedResult, twoSum(testCase3, 8));
+        assertArrayEquals(testCase4ExpectedResult, twoSum(testCase4, 5));
+        assertArrayEquals(testCase5ExpectedResult, twoSum(testCase5, 13));
+    
         assertArrayEquals(testCase1ExpectedResult, twoSumBruteForce(testCase1, 9));
         assertArrayEquals(testCase2ExpectedResult, twoSumBruteForce(testCase2, 6));
-        assertArrayEquals(testCase3ExpectedResult, twoSumBruteForce(testCase3, 6));
+        assertArrayEquals(testCase3ExpectedResult, twoSumBruteForce(testCase3, 8));
+        assertArrayEquals(testCase4ExpectedResult, twoSumBruteForce(testCase4, 5));
+        assertArrayEquals(testCase5ExpectedResult, twoSumBruteForce(testCase5, 13));
     }
 }

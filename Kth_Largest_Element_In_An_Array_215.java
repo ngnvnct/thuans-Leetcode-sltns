@@ -1,9 +1,9 @@
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.Arrays;
 import java.util.PriorityQueue;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class Kth_Largest_Element_In_An_Array_215 {
     public int findKthLargestSort(int[] nums, int k) {

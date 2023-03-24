@@ -1,6 +1,6 @@
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class Count_Operations_To_Obtain_Zero_2169 {
     public int countOperations(int num1, int num2) {

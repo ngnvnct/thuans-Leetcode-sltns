@@ -15,8 +15,8 @@
 
 package two_pointers;
 
-import org.junit.Test;
-import static org.junit.Assert.assertArrayEquals;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class problem_0977_squares_of_a_sorted_array {
     public int[] sortedSquare(int[] nums) {

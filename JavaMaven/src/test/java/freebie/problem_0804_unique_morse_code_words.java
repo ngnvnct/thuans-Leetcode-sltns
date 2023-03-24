@@ -14,8 +14,8 @@ package freebie;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.junit.Test;
-import static org.junit.Assert.assertEquals;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class problem_0804_unique_morse_code_words {
     public int uniqueMorseRepresentations(String[] words) {

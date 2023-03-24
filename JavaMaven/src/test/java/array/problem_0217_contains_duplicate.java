@@ -22,9 +22,9 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.junit.Test;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class problem_0217_contains_duplicate {
     public boolean containsDuplicate(int[] nums) {
@@ -64,17 +64,25 @@ public class problem_0217_contains_duplicate {
         int[] testCase1 = new int[] { 1, 2, 3, 1 };
         int[] testCase2 = new int[] { 1, 2, 3, 4 };
         int[] testCase3 = new int[] { 1, 1, 1, 3, 3, 4, 3, 2, 4, 2 };
-
+        int[] testCase4 = new int[] {};
+        int[] testCase5 = new int[] { 1 };
+    
         assertTrue(containsDuplicate(testCase1));
         assertFalse(containsDuplicate(testCase2));
         assertTrue(containsDuplicate(testCase3));
-
+        assertFalse(containsDuplicate(testCase4));
+        assertFalse(containsDuplicate(testCase5));
+    
         assertTrue(containsDuplicateSort(testCase1));
         assertFalse(containsDuplicateSort(testCase2));
         assertTrue(containsDuplicateSort(testCase3));
-
+        assertFalse(containsDuplicateSort(testCase4));
+        assertFalse(containsDuplicateSort(testCase5));
+    
         assertTrue(containsDuplicateLoops(testCase1));
         assertFalse(containsDuplicateLoops(testCase2));
         assertTrue(containsDuplicateLoops(testCase3));
+        assertFalse(containsDuplicateLoops(testCase4));
+        assertFalse(containsDuplicateLoops(testCase5));
     }
 }

@@ -27,8 +27,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import org.junit.Test;
-import static org.junit.Assert.assertTrue;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class problem_0002_add_two_numbers {
     public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {

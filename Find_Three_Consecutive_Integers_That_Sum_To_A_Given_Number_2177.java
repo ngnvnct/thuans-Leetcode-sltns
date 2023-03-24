@@ -1,6 +1,6 @@
-import static org.junit.Assert.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class Find_Three_Consecutive_Integers_That_Sum_To_A_Given_Number_2177 {
     public long[] sumOfThree(long num) {

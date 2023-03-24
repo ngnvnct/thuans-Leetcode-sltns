@@ -1,10 +1,10 @@
-import static org.junit.Assert.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class Finding_The_Users_Active_Minutes_1817 {
     public int[] findingUAM(int[][] logs, int k) {

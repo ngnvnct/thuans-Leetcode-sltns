@@ -1,9 +1,9 @@
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.HashSet;
 import java.util.Set;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class Number_Of_Different_Integers_In_A_String_1805 {
     public static void main(String[] args) {

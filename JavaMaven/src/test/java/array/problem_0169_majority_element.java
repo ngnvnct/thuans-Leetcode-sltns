@@ -24,8 +24,8 @@ package array;
 
 import java.util.Arrays;
 
-import org.junit.Test;
-import static org.junit.Assert.assertEquals;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class problem_0169_majority_element {
     public int majorityElement(int[] nums) {
@@ -57,11 +57,14 @@ public class problem_0169_majority_element {
         int testCase1ExpectedResult = 3;
         int[] testCase2 = { 2, 2, 1, 1, 1, 2, 2 };
         int testCase2ExpectedResult = 2;
-
+        int[] testCase3 = { 1, 1, 2, 2, 2, 2, 2 };
+        int testCase3ExpectedResult = 2;
+        int[] testCase4 = { 1, 2, 1, 2, 1, 2, 1 };
+        int testCase4ExpectedResult = 1;
+    
         assertEquals(testCase1ExpectedResult, majorityElement(testCase1));
         assertEquals(testCase2ExpectedResult, majorityElement(testCase2));
-
-        assertEquals(testCase1ExpectedResult, majorityElementSort(testCase1));
-        assertEquals(testCase2ExpectedResult, majorityElementSort(testCase2));
+        assertEquals(testCase3ExpectedResult, majorityElement(testCase3));
+        assertEquals(testCase4ExpectedResult, majorityElement(testCase4));
     }
 }

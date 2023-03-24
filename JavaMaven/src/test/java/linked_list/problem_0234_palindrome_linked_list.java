@@ -17,9 +17,9 @@ import java.util.Arrays;
 import java.util.Deque;
 import java.util.LinkedList;
 
-import org.junit.Test;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class problem_0234_palindrome_linked_list {
     public static boolean isPalindrome(ListNode head) {

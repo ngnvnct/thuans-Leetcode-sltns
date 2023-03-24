@@ -1,10 +1,10 @@
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.ArrayDeque;
 import java.util.Arrays;
 import java.util.Deque;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class min_swap_group_1_together {
     public int minSwaps(int[] data) {

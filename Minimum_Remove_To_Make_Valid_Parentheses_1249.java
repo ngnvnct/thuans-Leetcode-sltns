@@ -1,6 +1,6 @@
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class Minimum_Remove_To_Make_Valid_Parentheses_1249 {
     public String minRemoveToMakeValidReverse(String s) {

@@ -26,8 +26,8 @@
 
 package array;
 
-import org.junit.Test;
-import static org.junit.Assert.assertEquals;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class problem_0152_maximum_product_subarray {
     public int maxProduct(int[] nums) {
@@ -88,14 +88,29 @@ public class problem_0152_maximum_product_subarray {
         int testCase1ExpectedResult = 6;
         int[] testCase2 = { -2, 0, -1 };
         int testCase2ExpectedResult = 0;
-
+        int[] testCase3 = { 2, 3, -2, 4, -1 };
+        int testCase3ExpectedResult = 48;
+        int[] testCase4 = { -2, -3, -4 };
+        int testCase4ExpectedResult = 12;
+        int[] testCase5 = { 2 };
+        int testCase5ExpectedResult = 2;
+    
         assertEquals(testCase1ExpectedResult, maxProduct(testCase1));
         assertEquals(testCase2ExpectedResult, maxProduct(testCase2));
-
-        assertEquals(testCase1ExpectedResult, maxProductMethodThree(testCase1));
-        assertEquals(testCase2ExpectedResult, maxProductMethodThree(testCase2));
+        assertEquals(testCase3ExpectedResult, maxProduct(testCase3));
+        assertEquals(testCase4ExpectedResult, maxProduct(testCase4));
+        assertEquals(testCase5ExpectedResult, maxProduct(testCase5));
 
         assertEquals(testCase1ExpectedResult, maxProductMethodTwo(testCase1));
         assertEquals(testCase2ExpectedResult, maxProductMethodTwo(testCase2));
+        assertEquals(testCase3ExpectedResult, maxProductMethodTwo(testCase3));
+        assertEquals(testCase4ExpectedResult, maxProductMethodTwo(testCase4));
+        assertEquals(testCase5ExpectedResult, maxProductMethodTwo(testCase5));
+        
+        assertEquals(testCase1ExpectedResult, maxProductMethodThree(testCase1));
+        assertEquals(testCase2ExpectedResult, maxProductMethodThree(testCase2));
+        assertEquals(testCase3ExpectedResult, maxProductMethodThree(testCase3));
+        assertEquals(testCase4ExpectedResult, maxProductMethodThree(testCase4));
+        assertEquals(testCase5ExpectedResult, maxProductMethodThree(testCase5));
     }
 }

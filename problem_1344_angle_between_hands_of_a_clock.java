@@ -18,8 +18,8 @@
  * Space: O(1)
  */
 
-import static org.junit.Assert.assertEquals;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 
 public class problem_1344_angle_between_hands_of_a_clock {
     public double angleClock(int hour, int minutes) {

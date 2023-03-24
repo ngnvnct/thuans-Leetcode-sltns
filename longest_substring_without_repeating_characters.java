@@ -1,9 +1,9 @@
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.HashSet;
 import java.util.Set;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class longest_substring_without_repeating_characters {
     public int lengthOfLongestSubstring(String s) {

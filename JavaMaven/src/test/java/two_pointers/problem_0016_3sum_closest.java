@@ -16,8 +16,8 @@ package two_pointers;
 
 import java.util.Arrays;
 
-import org.junit.Test;
-import static org.junit.Assert.assertEquals;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class problem_0016_3sum_closest {
     public int threeSumClosest(int[] nums, int target) {

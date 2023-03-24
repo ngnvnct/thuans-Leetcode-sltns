@@ -13,8 +13,8 @@
 
 package freebie;
 
-import org.junit.Test;
-import static org.junit.Assert.assertArrayEquals;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class problem_1480_running_sum_of_1d_array {
     public int[] runningSum(int[] nums) {

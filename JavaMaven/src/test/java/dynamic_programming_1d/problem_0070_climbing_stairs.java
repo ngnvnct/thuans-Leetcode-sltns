@@ -17,8 +17,8 @@
 
 package dynamic_programming_1d;
 
-import org.junit.Test;
-import static org.junit.Assert.assertEquals;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class problem_0070_climbing_stairs {
     public int climbStairs(int n) {
@@ -68,9 +68,12 @@ public class problem_0070_climbing_stairs {
         int testCase2ExpectedResult = 3;
         int testCase3 = 45;
         int testCase3ExpectedResult = 1836311903;
+        int testCase4 = 10;
+        int testCase4ExpectedResult = 89;
 
         assertEquals(testCase1ExpectedResult, climbStairs(testCase1));
         assertEquals(testCase2ExpectedResult, climbStairs(testCase2));
         assertEquals(testCase3ExpectedResult, climbStairs(testCase3));
+        assertEquals(testCase4ExpectedResult, climbStairs(testCase4));
     }
 }

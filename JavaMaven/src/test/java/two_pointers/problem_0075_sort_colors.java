@@ -19,8 +19,8 @@
 
 package two_pointers;
 
-import org.junit.Test;
-import static org.junit.Assert.assertArrayEquals;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class problem_0075_sort_colors {
     public void sortColors(int[] nums) {

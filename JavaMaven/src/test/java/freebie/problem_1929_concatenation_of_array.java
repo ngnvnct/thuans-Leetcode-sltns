@@ -20,8 +20,8 @@
 
 package freebie;
 
-import org.junit.Test;
-import static org.junit.Assert.assertArrayEquals;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class problem_1929_concatenation_of_array {
     public int[] getConcatenation(int[] nums) {

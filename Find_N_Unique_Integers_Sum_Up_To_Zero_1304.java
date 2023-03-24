@@ -1,6 +1,6 @@
-import static org.junit.Assert.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class Find_N_Unique_Integers_Sum_Up_To_Zero_1304 {
     public int[] sumZero(int n) {

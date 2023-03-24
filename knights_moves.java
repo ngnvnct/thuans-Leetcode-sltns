@@ -1,10 +1,10 @@
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class knights_moves {
     public static void main(String[] args) {

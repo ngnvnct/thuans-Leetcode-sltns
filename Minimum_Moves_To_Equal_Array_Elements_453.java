@@ -1,8 +1,8 @@
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.Arrays;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class Minimum_Moves_To_Equal_Array_Elements_453 {
     public int minMoves(int[] nums) {

@@ -1,4 +1,4 @@
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class remove_all_ones_matrix {
     public boolean removesOnes(int[][] grid) {

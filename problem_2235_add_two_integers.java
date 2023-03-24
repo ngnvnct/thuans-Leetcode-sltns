@@ -13,9 +13,9 @@
  * Space: O(1)
  */
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class problem_2235_add_two_integers {
     public int sum(int num1, int num2) {

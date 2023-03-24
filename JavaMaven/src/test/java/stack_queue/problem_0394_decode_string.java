@@ -39,8 +39,8 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.Stack;
 
-import org.junit.Test;
-import static org.junit.Assert.assertEquals;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class problem_0394_decode_string {
     public String decodeStringStack(String s) {

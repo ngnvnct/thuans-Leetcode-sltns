@@ -13,8 +13,8 @@ package freebie;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.junit.Test;
-import static org.junit.Assert.assertEquals;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class problem_0771_jewels_and_stones {
     public int numJewelsInStonesSet(String jewels, String stones) {

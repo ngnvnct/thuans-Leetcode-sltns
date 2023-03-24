@@ -8,9 +8,9 @@
  * Space: O(1) or O(100)
  */
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class problem_1512_number_of_good_pairs {
     public int numIdenticalPairs(int[] nums) {

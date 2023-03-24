@@ -21,8 +21,8 @@ package stack_queue;
 import java.util.Deque;
 import java.util.LinkedList;
 
-import org.junit.Test;
-import static org.junit.Assert.assertEquals;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class problem_0071_simplify_path {
     public String simplifyPath(String path) {

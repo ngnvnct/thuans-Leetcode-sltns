@@ -10,8 +10,8 @@
 
 package binary_search;
 
-import org.junit.Test;
-import static org.junit.Assert.assertEquals;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class problem_0035_search_insert_position {
     public int searchInsert(int[] nums, int target) {

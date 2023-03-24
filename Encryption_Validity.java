@@ -1,8 +1,8 @@
-import static org.junit.Assert.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 import java.util.Arrays;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class Encryption_Validity {
     public int[] encryptionValidity(int[] keys, int instructionCount, int validityPeriod) {

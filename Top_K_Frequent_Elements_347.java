@@ -1,11 +1,11 @@
-import static org.junit.Assert.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class Top_K_Frequent_Elements_347 {
     public int[] topKFrequent(int[] nums, int k) {

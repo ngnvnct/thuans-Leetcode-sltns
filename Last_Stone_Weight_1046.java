@@ -1,11 +1,11 @@
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.PriorityQueue;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class Last_Stone_Weight_1046 {
     public int lastStoneWeight(int[] stones) {
