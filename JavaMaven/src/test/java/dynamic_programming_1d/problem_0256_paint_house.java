@@ -67,21 +67,13 @@ public class problem_0256_paint_house {
         int testCase2ExpectedResult = 2;
         int[][] testCase3 = { { 17, 2, 17 }, { 8, 4, 10 }, { 6, 3, 19 }, { 4, 8, 12 } };
         int testCase3ExpectedResult = 17;
-        int[][] testCase4 = { { 5, 8, 3 }, { 2, 3, 1 }, { 10, 12, 9 }, { 15, 13, 14 }, { 6, 1, 8 } };
-        int testCase4ExpectedResult = 16;
-        int[][] testCase5 = { { 1, 1, 1 }, { 2, 2, 2 }, { 3, 3, 3 }, { 4, 4, 4 }, { 5, 5, 5 } };
-        int testCase5ExpectedResult = 9;
 
         assertEquals(testCase1ExpectedResult, paintHouse(testCase1));
         assertEquals(testCase2ExpectedResult, paintHouse(testCase2));
         assertEquals(testCase3ExpectedResult, paintHouse(testCase3));
-        assertEquals(testCase4ExpectedResult, paintHouse(testCase4));
-        assertEquals(testCase5ExpectedResult, paintHouse(testCase5));
 
         assertEquals(testCase1ExpectedResult, paintHouse2(testCase1));
         assertEquals(testCase2ExpectedResult, paintHouse2(testCase2));
         assertEquals(testCase3ExpectedResult, paintHouse2(testCase3));
-        assertEquals(testCase4ExpectedResult, paintHouse2(testCase4));
-        assertEquals(testCase5ExpectedResult, paintHouse2(testCase5));
     }
 }
