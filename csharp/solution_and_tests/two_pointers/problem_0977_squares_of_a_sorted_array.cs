@@ -50,6 +50,9 @@ namespace Squares_of_a_Sorted_Array
         [Test]
         [TestCase(new int[] { -4, -1, 0, 3, 10 }, ExpectedResult = new int[] { 0, 1, 9, 16, 100 })]
         [TestCase(new int[] { -7, -3, 2, 3, 11 }, ExpectedResult = new int[] { 4, 9, 9, 49, 121 })]
+        [TestCase(new int[] { -5, -4, -3, -2, -1 }, ExpectedResult = new int[] { 1, 4, 9, 16, 25 })]
+        [TestCase(new int[] { 0, 1, 2, 3, 4 }, ExpectedResult = new int[] { 0, 1, 4, 9, 16 })]
+        [TestCase(new int[] { -1, 0, 1 }, ExpectedResult = new int[] { 0, 1, 1 })]
         public int[] TestSortedSquares(int[] nums)
         {
             return Solution.SortedSquares(nums);

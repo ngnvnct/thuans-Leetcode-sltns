@@ -105,6 +105,14 @@ namespace Trapping_Rain_Water
         [Test]
         [TestCase(new int[] { 0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1 }, ExpectedResult = 6)]
         [TestCase(new int[] { 4, 2, 0, 3, 2, 5 }, ExpectedResult = 9)]
+        [TestCase(new int[] { 0, 0, 0, 0, 0 }, ExpectedResult = 0)]
+        [TestCase(new int[] { 5, 4, 3, 2, 1 }, ExpectedResult = 0)]
+        [TestCase(new int[] { 1, 2, 3, 4, 5 }, ExpectedResult = 0)]
+        [TestCase(new int[] { 2, 0, 2 }, ExpectedResult = 2)]
+        [TestCase(new int[] { 1, 2, 1 }, ExpectedResult = 0)]
+        [TestCase(new int[] { 2, 1, 2 }, ExpectedResult = 1)]
+        [TestCase(new int[] { 3, 0, 0, 2, 0, 4 }, ExpectedResult = 10)]
+        [TestCase(new int[] { 3, 1, 0, 1, 2, 0, 2, 4 }, ExpectedResult = 12)]
         public int TestTrap(int[] height)
         {
             return Solution.Trap(height);
@@ -113,6 +121,14 @@ namespace Trapping_Rain_Water
         [Test]
         [TestCase(new int[] { 0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1 }, ExpectedResult = 6)]
         [TestCase(new int[] { 4, 2, 0, 3, 2, 5 }, ExpectedResult = 9)]
+        [TestCase(new int[] { 0, 0, 0, 0, 0 }, ExpectedResult = 0)]
+        [TestCase(new int[] { 5, 4, 3, 2, 1 }, ExpectedResult = 0)]
+        [TestCase(new int[] { 1, 2, 3, 4, 5 }, ExpectedResult = 0)]
+        [TestCase(new int[] { 2, 0, 2 }, ExpectedResult = 2)]
+        [TestCase(new int[] { 1, 2, 1 }, ExpectedResult = 0)]
+        [TestCase(new int[] { 2, 1, 2 }, ExpectedResult = 1)]
+        [TestCase(new int[] { 3, 0, 0, 2, 0, 4 }, ExpectedResult = 10)]
+        [TestCase(new int[] { 3, 1, 0, 1, 2, 0, 2, 4 }, ExpectedResult = 12)]
         public int TestTrapMemory(int[] height)
         {
             return Solution.TrapMemory(height);

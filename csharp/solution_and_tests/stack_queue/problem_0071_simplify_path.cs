@@ -64,6 +64,9 @@ namespace Simplify_Path
         [TestCase("/home/", ExpectedResult = "/home")]
         [TestCase("/../", ExpectedResult = "/")]
         [TestCase("/home//foo/", ExpectedResult = "/home/foo")]
+        [TestCase("/a/./b/../../c/", ExpectedResult = "/c")]
+        [TestCase("/a//b////c/d//././/..", ExpectedResult = "/a/b/c")]
+        [TestCase("/", ExpectedResult = "/")]
         public string TestSimplifyPath(string path)
         {
             return Solution.SimplifyPath(path);

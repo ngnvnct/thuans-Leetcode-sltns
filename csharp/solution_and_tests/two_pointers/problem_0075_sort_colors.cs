@@ -58,6 +58,11 @@ namespace Sort_Colors
         [Test]
         [TestCase(new int[] { 2, 0, 2, 1, 1, 0 }, ExpectedResult = new int[] { 0, 0, 1, 1, 2, 2 })]
         [TestCase(new int[] { 2, 0, 1 }, ExpectedResult = new int[] { 0, 1, 2 })]
+        [TestCase(new int[] { 0, 0, 0 }, ExpectedResult = new int[] { 0, 0, 0 })]
+        [TestCase(new int[] { 1, 2, 0 }, ExpectedResult = new int[] { 0, 1, 2 })]
+        [TestCase(new int[] { 1, 0, 0, 2, 2 }, ExpectedResult = new int[] { 0, 0, 1, 2, 2 })]
+        [TestCase(new int[] { 0, 1, 2, 0, 1, 2 }, ExpectedResult = new int[] { 0, 0, 1, 1, 2, 2 })]
+        [TestCase(new int[] { 2, 1, 0 }, ExpectedResult = new int[] { 0, 1, 2 })]
         public int[] TestSortColor(int[] nums)
         {
             return Solution.TestSortColor(nums);
