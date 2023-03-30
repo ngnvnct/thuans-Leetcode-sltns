@@ -47,6 +47,20 @@ namespace Valid_Palindrome
         [TestCase("A man, a plan, a canal: Panama", ExpectedResult = true)]
         [TestCase("race a car", ExpectedResult = false)]
         [TestCase("", ExpectedResult = true)]
+        [TestCase("Was it a car or a cat I saw", ExpectedResult = true)]
+        [TestCase("No 'x' in Nixon", ExpectedResult = true)]
+        [TestCase("Live on time, emit no evil", ExpectedResult = true)]
+        [TestCase("Was it a cat I saw?", ExpectedResult = true)]
+        [TestCase("Eva, can I see bees in a cave?", ExpectedResult = true)]
+        [TestCase("Madam, in Eden, I'm Adam", ExpectedResult = true)]
+        [TestCase("Never odd or even", ExpectedResult = true)]
+        [TestCase("Do geese see God?", ExpectedResult = true)]
+        [TestCase("Mr. Owl ate my metal worm", ExpectedResult = true)]
+        [TestCase("A Santa, at NASA", ExpectedResult = true)]
+        [TestCase("Yo, Banana Boy!", ExpectedResult = true)]
+        [TestCase("Madam, in Alaska, I'm Adam", ExpectedResult = false)]
+        [TestCase("A man, a plan, a canal -- Panama", ExpectedResult = true)]
+        [TestCase("Mr. Owl ate my metal worm?", ExpectedResult = true)]
         public bool TestIsPalindrome(string s)
         {
             return Solution.IsPalindrome(s);

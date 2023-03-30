@@ -73,15 +73,15 @@ namespace ThreeSum
         public void TestThreeSum()
         {
             int[] testCase1 = new int[] { -1, 0, 1, 2, -1, -4 };
-            int[][] testCase1ExpectedResult = new int[][] { new int[] { -1, -1, 2 }, new int[] { -1, 0, 1 } };
+            IList<IList<int>> testCase1ExpectedResult = new List<IList<int>> { new List<int> { -1, -1, 2 }, new List<int> { -1, 0, 1 } };
             int[] testCase2 = new int[] { 0, 1, 1 };
-            int[][] testCase2ExpectedResult = new int[0][];
+            IList<IList<int>> testCase2ExpectedResult = new List<IList<int>>();
             int[] testCase3 = new int[] { 0, 0, 0 };
-            int[][] testCase3ExpectedResult = new int[][] { new int[] { 0, 0, 0 } };
+            IList<IList<int>> testCase3ExpectedResult = new List<IList<int>> { new List<int> { 0, 0, 0 } };
 
-            CollectionAssert.AreEqual(testCase1ExpectedResult, Solution.ThreeSum(testCase1));
-            CollectionAssert.AreEqual(testCase2ExpectedResult, Solution.ThreeSum(testCase2));
-            CollectionAssert.AreEqual(testCase3ExpectedResult, Solution.ThreeSum(testCase3));
+            CollectionAssert.AreEquivalent(testCase1ExpectedResult, Solution.ThreeSum(testCase1));
+            CollectionAssert.AreEquivalent(testCase2ExpectedResult, Solution.ThreeSum(testCase2));
+            CollectionAssert.AreEquivalent(testCase3ExpectedResult, Solution.ThreeSum(testCase3));
         }
     }
 }
