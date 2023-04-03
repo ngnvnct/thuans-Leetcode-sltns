@@ -28,7 +28,7 @@ class TestCase(unittest.TestCase):
         self.testCase1ExpectedResult = 4
 
         self.testCase2 = [2,7,9,3,1]
-        self.testCase2ExpectedResult = 13
+        self.testCase2ExpectedResult = 12
     
     def testRob1(self):
         self.assertEqual(self.solution.rob(self.testCase1), self.testCase1ExpectedResult)
