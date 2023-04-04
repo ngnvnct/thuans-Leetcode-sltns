@@ -23,16 +23,14 @@ Space = O(n) We have to make a completely separate dp array.
 class TestCase(unittest.TestCase):
     def setUp(self):
         self.solution = Solution()
-
-        self.testCase1 = [1,2,3,1]
-        self.testCase1ExpectedResult = 4
-
-        self.testCase2 = [2,7,9,3,1]
-        self.testCase2ExpectedResult = 12
     
     def testRob1(self):
+        self.testCase1 = [1,2,3,1]
+        self.testCase1ExpectedResult = 4
         self.assertEqual(self.solution.rob(self.testCase1), self.testCase1ExpectedResult)
     def testRob2(self):
+        self.testCase2 = [2,7,9,3,1]
+        self.testCase2ExpectedResult = 12
         self.assertEqual(self.solution.rob(self.testCase2), self.testCase2ExpectedResult)
 
 if __name__ == "__main__":
