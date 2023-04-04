@@ -30,16 +30,14 @@ class TestCase(unittest.TestCase):
     def setUp(self):
         self.solution = Solution()
 
+    def testMinPathSum1(self):
         self.testCase1 = [[1,3,1],[1,5,1],[4,2,1]]
         self.testCase1ExpectedResult = 7
-
-        self.testCase2 = [[1,2,3],[4,5,6]]
-        self.testCase2ExpectedResult = 12
-
-    def testMinPathSum1(self):
         self.assertEqual(self.solution.minPathSum(self.testCase1), self.testCase1ExpectedResult)
 
     def testMinPathSum2(self):
+        self.testCase2 = [[1,2,3],[4,5,6]]
+        self.testCase2ExpectedResult = 12
         self.assertEqual(self.solution.minPathSum(self.testCase2), self.testCase2ExpectedResult)
 
 if __name__ == "__main__":

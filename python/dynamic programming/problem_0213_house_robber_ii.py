@@ -33,20 +33,17 @@ class TestCase(unittest.TestCase):
     def setUp(self):
         self.solution = Solution()
 
+    def testRob1(self):
         self.testCase1 = [2,3,2]
         self.testCase1ExpectedResult = 3
-
-        self.testCase2 = [1,2,3,1]
-        self.testCase2ExpectedResult = 4
-
-        self.testCase3 = [1,2,3]
-        self.testCase3ExpectedResult = 3
-
-    def testRob1(self):
         self.assertEqual(self.solution.rob(self.testCase1), self.testCase1ExpectedResult)
     def testRob2(self):
+        self.testCase2 = [1,2,3,1]
+        self.testCase2ExpectedResult = 4
         self.assertEqual(self.solution.rob(self.testCase2), self.testCase2ExpectedResult)
     def testRob3(self):
+        self.testCase3 = [1,2,3]
+        self.testCase3ExpectedResult = 3
         self.assertEqual(self.solution.rob(self.testCase3), self.testCase3ExpectedResult)
 
 if __name__ == "__main__":
