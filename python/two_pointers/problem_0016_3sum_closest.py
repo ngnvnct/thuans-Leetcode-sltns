@@ -32,11 +32,11 @@ class TestCase(unittest.TestCase):
 
         self.testCase1 = [-1,2,1,-4]
         self.testCase1Target = 1
-        self.testCase1ExpectedResult = 1
+        self.testCase1ExpectedResult = 2
 
         self.testCase2 = [0,0,0]
         self.testCase2Target = 1
-        self.testCase2ExpectedResult = 1
+        self.testCase2ExpectedResult = 0
     
     def testThreeSumClosest1(self):
         self.assertEqual(self.solution.threeSumClosest(self.testCase1, self.testCase1Target), self.testCase1ExpectedResult)
