@@ -28,6 +28,8 @@
  * Space: O(n)
  */
 
+package stack_queue;
+
 import java.util.ArrayDeque;
 import java.util.Deque;
 
@@ -89,7 +91,7 @@ public class problem_0682_baseball_game {
     }
 
     @Test
-    public void testPoint() {
+    public void testCalPoints() {
         String[] testCase1 = { "5", "2", "C", "D", "+" };
         int testCase1ExpectedResult = 30;
         String[] testCase2 = { "5", "-2", "4", "C", "D", "9", "+", "+" };

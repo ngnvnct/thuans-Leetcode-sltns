@@ -19,6 +19,8 @@
  * Space: O(m * n) because of recursion stack
  */
 
+package graph;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 
@@ -53,7 +55,7 @@ public class problem_0200_number_of_islands {
     }
 
     @Test
-    public void testIslands() {
+    public void testNumIslands() {
         char[][] testCase1 = {
                 { '1', '1', '1', '1', '0' },
                 { '1', '1', '0', '1', '0' },
@@ -69,5 +71,29 @@ public class problem_0200_number_of_islands {
                 { '0', '0', '0', '1', '1' }
         };
         assertEquals(3, numIslands(testCase2));
+
+        char[][] testCase3 = {
+                { '1', '1', '1', '1', '1' },
+                { '1', '1', '1', '1', '1' },
+                { '1', '1', '1', '1', '1' },
+                { '1', '1', '1', '1', '1' }
+        };
+        assertEquals(1, numIslands(testCase3));
+
+        char[][] testCase4 = {
+                { '0', '0', '0', '0', '0' },
+                { '0', '0', '0', '0', '0' },
+                { '0', '0', '0', '0', '0' },
+                { '0', '0', '0', '0', '0' }
+        };
+        assertEquals(0, numIslands(testCase4));
+
+        char[][] testCase5 = {
+                { '1', '1', '1', '0', '0' },
+                { '1', '0', '0', '1', '0' },
+                { '1', '0', '0', '0', '1' },
+                { '0', '0', '1', '1', '0' }
+        };
+        assertEquals(4, numIslands(testCase5));
     }
 }

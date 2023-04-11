@@ -1,3 +1,24 @@
+/*
+ * Explanation:
+ * 
+ * This problem basically asks that given a unique collection, and a budget, buy
+ * cards within budget that is not a duplicate
+ * 
+ * For example, a collection = [2, 4, 5] and a budget of 7, you can buy 1 and 3,
+ * or 1 and 6, or 7. Maximum of 2 cards
+ * 
+ * For simplicity sake, I turn collection into a set, otherwise you have to make
+ * a hash set to add the collection element in.
+ * Then you can just apply greedy algorithm and grab the card from smallest cost
+ * first, while avoiding duplication
+ * 
+ * Time: O(n)
+ * Space: O(n) to include the set element, it is still O(n) for input, otherwise
+ * O(1)
+ */
+
+package array;
+
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 import java.util.ArrayList;
@@ -8,7 +29,7 @@ import java.util.Set;
 
 import org.junit.jupiter.api.Test;
 
-public class problem_9999_Birthday_Card_Collection {
+public class problem_9999_birthday_card_collection {
     public int[] birthdayCard(Set<Integer> collection, int d) {
         int temp = d;
         List<Integer> res = new ArrayList<>();
@@ -36,22 +57,3 @@ public class problem_9999_Birthday_Card_Collection {
         assertArrayEquals(new int[] { 1, 2, 3, 5 }, birthdayCard(new HashSet<>(Arrays.asList(4, 6, 12, 8)), 14));
     }
 }
-
-/*
- * Explanation:
- * 
- * This problem basically asks that given a unique collection, and a budget, buy
- * cards within budget that is not a duplicate
- * 
- * For example, a collection = [2, 4, 5] and a budget of 7, you can buy 1 and 3,
- * or 1 and 6, or 7. Maximum of 2 cards
- * 
- * For simplicity sake, I turn collection into a set, otherwise you have to make
- * a hash set to add the collection element in.
- * Then you can just apply greedy algorithm and grab the card from smallest cost
- * first, while avoiding duplication
- * 
- * Time: O(n)
- * Space: O(n) to include the set element, it is still O(n) for input, otherwise
- * O(1)
- */

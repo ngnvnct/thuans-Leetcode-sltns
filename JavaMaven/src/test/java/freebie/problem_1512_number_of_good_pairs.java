@@ -8,15 +8,16 @@
  * Space: O(1) or O(100)
  */
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+package freebie;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 
 public class problem_1512_number_of_good_pairs {
     public int numIdenticalPairs(int[] nums) {
         int identicalPairs = 0;
         for (int i = 0; i < nums.length; i++) {
-            for (int j = i+1; j < nums.length; j++) {
+            for (int j = i + 1; j < nums.length; j++) {
                 if (nums[i] == nums[j]) {
                     identicalPairs++;
                 }
@@ -34,18 +35,18 @@ public class problem_1512_number_of_good_pairs {
         }
 
         for (int n : countBucket) {
-            identicalPairs += (n * (n-1) /2);
+            identicalPairs += (n * (n - 1) / 2);
         }
         return identicalPairs;
     }
 
     @Test
     public void testPairs() {
-        int[] testCase1 = new int[] {1,2,3,1,1,3};
+        int[] testCase1 = new int[] { 1, 2, 3, 1, 1, 3 };
         int testCase1ExpectedResult = 4;
-        int[] testCase2 = new int[] {1,1,1,1};
+        int[] testCase2 = new int[] { 1, 1, 1, 1 };
         int testCase2ExpectedResult = 6;
-        int[] testCase3 = new int[] {1,2,3};
+        int[] testCase3 = new int[] { 1, 2, 3 };
         int testCase3ExpectedResult = 0;
 
         assertEquals(testCase1ExpectedResult, numIdenticalPairs(testCase1));

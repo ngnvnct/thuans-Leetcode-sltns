@@ -27,6 +27,8 @@
  * Space: O(1)
  */
 
+package array;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -88,7 +90,7 @@ public class problem_9999_anagrams_from_string {
     public void testAnagram() {
         String[] testCase1 = { "ACT", "TAC", "DOGG", "TCA", "BOB", "JUM" };
         List<String> testCase1ExpectedResult = new ArrayList<>(Arrays.asList("ACT", "TAC", "TCA"));
-        
+
         assertEquals(testCase1ExpectedResult, findAnagram("CAT", testCase1));
         assertEquals(testCase1ExpectedResult, findAnagramSort("CAT", testCase1));
     }

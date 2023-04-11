@@ -21,14 +21,15 @@
  * second part was to print the index
  */
 
+package stack_queue;
+
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Deque;
 import java.util.List;
-import org.junit.jupiter.api.Test;
 
 public class problem_1762_buildings_with_an_ocean_view {
     public int[] findBuildings(int[] heights) {

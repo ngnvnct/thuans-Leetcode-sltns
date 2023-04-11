@@ -13,6 +13,8 @@
  * Space: O(1)
  */
 
+package math_matrix_geometry;
+
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -39,9 +41,24 @@ public class problem_0258_add_digits {
     public void testAddDigit() {
         int testCase1 = 38;
         int testCase1ExpectedResult = 2;
-        
+        int testCase2 = 12345;
+        int testCase2ExpectedResult = 6;
+        int testCase3 = 0;
+        int testCase3ExpectedResult = 0;
+        int testCase4 = 9;
+        int testCase4ExpectedResult = 9;
+        int testCase5 = 99999;
+        int testCase5ExpectedResult = 9;
+
         assertEquals(testCase1ExpectedResult, addDigitIteration(testCase1));
         assertEquals(testCase1ExpectedResult, addDigitMath(testCase1));
-        assertEquals(0, addDigitMath(testCase1));
+        assertEquals(testCase2ExpectedResult, addDigitIteration(testCase2));
+        assertEquals(testCase2ExpectedResult, addDigitMath(testCase2));
+        assertEquals(testCase3ExpectedResult, addDigitIteration(testCase3));
+        assertEquals(testCase3ExpectedResult, addDigitMath(testCase3));
+        assertEquals(testCase4ExpectedResult, addDigitIteration(testCase4));
+        assertEquals(testCase4ExpectedResult, addDigitMath(testCase4));
+        assertEquals(testCase5ExpectedResult, addDigitIteration(testCase5));
+        assertEquals(testCase5ExpectedResult, addDigitMath(testCase5));
     }
 }

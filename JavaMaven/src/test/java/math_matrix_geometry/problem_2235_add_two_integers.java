@@ -13,8 +13,9 @@
  * Space: O(1)
  */
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+package math_matrix_geometry;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 
 public class problem_2235_add_two_integers {

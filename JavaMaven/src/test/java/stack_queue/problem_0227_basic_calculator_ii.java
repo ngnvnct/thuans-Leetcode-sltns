@@ -27,11 +27,13 @@
  * Space: O(1)
  */
 
+package stack_queue;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
-import org.junit.jupiter.api.Test;
 
 public class problem_0227_basic_calculator_ii {
     public int calculate(String s) {
@@ -147,18 +149,32 @@ public class problem_0227_basic_calculator_ii {
         int testCase2ExpectedResult = 1;
         String testCase3 = "3+5 / 2";
         int testCase3ExpectedResult = 5;
+        String testCase4 = "10+2/2+3*4-6";
+        int testCase4ExpectedResult = 17;
+        String testCase5 = "1-2*3+4/2";
+        int testCase5ExpectedResult = -3;
+        String testCase6 = "0";
+        int testCase6ExpectedResult = 0;
 
         assertEquals(testCase1ExpectedResult, calculate(testCase1));
         assertEquals(testCase2ExpectedResult, calculate(testCase2));
         assertEquals(testCase3ExpectedResult, calculate(testCase3));
+        assertEquals(testCase4ExpectedResult, calculate(testCase4));
+        assertEquals(testCase5ExpectedResult, calculate(testCase5));
+        assertEquals(testCase6ExpectedResult, calculate(testCase6));
 
         assertEquals(testCase1ExpectedResult, calculateEasy(testCase1));
         assertEquals(testCase2ExpectedResult, calculateEasy(testCase2));
         assertEquals(testCase3ExpectedResult, calculateEasy(testCase3));
+        assertEquals(testCase4ExpectedResult, calculateEasy(testCase4));
+        assertEquals(testCase5ExpectedResult, calculateEasy(testCase5));
+        assertEquals(testCase6ExpectedResult, calculateEasy(testCase6));
 
         assertEquals(testCase1ExpectedResult, calculateOptimal(testCase1));
         assertEquals(testCase2ExpectedResult, calculateOptimal(testCase2));
         assertEquals(testCase3ExpectedResult, calculateOptimal(testCase3));
-
+        assertEquals(testCase4ExpectedResult, calculateOptimal(testCase4));
+        assertEquals(testCase5ExpectedResult, calculateOptimal(testCase5));
+        assertEquals(testCase6ExpectedResult, calculateOptimal(testCase6));
     }
 }
