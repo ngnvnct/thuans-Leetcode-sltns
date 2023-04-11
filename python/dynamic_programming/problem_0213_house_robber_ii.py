@@ -46,5 +46,30 @@ class TestCase(unittest.TestCase):
         self.testCase3ExpectedResult = 3
         self.assertEqual(self.solution.rob(self.testCase3), self.testCase3ExpectedResult)
 
+    def testRob4(self):
+        self.testCase4 = [1, 1, 1]
+        self.testCase4ExpectedResult = 1
+        self.assertEqual(self.solution.rob(self.testCase4), self.testCase4ExpectedResult)
+
+    def testRob5(self):
+        self.testCase5 = [2, 7, 9, 3, 1]
+        self.testCase5ExpectedResult = 11
+        self.assertEqual(self.solution.rob(self.testCase5), self.testCase5ExpectedResult)
+
+    def testRob6(self):
+        self.testCase6 = [2, 1, 1, 2]
+        self.testCase6ExpectedResult = 3
+        self.assertEqual(self.solution.rob(self.testCase6), self.testCase6ExpectedResult)
+
+    def testRob7(self):
+        self.testCase7 = [1, 2, 3, 4, 5, 6, 7, 8]
+        self.testCase7ExpectedResult = 20
+        self.assertEqual(self.solution.rob(self.testCase7), self.testCase7ExpectedResult)
+
+    def testRob8(self):
+        self.testCase8 = [1, 1, 1, 1, 1, 1]
+        self.testCase8ExpectedResult = 3
+        self.assertEqual(self.solution.rob(self.testCase8), self.testCase8ExpectedResult)
+
 if __name__ == "__main__":
     unittest.main()

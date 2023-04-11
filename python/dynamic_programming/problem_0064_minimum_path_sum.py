@@ -39,6 +39,21 @@ class TestCase(unittest.TestCase):
         self.testCase2 = [[1,2,3],[4,5,6]]
         self.testCase2ExpectedResult = 12
         self.assertEqual(self.solution.minPathSum(self.testCase2), self.testCase2ExpectedResult)
+        
+    def testMinPathSum3(self):
+        self.testCase3 = [[1]]
+        self.testCase3ExpectedResult = 1
+        self.assertEqual(self.solution.minPathSum(self.testCase3), self.testCase3ExpectedResult)
+
+    def testMinPathSum4(self):
+        self.testCase4 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+        self.testCase4ExpectedResult = 21
+        self.assertEqual(self.solution.minPathSum(self.testCase4), self.testCase4ExpectedResult)
+
+    def testMinPathSum5(self):
+        self.testCase5 = [[1, 2], [3, 4]]
+        self.testCase5ExpectedResult = 7
+        self.assertEqual(self.solution.minPathSum(self.testCase5), self.testCase5ExpectedResult)
 
 if __name__ == "__main__":
     unittest.main()

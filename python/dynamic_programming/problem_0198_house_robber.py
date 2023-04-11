@@ -32,6 +32,21 @@ class TestCase(unittest.TestCase):
         self.testCase2 = [2,7,9,3,1]
         self.testCase2ExpectedResult = 12
         self.assertEqual(self.solution.rob(self.testCase2), self.testCase2ExpectedResult)
+        
+    def testRob3(self):
+        self.testCase3 = [2, 1, 1, 2]
+        self.testCase3ExpectedResult = 4
+        self.assertEqual(self.solution.rob(self.testCase3), self.testCase3ExpectedResult)
+
+    def testRob4(self):
+        self.testCase4 = [1, 1, 1, 1, 1, 1, 1]
+        self.testCase4ExpectedResult = 4
+        self.assertEqual(self.solution.rob(self.testCase4), self.testCase4ExpectedResult)
+
+    def testRob5(self):
+        self.testCase5 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        self.testCase5ExpectedResult = 30
+        self.assertEqual(self.solution.rob(self.testCase5), self.testCase5ExpectedResult)
 
 if __name__ == "__main__":
     unittest.main()
