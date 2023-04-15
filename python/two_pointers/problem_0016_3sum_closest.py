@@ -1,5 +1,6 @@
 import unittest
 
+
 class Solution:
     @staticmethod
     def threeSumClosest(nums, target):
@@ -15,7 +16,7 @@ class Solution:
                 # i.e. sum = 4, target = 6, diff = -2 // sum = 7, target = 6, diff = 1. but since -2 < 1, the returned answer will be 4 even though it's wrong
                 if abs(target-sum) < diff:
                     diff = abs(target-sum)
-                    ans = sum                
+                    ans = sum
                 # narrows down the 3 numbers to get closer to the target depending on conditions
                 if sum > target:
                     right -= 1
@@ -26,23 +27,27 @@ class Solution:
                     mid += 1
         return ans
 
+
 class TestCase(unittest.TestCase):
     def setUp(self):
         self.solution = Solution()
 
-        self.testCase1 = [-1,2,1,-4]
+        self.testCase1 = [-1, 2, 1, -4]
         self.testCase1Target = 1
         self.testCase1ExpectedResult = 2
 
-        self.testCase2 = [0,0,0]
+        self.testCase2 = [0, 0, 0]
         self.testCase2Target = 1
         self.testCase2ExpectedResult = 0
-    
+
     def testThreeSumClosest1(self):
-        self.assertEqual(self.solution.threeSumClosest(self.testCase1, self.testCase1Target), self.testCase1ExpectedResult)
-    
+        self.assertEqual(self.solution.threeSumClosest(
+            self.testCase1, self.testCase1Target), self.testCase1ExpectedResult)
+
     def testThreeSumClosest2(self):
-        self.assertEqual(self.solution.threeSumClosest(self.testCase2, self.testCase2Target), self.testCase2ExpectedResult)
+        self.assertEqual(self.solution.threeSumClosest(
+            self.testCase2, self.testCase2Target), self.testCase2ExpectedResult)
+
 
 if __name__ == "__main__":
     unittest.main()

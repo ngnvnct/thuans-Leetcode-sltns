@@ -1,4 +1,3 @@
-# LC says to modify in place and don't return anything. unittest doesn't work unless something is returned so we are returning nums back in this solution
 import unittest
 
 class Solution:
@@ -24,6 +23,9 @@ class Solution:
                 nums[two_index], nums[curr_index] = nums[curr_index], nums[two_index]
                 # don't iterate curr_index here so that we can check the number that got switched to curr_index
                 two_index -= 1
+    @staticmethod
+    def testSortColors(nums):
+        Solution.sortColors(nums)
         return nums
 """
 Time = O(n)
@@ -40,10 +42,10 @@ class TestCase(unittest.TestCase):
         self.testCase2ExpectedResult = [0,1,2]
     
     def testSortColors1(self):
-        self.assertEqual(self.solution.sortColors(self.testCase1), self.testCase1ExpectedResult)
+        self.assertEqual(self.solution.testSortColors(self.testCase1), self.testCase1ExpectedResult)
     
     def testSortColors2(self):
-        self.assertEqual(self.solution.sortColors(self.testCase2), self.testCase2ExpectedResult)
+        self.assertEqual(self.solution.testSortColors(self.testCase2), self.testCase2ExpectedResult)
 
 if __name__ == "__main__":
     unittest.main()
