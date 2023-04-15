@@ -46,7 +46,7 @@ namespace Sort_Colors
             }
         }
 
-        public static int[] TestSortColor(int[] nums)
+        public static int[] TestSortColorVoidMethod(int[] nums)
         {
             SortColors(nums);
             return nums;
@@ -65,7 +65,7 @@ namespace Sort_Colors
         [TestCase(new int[] { 2, 1, 0 }, ExpectedResult = new int[] { 0, 1, 2 })]
         public int[] TestSortColor(int[] nums)
         {
-            return Solution.TestSortColor(nums);
+            return Solution.TestSortColorVoidMethod(nums);
         }
     }
 }

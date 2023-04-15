@@ -24,7 +24,7 @@ class Solution:
                 # don't iterate curr_index here so that we can check the number that got switched to curr_index
                 two_index -= 1
     @staticmethod
-    def testSortColors(nums):
+    def testSortColorsVoidMethod(nums):
         Solution.sortColors(nums)
         return nums
 """
@@ -42,10 +42,10 @@ class TestCase(unittest.TestCase):
         self.testCase2ExpectedResult = [0,1,2]
     
     def testSortColors1(self):
-        self.assertEqual(self.solution.testSortColors(self.testCase1), self.testCase1ExpectedResult)
+        self.assertEqual(self.solution.testSortColorsVoidMethod(self.testCase1), self.testCase1ExpectedResult)
     
     def testSortColors2(self):
-        self.assertEqual(self.solution.testSortColors(self.testCase2), self.testCase2ExpectedResult)
+        self.assertEqual(self.solution.testSortColorsVoidMethod(self.testCase2), self.testCase2ExpectedResult)
 
 if __name__ == "__main__":
     unittest.main()
