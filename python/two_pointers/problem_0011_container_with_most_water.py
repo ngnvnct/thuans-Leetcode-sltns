@@ -43,6 +43,15 @@ class TestCase(unittest.TestCase):
         self.testCase2 = [1, 1]
         self.testCase2ExpectedResult = 1
 
+        self.testCase3 = [4, 3, 2, 1, 4]
+        self.testCase3ExpectedResult = 16
+
+        self.testCase4 = [1, 2, 1]
+        self.testCase4ExpectedResult = 2
+
+        self.testCase5 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        self.testCase5ExpectedResult = 25
+
     def testMaxArea1(self):
         self.assertEqual(self.solution.maxArea(
             self.testCase1), self.testCase1ExpectedResult)
@@ -50,6 +59,20 @@ class TestCase(unittest.TestCase):
     def testMaxArea2(self):
         self.assertEqual(self.solution.maxArea(
             self.testCase2), self.testCase2ExpectedResult)
+
+    def testMaxArea3(self):
+        self.assertEqual(self.solution.maxArea(
+            self.testCase3), self.testCase3ExpectedResult)
+
+    def testMaxArea4(self):
+        self.assertEqual(self.solution.maxArea(
+            self.testCase4), self.testCase4ExpectedResult)
+
+    def testMaxArea5(self):
+        self.assertEqual(self.solution.maxArea(
+            self.testCase5), self.testCase5ExpectedResult)
+
+
 
 
 if __name__ == "__main__":
