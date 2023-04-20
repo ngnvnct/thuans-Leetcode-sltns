@@ -1,3 +1,20 @@
+/*
+ * https://leetcode.com/problems/check-if-a-number-is-majority-element-in-a-sorted-array/
+ * Explanation:
+ * 
+ * First method, linear search and get a counter. Return counter > nums.length /
+ * 2
+ * Second method, put it in a hash map and gets the number of occurence
+ * Third method, we do a binary search, get the first occurence and the last
+ * occurence. Then from there we can get the range of occurence then check for
+ * majority
+ * 
+ * Time: O(n), O(n), O(logn)
+ * Space: O(1), O(n), O(1)
+ */
+
+package binary_search;
+
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -6,8 +23,8 @@ import java.util.Map;
 
 import org.junit.jupiter.api.Test;
 
-public class Check_If_A_Number_Is_Majority_Element_In_A_Sorted_Array_1150 {
-    public boolean isMajorityElement(int[] nums, int target) {
+public class problem_1150_check_if_a_number_is_majority_element_in_a_sorted_array {
+    public static boolean isMajorityElement(int[] nums, int target) {
         int counter = 0;
         int k = nums.length / 2;
         for (int num : nums) {
@@ -18,7 +35,7 @@ public class Check_If_A_Number_Is_Majority_Element_In_A_Sorted_Array_1150 {
         return counter > k;
     }
 
-    public boolean isMajorityElementHash(int[] nums, int target) {
+    public static boolean isMajorityElementHash(int[] nums, int target) {
         int k = nums.length / 2;
         Map<Integer, Integer> map = new HashMap<>();
         for (int num : nums) {
@@ -78,18 +95,3 @@ public class Check_If_A_Number_Is_Majority_Element_In_A_Sorted_Array_1150 {
         assertFalse(isMajorityElementBinarySearch(testCase2, 101));
     }
 }
-
-/*
- * https://leetcode.com/problems/check-if-a-number-is-majority-element-in-a-sorted-array/
- * Explanation
- * 
- * First method, linear search and get a counter. Return counter > nums.length /
- * 2
- * Second method, put it in a hash map and gets the number of occurence
- * Third method, we do a binary search, get the first occurence and the last
- * occurence. Then from there we can get the range of occurence then check for
- * majority
- * 
- * Time: O(n), O(n), O(logn)
- * Space: O(1), O(n), O(1)
- */

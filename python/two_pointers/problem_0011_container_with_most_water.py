@@ -1,5 +1,6 @@
 import unittest
 
+
 class Solution:
     @staticmethod
     def maxArea(height):
@@ -15,8 +16,9 @@ class Solution:
                 left += 1
             else:
                 right -= 1
-        
+
         return area
+
 
 """
 Two pointers method, one on the left end of the array (i) and the other on the right end of the array (n)
@@ -30,21 +32,48 @@ Time = O(n) linear. Increment through the array once
 Space = O(1) no additional arrays needed to be created
 """
 
+
 class TestCase(unittest.TestCase):
     def setUp(self):
         self.solution = Solution()
 
-        self.testCase1 = [1,8,6,2,5,4,8,3,7]
+        self.testCase1 = [1, 8, 6, 2, 5, 4, 8, 3, 7]
         self.testCase1ExpectedResult = 49
 
-        self.testCase2 = [1,1]
+        self.testCase2 = [1, 1]
         self.testCase2ExpectedResult = 1
 
+        self.testCase3 = [4, 3, 2, 1, 4]
+        self.testCase3ExpectedResult = 16
+
+        self.testCase4 = [1, 2, 1]
+        self.testCase4ExpectedResult = 2
+
+        self.testCase5 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        self.testCase5ExpectedResult = 25
+
     def testMaxArea1(self):
-        self.assertEqual(self.solution.maxArea(self.testCase1), self.testCase1ExpectedResult)
+        self.assertEqual(self.solution.maxArea(
+            self.testCase1), self.testCase1ExpectedResult)
 
     def testMaxArea2(self):
-        self.assertEqual(self.solution.maxArea(self.testCase2), self.testCase2ExpectedResult)
+        self.assertEqual(self.solution.maxArea(
+            self.testCase2), self.testCase2ExpectedResult)
+
+    def testMaxArea3(self):
+        self.assertEqual(self.solution.maxArea(
+            self.testCase3), self.testCase3ExpectedResult)
+
+    def testMaxArea4(self):
+        self.assertEqual(self.solution.maxArea(
+            self.testCase4), self.testCase4ExpectedResult)
+
+    def testMaxArea5(self):
+        self.assertEqual(self.solution.maxArea(
+            self.testCase5), self.testCase5ExpectedResult)
+
+
+
 
 if __name__ == "__main__":
     unittest.main()

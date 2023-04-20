@@ -1,5 +1,6 @@
 import unittest
 
+
 class Solution:
     @staticmethod
     def trap(height):
@@ -21,11 +22,12 @@ class Solution:
                 right -= 1
         return ans
 
+
 class TestCase(unittest.TestCase):
     def setUp(self):
         self.solution = Solution()
 
-        self.testCase1 = [0,1,0,2,1,0,1,3,2,1,2,1]
+        self.testCase1 = [0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]
         """
                      |_|
              |_|# # #|_|_|#|_|
@@ -33,7 +35,7 @@ class TestCase(unittest.TestCase):
         """
         self.testCase1ExpectedResult = 6
 
-        self.testCase2 = [4,2,0,3,2,5]
+        self.testCase2 = [4, 2, 0, 3, 2, 5]
         """
                   |_|
         |_|# # # #|_|
@@ -44,11 +46,13 @@ class TestCase(unittest.TestCase):
         self.testCase2ExpectedResult = 9
 
     def testTrap1(self):
-        self.assertEqual(self.solution.trap(self.testCase1), self.testCase1ExpectedResult)
+        self.assertEqual(self.solution.trap(self.testCase1),
+                         self.testCase1ExpectedResult)
 
     def testTrap2(self):
-        self.assertEqual(self.solution.trap(self.testCase2), self.testCase2ExpectedResult)
+        self.assertEqual(self.solution.trap(self.testCase2),
+                         self.testCase2ExpectedResult)
+
 
 if __name__ == "__main__":
     unittest.main()
-

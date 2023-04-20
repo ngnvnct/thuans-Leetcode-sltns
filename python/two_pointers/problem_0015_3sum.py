@@ -1,5 +1,6 @@
 import unittest
 
+
 class Solution:
     @staticmethod
     def threeSum(nums):
@@ -29,26 +30,45 @@ class Solution:
                 right -= 1
 
         return list(ans)
-    
+
+
 class TestCase(unittest.TestCase):
     def setUp(self):
         self.solution = Solution()
 
-        self.testCase1 = [-1,0,1,2,-1,-4]
-        self.testCase1ExpectedResult = [[-1,-1,2], [-1,0,1]]
+        self.testCase1 = [-1, 0, 1, 2, -1, -4]
+        self.testCase1ExpectedResult = [[-1, -1, 2], [-1, 0, 1]]
 
-        self.testCase2 = [0,1,1]
+        self.testCase2 = [0, 1, 1]
         self.testCase2ExpectedResult = []
 
-        self.testCase3 = [0,0,0]
-        self.testCase3ExpectedResult = [[0,0,0]]
+        self.testCase3 = [0, 0, 0]
+        self.testCase3ExpectedResult = [[0, 0, 0]]
 
+        self.testCase4 = [-2, 0, 0, 2, 2]
+        self.testCase4ExpectedResult = [[-2, 0, 2]]
+
+        self.testCase5 = [1, 2, 3, 4, 5, 6]
+        self.testCase5ExpectedResult = []
+        
     def testThreeSum1(self):
         self.assertEqual(self.solution.threeSum(self.testCase1), self.testCase1ExpectedResult)
+
     def testThreeSum2(self):
         self.assertEqual(self.solution.threeSum(self.testCase2), self.testCase2ExpectedResult)
+
     def testThreeSum3(self):
         self.assertEqual(self.solution.threeSum(self.testCase3), self.testCase3ExpectedResult)
+
+    def testThreeSum3(self):
+        self.assertEqual(self.solution.threeSum(self.testCase3), self.testCase3ExpectedResult)
+
+    def testThreeSum4(self):
+        self.assertEqual(self.solution.threeSum(self.testCase4), self.testCase4ExpectedResult)
+
+    def testThreeSum5(self):
+        self.assertEqual(self.solution.threeSum(self.testCase5), self.testCase5ExpectedResult)
+
 
 if __name__ == "__main__":
     unittest.main()
