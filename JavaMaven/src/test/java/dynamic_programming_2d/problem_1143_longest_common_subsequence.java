@@ -1,8 +1,33 @@
+/*
+https://leetcode.com/problems/longest-common-subsequence/
+Explanation:
+
+Let X be “XMJYAUZ” and Y be “MZJAWXU”. The longest common subsequence between X and Y is “MJAU”
+The following table shows the lengths of the longest common subsequences between prefixes of X and Y. The ith row and jth column shows the length of the LCS between X_{1..i} and Y_{1..j}
+    0 1 2 3 4 5 6 7
+      M Z J A W X U
+0   0 0 0 0 0 0 0 0 
+1 X 0 0 0 0 0 0 1 1
+2 M 0 1 1 1 1 1 1 1
+3 J 0 1 1 2 2 2 2 2
+4 Y 0 1 1 2 2 2 2 2
+5 A 0 1 1 2 3 3 3 3
+6 U 0 1 1 2 3 3 3 4
+7 Z 0 1 1 2 3 3 3 4
+
+Method 3 and Method 4 are space optimized. We only look at the current column and the previous column, so instead of keeping track of the entire 2D array, we only need the last two columns.
+
+Time: O(m * n)
+Space: O(m * n) or O(min(m,n)) for method 3 and 4
+*/
+
+package dynamic_programming_2d;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
-public class longest_common_subsequence {
+public class problem_1143_longest_common_subsequence {
     public int longestCommonSubsequence(String text1, String text2) {
         int[][] dp = new int[text1.length() + 1][text2.length() + 1];
         for (int i = 0; i < text1.length(); ++i) {
@@ -88,44 +113,41 @@ public class longest_common_subsequence {
     }
 
     @Test
-    public void testLCS() {
-        assertEquals(3, longestCommonSubsequence("abcde", "ace"));
-        assertEquals(3, longestCommonSubsequence("abc", "abc"));
-        assertEquals(0, longestCommonSubsequence("abc", "def"));
-        assertEquals(4, longestCommonSubsequence("XMJYAUZ", "MZJAWXU"));
-        assertEquals(3, longestCommonSubsequence2("abcde", "ace"));
-        assertEquals(3, longestCommonSubsequence2("abc", "abc"));
-        assertEquals(0, longestCommonSubsequence2("abc", "def"));
-        assertEquals(4, longestCommonSubsequence2("XMJYAUZ", "MZJAWXU"));
-        assertEquals(3, longestCommonSubsequence3("abcde", "ace"));
-        assertEquals(3, longestCommonSubsequence3("abc", "abc"));
-        assertEquals(0, longestCommonSubsequence3("abc", "def"));
-        assertEquals(4, longestCommonSubsequence3("XMJYAUZ", "MZJAWXU"));
-        assertEquals(3, longestCommonSubsequence4("abcde", "ace"));
-        assertEquals(3, longestCommonSubsequence4("abc", "abc"));
-        assertEquals(0, longestCommonSubsequence4("abc", "def"));
-        assertEquals(4, longestCommonSubsequence4("XMJYAUZ", "MZJAWXU"));
+    public void testLongestCommonSubsequence() {
+        String testCase1Text1 = "abcde";
+        String testCase1Text2 = "ace";
+        int testCase1ExpectedResult = 3;
+
+        String testCase2Text1 = "abc";
+        String testCase2Text2 = "abc";
+        int testCase2ExpectedResult = 3;
+
+        String testCase3Text1 = "abc";
+        String testCase3Text2 = "def";
+        int testCase3ExpectedResult = 0;
+
+        String testCase4Text1 = "XMJYAUZ";
+        String testCase4Text2 = "MZJAWXU";
+        int testCase4ExpectedResult = 4;
+
+        assertEquals(testCase1ExpectedResult, longestCommonSubsequence(testCase1Text1, testCase1Text2));
+        assertEquals(testCase2ExpectedResult, longestCommonSubsequence(testCase2Text1, testCase2Text2));
+        assertEquals(testCase3ExpectedResult, longestCommonSubsequence(testCase3Text1, testCase3Text2));
+        assertEquals(testCase4ExpectedResult, longestCommonSubsequence(testCase4Text1, testCase4Text2));
+
+        assertEquals(testCase1ExpectedResult, longestCommonSubsequence2(testCase1Text1, testCase1Text2));
+        assertEquals(testCase2ExpectedResult, longestCommonSubsequence2(testCase2Text1, testCase2Text2));
+        assertEquals(testCase3ExpectedResult, longestCommonSubsequence2(testCase3Text1, testCase3Text2));
+        assertEquals(testCase4ExpectedResult, longestCommonSubsequence2(testCase4Text1, testCase4Text2));
+
+        assertEquals(testCase1ExpectedResult, longestCommonSubsequence3(testCase1Text1, testCase1Text2));
+        assertEquals(testCase2ExpectedResult, longestCommonSubsequence3(testCase2Text1, testCase2Text2));
+        assertEquals(testCase3ExpectedResult, longestCommonSubsequence3(testCase3Text1, testCase3Text2));
+        assertEquals(testCase4ExpectedResult, longestCommonSubsequence3(testCase4Text1, testCase4Text2));
+
+        assertEquals(testCase1ExpectedResult, longestCommonSubsequence4(testCase1Text1, testCase1Text2));
+        assertEquals(testCase2ExpectedResult, longestCommonSubsequence4(testCase2Text1, testCase2Text2));
+        assertEquals(testCase3ExpectedResult, longestCommonSubsequence4(testCase3Text1, testCase3Text2));
+        assertEquals(testCase4ExpectedResult, longestCommonSubsequence4(testCase4Text1, testCase4Text2));
     }
 }
-
-/*
-https://leetcode.com/problems/longest-common-subsequence/
-Explanation
-Let X be “XMJYAUZ” and Y be “MZJAWXU”. The longest common subsequence between X and Y is “MJAU”
-The following table shows the lengths of the longest common subsequences between prefixes of X and Y. The ith row and jth column shows the length of the LCS between X_{1..i} and Y_{1..j}
-    0 1 2 3 4 5 6 7
-      M Z J A W X U
-0   0 0 0 0 0 0 0 0 
-1 X 0 0 0 0 0 0 1 1
-2 M 0 1 1 1 1 1 1 1
-3 J 0 1 1 2 2 2 2 2
-4 Y 0 1 1 2 2 2 2 2
-5 A 0 1 1 2 3 3 3 3
-6 U 0 1 1 2 3 3 3 4
-7 Z 0 1 1 2 3 3 3 4
-
-Method 3 and Method 4 are space optimized. We only look at the current column and the previous column, so instead of keeping track of the entire 2D array, we only need the last two columns.
-
-Time: O(m * n)
-Space: O(m * n) or O(min(m,n)) for method 3 and 4
-*/
