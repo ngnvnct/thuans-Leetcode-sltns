@@ -1,66 +1,6 @@
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-
-import org.junit.jupiter.api.Test;
-
-public class longest_string_chain {
-    public int longestStrChain(String[] words) {
-        Map<String, Integer> dp = new HashMap<>();
-        Arrays.sort(words, (a, b) -> a.length() - b.length());
-        int res = 0;
-        for (String word : words) {
-            int best = 0;
-            for (int i = 0; i < word.length(); ++i) {
-                String prev = word.substring(0, i) + word.substring(i + 1);
-                best = Math.max(best, dp.getOrDefault(prev, 0) + 1);
-            }
-            dp.put(word, best);
-            res = Math.max(res, best);
-        }
-        return res;
-    }
-
-    public int longestStrChainMethod2(String[] words) {
-        Map<String, Integer> dpMap = new HashMap<>();
-        Arrays.sort(words, (a, b) -> a.length() - b.length());
-
-        int sequenceLength = 1;
-        for (String word : words) {
-            int presentLength = 1;
-            for (int i = 0; i < word.length(); i++) {
-                StringBuilder sb = new StringBuilder(word);
-                sb.deleteCharAt(i);
-                String predecessor = sb.toString();
-                int previousLength = dpMap.getOrDefault(predecessor, 0);
-                presentLength = Math.max(presentLength, previousLength + 1);
-            }
-            dpMap.put(word, presentLength);
-            sequenceLength = Math.max(sequenceLength, presentLength);
-        }
-        return sequenceLength;
-    }
-
-    @Test
-    public void testLongestStrChain() {
-        String[] testCase1 = { "a", "b", "ba", "bca", "bda", "bdca" };
-        String[] testCase2 = { "xbc", "pcxbcf", "xb", "cxbc", "pcxbc" };
-        String[] testCase3 = { "abcd", "dbqca" };
-
-        assertEquals(4, longestStrChain(testCase1));
-        assertEquals(4, longestStrChain(testCase1));
-        assertEquals(5, longestStrChainMethod2(testCase2));
-        assertEquals(5, longestStrChainMethod2(testCase2));
-        assertEquals(1, longestStrChain(testCase3));
-        assertEquals(1, longestStrChain(testCase3));
-    }
-}
-
 /*
  * https://leetcode.com/problems/longest-string-chain/
- * Explanation
+ * Explanation:
  * 
  * substring syntax: string.substring(int startIndex, int endIndex). startIndex
  * is inclusive and endIndex is exclusive
@@ -132,3 +72,75 @@ public class longest_string_chain {
  * Time: O(n log n + (n . L^2))) = O(n (log n + L2))
  * Space: O(n), hash map
  */
+
+package array;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.junit.jupiter.api.Test;
+
+public class problem_1048_longest_string_chain {
+    public int longestStrChain(String[] words) {
+        Map<String, Integer> dp = new HashMap<>();
+        Arrays.sort(words, (a, b) -> a.length() - b.length());
+        int res = 0;
+        for (String word : words) {
+            int best = 0;
+            for (int i = 0; i < word.length(); ++i) {
+                String prev = word.substring(0, i) + word.substring(i + 1);
+                best = Math.max(best, dp.getOrDefault(prev, 0) + 1);
+            }
+            dp.put(word, best);
+            res = Math.max(res, best);
+        }
+        return res;
+    }
+
+    public int longestStrChainMethod2(String[] words) {
+        Map<String, Integer> dpMap = new HashMap<>();
+        Arrays.sort(words, (a, b) -> a.length() - b.length());
+
+        int sequenceLength = 1;
+        for (String word : words) {
+            int presentLength = 1;
+            for (int i = 0; i < word.length(); i++) {
+                StringBuilder sb = new StringBuilder(word);
+                sb.deleteCharAt(i);
+                String predecessor = sb.toString();
+                int previousLength = dpMap.getOrDefault(predecessor, 0);
+                presentLength = Math.max(presentLength, previousLength + 1);
+            }
+            dpMap.put(word, presentLength);
+            sequenceLength = Math.max(sequenceLength, presentLength);
+        }
+        return sequenceLength;
+    }
+
+    @Test
+    public void testLongestStrChain() {
+        String[] testCase1 = { "a", "b", "ba", "bca", "bda", "bdca" };
+        int testCase1ExpectedResult = 4;
+        String[] testCase2 = { "xbc", "pcxbcf", "xb", "cxbc", "pcxbc" };
+        int testCase2ExpectedResult = 5;
+        String[] testCase3 = { "abcd", "dbqca" };
+        int testCase3ExpectedResult = 1;
+
+        assertEquals(testCase1ExpectedResult, longestStrChain(testCase1));
+        assertEquals(testCase1ExpectedResult, longestStrChain(testCase1));
+        assertEquals(testCase2ExpectedResult, longestStrChainMethod2(testCase2));
+        assertEquals(testCase2ExpectedResult, longestStrChainMethod2(testCase2));
+        assertEquals(testCase3ExpectedResult, longestStrChain(testCase3));
+        assertEquals(testCase3ExpectedResult, longestStrChain(testCase3));
+
+        assertEquals(testCase1ExpectedResult, longestStrChainMethod2(testCase1));
+        assertEquals(testCase1ExpectedResult, longestStrChainMethod2(testCase1));
+        assertEquals(testCase2ExpectedResult, longestStrChainMethod2(testCase2));
+        assertEquals(testCase2ExpectedResult, longestStrChainMethod2(testCase2));
+        assertEquals(testCase3ExpectedResult, longestStrChainMethod2(testCase3));
+        assertEquals(testCase3ExpectedResult, longestStrChainMethod2(testCase3));
+    }
+}

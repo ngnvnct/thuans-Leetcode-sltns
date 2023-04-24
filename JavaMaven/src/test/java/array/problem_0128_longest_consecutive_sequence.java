@@ -1,3 +1,25 @@
+/*
+ * https://leetcode.com/problems/longest-consecutive-sequence/
+ * Explanation:
+ * 
+ * For the two sort solutions, just sort it and have two variables to keep track
+ * of the current length and the longest consecutive sequence
+ * 
+ * For the set solution, think of it like a sequence
+ * 1,2,3,4 100, 200
+ * We use a set to track all the element in the array, and at each iteration we
+ * check to see if its left neighbor exist, if its left neighbor doesn't exist
+ * it means it is the start of the sequence, and we increment the length as long
+ * as we see the right neighbor in the set
+ * 
+ * Time: O(n log n) or O(n + n) = O(n), the while loop is only run if it is the
+ * beginning of a sequence, it can only run for n iterations throughout the
+ * entire runtime
+ * Space: O(1) or O(n)
+ */
+
+package array;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.Arrays;
@@ -6,7 +28,7 @@ import java.util.Set;
 
 import org.junit.jupiter.api.Test;
 
-public class Longest_Consecutive_Sequence_128 {
+public class problem_0128_longest_consecutive_sequence {
     public int longestConsecutive(int[] nums) {
         if (nums.length == 0) {
             return 0;
@@ -92,23 +114,3 @@ public class Longest_Consecutive_Sequence_128 {
         assertEquals(testCase3ExpectedResult, longestConsecutiveSet(testCase3));
     }
 }
-
-/*
- * https://leetcode.com/problems/longest-consecutive-sequence/
- * Explanation
- * 
- * For the two sort solutions, just sort it and have two variables to keep track
- * of the current length and the longest consecutive sequence
- * 
- * For the set solution, think of it like a sequence
- * 1,2,3,4 100, 200
- * We use a set to track all the element in the array, and at each iteration we
- * check to see if its left neighbor exist, if its left neighbor doesn't exist
- * it means it is the start of the sequence, and we increment the length as long
- * as we see the right neighbor in the set
- * 
- * Time: O(n log n) or O(n + n) = O(n), the while loop is only run if it is the
- * beginning of a sequence, it can only run for n iterations throughout the
- * entire runtime
- * Space: O(1) or O(n)
- */
