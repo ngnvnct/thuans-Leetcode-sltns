@@ -18,7 +18,7 @@ class TestCase(unittest.TestCase):
         self.solution = Solution()
 
         self.testCase1 = "AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT"
-        self.testCase1ExpectedResult = ["AAAAACCCCC","CCCCCAAAAA"]
+        self.testCase1ExpectedResult = ["AAAAACCCCC","CCCCCAAAAA"] or ["CCCCCAAAAA","AAAAACCCCC"]
 
         self.testCase2 = "AAAAAAAAAAAAA"
         self.testCase2ExpectedResult = ["AAAAAAAAAA"]
